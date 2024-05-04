@@ -1,7 +1,8 @@
-![Remagica Logo](assets/logo_dark.svg#gh-light-mode-only)![Remagica Logo](assets/logo_light.svg#gh-dark-mode-only)
-# Remagica 3.2.X
-Remagica v3.2 and onward were meant to be published as a Twine document due to the high load time on the Google Doc for v.3.1 and earlier.
-This is a WIP written in Harlowe 3.1. The content is far from complete, but most of the code is either complete or vestigial (many abandoned ideas.) I have no idea if I'll come back to this project anytime soon, but I definitely put a lot of effort into it last year.
-The most recent major edits to this were in June of 2022.
+![Remagica Logo](assets/logo_dark.svg#gh-light-mode-only)![Remagica Logo](assets/logo_light.svg#gh-dark-mode-only)  
+# Remagica 3.2.X  
+Remagica 3.2 might be moving to astro.build, as per the advice of a friend. Harlowe is a wonderful, wonderful tool and I want to use it forever but it does have drawbacks that I need to move past. Thank you Harlowe, and thank you Twine. I'll miss you!  
+This is a WIP repo that I'm using to synchronize changes across devices, but feel free to take a look around!  
+Please keep in mind that while this is a working copy for the *site,* you shouldn't trust any of the mechanical information here. Everything is subject to change.  
 ## Remagica 3.1- PHB
-For the Google Doc version of the PHB, click [here](https://docs.google.com/document/d/1cc5nM2K04N1pf9uYKd9D7Tu8Vanmruu5nAcbfZyWCDY/edit?usp=sharing).
+Looking for the legacy version used in the Theodora Campaign? Look no further!  
+For the Google Doc version of the PHB, click [here](https://docs.google.com/document/d/1cc5nM2K04N1pf9uYKd9D7Tu8Vanmruu5nAcbfZyWCDY/edit?usp=sharing).  

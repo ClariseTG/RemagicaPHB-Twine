@@ -157,73 +157,39 @@ li {
   padding: 0 0 0 0;
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="298.3333333333333,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
+</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_dark.svg&quot;&gt;&lt;/img&gt;](else-if:it is 1)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot;&gt;&lt;/img&gt;](else:)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.png&quot;&gt;&lt;/img&gt;]
 }
-
-(text-style:&quot;bold&quot;)[$H3[PHB]]&lt;PHBDrop|{
-	(click:?PHBDrop)[(replace:?PHBDrop)[{
-		$H3[PHB]
-		&lt;br&gt;[Gameplay]&lt;PHBGameDrop|
-		(click:?PHBGameDrop)[(replace:?PHBGameDrop)[{
-			$H4[Gameplay]
-			}&lt;p&gt;[[Overall Gameplay]]
-			&lt;p&gt;[[Attributes Quick Reference]]
-			&lt;p&gt;[[Damage (Physical, Magical, and Sanity)]]
-			&lt;p&gt;[[Long Rests, Short Rests, and Temporary Sanity]]
-			&lt;p&gt;[[Combat]]
-			&lt;p&gt;[[Pseudo-Combat]]
-			&lt;p&gt;[[Advancement and Improvements]]\
-		]]
-		&lt;br&gt;[Creating a Character]&lt;PHBCharDrop|
-		(click:?PHBCharDrop)[(replace:?PHBCharDrop)[{
-			$H4[Creating a Character]
-			}&lt;p&gt;[[Creating a Concept]]
-			&lt;p&gt;[Races]&lt;PHBCharRaceDrop|
-			(click:?PHBCharRaceDrop)[{
-				&lt;p&gt;   [[Race List]]
-				&lt;p&gt; ㅤ ㅤ [[Apians]]
-				&lt;p&gt; ㅤ ㅤ [[Doons]]
-				&lt;p&gt; ㅤ ㅤ [[Exterreri]]
-				&lt;p&gt; ㅤ ㅤ [[Ferfaen]]
-				&lt;p&gt; ㅤ ㅤ [[Hadalites]]
-				&lt;p&gt; ㅤ ㅤ [[Hiverscruffs]]
-				&lt;p&gt; ㅤ ㅤ [[Marigen]]
-				&lt;p&gt; ㅤ ㅤ [[Phorads]]
-				&lt;p&gt; ㅤ ㅤ [[Remagi]]
-				&lt;p&gt; ㅤ ㅤ [[Valdiens]]
-				&lt;p&gt; ㅤ ㅤ [[Wyrmlings]]
-
-				
-			}]
-			&lt;p&gt;[[Magic]]
-			&lt;p&gt;[[Attributes]]
-			&lt;p&gt;[[Inventory, Backstory and Personality]]
-			&lt;p&gt;[[EXP Usage Quick Reference]]\
-			]]
-		&lt;br&gt;[Game Compendium]&lt;PHBCompDrop|
-		(click:?PHBCompDrop)[(replace:?PHBCompDrop)[{
-			$H4[Game Compendium]
-			}&lt;p&gt;[[Weapons]]
-			&lt;p&gt;[[Items List]]
-			&lt;p&gt;[[Skills List]]
-			&lt;p&gt;[[Conditions List]]
-			&lt;p&gt;[[Character Sheet]]{
-		}]]
-	}]]
-}
-(text-style:&quot;bold&quot;)[$H3[Lore]]&lt;LoreDrop|
-{(click:?LoreDrop)[(replace:?LoreDrop)[{
-$H3[Lore]{
-}&lt;br&gt;[[Races-&gt;RacesLore]]{
-}&lt;br&gt;[[Locations]]{
-}&lt;br&gt;[[Organizations]]{
-}&lt;br&gt;[[Deities/Higher Spirits]]{
-}&lt;br&gt;[[Pop Culture]]{
-}&lt;br&gt;[[Other]]\
-}]]}
+$H2[Remagica PHB]
+|=
+$H3[Gameplay]
+$HB2+(box:&quot;X&quot;, 10)[\
+[[Overall Gameplay]]
+[[Damage-&gt;Damage (Physical, Magical, and Sanity)]]
+[[Long and Short Rests]]
+[[Combat]]
+]
+=|=
+$H3[Character Stats]
+$HB2+(box:&quot;X&quot;, 10)[\
+[[Character Creation Tutorial]]
+[[Browse Races-&gt;Race List]]
+[[Casting Archetypes]]
+[[Statistics and Proficiencies]]
+[[Advancement and Improvements]]\
+]
+=|
+$H3[Compendium]
+$HB2+(box:&quot;X&quot;, 10)[\
+[[Attributes Quick Reference]]
+[[Character Sheet Links]]
+[[EXP Usage Quick Reference]]&#96;**&#96;incomplete\
+]
+|==|
+$H2[Remagica Lore]
+&#96;[Under construction]&#96;
 Remagica by ClariseTG
 [[Credits]]</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
@@ -333,7 +299,7 @@ Array
 
 (set:$pop to (macro: string-type _disp,[
 	(alert:_disp, &quot;X&quot;)
-	(output:)
+	(output-data:&quot;&quot;)
 ]))
 }</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
 (set:$pageUrl to (page-url:))
@@ -435,6 +401,7 @@ p:hover span{
 (set:$H3 to (text-style:&quot;bold&quot;) + (font:&quot;Montserrat&quot;) + (size:1.5*$baseSize))
 (set:$H4 to (text-style:&quot;bold&quot;) + (font:&quot;Montserrat Black&quot;) + (size:$baseSize))
 (set:$HB to (size:$baseSize) + (box: &quot;X&quot;) + (background:$themeChosen&#39;s 6))
+(set:$HB2 to (background: $themeChosen&#39;s 6) + (corner-radius:12))
 (set:$Hchar to (size:0.5*$baseSize)+(css:&quot;line-height:0px;&quot;))
 (set:$Hhp to (text-style:&quot;bold&quot;) + (size:2.5*$baseSize)+(css:&quot;line-height:0.8;&quot;))
 
@@ -678,7 +645,7 @@ Only one of these can be done per session that involved a (link-goto:&quot;Long 
 Click on one to see more.
 []&lt;ImprovementDisplay|
 
-Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="" position="800,225" size="100,100">$H2[Creating a Concept]
+Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="" position="800,350" size="100,100">$H2[Creating a Concept]
 Each character is unique, and while the rules below will help fit a concept into the game system, they are very freeform, and will not give much aid in coming up with said concept. That said, there are some choices that can help guide character creation.
 a. &lt;b&gt;Playstyle.&lt;/b&gt;
 Do you want a character who spends a lot of time negotiating with NPCs, or do you want a character who punches first and asks questions later?
@@ -726,12 +693,12 @@ Some notable things to keep in mind throughout the process:
 	&lt;/tr&gt;
 	&lt;tr&gt;
 	&lt;td colspan=&quot;2&quot;&gt;
-	(set:$raceViewed to (passage:)&#39;s Name)(display:&quot;Race Skills&quot;)
+	(set:$raceViewed to (passage:)&#39;s name)(display:&quot;Race Skills&quot;)
 	&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-}</tw-passagedata><tw-passagedata pid="13" name="Magic" tags="" position="800,600" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="14" name="Attributes" tags="" position="800,975" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="15" name="Inventory, Backstory and Personality" tags="" position="800,850" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="16" name="EXP Usage Quick Reference" tags="" position="800,725" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="17" name="Items List" tags="" position="1100,225" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="18" name="Skills List" tags="table" position="1100,350" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="13" name="Inventory, Backstory and Personality" tags="" position="800,850" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="14" name="EXP Usage Quick Reference" tags="" position="800,725" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="15" name="Items List" tags="" position="1100,225" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="16" name="Skills List" tags="table" position="1100,350" size="100,100">{
 Click on a skill&#39;s name to see its description.
 [Header to the HTML table](c|
 (set:$skillsListView to &quot;&lt;table&gt;
@@ -810,26 +777,22 @@ Click on a skill&#39;s name to see its description.
 [HTML table ends](c|
 (set:$skillsListView to it + &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;)
 (print:$skillsListView)
-}</tw-passagedata><tw-passagedata pid="19" name="Character Sheet Download" tags="" position="1100,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="20" name="Locations" tags="" position="1300,350" size="100,100">$H2[Locations]
-</tw-passagedata><tw-passagedata pid="21" name="Organizations" tags="" position="1300,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="22" name="Deities/Higher Spirits" tags="" position="1300,600" size="100,100">$H2[Deities]
+}</tw-passagedata><tw-passagedata pid="17" name="Character Sheet Download" tags="" position="1100,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="18" name="Locations" tags="" position="1300,350" size="100,100">$H2[Locations]
+</tw-passagedata><tw-passagedata pid="19" name="Organizations" tags="" position="1300,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="20" name="Deities/Higher Spirits" tags="" position="1300,600" size="100,100">$H2[Deities]
 
 
-$H2[Higher Spirits]</tw-passagedata><tw-passagedata pid="23" name="Pop Culture" tags="" position="1300,725" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="24" name="Other" tags="" position="1300,850" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="25" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="26" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="27" name="Compendium" tags="section" position="1100,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="28" name="Lore" tags="section" position="1300,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="29" name="Long Rests, Short Rests, and Temporary Sanity" tags="in-progress" position="600,750" size="100,100">$H2[Long Rests, Short Rests, and Temporary Sanity]
-(set:_gritReal to False)\
+$H2[Higher Spirits]</tw-passagedata><tw-passagedata pid="21" name="Pop Culture" tags="" position="1300,725" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="22" name="Other" tags="" position="1300,850" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="23" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="24" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="25" name="Compendium" tags="section" position="1100,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="26" name="Lore" tags="section" position="1300,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="27" name="Long and Short Rests" tags="in-progress" position="600,750" size="100,100">$H2[Long Rests, Short Rests, and Temporary Sanity]
+
 Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
-Gritty Realism rules: {
-(if:_gritReal)[(link:&quot;Off&quot;)[(set:_gritReal to False)]]
-(else:)[(link:&quot;On&quot;)[(set:_gritReal to True)]]
-}
 
 $H3[Long Rests]
-Long Rests last for (if:_GritReal)[one week](else:)[8-24 hours], and will heal all of a character&#39;s Physical and Magical Health. It also resets the uses for many Features.
+Long Rests last for 8-24 hours, and will heal all of a character&#39;s Physical and Magical Health. It also resets the uses for many Features.
 
 $H3[Short Rests]
-Short rests last for (if:_GritReal)[a day](else:)[2 hours]. They restore dice from a pool of Short Rest dice; the die is the same one the character must roll for health gain, and the pool contains a number of dice equivalent to twice their Heartiness bonus plus two (including their Con modifier, minimum 4.) When a short rest is taken, (link-repeat:&quot;dice can be removed from this pool to be rolled&quot;)[($pop: &quot;For example: Zenn has a +1  to Heartiness. Therefore, they add two to that, getting 3, and then double it, to get 6. Zenn&#39;s hit die is a d6, so when they took a short rest, they decided to heal 4d6. If they take another Short Rest, they will only be able to heal the 2d6 remaining in their pool.&quot;)]. The result is healed Physical Health. When they take more short rests, they must heal from the remaining dice, and cannot heal from a Short Rest after they run out of dice. The dice pool is reset whenever the character takes a Long Rest. Short Rests cannot restore Magical Health.
+Short rests last for 2 hours. They restore dice from a pool of Short Rest dice; the die is the same one the character must roll for health gain, and the pool contains a number of dice equivalent to twice their Heartiness bonus plus two (including their Con modifier, minimum 4.) When a short rest is taken, (link-repeat:&quot;dice can be removed from this pool to be rolled&quot;)[(alert: &quot;For example: Zenn has a +1  to Heartiness. Therefore, they add two to that, getting 3, and then double it, to get 6. Zenn&#39;s hit die is a d6, so when they took a short rest, they decided to heal 4d6. If they take another Short Rest, they will only be able to heal the 2d6 remaining in their pool.&quot;, &quot;X&quot;)]. The result is healed Physical Health. When they take more short rests, they must heal from the remaining dice, and cannot heal from a Short Rest after they run out of dice. The dice pool is reset whenever the character takes a Long Rest. Short Rests cannot restore Magical Health.
 
-$H3[Temporary Sanity]
-</tw-passagedata><tw-passagedata pid="30" name="Conditions List" tags="in-progress" position="1100,600" size="100,100">[Conditions]&lt;H2|
+$H3[Alt Ruleset: Gritty Realism]
+Long and Short rests can be stretched to one week and one day respectively with this ruleset.</tw-passagedata><tw-passagedata pid="28" name="Conditions List" tags="in-progress" position="1100,600" size="100,100">[Conditions]&lt;H2|
 Click on a condition to see details:
 (box:&quot;X&quot;,6)+(border:&quot;solid&quot;)+(corner-radius:10)+(border-color:#9659eb)[• {(link-repeat:&quot;Absorbent&quot;)[
 	(replace:?ConditionDisplay)[
@@ -931,7 +894,7 @@ Click on a condition to see details:
 ]}
 (display:&quot;Conditions Temp Storage (to reduce input lag)&quot;)]
 
-[]&lt;ConditionDisplay|</tw-passagedata><tw-passagedata pid="31" name="Conditions Temp Storage (to reduce input lag)" tags="unused" position="100,750" size="100,100">• {(link-repeat:&quot;Controlled&quot;)[
+[]&lt;ConditionDisplay|</tw-passagedata><tw-passagedata pid="29" name="Conditions Temp Storage (to reduce input lag)" tags="unused" position="100,750" size="100,100">• {(link-repeat:&quot;Controlled&quot;)[
 	(replace:?ConditionDisplay)[
 	[Absorbent]&lt;H3|
 	&lt;br&gt;&lt;i&gt;Tags: Healing&lt;/i&gt;
@@ -1308,7 +1271,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="32" name="Doons" tags="" position="925,375" size="100,100">$H2[Apians]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.jpg&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="30" name="Doons" tags="" position="925,375" size="100,100">$H2[Apians]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.jpg&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 &lt;br&gt;Apians’ language, Apian, sounds very alien to other races, to the point of many not realizing it is a language at all; as a result, Apians are often considered to be animals, rather than a fully sentient race.
 &lt;p&gt;Apians are able to transform fruit that they eat into various other compounds, including both toxins (used for self-defense) and honey (as food storage.) Some farmers have found that Apians make useful pets or farm animals, keeping them for their honey production or pollination habits.
 {&lt;table&gt;
@@ -1337,7 +1300,7 @@ Click on a condition to see details:
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-}</tw-passagedata><tw-passagedata pid="33" name="Exterreri" tags="" position="925,500" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="Ferfaen" tags="" position="925,625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Hadalites" tags="" position="925,750" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="Hiverscruffs" tags="" position="925,875" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Marigen" tags="" position="925,1000" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="Phorads" tags="" position="925,1125" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Remagi" tags="" position="925,1250" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="Valdiens" tags="" position="925,1375" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="Wyrmlings" tags="" position="925,1500" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="42" name="SkillsInit" tags="data-storage" position="1825,250" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="31" name="Exterreri" tags="" position="925,500" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Ferfaen" tags="" position="925,625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Hadalites" tags="" position="925,750" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="Hiverscruffs" tags="" position="925,875" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Marigen" tags="" position="925,1000" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="Phorads" tags="" position="925,1125" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Remagi" tags="" position="925,1250" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="Valdiens" tags="" position="925,1375" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Wyrmlings" tags="" position="925,1500" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="SkillsInit" tags="data-storage" position="1825,250" size="100,100">{
 (set:$skillsMaster to 
 (a:
 
@@ -1358,7 +1321,7 @@ Click on a condition to see details:
 	
 )
 )
-}</tw-passagedata><tw-passagedata pid="43" name="ItemsInit" tags="data-storage" position="1825,375" size="100,100">{}</tw-passagedata><tw-passagedata pid="44" name="Code/Admin Stuff" tags="section" position="1900,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="45" name="Sort" tags="data-processing" position="1950,250" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="41" name="ItemsInit" tags="data-storage" position="1825,375" size="100,100">{}</tw-passagedata><tw-passagedata pid="42" name="Code/Admin Stuff" tags="section" position="1900,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="43" name="Sort" tags="data-processing" position="1950,250" size="100,100">{
 {&lt;!--&#96;$sortedList&#96; is the list to be sorted, set (passed in) by the passage that uses this &#96;(display:)&#96;. &#96;$sortIndexType&#96; is an integer value representing the index of the data value being used to sort the list.--&gt;
 
 &lt;!--resetting the list by the wanted index. &#96;_sortableIndices&#96; turns the list of indices into a single array that can be sorted using the &#96;(sorted:)&#96; macro.--&gt;
@@ -1394,9 +1357,9 @@ Click on a condition to see details:
 	(set:_masterIndex to (number:_masterIndex&#39;s 2))
 	(set:$sortedList to it + (a:$masterList&#39;s (_masterIndex)))
 ]}
-}</tw-passagedata><tw-passagedata pid="46" name="Sort-nowhitespace" tags="data-processing" position="1950,375" size="100,100">{{(set: _sortableIndices to (a:))(set:_indexAppended to &quot;&quot;)}{(for: each _item, ...$sortedList)[(set:_indexAppended to (string:_item&#39;s $sortIndexType) + &quot;▮&quot; + (string:_item&#39;s 6))(set:_sortableIndices to it + (a:_indexAppended))]}{(set:_sortableIndices to (sorted: ..._sortableIndices))(set:$sortedList to (a:))}{(for: each _item, ..._sortableIndices)[(set:_masterIndex to 0)(set:_masterIndex to (split: (p:&quot;▮&quot;), _item))(set:_masterIndex to (number:_masterIndex&#39;s 2))	(set:$sortedList to it + $masterList&#39;s (_masterIndex))]}}</tw-passagedata><tw-passagedata pid="47" name="hovertest" tags="" position="1825,500" size="100,100">[22]&lt;hover|
+}</tw-passagedata><tw-passagedata pid="44" name="Sort-nowhitespace" tags="data-processing" position="1950,375" size="100,100">{{(set: _sortableIndices to (a:))(set:_indexAppended to &quot;&quot;)}{(for: each _item, ...$sortedList)[(set:_indexAppended to (string:_item&#39;s $sortIndexType) + &quot;▮&quot; + (string:_item&#39;s 6))(set:_sortableIndices to it + (a:_indexAppended))]}{(set:_sortableIndices to (sorted: ..._sortableIndices))(set:$sortedList to (a:))}{(for: each _item, ..._sortableIndices)[(set:_masterIndex to 0)(set:_masterIndex to (split: (p:&quot;▮&quot;), _item))(set:_masterIndex to (number:_masterIndex&#39;s 2))	(set:$sortedList to it + $masterList&#39;s (_masterIndex))]}}</tw-passagedata><tw-passagedata pid="45" name="hovertest" tags="" position="1825,500" size="100,100">[22]&lt;hover|
 (mouseover:?hover)[(alert:&quot;hovered&quot;)]
-(link:&quot;eh&quot;)[(rerun:?hover)]</tw-passagedata><tw-passagedata pid="48" name="test" tags="table test" position="1900,1200" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
+(link:&quot;eh&quot;)[(rerun:?hover)]</tw-passagedata><tw-passagedata pid="46" name="test" tags="table test" position="1900,1200" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
 	&lt;tr&gt;
 	(for: each _j, ...(range:1,9))[
@@ -1416,7 +1379,7 @@ Click on a condition to see details:
 	]
 	&lt;/tr&gt;
 ]
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="49" name="og not working code for skills" tags="unused" position="100,875" size="100,100">&lt;!--ok so this is how this is SUPPOSED to work:--&gt;
+&lt;/table&gt;</tw-passagedata><tw-passagedata pid="47" name="og not working code for skills" tags="unused" position="100,875" size="100,100">&lt;!--ok so this is how this is SUPPOSED to work:--&gt;
 &lt;!--one, we use the index of the skill to generate a new description variable unique to each row and corresponding to it. the generation works.--&gt;
 &lt;!--two, we use the unique variable to retrieve the relevant data once the button is clicked. this does not work, since for some reason every single variable is getting set to the final one, even though their data filling is still in the loop.--&gt;
 [(set:$skillsListView to it + &quot;
@@ -1430,7 +1393,7 @@ Click on a condition to see details:
 		&lt;td&gt;&quot; + (string:$skillsTS&#39;s 3) + &quot;&lt;/td&gt;
 	&lt;/tr&gt;
 &quot;)](c|&lt;!--this part was the original code. its issue was--&gt;
-&lt;!--that it wouldnt load each specific message--&gt;</tw-passagedata><tw-passagedata pid="50" name="format-popup" tags="unused" position="1950,500" size="100,100">{(for:each _skill, ...$skillsMaster)[
+&lt;!--that it wouldnt load each specific message--&gt;</tw-passagedata><tw-passagedata pid="48" name="format-popup" tags="unused" position="1950,500" size="100,100">{(for:each _skill, ...$skillsMaster)[
 	(set:_skill&#39;s 7 to &quot;
 		[&quot; + (string:_skill&#39;s 1) + &quot;
 	(click:?desc&quot; + (string:_skill&#39;s 6) + &quot;)[
@@ -1453,21 +1416,21 @@ Click on a condition to see details:
 alert
 
 (color:$themeChosen&#39;s 5)[&lt;i&gt;(string:_skill&#39;s 1).&lt;/i&gt;]
-(string:_skill&#39;s 5)</tw-passagedata><tw-passagedata pid="51" name="Credits" tags="" position="100,1000" size="100,100">&lt;center&gt;(box:&quot;=XXXX=&quot;)+$H2[Credits]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[Main Writer
+(string:_skill&#39;s 5)</tw-passagedata><tw-passagedata pid="49" name="Credits" tags="" position="100,1000" size="100,100">&lt;center&gt;(box:&quot;=XXXX=&quot;)+$H2[Credits]
+$HB2(box:&quot;=XXXXXX=&quot;)[Main Writer
 &lt;b&gt;ClariseTG&lt;/b&gt;]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[&lt;span title=&quot;Everyone who bounced ideas with me early on in 3.0&quot;&gt;Idea Squad™
+$HB2(box:&quot;=XXXXXX=&quot;)[&lt;span title=&quot;Everyone who bounced ideas with me early on in 3.0&quot;&gt;Idea Squad™
 &lt;b&gt;LonelyRollingStar
 Kairon Astrannil&lt;/b&gt;&lt;/span&gt;]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[Art
+$HB2(box:&quot;=XXXXXX=&quot;)[Art
 &lt;b&gt;Rathofmeow
 ClariseTG&lt;/b&gt;]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[Beta Test 1 (3.0)
+$HB2(box:&quot;=XXXXXX=&quot;)[Beta Test 1 (3.0)
 &lt;b&gt;ExplodingWhale
 LonelyRollingStar
 Rai
 &#96;the_Skeleton_king&#96;&lt;/b&gt;]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[Beta Test 2 (3.1-3.2)
+$HB2(box:&quot;=XXXXXX=&quot;)[Beta Test 2 (3.1)
 &lt;b&gt;alabamanate
 Alzalith
 Carbon
@@ -1476,17 +1439,16 @@ Jimara
 Kairon Astrannil
 LonelyRollingStar
 Potion O&#39;Confusion
-Rai
+Vall
 &#96;the_Skeleton_king&#96;
-Torra Evergreen&lt;/b&gt;
-&lt;i&gt;A2&lt;/i&gt;
-&lt;b&gt;annabherbst (shwarma)
+Torra Evergreen
+annabherbst (shwarma)
 Brainstorm2341
 Tardzard (Celes)&lt;/b&gt;]
-(background: $themeChosen&#39;s 6)+(box:&quot;=XXXXXX=&quot;)+(corner-radius:12)[Additional Help with 3.2
+$HB2(box:&quot;=XXXXXX=&quot;)[Additional Help with 3.2
 &lt;b&gt;Ultima Ollie&lt;/b&gt;]
 &lt;/center&gt;
-[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="52" name="SkillsInit (Deprecated)" tags="unused" position="2075,250" size="100,100">{
+[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="50" name="SkillsInit (Deprecated)" tags="unused" position="2075,250" size="100,100">{
 (set:$skillsMaster to 
 (a:
 (a:&quot;Careful Candymaker&quot;,&quot;None&quot;,33,&quot;None&quot;,
@@ -1506,7 +1468,7 @@ Tardzard (Celes)&lt;/b&gt;]
 	)
 )
 )
-}</tw-passagedata><tw-passagedata pid="53" name="test 2" tags="test" position="1900,1050" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
+}</tw-passagedata><tw-passagedata pid="51" name="test 2" tags="test" position="1900,1050" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;&lt;tr&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1542,7 +1504,7 @@ Tardzard (Celes)&lt;/b&gt;]
 ]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="54" name="test 3" tags="test" position="2025,1050" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
+</tw-passagedata><tw-passagedata pid="52" name="test 3" tags="test" position="2025,1050" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;$mapFormat&quot; + (string:_i) + (string:_j)&quot;[&lt;div class=\&quot;mapCol2\&quot;&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1557,7 +1519,7 @@ Tardzard (Celes)&lt;/b&gt;]
 ]
 (set:$mapGrid to it + &quot;&lt;/div&gt;&quot;)
 (print:$mapGrid)}
-</tw-passagedata><tw-passagedata pid="55" name="MapInit" tags="" position="2075,375" size="100,100">{
+</tw-passagedata><tw-passagedata pid="53" name="MapInit" tags="" position="2075,375" size="100,100">{
 (for: each _i, ...(range:1,9))[
 	(for: each _j, ...(range:1,9))[
 		(print:&quot;
@@ -1569,7 +1531,7 @@ Tardzard (Celes)&lt;/b&gt;]
 	]
 ]
 
-}</tw-passagedata><tw-passagedata pid="56" name="og race table" tags="unused" position="100,1125" size="100,100">{&lt;table&gt;
+}</tw-passagedata><tw-passagedata pid="54" name="og race table" tags="unused" position="100,1125" size="100,100">{&lt;table&gt;
 	&lt;tbody&gt;
 	&lt;tr&gt;
 		&lt;td class=&quot;gray2&quot; rowspan=&quot;2&quot;&gt;Diet: [Fruit, Sugary Food]&lt;b|&lt;/td&gt;
@@ -1589,13 +1551,13 @@ Tardzard (Celes)&lt;/b&gt;]
 		&lt;td&gt;??&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="57" name="DropdownButton" tags="" position="2075,500" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="55" name="DropdownButton" tags="" position="2075,500" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
 ](else-if:it is 1)[
-(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="58" name="Weapons" tags="table" position="1100,725" size="100,100">$H2[Weapons]</tw-passagedata><tw-passagedata pid="59" name="Race Skills" tags="data-processing" position="1825,625" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
+(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="56" name="Weapons" tags="table" position="1100,725" size="100,100">$H2[Weapons]</tw-passagedata><tw-passagedata pid="57" name="Race Skills" tags="data-processing" position="1825,625" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
 (for: each _skill, ...$racialSkills)[
 
 $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quot;)[((print:_skill&#39;s 3) EXP)](else:)[(Required)] (print:_skill&#39;s 5)
-]}</tw-passagedata><tw-passagedata pid="60" name="Character Sheet" tags="table" position="1300,975" size="100,100">{{&lt;style&gt;tw-hook {
+]}</tw-passagedata><tw-passagedata pid="58" name="Character Sheet" tags="table" position="1300,975" size="100,100">{{&lt;style&gt;tw-hook {
 }&lt;/style&gt;}
 &lt;i&gt;$H2[Character Name (Nickname)]&lt;/i&gt;
 &lt;table&gt;
@@ -1639,7 +1601,7 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 	]
 ]
 
-}</tw-passagedata><tw-passagedata pid="61" name="CharSheet Stats" tags="" position="1950,625" size="100,100">&lt;center&gt;
+}</tw-passagedata><tw-passagedata pid="59" name="CharSheet Stats" tags="" position="1950,625" size="100,100">&lt;center&gt;
 		{(set:$charShSB to 
 		(css:&quot;line-height:3; vertical-align:middle;&quot;) + (text-style:&quot;Bold&quot;))}
 		&lt;table&gt;
@@ -1672,7 +1634,7 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 			&lt;td&gt;$charShSB[+X]&lt;/td&gt;
 		&lt;/tr&gt;
 		&lt;/table&gt;
-&lt;/center&gt;</tw-passagedata><tw-passagedata pid="62" name="CharSheet Stats II" tags="" position="2075,625" size="100,100">{(set:_Statblock to &quot;&lt;table&gt;&quot;)
+&lt;/center&gt;</tw-passagedata><tw-passagedata pid="60" name="CharSheet Stats II" tags="" position="2075,625" size="100,100">{(set:_Statblock to &quot;&lt;table&gt;&quot;)
 (set:_statnames to $activeChar&#39;s stat_names)
 (set:_stats to $activeChar&#39;s stats)
 (for: each num-type _Stat,  1,2,3,4,5,6,7)[
@@ -1681,7 +1643,7 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 	(set:_Statblock to it + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)
 ]
 (set:_Statblock to it + &quot;&lt;/table&gt;&quot;)
-(print:_Statblock)}</tw-passagedata><tw-passagedata pid="63" name="CharacterInit" tags="data-processing" position="2200,250" size="100,100">{(set:$activeChar to (dm:
+(print:_Statblock)}</tw-passagedata><tw-passagedata pid="61" name="CharacterInit" tags="data-processing" position="2200,250" size="100,100">{(set:$activeChar to (dm:
 &quot;name&quot;, &quot;&quot;,
 &quot;stat_names&quot;, (a:&quot;Str&quot;,&quot;Dex&quot;,&quot;Con&quot;,&quot;Int&quot;,&quot;Wis&quot;,&quot;Cha&quot;,&quot;Mag&quot;),
 &quot;stats&quot;, (a:0,0,0,0,0,0,0),
@@ -1705,9 +1667,13 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 &lt;!--Power: Description, Element, Archetype, then stages--&gt;
 &lt;!--Skills: Array of indices--&gt;
 &lt;!--Racial Needs: Diet, Movements--&gt;
-&lt;!--lmao can you tell ive been working with json lately--&gt;}</tw-passagedata><tw-passagedata pid="64" name="skill-popup" tags="display" position="2200,375" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="65" name="Combat" tags="table in-progress" position="600,875" size="100,100">$H2[Combat]
+&lt;!--lmao can you tell ive been working with json lately--&gt;}</tw-passagedata><tw-passagedata pid="62" name="skill-popup" tags="display" position="2200,375" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="63" name="Combat" tags="table in-progress" position="600,875" size="100,100">$H2[Combat]
 &lt;i&gt;Scroll to...&lt;/i&gt;
-(link-repeat:&quot;Starting Combat&quot;)[(scroll:?StartingCombat)]
+(link-repeat:&quot;Starting Combat&quot;)[(scroll:?page, ?StartingCombat)]
+(link-repeat:&quot;Rounds, Turns and Initiative&quot;)[(scroll:?page, ?RoundsTurnsandInitiative)]
+(link-repeat:&quot;Action Speed/Type&quot;)[(scroll:?page, ?ActionSpeedType)]
+(link-repeat:&quot;Pseudo-Combat&quot;)[(scroll:?page, ?PseudoCombat)]
+(link-repeat:&quot;Contests&quot;)[(scroll:?page, ?Contests)]
 
 Combat is hectic and often involves many things going on at once; as such, once combat starts, time is subdivided into &lt;i&gt;rounds&lt;/i&gt; and &lt;i&gt;turns&lt;/i&gt;.
 
@@ -1784,15 +1750,14 @@ Generally, the rule is that if the action being taken can be done at the same ti
 
 As a special case, getting up from being Prone counts as a Move Action, consuming the user&#39;s movement speed.
 
-$H3[Pseudo-Combat]
-&lt;i&gt;Main Article: [[Pseudo-Combat]]&lt;/i&gt;
+$H3[Pseudo-Combat]&lt;PseudoCombat|
+Pseudo-Combat is a variant of combat where initiative is not clearly established and held. It is up to the DM and players to ensure all players engage as much as they&#39;d like to. Rather than adhering to a structure of turns and actions, all characters act and react as if they were in a non-combat roleplay setting. However, statistics such as damage, health, and conditions are upheld, with conditions taking round-by-round effects roughly once every 6 seconds within roleplay time.
 
 $H3[Contests]&lt;Contests|
-</tw-passagedata><tw-passagedata pid="66" name="Death Saves" tags="" position="600,1000" size="100,100">Death Saves are a series of Constitution checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="67" name="Pseudo-Combat" tags="" position="600,1125" size="100,100">$H2[Pseudo-Combat]
-</tw-passagedata><tw-passagedata pid="68" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
+</tw-passagedata><tw-passagedata pid="64" name="Death Saves" tags="" position="600,1000" size="100,100">Death Saves are a series of Constitution checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="65" name="Pseudo-Combat" tags="" position="600,1125" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
 (link-repeat:&quot;🔎 Search&quot;)[(replace:?Results)[{(alert: &quot;(display:\&quot;SearchResults\&quot;)&quot;, &quot;X&quot;)}]]{
 }\
-[]&lt;Results|</tw-passagedata><tw-passagedata pid="69" name="SearchResults" tags="data-processing" position="350,550" size="100,100">{$H4[&lt;i&gt;Search Results for &quot;$search&quot;...&lt;/i&gt;]&lt;br&gt;
+[]&lt;Results|</tw-passagedata><tw-passagedata pid="67" name="SearchResults" tags="data-processing" position="350,550" size="100,100">{$H4[&lt;i&gt;Search Results for &quot;$search&quot;...&lt;/i&gt;]&lt;br&gt;
 (unless:$search is 0)[&lt;!--SETTING UP THE SEARCH--&gt;
 &lt;!--search term: $\search--&gt;
 &lt;!--looks for exact matches, like ctrl f--&gt;
@@ -1818,10 +1783,10 @@ $H3[Contests]&lt;Contests|
 	• (link-goto:_result)&lt;br&gt;
 ]]]
 (if:$results&#39;s length is 0)[No results found.]
-}</tw-passagedata><tw-passagedata pid="70" name="RacesLore" tags="" position="1300,225" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="71" name="Password Lock" tags="Temporary" position="100,1250" size="100,100">Please enter the password to access the beta PHB.
+}</tw-passagedata><tw-passagedata pid="68" name="RacesLore" tags="" position="1300,225" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="69" name="Password Lock" tags="Temporary" position="100,1250" size="100,100">Please enter the password to access the beta PHB.
 (input-box: bind _entryPasscode, &quot;X&quot;, 1)\
-(link-repeat:&quot;Enter&quot;)[(if:_entryPasscode is &quot;buttquack&quot;)[(go-to:&quot;Homepage&quot;)]]</tw-passagedata><tw-passagedata pid="72" name="Statistics and Attributes" tags="in-progress table" position="798.3333333333334,476.6666666666667" size="100,100">$H2[Rolling Statistics and Choosing Attributes]
-When making skill checks in-game, the source of a character&#39;s roll modifiers are their Statistics– or core numerical scores for their capabilities– and their Attribute points, which flesh out the finer details of their skillsets.
+(link-repeat:&quot;Enter&quot;)[(if:_entryPasscode is &quot;buttquack&quot;)[(go-to:&quot;Homepage&quot;)]]</tw-passagedata><tw-passagedata pid="70" name="Statistics and Proficiencies" tags="in-progress table" position="800,475" size="100,100">$H2[Rolling Statistics and Choosing Proficiencies]
+When making skill checks in-game, the source of a character&#39;s roll modifiers are their Statistics– or core numerical scores for their capabilities– and their Proficiency points, which flesh out the finer details of their skillsets.
 $H3[Statistics]
 There are 7 statistics in Remagica. When a new character is created, roll 2d10 for each statistic, totalling up to 7 numbers ranged 1-20. Numbers under 6 can be rerolled. These 7 numbers can be assigned to the statistics as the player chooses upon character creation.
 &lt;i&gt;Click one to learn more about it.&lt;/i&gt;
@@ -1870,7 +1835,7 @@ There are 7 statistics in Remagica. When a new character is created, roll 2d10 f
 $H3[Attribute Points]
 A character&#39;s attributes determine their more specific capabilities. Every single skill check in the game references an attribute; these attributes stack on top of a character&#39;s main 7 statistics.
 A character starts with 7 points that they can spread between their attributes; any one attribute can have up to 2 attribute points in it.
-(b4r-color:$themeChosen&#39;s 6)+(b4r:&quot;solid&quot;)+(corner-radius:12)+(box:&quot;x&quot;,5)[(display:&quot;Attributes Quick Reference&quot;)]
+(link-repeat:&quot;Show Attributes Quick Reference&quot;)[]
 $H3[Derived Statistics]
 The character has a handful of other important numbers, which are derived from their main Statistics and Attributes.
 {&lt;table&gt;
@@ -1898,7 +1863,7 @@ The character has a handful of other important numbers, which are derived from t
 ]&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-}</tw-passagedata><tw-passagedata pid="73" name="Rolling Health" tags="in-progress" position="800,1100" size="100,100">$H2[Rolling Health]{
+}</tw-passagedata><tw-passagedata pid="71" name="Rolling Health" tags="in-progress" position="800,1100" size="100,100">$H2[Rolling Health]{
 (set:_names to (a:))
 (for: each _race, ...$racesTech)[(set:_names to it + (a:_race&#39;s 1))]
 (set:_raceIndices to (dm:...(interlaced:_names, (range:1,11))))
@@ -1918,7 +1883,8 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 1)d(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 2) + Mag MP&lt;/center&gt;]
 
 &lt;/td&gt;}&lt;/tr&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="74" name="RacesTechInit" tags="data-storage" position="2200,500" size="100,100">{
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="72" name="RacesTechInit" tags="data-storage" position="2200,500" size="100,100">{
+(set:$raceIndex to (a:&quot;Apians&quot;))
 &lt;!--TITLE|HP|MP|Skills List--&gt;
 (set:$racesTech to (a:
 (a:&quot;Apian&quot;, 18, (a:4,4), 15, (a:3,4)),
@@ -1932,8 +1898,76 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 (a:&quot;Remagus&quot;, 21, (a:3,6), 40, (a:5,8)),
 (a:&quot;Valdien&quot;, 25, (a:3,6), 20, (a:3,6)),
 (a:&quot;Wyrmling&quot;, 25, (a:3,6), 18, (a:2,6))
-))}</tw-passagedata><tw-passagedata pid="75" name="Race List" tags="" position="925,125" size="100,100">$H2[Races]
-</tw-passagedata></tw-storydata>
+))}</tw-passagedata><tw-passagedata pid="73" name="Race List" tags="" position="925,125" size="100,100">$H2[Races]
+</tw-passagedata><tw-passagedata pid="74" name="Homepage (As of 3.1.12)" tags="" position="100,1375" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[
+&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_dark.svg&quot;&gt;&lt;/img&gt;](else-if:it is 1)[
+&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot;&gt;&lt;/img&gt;](else:)[
+&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.png&quot;&gt;&lt;/img&gt;]
+}
+
+(text-style:&quot;bold&quot;)[$H3[PHB]]&lt;PHBDrop|{
+	(click:?PHBDrop)[(replace:?PHBDrop)[{
+		$H3[PHB]
+		&lt;br&gt;[Gameplay]&lt;PHBGameDrop|
+		(click:?PHBGameDrop)[(replace:?PHBGameDrop)[{
+			$H4[Gameplay]
+			}&lt;p&gt;[[Overall Gameplay]]
+			&lt;p&gt;[[Attributes Quick Reference]]
+			&lt;p&gt;[[Damage (Physical, Magical, and Sanity)]]
+			&lt;p&gt;[[Long and Short Rests]]
+			&lt;p&gt;[[Combat]]
+			&lt;p&gt;[[Pseudo-Combat]]
+			&lt;p&gt;[[Advancement and Improvements]]\
+		]]
+		&lt;br&gt;[Creating a Character]&lt;PHBCharDrop|
+		(click:?PHBCharDrop)[(replace:?PHBCharDrop)[{
+			$H4[Creating a Character]
+			}&lt;p&gt;[[Creating a Concept]]
+			&lt;p&gt;[Races]&lt;PHBCharRaceDrop|
+			(click:?PHBCharRaceDrop)[{
+				&lt;p&gt;   [[Race List]]
+				&lt;p&gt; ㅤ ㅤ [[Apians]]
+				&lt;p&gt; ㅤ ㅤ [[Doons]]
+				&lt;p&gt; ㅤ ㅤ [[Exterreri]]
+				&lt;p&gt; ㅤ ㅤ [[Ferfaen]]
+				&lt;p&gt; ㅤ ㅤ [[Hadalites]]
+				&lt;p&gt; ㅤ ㅤ [[Hiverscruffs]]
+				&lt;p&gt; ㅤ ㅤ [[Marigen]]
+				&lt;p&gt; ㅤ ㅤ [[Phorads]]
+				&lt;p&gt; ㅤ ㅤ [[Remagi]]
+				&lt;p&gt; ㅤ ㅤ [[Valdiens]]
+				&lt;p&gt; ㅤ ㅤ [[Wyrmlings]]
+
+				
+			}]
+			&lt;p&gt;[[Magic]]
+			&lt;p&gt;[[Attributes]]
+			&lt;p&gt;[[Inventory, Backstory and Personality]]
+			&lt;p&gt;[[EXP Usage Quick Reference]]\
+			]]
+		&lt;br&gt;[Game Compendium]&lt;PHBCompDrop|
+		(click:?PHBCompDrop)[(replace:?PHBCompDrop)[{
+			$H4[Game Compendium]
+			}&lt;p&gt;[[Weapons]]
+			&lt;p&gt;[[Items List]]
+			&lt;p&gt;[[Skills List]]
+			&lt;p&gt;[[Conditions List]]
+			&lt;p&gt;[[Character Sheet]]{
+		}]]
+	}]]
+}
+(text-style:&quot;bold&quot;)[$H3[Lore]]&lt;LoreDrop|
+{(click:?LoreDrop)[(replace:?LoreDrop)[{
+$H3[Lore]{
+}&lt;br&gt;[[Races-&gt;RacesLore]]{
+}&lt;br&gt;[[Locations]]{
+}&lt;br&gt;[[Organizations]]{
+}&lt;br&gt;[[Deities/Higher Spirits]]{
+}&lt;br&gt;[[Pop Culture]]{
+}&lt;br&gt;[[Other]]\
+}]]}
+Remagica by ClariseTG
+[[Credits]]</tw-passagedata><tw-passagedata pid="75" name="Character Sheet Links" tags="" position="1300,1100" size="100,100">[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="76" name="Character Creation Tutorial" tags="" position="800,225" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="77" name="Casting Archetypes" tags="" position="800,600" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

@@ -323,6 +323,7 @@ Array
 {(display:&quot;AttributesInit&quot;)}
 {(display:&quot;MagicSkillsInit&quot;)}
 {(display:&quot;CastingStylesInit&quot;)}
+{(display:&quot;WeaponsInit&quot;)}
 
 (set:$skillsSortable to $skillsMaster)
 (set:$skillSelected to 1)
@@ -1607,7 +1608,39 @@ TweeTowhee&lt;/b&gt;]
 &lt;/table&gt;}</tw-passagedata><tw-passagedata pid="41" name="DropdownButton" tags="" position="2175,500" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
 ](else-if:it is 1)[
 (link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="42" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
-</tw-passagedata><tw-passagedata pid="43" name="Race Skills" tags="data-processing" position="1925,625" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
+(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)(set:_index to 0)\
+{
+&lt;!--header--&gt;
+(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	|=
+	Name
+	|=
+	Effect
+]
+&lt;!--table body--&gt;
+(for: each (_tag), 
+	...(sorted: via its 1, 
+		...$weaponsList
+		)
+)[{
+	(if:_index % 2 is 1)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	|=
+	(print:_tag&#39;s 1)
+	|=
+	(print:_tag&#39;s 2)
+	]
+	](else:)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
+	|=
+	(print:_tag&#39;s 1)
+	|=
+	(print:_tag&#39;s 2)
+	]
+	]
+(set:_index to it + 1)}]}\
+&lt;!--this is spaghetti code--&gt;\
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="43" name="Race Skills" tags="data-processing" position="1925,625" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
 (for: each _skill, ...$racialSkills)[
 
 $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quot;)[((print:_skill&#39;s 3) EXP)](else:)[(Required)] (print:_skill&#39;s 5)
@@ -2723,7 +2756,15 @@ Casting:
 	]
 	]
 (set:_index to it + 1)}]}\
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="97" name="WeaponsInit" tags="data-storage" position="2050,875" size="100,100">{(set:$weaponsList to (a:
+(a: &quot;Shiv&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, DC AC; single target within 2 tiles. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 1 tile closer to the user, if possible.&quot;),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Bludgeoning) damage on a success. On a success, the attack will leave the target&#39;s defenses open and lower their AC by 1 for 6 seconds.&quot;),
+(a: &quot;Shortsword&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 + 2 Physical (Slashing) damage on a success. On a critical success, the target must make a Heartiness check against a DC of 10 + the user&#39;s total Handiwork bonus or gain a level of Bleeding.&quot;),
+(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
+))}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

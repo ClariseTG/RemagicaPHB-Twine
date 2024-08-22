@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Remagica 4.0 Site.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Remagica 4.0 Site" startnode="1" creator="Twine" creator-version="2.3.0-beta1" ifid="DEB89225-E185-4437-AF46-E0CA21C8B86F" zoom="0.6" format="Harlowe" format-version="3.0.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+<tw-storydata name="Remagica 4.0 Site" startnode="1" creator="Twine" creator-version="2.3.0-beta1" ifid="DEB89225-E185-4437-AF46-E0CA21C8B86F" zoom="1" format="Harlowe" format-version="3.0.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .lexend-deca-<uniquifier> {
@@ -2173,6 +2173,7 @@ HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="72" name="Intuitive" tags="" position="1050,775" size="100,100">$H3[Intuitive]
 Connected to their environment and aware of minute details and changes, those who embrace the world with their intuition and keen senses find themselves seeing one thing when everyone else sees another. A unique outlook lends itself to identifying the unique identities in the world around them.
+(Intuitive ends up leading to both ranger-like archetypes, druid-like archetypes, and crafting-heavy builds.)
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Perception and Aura.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 12&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 12&#39;s 2)</tw-passagedata><tw-passagedata pid="73" name="Tactical" tags="" position="1050,900" size="100,100">$H3[Tactical]
@@ -2183,8 +2184,10 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$skills
 Those who refine their skills thoroughly 
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 4 Bonus Proficiency Points between Stealth, Handiwork, History, Investigation, Tracking, Insight, and Appraisal.
+(Thorough is meant to be similar to a rogue in some ways.)
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="75" name="Tough" tags="" position="1050,1150" size="100,100">$H3[Tough]
 The toughest of us can rely on their physical might to keep themselves going and control the situation around them. There is technique to asserting strength, developed over years of use-- those who are tough know how to use themselves to the fullest.
+(Tough lends itself to HP tanks and front-line fighters. There should be other directions it can take, though.)
 HP: &lt;b&gt;15&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Endurance and Heartiness.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="76" name="Well-Read" tags="" position="1050,1275" size="100,100">$H3[Well-Read]
@@ -2502,7 +2505,8 @@ Casting:
 (a: &quot;New Form&quot;, &quot;Once per Short Rest, an Otsoa can choose to cast one Form Tag on themself as a Reaction.&quot;, (a: -2), (a:), &quot;&quot;), 
 (a: &quot;Stoneskin&quot;, &quot;Zaileas’ magic protects them from harm. Any time a Zailea would take damage, they can choose to have their magic shield them and reduce the damage they take as a Free Action. However, they must use an Action to recharge this ability before it can be used again. Their Damage Reduction applies after all other modifiers, such as Resistances and Vulnerabilities, are applied.&quot;, (a: -2), (a:), &quot;&quot;), 
 (a: &quot;Impermeable&quot;, &quot;When a Damage Reduction is enough that the damage taken is zero, the Zaliea is immune to the secondary effects of the source of damage.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Starting Casting&quot;, &quot;The character can cast magic from the first two rows of their casting table.&quot;, (a: -2), (a:), &quot;&quot;)
+(a: &quot;Starting Casting&quot;, &quot;The character can cast magic from the first two rows of their casting table.&quot;, (a: -2), (a:), &quot;&quot;), 
+(a: &quot;Second Aid&quot;, &quot;An Azurite can choose to double the HP gained from a short rest for a creature.&quot;, (a: -2), (a:), &quot;&quot;)
 
 ))}</tw-passagedata><tw-passagedata pid="87" name="Exterreri" tags="table" position="925,650" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
@@ -2552,15 +2556,13 @@ Casting:
 &lt;td class=&quot;gray2&quot; width=&quot;8%&quot;&gt;Row&lt;/td&gt;
 &lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Damage&lt;/td&gt;
 &lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Damage Cost&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Burst Damage&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Burst Cost&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;
 &lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
 &lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="89" name="Shioreta" tags="table" position="1175,650" size="100,100">$H3[Shioreta]
@@ -2600,7 +2602,20 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 8&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 8&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 9&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 9&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+&lt;b&gt;(print:$magicMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 14&#39;s 2)
 Casting:
+{&lt;table&gt;
+&lt;tr&gt;
+&lt;td class=&quot;gray2&quot; width=&quot;8%&quot;&gt;Row&lt;/td&gt;
+&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Healing&lt;/td&gt;
+&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Healing Cost&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;}
 
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="93" name="Zailea" tags="table" position="1175,1025" size="100,100">$H3[Zailea]
 &#96;[Description]&#96;

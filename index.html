@@ -176,9 +176,11 @@ li {
   padding: 0 0 0 0;
 }
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
-</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
+
+</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag>,<tw-tag name="display-macro" color="green"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_dark.svg&quot;&gt;&lt;/img&gt;](else-if:it is 1)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot;&gt;&lt;/img&gt;](else:)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.png&quot;&gt;&lt;/img&gt;]
@@ -250,37 +252,8 @@ Array
 [[&lt;img class=&quot;imgbox&quot; src=&quot;assets/star_icon_light.svg&quot;&gt;&lt;/img&gt;-&gt;Homepage]]]
 
 (unless:$optionsShown)[(link:&quot;Options&quot;)[(set:$optionsShown to true)(show:?Options)]]
-(if:$optionsShown)[Theme:
-{(unless:$themeChosen&#39;s 4 is &quot;Light&quot;)[
-	(link:&quot;Light&quot;)[
-		(set:$themeChosen to $themeLight)(go-to:(passage:)&#39;s name)
-	]
-](else:)[
-	Light
-]}
-{(unless:$themeChosen&#39;s 4 is &quot;Dark&quot;)[
-	&lt;br&gt;(link:&quot;Dark&quot;)[
-		(set:$themeChosen to $themeDark)(go-to:(passage:)&#39;s name)
-	]
-](else:)[
-	&lt;br&gt;Dark
-]}&lt;br&gt;
-
-&lt;br&gt;Text Size:&lt;br&gt;&lt;center&gt;
-{(unless:$baseSize &lt; 0.3)[
-	(link-repeat:&quot;&lt;&quot;)[
-		(set:$baseSize to it - 0.1)
-		(go-to:(passage:)&#39;s name)
-	]
-](else:)[
-	-
-]
-(link-repeat:&quot;&gt;&quot;)[
-	(set:$baseSize to it + 0.1)
-	(go-to:(passage:)&#39;s name)
-]}&lt;/center&gt;
-
-&lt;br&gt;(link:&quot;\^\^Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]
+(if:$optionsShown)[\
+(display:&quot;Settings&quot;)\
 ]&lt;Options|
 
 [[Attributes-&gt;Attributes Quick Reference]]{{
@@ -310,6 +283,7 @@ Array
 
 &lt;!--Setting up Headers--&gt;
 (set:$baseSize to 1)
+(set:$popupHeight to 30)
 
 &lt;!--Other--&gt;
 (set:$optionsShown to false)
@@ -325,15 +299,7 @@ Array
 {(display:&quot;CastingStylesInit&quot;)}
 {(display:&quot;WeaponsInit&quot;)}
 
-(set:$skillsSortable to $skillsMaster)
-(set:$skillSelected to 1)
-
-(display:&quot;CharacterInit&quot;)
-
-(set:$pop to (macro: string-type _disp,[
-	(alert:_disp, &quot;X&quot;)
-	(output-data:&quot;&quot;)
-]))
+{(display:&quot;Popup&quot;)}
 }</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
 (set:$pageUrl to (page-url:))
 
@@ -468,38 +434,39 @@ div.desc {
 ](else:)[
 	(set:$sbTransition to (t8n:&quot;instant&quot;))
 ]
-}</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="unused" position="100,225" size="100,100">$H1[Settings]
-Theme:
+}</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="display" position="100,225" size="100,100">{Theme:
 {(unless:$themeChosen&#39;s 4 is &quot;Light&quot;)[
 	(link:&quot;Light&quot;)[
-		(set:$themeChosen to $themeLight)(go-to:&quot;Settings&quot;)
+		(set:$themeChosen to $themeLight)(go-to:(passage:)&#39;s name)
 	]
 ](else:)[
 	Light
 ]}
 {(unless:$themeChosen&#39;s 4 is &quot;Dark&quot;)[
-	(link:&quot;Dark&quot;)[
-		(set:$themeChosen to $themeDark)(go-to:&quot;Settings&quot;)
+	&lt;br&gt;(link:&quot;Dark&quot;)[
+		(set:$themeChosen to $themeDark)(go-to:(passage:)&#39;s name)
 	]
 ](else:)[
-	Dark
-]}
+	&lt;br&gt;Dark
+]}&lt;br&gt;
 
-Text Size:
+&lt;br&gt;Text Size:&lt;br&gt;&lt;center&gt;
 {(unless:$baseSize &lt; 0.3)[
 	(link-repeat:&quot;&lt;&quot;)[
-		(set:$baseSize -= 0.1)
-		(go-to:&quot;Settings&quot;)
+		(set:$baseSize to it - 0.1)
+		(go-to:(passage:)&#39;s name)
 	]
 ](else:)[
 	-
 ]
 (link-repeat:&quot;&gt;&quot;)[
 	(set:$baseSize to it + 0.1)
-	(go-to:&quot;Settings&quot;)
-]}
+	(go-to:(passage:)&#39;s name)
+]}&lt;/center&gt;
 
-[[Homepage]]</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
+&lt;br&gt;(link-goto:&quot;Configure popup height&quot;, &quot;PopupConfig&quot;)
+
+&lt;br&gt;(link:&quot;\^\^Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]&lt;br&gt;}</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
 Remagica is a game played by voice or text-- words-- where players apart from the DM can interact with the world, and the DM provides information on how the world reacts. The players are limited to a single character as their main link to the world, and the DM has a wider scope to give players more options.
 &lt;p&gt;Primarily, interaction with the world is done through roleplay, due to this one-character restriction. Players describe what their character would do or say, and the DM explains what the world&#39;s reaction would be. When outcomes are indeterminate, the DM will ask the player to make a Skill Check, or in a fast-paced or violent scenario, shift into [[combat-&gt;Combat]].
 $H3[Checks]
@@ -1608,7 +1575,7 @@ TweeTowhee&lt;/b&gt;]
 &lt;/table&gt;}</tw-passagedata><tw-passagedata pid="41" name="DropdownButton" tags="" position="2175,500" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
 ](else-if:it is 1)[
 (link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="42" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
-(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)(set:_index to 0)\
+(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
 &lt;!--header--&gt;
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
@@ -1618,7 +1585,7 @@ TweeTowhee&lt;/b&gt;]
 	Effect
 ]
 &lt;!--table body--&gt;
-(for: each (_tag), 
+(for: each (_weapon), 
 	...(sorted: via its 1, 
 		...$weaponsList
 		)
@@ -1626,16 +1593,16 @@ TweeTowhee&lt;/b&gt;]
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	|=
-	(print:_tag&#39;s 1)
+	(print:_weapon&#39;s 1)
 	|=
-	(print:_tag&#39;s 2)
+	(print:_weapon&#39;s 2)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
 	|=
-	(print:_tag&#39;s 1)
+	(print:_weapon&#39;s 1)
 	|=
-	(print:_tag&#39;s 2)
+	(print:_weapon&#39;s 2)
 	]
 	]
 (set:_index to it + 1)}]}\
@@ -1774,7 +1741,7 @@ Combat officially begins when the DM asks any players to &quot;roll initiative.&
 
 $H3[Rounds, Turns, and Initiative]&lt;RoundsTurnsandInitiative|
 Rounds are split up into turns. Each round lasts for exactly 6 seconds of real, in-game time; each turn takes place almost simultaneously (in theory) during these 6 seconds.
-&lt;p&gt;The order in which creatures&#39; turns are played out within a round is determined by their (link-repeat:&quot;initiative roll&quot;)[(alert:&quot;1d20 + the character&#39;s Dex modifier&quot;)]. Creatures that roll the same initiative will go in the order from greatest modifier to least modifier; if their modifiers are the same, then they must roll 1d20s until they do not get the same result. They will go in order from highest roll to lowest roll within the original initiative they had rolled.
+&lt;p&gt;The order in which creatures&#39; turns are played out within a round is determined by their (link-repeat:&quot;initiative roll&quot;)[(alert:&quot;1d20 + the character&#39;s Dex modifier&quot;,&quot;X&quot;)]. Creatures that roll the same initiative will go in the order from greatest modifier to least modifier; if their modifiers are the same, then they must roll 1d20s until they do not get the same result. They will go in order from highest roll to lowest roll within the original initiative they had rolled.
 &lt;p&gt;Rolling a Critical Fail or Critical Success will guarantee being last or first on the initiative order, respectively; multiple Critical Fails/Successes are treated the same as any other tying roll.
 
 $H3[Action Speed/Type]&lt;ActionSpeedType|
@@ -1924,7 +1891,7 @@ There are 7 statistics in Remagica. When a new character is created, roll 2d10 f
 $H3[Attribute Points]
 A character&#39;s attributes determine their more specific capabilities. Every single skill check in the game references an attribute; these attributes stack on top of a character&#39;s main 7 statistics.
 A character starts with 7 points that they can spread between their attributes; any one attribute can have up to 2 attribute points in it.
-(link-repeat:&quot;Show Attributes Quick Reference&quot;)[(alert:&quot;(box:\&quot;X\&quot;, 8)[(display:\&quot;Attributes Quick Reference\&quot;)]&quot;)]
+(link-repeat:&quot;Show Attributes Quick Reference&quot;)[($pop:&quot;Attributes Quick Reference&quot;)]
 $H3[Derived Statistics]
 The character has a handful of other important numbers, which are derived from their main Statistics and Attributes.
 {&lt;table&gt;
@@ -2010,8 +1977,8 @@ $H3[Statistics and Attributes]
 A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Roll 2d10 for all seven stats (rerolling stats that total to 5 or less) and assign them as you would like.
 A character also has Attributes; each of these attributes can have proficiency points. The Attribute table on the character sheet has zeros next to each Attribute name; this is because Attributes begin with no proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;7 Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
 On top of that, there are derived Statistics based on combinations of other bonuses:
-* HP is the base HP given in the Talent plus your Con bonus.
-* MP is the base MP given in the Race plus your Mag bonus.
+* HP is double the base HP given in the Talent plus your Con bonus.
+* MP is double the base MP given in the Race plus your Mag bonus.
 * AC is based off of the armor the character is wearing, or 10 + Dex + Dodge if unarmored.
 $H3[The Skills section]
 There is a section for Skills to be added to the sheet beneath the major block of stats.
@@ -2067,35 +2034,35 @@ Take a look at the Talents below!
 {&lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Aurastrong&quot;)[(alert:&quot;(display:\&quot;Aurastrong\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Aurastrong&quot;)[($pop:&quot;Aurastrong&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Creative&quot;)[(alert:&quot;(display:\&quot;Creative\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Creative&quot;)[($pop:&quot;Creative&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Faithful&quot;)[(alert:&quot;(display:\&quot;Faithful\&quot;)&quot;, &quot;X&quot;)]
-	&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Fast&quot;)[(alert:&quot;(display:\&quot;Fast\&quot;)&quot;, &quot;X&quot;)]
-	&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Intuitive&quot;)[(alert:&quot;(display:\&quot;Intuitive\&quot;)&quot;, &quot;X&quot;)]
-	&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Tactical&quot;)[(alert:&quot;(display:\&quot;Tactical\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Faithful&quot;)[($pop:&quot;Faithful&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Thorough&quot;)[(alert:&quot;(display:\&quot;Thorough\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Fast&quot;)[($pop:&quot;Fast&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Tough&quot;)[(alert:&quot;(display:\&quot;Tough\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Intuitive&quot;)[($pop:&quot;Intuitive&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Well-Read&quot;)[(alert:&quot;(display:\&quot;Well-Read\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Tactical&quot;)[($pop:&quot;Tactical&quot;)]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;
+		(link-repeat:&quot;Thorough&quot;)[($pop:&quot;Thorough&quot;)]
+	&lt;/td&gt;
+	&lt;td&gt;
+		(link-repeat:&quot;Tough&quot;)[($pop:&quot;Tough&quot;)]
+	&lt;/td&gt;
+	&lt;td&gt;
+		(link-repeat:&quot;Well-Read&quot;)[($pop:&quot;Well-Read&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
 }</tw-passagedata><tw-passagedata pid="63" name="Thalassophobia" tags="" position="1600,225" size="100,100">$H2[Thalassophobia Lore]
@@ -2412,7 +2379,7 @@ A character&#39;s most interesting abilities are often defined by their Skills. 
 $H4[Health Improvement]
 A character&#39;s health increases by the amount of HP listed in their Talent and MP listed in their Race, plus their Constitution or Magic modifier, respectively. A Rank can also grant partial Health Improvements, granting half of the amount otherwise gained; in these cases, always round up. Do not divide Health Improvements into pieces more precise than halves; for example, 1.5 Improvements is okay, but 2/3 of one is not.
 $H4[Proficiency Point]
-A character&#39;s (link-repeat:&quot;Attribute Proficiencies&quot;)[(alert:&quot;(display:\&quot;Attributes Quick Reference\&quot;)&quot;)] are determined by how many points are put into each one. Each Proficiency Point can be added directly to the amount of points in any given Attribute, raising the bonus the character has with that type of check by one.
+A character&#39;s (link-repeat:&quot;Attribute Proficiencies&quot;)[($pop:&quot;Attributes Quick Reference&quot;)] are determined by how many points are put into each one. Each Proficiency Point can be added directly to the amount of points in any given Attribute, raising the bonus the character has with that type of check by one.
 $H4[Statistic Point]TODO
 $H3[A Typical Rank]
 Often, a Rank consists of the following:
@@ -2433,30 +2400,30 @@ A character begins with only one Casting Style. Take a look at them below:
 {&lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Azurite&quot;)[(alert:&quot;(display:\&quot;Azurite\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Azurite&quot;)[($pop:&quot;Azurite&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Fyugo&quot;)[(alert:&quot;(display:\&quot;Fyugo\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Fyugo&quot;)[($pop:&quot;Fyugo&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Shioreta&quot;)[(alert:&quot;(display:\&quot;Shioreta\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Shioreta&quot;)[($pop:&quot;Shioreta&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Borro&quot;)[(alert:&quot;(display:\&quot;Borro\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Borro&quot;)[($pop:&quot;Borro&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Otsoa&quot;)[(alert:&quot;(display:\&quot;Otsoa\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Otsoa&quot;)[($pop:&quot;Otsoa&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Skathi&quot;)[(alert:&quot;(display:\&quot;Skathi\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Skathi&quot;)[($pop:&quot;Skathi&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 	&lt;td&gt;&lt;/td&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Zailea&quot;)[(alert:&quot;(display:\&quot;Zailea\&quot;)&quot;, &quot;X&quot;)]
+		(link-repeat:&quot;Zailea&quot;)[($pop:&quot;Zailea&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -2764,7 +2731,27 @@ Casting:
 (a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
 (a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
 (a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
-))}</tw-passagedata></tw-storydata>
+))}</tw-passagedata><tw-passagedata pid="98" name="Popup" tags="display-macro" position="2175,875" size="100,100">{
+(set:$pop to 
+	(macro: string-type _disp,[
+		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
+		(output-data:&quot;(alert:\&quot;&quot; + (string:_contents) + &quot;\&quot;, \&quot;X\&quot;)&quot;)
+	])
+)
+}
+</tw-passagedata><tw-passagedata pid="99" name="PopupConfig" tags="display" position="2300,875" size="100,100">|=
+$H2[Configure Popup Height]
+Adjust the height until the box on the right fits within the screen.
+{&lt;center&gt;
+(size:2.5*$baseSize)[(link-repeat:&quot;+&quot;)[(set:$popupHeight to it + 10)(go-to:&quot;PopupConfig&quot;))]] 
+(link-repeat:&quot;+&quot;)[(set:$popupHeight to it + 1)(go-to:&quot;PopupConfig&quot;))] | 
+(link-repeat:&quot;-&quot;)[(set:$popupHeight to it - 1)(go-to:&quot;PopupConfig&quot;))] 
+(size:2.5*$baseSize)[(link-repeat:&quot;-&quot;)[(set:$popupHeight to it - 10)(go-to:&quot;PopupConfig&quot;))]]
+&lt;/center&gt;
+}
+(link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
+=|
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

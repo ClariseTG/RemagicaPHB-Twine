@@ -112,7 +112,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -2163,7 +2165,6 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 (a: &quot;Athletics&quot;, &quot;Strength&quot;), 
 (a: &quot;Aura&quot;, &quot;Magic&quot;), 
 (a: &quot;Beastwork&quot;, &quot;Wisdom&quot;), 
-(a: &quot;Dodge&quot;, &quot;Dexterity&quot;), 
 (a: &quot;Endurance&quot;, &quot;Constitution&quot;), 
 (a: &quot;Fisticuffs&quot;, &quot;Strength&quot;), 
 (a: &quot;Flair&quot;, &quot;Charisma&quot;), 
@@ -2183,7 +2184,8 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 (a: &quot;Stealth&quot;, &quot;Dexterity&quot;), 
 (a: &quot;Sturdy&quot;, &quot;Strength&quot;), 
 (a: &quot;Tracking&quot;, &quot;Wisdom&quot;), 
-(a: &quot;Willpower&quot;, &quot;Charisma&quot;)
+(a: &quot;Willpower&quot;, &quot;Charisma&quot;), 
+(a: &quot;Dodge (Deprecated in 4.1)&quot;, &quot;Dexterity&quot;)
 ))
 
 (set:$statColor to (dm:
@@ -2383,13 +2385,6 @@ A character begins with only one Casting Style. Take a look at them below:
 		(link-repeat:&quot;Skathi&quot;)[($pop:&quot;Skathi&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-	&lt;td&gt;&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Zailea&quot;)[($pop:&quot;Zailea&quot;)]
-	&lt;/td&gt;
-	&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/table&gt;}
 $H3[Damage Types]
 A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which is a shorthand for which natural element the magic has the most similar properties to. For example, magic that manipulates fire would deal &quot;fire damage,&quot; which means that it will be more effective at destroying wooden or flammable objects. However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
@@ -2401,8 +2396,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 &quot;Fyugo&quot;,
 &quot;Shioreta&quot;,
 &quot;Otsoa&quot;,
-&quot;Azurite&quot;,
-&quot;Zailea&quot;
+&quot;Azurite&quot;
 ))
 (set:$fyugoTags to (a:
 	(a: &quot;Attack I&quot;, &quot;The summon can take the Attack action. When it Attacks, its target must make a save of a reasonable proficiency based off of the nature of the attack with a DC of 8 + the Fyugo&#39;s Power proficiency. On a fail, the target will take 4 damage.&quot;, &quot;Persistent Fabrications&quot;, 2, 5), 
@@ -2419,7 +2413,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 	(a: &quot;Statistic Change I&quot;, &quot;The Otsoa raises their bonus for a particular statistic by 1.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
 (a: &quot;Toe Beans&quot;, &quot;The Otsoa gains advantage to Stealth and Acrobatics checks.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
 (a: &quot;Quick I&quot;, &quot;The Otsoa gains 15 feet of movement.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Fluff&quot;, &quot;The Otsoa becomes unaffected by weather and temperature effects.&quot;, &quot;Metamorphosis&quot;, , ), 
+(a: &quot;Fluff&quot;, &quot;The Otsoa becomes unaffected by weather and temperature effects.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
 (a: &quot;Thick Hide&quot;, &quot;The Otsoa gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;Metamorphosis&quot;, 1, 8), 
 (a: &quot;Super-Senses&quot;, &quot;The Otsoa&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to the Otsoa&#39;s senses.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
 (a: &quot;Healthy I&quot;, &quot;No effect.&quot;, &quot;Metamorphosis&quot;, 6, 6), 
@@ -2554,7 +2548,7 @@ Skills:
 Casting:
 See [[Summon Tags List]] for casting costs.
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="91" name="Azurite" tags="table" position="1175,900" size="100,100">$H3[Azurite]
-&#96;[Description]&#96;
+Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 Short Range: 10ft
 Long Range: 90ft
 Skills:
@@ -2578,31 +2572,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="92" name="Zailea" tags="table" position="1175,1025" size="100,100">$H3[Zailea]
-&#96;[Description]&#96;
-Short Range: 10ft
-Long Range: 90ft
-Skills:
-&lt;b&gt;(print:$magicMaster&#39;s 11&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 11&#39;s 2)
-&lt;b&gt;(print:$magicMaster&#39;s 12&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 12&#39;s 2)
-&lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
-Casting:
-{&lt;table&gt;
-&lt;tr&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;8%&quot;&gt;Row&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Damage Reduction&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Reduction Cost&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;}
-(1 MP for 2 HP, max 4 at once)
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="93" name="Summon Tags List" tags="table" position="1400,850" size="100,100">$H2[Summon Tags List]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="92" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2617,12 +2587,16 @@ Casting:
 {
 &lt;!--header--&gt;
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	Name
-	|=
+	||||=
 	Description
-	|=
+	||=
 	Unlocked by
+	|=
+	Durability
+	|=
+	Cost
 ]
 &lt;!--table body--&gt;
 (for: each (_tag), 
@@ -2632,27 +2606,36 @@ Casting:
 )[{
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	(print:_tag&#39;s 1)
-	|=
+	||||=
 	(print:_tag&#39;s 2)
-	|=
+	||=
 	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	|=
+	(print:_tag&#39;s 5)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
-	|=
+	||=
 	(print:_tag&#39;s 1)
-	|=
+	||||=
 	(print:_tag&#39;s 2)
-	|=
+	||=
 	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	|=
+	(print:_tag&#39;s 5)
 	]
 	]
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="94" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="95" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="93" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="94" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
+(set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2667,12 +2650,16 @@ Casting:
 {
 &lt;!--header--&gt;
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	Name
-	|=
+	||||=
 	Description
-	|=
+	||=
 	Unlocked by
+	|=
+	Durability
+	|=
+	Cost
 ]
 &lt;!--table body--&gt;
 (for: each (_tag), 
@@ -2682,25 +2669,35 @@ Casting:
 )[{
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	(print:_tag&#39;s 1)
-	|=
+	||||=
 	(print:_tag&#39;s 2)
-	|=
+	||=
 	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	|=
+	(print:_tag&#39;s 5)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
-	|=
+	||=
 	(print:_tag&#39;s 1)
-	|=
+	||||=
 	(print:_tag&#39;s 2)
-	|=
+	||=
 	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	|=
+	(print:_tag&#39;s 5)
 	]
 	]
 (set:_index to it + 1)}]}\
-]</tw-passagedata><tw-passagedata pid="96" name="WeaponsInit" tags="data-storage" position="2048,875" size="100,100">{(set:$weaponsList to (a:
+]\
+&lt;!--this is spaghetti code--&gt;\
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="95" name="WeaponsInit" tags="data-storage" position="2048,875" size="100,100">{(set:$weaponsList to (a:
 (a: &quot;Shiv&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;),
 (a: &quot;Harpoon&quot;, &quot;Athletics check, DC AC; single target within 2 tiles. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 1 tile closer to the user, if possible.&quot;),
 (a: &quot;Staff&quot;, &quot;Acrobatics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Bludgeoning) damage on a success. On a success, the attack will leave the target&#39;s defenses open and lower their AC by 1 for 6 seconds.&quot;),
@@ -2708,7 +2705,7 @@ Casting:
 (a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
 (a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
 (a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
-))}</tw-passagedata><tw-passagedata pid="97" name="Popup" tags="display-macro" position="2175,875" size="100,100">{
+))}</tw-passagedata><tw-passagedata pid="96" name="Popup" tags="display-macro" position="2175,875" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
 		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
@@ -2716,7 +2713,7 @@ Casting:
 	])
 )
 }
-</tw-passagedata><tw-passagedata pid="98" name="PopupConfig" tags="display" position="2300,875" size="100,100">|=
+</tw-passagedata><tw-passagedata pid="97" name="PopupConfig" tags="display" position="2300,875" size="100,100">|=
 $H2[Configure Popup Height]
 Adjust the height until the box on the right fits within the screen.
 {&lt;center&gt;

@@ -131,7 +131,7 @@ $H3[Gameplay]
 $HB2+(box:&quot;X&quot;, 15)[\
 [[Overall Gameplay]]
 
-[[Damage-&gt;Damage (Physical, Magical, and Sanity)]]
+[[Damage-&gt;Damage]]
 
 [[Long and Short Rests]]
 
@@ -159,7 +159,7 @@ $HB2+(box:&quot;X&quot;, 15)[\
 
 [[Character Sheet Links]]
 
-[[Conditions List]]
+[[Conditions]]
 
 [[Weapons]]
 
@@ -253,7 +253,7 @@ Array
 {(display:&quot;WeaponsInit&quot;)}
 
 {(display:&quot;Popup&quot;)}
-}</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,603" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
 (set:$pageUrl to (page-url:))
 
 (set:$formattingString to &quot;tw-story {
@@ -379,6 +379,7 @@ div.desc {
 (set:$H5 to (text-style:&quot;italic&quot;) + (font:&quot;Montserrat&quot;) + (size:$baseSize))
 (set:$HB to (size:$baseSize) + (box: &quot;X&quot;) + (background:$themeChosen&#39;s 6))
 (set:$HB2 to (background: $themeChosen&#39;s 6) + (corner-radius:12))
+(set:$HB3 to (background: $themeChosen&#39;s 6) + (corner-radius:12) + (css:&quot;display: block;&quot;))
 (set:$HB4 to (css:&quot;line-height: 48px; padding: 3px&quot;) + (background: $themeChosen&#39;s 1) + (corner-radius:8) + $H4)
 (set:$Hchar to (size:0.5*$baseSize)+(css:&quot;line-height:0px;&quot;))
 (set:$Hhp to (text-style:&quot;bold&quot;) + (size:2.5*$baseSize)+(css:&quot;line-height:0.8;&quot;))
@@ -544,7 +545,7 @@ When a character makes a Check, they roll 1d20 and add a set of modifiers to tha
     &lt;td&gt;Charisma&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Damage (Physical, Magical, and Sanity)" tags="done" position="600,475" size="100,100">$H2[Damage, Health, Sanity, and Madness]
+&lt;/table&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Damage" tags="in-progress" position="600,475" size="100,100">$H2[Damage, Health, Sanity, and Madness]
 In Remagica, there are 4 kinds of health:
 • {(link-repeat:&quot;Physical Health (HP)&quot;)[
 	(replace:?HealthDisplay)[
@@ -740,7 +741,7 @@ $H3[Short Rests]
 Short rests last for 2 hours. A short rest heals half of the damage the character currently has; for example, a character at half health prior to a Short Rest would heal one quarter of their maximum HP. Two Short Rests can be taken for each Long Rest.
 [
 $H3[Alt Ruleset: Gritty Realism]
-Long and Short rests can be stretched to one week and one day respectively with this ruleset.](Hidden|</tw-passagedata><tw-passagedata pid="23" name="Conditions List" tags="in-progress" position="1400,600" size="100,100">$H2[Conditions (WIP SUPER WIP)]
+Long and Short rests can be stretched to one week and one day respectively with this ruleset.](Hidden|</tw-passagedata><tw-passagedata pid="23" name="Conditions List (3.2)" tags="3e" position="2250,1325" size="100,100">$H2[Conditions (WIP SUPER WIP)]
 [[Homepage]] 
 Click on a condition to see details:
 (box:&quot;X&quot;,6)+(border:&quot;solid&quot;)+(corner-radius:10)+(border-color:#9659eb)[• {(link-repeat:&quot;Absorbent&quot;)[
@@ -1220,7 +1221,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="25" name="Hadalite" tags="table" position="925,400" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="25" name="Hadalite" tags="table" position="925,475" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Hadalites live long lives— much longer than most other creatures. However, as ambush predators, they spend most of it in-between sleep and waking.
 &lt;p&gt;These long periods of half-sleep can sometimes render their memories fuzzy; a Hadalite can seem like a completely different person after enough years have passed, unable to clearly recall their past selves. In this way, other people are transient in the life of a Hadalite.
@@ -1258,7 +1259,7 @@ Features:
 &#96;[&#96;image&#96;]&#96;
 *The lures at the end of the tentacles as well as the “hairstyle” of the tentacles can be variant. Line down the middle is their mouth, so clothes tend to accommodate it opening.
 Spots on head tend to resemble eyes or features found on other races, but can vary! Colors can be anything, though tend towards more phosphorescent-looking shades.
-Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="26" name="Marigen" tags="table done" position="925,275" size="100,100">$H2[Marigen (Deepsea)]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="26" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen (Deepsea)]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.
 &lt;p&gt;Marigen are omnivores, but have little access to plant matter in the Hadal Zone.
@@ -1313,7 +1314,7 @@ Can have fur, but it is rare.
 	
 )
 )
-}</tw-passagedata><tw-passagedata pid="28" name="ItemsInit" tags="data-storage" position="1925,375" size="100,100">{}</tw-passagedata><tw-passagedata pid="29" name="Code/Admin Stuff" tags="section" position="2000,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Sort" tags="data-processing" position="2050,250" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="28" name="ItemsInit" tags="data-storage" position="1925,375" size="100,100">{}</tw-passagedata><tw-passagedata pid="29" name="Code/Admin Stuff" tags="section" position="2075,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Sort" tags="data-processing" position="2050,250" size="100,100">{
 {&lt;!--&#96;$sortedList&#96; is the list to be sorted, set (passed in) by the passage that uses this &#96;(display:)&#96;. &#96;$sortIndexType&#96; is an integer value representing the index of the data value being used to sort the list.--&gt;
 
 &lt;!--resetting the list by the wanted index. &#96;_sortableIndices&#96; turns the list of indices into a single array that can be sorted using the &#96;(sorted:)&#96; macro.--&gt;
@@ -1351,7 +1352,7 @@ Can have fur, but it is rare.
 ]}
 }</tw-passagedata><tw-passagedata pid="31" name="Sort-nowhitespace" tags="data-processing" position="2050,375" size="100,100">{{(set: _sortableIndices to (a:))(set:_indexAppended to &quot;&quot;)}{(for: each _item, ...$sortedList)[(set:_indexAppended to (string:_item&#39;s $sortIndexType) + &quot;▮&quot; + (string:_item&#39;s 6))(set:_sortableIndices to it + (a:_indexAppended))]}{(set:_sortableIndices to (sorted: ..._sortableIndices))(set:$sortedList to (a:))}{(for: each _item, ..._sortableIndices)[(set:_masterIndex to 0)(set:_masterIndex to (split: (p:&quot;▮&quot;), _item))(set:_masterIndex to (number:_masterIndex&#39;s 2))	(set:$sortedList to it + $masterList&#39;s (_masterIndex))]}}</tw-passagedata><tw-passagedata pid="32" name="hovertest" tags="" position="1925,500" size="100,100">[22]&lt;hover|
 (mouseover:?hover)[(alert:&quot;hovered&quot;)]
-(link:&quot;eh&quot;)[(rerun:?hover)]</tw-passagedata><tw-passagedata pid="33" name="test" tags="table test" position="2000,1200" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
+(link:&quot;eh&quot;)[(rerun:?hover)]</tw-passagedata><tw-passagedata pid="33" name="test" tags="table test" position="2700,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
 	&lt;tr&gt;
 	(for: each _j, ...(range:1,9))[
@@ -1444,7 +1445,7 @@ Carbon
 Tardzard (Celes)
 TweeTowhee&lt;/b&gt;]
 &lt;/center&gt;
-[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="37" name="test 2" tags="test" position="2000,1050" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
+[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="37" name="test 2" tags="test" position="2700,375" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;&lt;tr&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1480,7 +1481,7 @@ TweeTowhee&lt;/b&gt;]
 ]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="38" name="test 3" tags="test" position="2125,1050" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
+</tw-passagedata><tw-passagedata pid="38" name="test 3" tags="test" position="2700,500" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;$mapFormat&quot; + (string:_i) + (string:_j)&quot;[&lt;div class=\&quot;mapCol2\&quot;&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1909,7 +1910,7 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 (a:&quot;Remagus&quot;, 21, (a:3,6), 40, (a:5,8)),
 (a:&quot;Valdien&quot;, 25, (a:3,6), 20, (a:3,6)),
 (a:&quot;Wyrmling&quot;, 25, (a:3,6), 18, (a:2,6))
-))}</tw-passagedata><tw-passagedata pid="57" name="Race List" tags="" position="925,150" size="100,100">$H2[Races]
+))}</tw-passagedata><tw-passagedata pid="57" name="Race List" tags="" position="925,225" size="100,100">$H2[Races]
 {(for: each _race, ...$racesPreview)[
 	$HB2[
 	|||=
@@ -1979,7 +1980,7 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Blood in the Water&quot;, &quot;Khetadons have advantage on Tracking checks for Bleeding creatures, and can add their Tracking modifier to attacks against those creatures. &quot;),
 (a: &quot;Retract&quot;, &quot;Karkani can take the Retract action as a bonus action, which gives other creatures disadvantage on physical attacks against them for that round.&quot;)
 ))
-}</tw-passagedata><tw-passagedata pid="62" name="Talents and Skills" tags="table done" position="1050,150" size="100,100">$H2[Talents and Skills]
+}</tw-passagedata><tw-passagedata pid="62" name="Talents and Skills" tags="table done" position="1050,225" size="100,100">$H2[Talents and Skills]
 When starting out, all characters have a Talent-- this represents the skills they brought with them from their life before adventuring, and has a profound effect on the Skills they will have access to as they progress.
 A Talent comes with a few bonus Attribute Proficiency points and an associated Skill. It also determines how much HP a character gains per Advancement. (MP is determined by the choice of race.)
 Keep in mind that end-game Skills are not always exclusive to a single Talent; in fact, the Skills&#39; prerequisites and unlocks are designed to provide multiple paths from the Talents&#39; Skills to the capstone Skills acquired by very powerful characters.
@@ -2116,42 +2117,42 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="64" name="Sk
 &quot;Well-Read&quot;, #5a9aed, 
 &quot;Tactical&quot;, #6c7087, 
 &quot;Thorough&quot;, #03a336
-))</tw-passagedata><tw-passagedata pid="67" name="Aurastrong" tags="" position="1050,275" size="100,100">$H3[Aurastrong]
+))</tw-passagedata><tw-passagedata pid="67" name="Aurastrong" tags="" position="1050,350" size="100,100">$H3[Aurastrong]
 Those who are Aurastrong have a lot of force behind their magic. Whether that is by hard work, or due to a natural-born affinity, magic of that scale can be difficult to tame and dangerous to wield.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to Power.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="68" name="Creative" tags="" position="1050,400" size="100,100">$H3[Creative]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="68" name="Creative" tags="" position="1050,475" size="100,100">$H3[Creative]
 Creative types see beauty in the things around them, and carry with them the ability to enhance the qualities they feel. Through craft or performance, those with creative talent can work with the things around them to make them into something new.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Flair and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="69" name="Faithful" tags="" position="1050,525" size="100,100">$H3[Faithful]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="69" name="Faithful" tags="" position="1050,600" size="100,100">$H3[Faithful]
 The world is filled with forces beyond comprehension; some, almost sapient. Those with strong faith have dedicated their time to learning about those forces and working alongside them for a purpose. While some choose their own purpose, others find themselves corrupted by the forces around them and are compelled to act alongside their force&#39;s will.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="70" name="Fast" tags="" position="1050,650" size="100,100">$H3[Fast]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="70" name="Fast" tags="" position="1050,725" size="100,100">$H3[Fast]
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="71" name="Intuitive" tags="" position="1050,775" size="100,100">$H3[Intuitive]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="71" name="Intuitive" tags="" position="1050,850" size="100,100">$H3[Intuitive]
 Connected to their environment and aware of minute details and changes, those who embrace the world with their intuition and keen senses find themselves seeing one thing when everyone else sees another. A unique outlook lends itself to identifying the unique identities in the world around them.
 (Intuitive ends up leading to both ranger-like archetypes, druid-like archetypes, and crafting-heavy builds.)
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Perception and Aura.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="72" name="Tactical" tags="" position="1050,900" size="100,100">$H3[Tactical]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="72" name="Tactical" tags="" position="1050,975" size="100,100">$H3[Tactical]
 Failure becomes experience, and those who have refined their tactics to this degree have seen it all. Their plans cover many angles and possibilities, and they know how to best bring out the strength of their comrades, whether there is chaos or peace.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Insight, Investigation and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="73" name="Thorough" tags="" position="1050,1025" size="100,100">$H3[Thorough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="73" name="Thorough" tags="" position="1050,1100" size="100,100">$H3[Thorough]
 Those who refine their skills thoroughly 
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 4 Bonus Proficiency Points between Stealth, Handiwork, History, Investigation, Tracking, Insight, and Appraisal.
 (Thorough is meant to be similar to a rogue in some ways.)
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="74" name="Tough" tags="" position="1050,1150" size="100,100">$H3[Tough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="74" name="Tough" tags="" position="1050,1225" size="100,100">$H3[Tough]
 The toughest of us can rely on their physical might to keep themselves going and control the situation around them. There is technique to asserting strength, developed over years of use-- those who are tough know how to use themselves to the fullest.
 (Tough lends itself to HP tanks and front-line fighters. There should be other directions it can take, though.)
 HP: &lt;b&gt;15&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Endurance and Heartiness.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 20&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 20&#39;s 2)</tw-passagedata><tw-passagedata pid="75" name="Well-Read" tags="" position="1050,1275" size="100,100">$H3[Well-Read]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 20&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 20&#39;s 2)</tw-passagedata><tw-passagedata pid="75" name="Well-Read" tags="" position="1050,1350" size="100,100">$H3[Well-Read]
 Knowledge is slow to collect and quick to be useful, and no one knows that better than those who focus their efforts on becoming well-read. History, nature, politics-- these characters know it best.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to History.
@@ -2235,7 +2236,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 	&lt;/td&gt;&lt;/tr&gt;
 (set:_index to it + 1)}]}\
 ]
-</tw-passagedata><tw-passagedata pid="78" name="Nerite" tags="table" position="925,525" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+</tw-passagedata><tw-passagedata pid="78" name="Nerite" tags="table" position="925,600" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Frilly and soft, Nerites were likely prey animals before they came to the Hadal Zone. Their strong aurasense followed them even as the need for it faded, and as a result, they have the strongest aurasense among the races. 
 &lt;p&gt;They are the most populous race in Ventopia, covered in many intricate markings that they consider “beautiful.”
@@ -2267,7 +2268,7 @@ Features:
 None-- they get a lot of MP!
 
 &#96;[&#96;image&#96;]&#96;
-*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="79" name="Khetadon" tags="table" position="925,775" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="79" name="Khetadon" tags="table" position="925,850" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 The Khetadons are a rough-skinned and bold species likely descended from true top-of-the-food-chain carnivores. With their sharp teeth and acute mid-range senses, they have a bit of an edge in a physical fight; don’t underestimate them in other settings because of that.
 &lt;p&gt;Khetadons deal with exclusion from institutions of knowledge and are shunned by worshippers of South, but can be found in all sorts of places regardless.
@@ -2299,7 +2300,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 6&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 6&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="80" name="Karkani" tags="table" position="925,900" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="80" name="Karkani" tags="table" position="925,975" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Karkani take great pride in their shells, often decorating them or carving things into them. These shells make great protection against predators, blunt force trauma, and social embarrassment.
 &lt;p&gt;Karkani have strong internal social structure, and status is often marked on their shells.
@@ -2351,7 +2352,7 @@ Often, a Rank consists of the following:
 * One Skill gained
 * One Health Improvement
 * One Proficiency Point
-* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="82" name="Magic Ability" tags="in-progress table" position="1175,150" size="100,100">$H2[Magic Ability]
+* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="82" name="Magic Ability" tags="in-progress table" position="1175,225" size="100,100">$H2[Magic Ability]
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
 &lt;p&gt;Often, Abilities are highly specific. Some examples include:
 * Nikita Theodora has the ability to create a shadowy shell around herself in the shape of a were-fox, augmenting her melee capabilities.
@@ -2420,7 +2421,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 (a: &quot;Solid Form&quot;, &quot;The Otsoa will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 7), 
 (a: &quot;Unrecognizable&quot;, &quot;The Otsoa&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the Otsoa&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 5)
 ))
-}</tw-passagedata><tw-passagedata pid="84" name="Borro" tags="table" position="1175,275" size="100,100">$H3[Borro]
+}</tw-passagedata><tw-passagedata pid="84" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
 Borros have a strong connection to the physical, imbuing magic into things they can touch. While this leaves them with a short range, their power is more concentrated as a result.
 Short Range: 5ft
 Long Range: 20ft
@@ -2446,22 +2447,32 @@ Casting:
 &lt;/table&gt;}
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="85" name="MagicSkillsInit" tags="data-storage" position="1925,875" size="100,100">{(set:$magicMaster to (a:
 
-(a: &quot;Hands-on Fighter&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making a melee attack, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:), &quot;Borro&quot;), 
-(a: &quot;Extended Focus&quot;, &quot;When a Skathi applies a magical effect, they can choose to have it affect any number of targets, up to 3, within their Short Range of the casting’s origin, not passing through barriers such as walls. However, they have to pay for their conditions per-target, and damage is spread between them, meaning each target would take the total damage divided by the number of targets, rounded up. If the character also has the Modifying Monikers skill, Summon Tags that affect damage or give conditions can only apply to one of the targets.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Ranged Attack&quot;, &quot;A Skathi’s magic casting does not need to be centered on themself; they can choose any point within their long range as the origin of their magic casting. This point has to be a space that the Skathi could theoretically move to themself; that is, if the Skathi cannot fly, the point should be on the ground, and the point cannot be inside walls or in areas physically inaccessible to the Skathi.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Persistent Fabrications&quot;, &quot;When a Fyugo casts magic– whether it is to create matter or manipulate it– the spell will persist for 10min or until dismissed, rather than dissipating immediately, and have its own Contact and Short Range of 5ft. The Fyugo can move their creation by 15ft and use one of their Actions to grant creations the ability to use their own Actions. Without any Tags, each creation has one Action per Round, and can only use the Move action, or do simple tasks that the Fyugo directly controls them to do, such as opening doors or springing traps.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Modifying Monikers&quot;, &quot;Fyugos can add Summon Tags to their creations, which each have their own durability. When the durability of a Tag expires, the creation loses the Tag. Tags lose durability and break in the order that they are applied.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Snowball Effect&quot;, &quot;Shioretas can apply Conditions and Statistic Effects to themselves as well as others within their Short Range. When applying either of those to themselves, the Condition or Statistic Effect only costs 2/3 of what it typically would, rounded up.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Metamorphosis&quot;, &quot;When Otsoas cast magic, it lasts until their next Short or Long Rest, and is cast on themself. These magical effects are called Form Tags, and each have their own Durability, which acts just as HP would and is affected by the Resistances and Vulnerabilities of the Otsoa, as well as their Conditions. Durability is reduced before HP is. When the Durability of a tag is reduced to 0, the tag dissipates and the associated magical effect disappears.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Passive Healing&quot;, &quot;When an Azurite heals someone else with their magic, the residual energies heal them a little bit, too. They recover 1/4 of the HP healed to another creature (rounded up) themself, whenever they heal.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Active Healing&quot;, &quot;An Azurite can remove one Stage I or II Condition for 5 MP, rounded up.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;New Form&quot;, &quot;Once per Short Rest, an Otsoa can choose to cast one Form Tag on themself as a Reaction.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Stoneskin&quot;, &quot;Zaileas’ magic protects them from harm. Any time a Zailea would take damage, they can choose to have their magic shield them and reduce the damage they take as a Free Action. However, they must use an Action to recharge this ability before it can be used again. Their Damage Reduction applies after all other modifiers, such as Resistances and Vulnerabilities, are applied.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Impermeable&quot;, &quot;When a Damage Reduction is enough that the damage taken is zero, the Zaliea is immune to the secondary effects of the source of damage.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Starting Casting&quot;, &quot;The character can cast magic from the first two rows of their casting table.&quot;, (a: -2), (a:), &quot;&quot;), 
-(a: &quot;Second Aid&quot;, &quot;An Azurite can choose to double the HP gained from a short rest for a creature.&quot;, (a: -2), (a:), &quot;&quot;)
+(a: &quot;Hands-On&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making an Action that involves physical contact, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:15,16), &quot;Borro&quot;), 
+(a: &quot;It Spreads&quot;, &quot;When a Skathi applies a magical effect, they can choose to have it affect any number of targets, up to 3, within their Short Range of the casting’s origin, not passing through barriers such as walls. However, they have to pay for their conditions per-target, and damage is spread between them, meaning each target would take the total damage divided by the number of targets, rounded up. If the character also has the Modifying Monikers skill, Summon Tags that affect damage or give conditions can only apply to one of the targets.&quot;, (a: -2), (a:17), &quot;Skathi&quot;), 
+(a: &quot;Distant Target&quot;, &quot;A Skathi’s magic casting does not need to be centered on themself; they can choose any point within their long range as the origin of their magic casting. This point has to be a space that the Skathi could theoretically move to themself; that is, if the Skathi cannot fly, the point should be on the ground, and the point cannot be inside walls or in areas physically inaccessible to the Skathi.&quot;, (a: -2), (a:18), &quot;Skathi&quot;), 
+(a: &quot;Persistent Fabrications&quot;, &quot;When a Fyugo casts magic– whether it is to create matter or manipulate it– the spell will persist for 10min or until dismissed, rather than dissipating immediately, and have its own Contact and Short Range of 5ft. The Fyugo can move their creation by 15ft and use one of their Actions to grant creations the ability to use their own Actions. Without any Tags, each creation has one Action per Round, and can only use the Move action, or do simple tasks that the Fyugo directly controls them to do, such as opening doors or springing traps.&quot;, (a: -2), (a:), &quot;Fyugo&quot;), 
+(a: &quot;Modifying Monikers&quot;, &quot;Fyugos can add Summon Tags to their creations, which each have their own durability. When the durability of a Tag expires, the creation loses the Tag. Tags lose durability and break in the order that they are applied. Fyugos can choose to cast a summon with up to two Summon Tags as a Reaction to rolling initiative.&quot;, (a: -2), (a:19), &quot;Fyugo&quot;), 
+(a: &quot;Snowball Effect&quot;, &quot;Shioretas can apply Conditions and Statistic Effects from their Conditions and Statistic Effects table within their Short Range. &quot;, (a: -2), (a:20), &quot;Shioreta&quot;), 
+(a: &quot;Metamorphosis&quot;, &quot;When Otsoas cast magic, it lasts until their next Short or Long Rest, and is cast on themself. These magical effects are called Form Tags, and each have their own Durability, which acts just as HP would and is affected by the Resistances and Vulnerabilities of the Otsoa, as well as their Conditions. Durability is reduced before HP is. When the Durability of a tag is reduced to 0, the tag dissipates and the associated magical effect disappears.&quot;, (a: -2), (a:21,24), &quot;Otsoa&quot;), 
+(a: &quot;Give and Take&quot;, &quot;When an Azurite heals someone else with their magic, the residual energies heal them a little bit, too. They recover 1/4 of the HP healed to another creature (rounded up) themself, whenever they heal.&quot;, (a: -2), (a:23), &quot;Azurite&quot;), 
+(a: &quot;Restoration&quot;, &quot;An Azurite can remove one Stage I or II Condition for 10 MP.&quot;, (a: -2), (a:), &quot;Azurite&quot;), 
+(a: &quot;Feral Transformation&quot;, &quot; Otsoas can choose to cast a Form Tag on themself as a Reaction to rolling initiative.&quot;, (a: -2), (a:22), &quot;Otsoa&quot;), 
+(a: &quot;Stoneskin&quot;, &quot;Zaileas’ magic protects them from harm. Any time a Zailea would take damage, they can choose to have their magic shield them and reduce the damage they take as a Free Action. However, they must use an Action to recharge this ability before it can be used again. Their Damage Reduction applies after all other modifiers, such as Resistances and Vulnerabilities, are applied.&quot;, (a: -2), (a:), &quot;Zailea&quot;), 
+(a: &quot;Impermeable&quot;, &quot;When a Damage Reduction is enough that the damage taken is zero, the Zaliea is immune to the secondary effects of the source of damage.&quot;, (a: -2), (a:), &quot;Zailea&quot;), 
+(a: &quot;Starting Casting&quot;, &quot;The character can cast magic from the first two rows of their casting table.&quot;, (a: -2), (a:), &quot;All&quot;), 
+(a: &quot;Second Aid&quot;, &quot;An Azurite can choose to apply a short rest&#39;s bonuses to a creature twice, as well as remove one level of a condition from them during said short rest.&quot;, (a: -2), (a:), &quot;Azurite&quot;), 
+(a: &quot;Imbue&quot;, &quot;A Borro can choose to take the Imbue action, which causes an object that they touch to gain a magical effect. Treat the object as if it is a Fyugo summon that can take no Actions other than those explicitly given by its Summon Tags. The Borro can give it one tag marked with Imbue, paying the same cost as the Fyugo would.&quot;, (a: 1), (a:), &quot;Borro&quot;), 
+(a: &quot;Assault&quot;, &quot;When a Borro rolls 10 or more above the DC to hit with a melee attack, they can choose to multiply the added magic damage by 1.5, rounded down. This does not stack with critical hits.&quot;, (a: 1), (a:), &quot;Borro&quot;), 
+(a: &quot;Infectious&quot;, &quot;When a Skathi applies a magical effect within their Short range, they can choose to give their magic an infectious effect. This effect manifests as a condition, seen in the (link-repeat:\&quot;Shioreta Conditions List\&quot;)[($pop: \&quot;Conditions Cost List\&quot;)]. The Skathi pays twice the MP that the Shioreta would for the condition, but all creatures within the range are affected. When affected, each creature (in an order chosen by the Skathi) must make a Heartiness save with a DC of 10 + the caster&#39;s Power modifier. For each creature that fails the save, the next has the DC lowered by 5.&quot;, (a: 2), (a:), &quot;Skathi&quot;), 
+(a: &quot;Pinpoint&quot;, &quot;Once a Skathi has attempted to target a creature with a magical effect, they can continue to target that creature, even if they move out of their Long Range. However, if they leave 1.5 times the Skathi&#39;s Long Range, rounded down to the nearest tile, then the Skathi can no longer target them. Switching targets or targeting more than one creature also ends this skill.&quot;, (a: 3), (a:), &quot;Skathi&quot;), 
+(a: &quot;More Fabrications&quot;, &quot;The Fyugo gains new Form Tags that they can use.&quot;, (a: 5), (a:), &quot;Fyugo&quot;), 
+(a: &quot;Avalanche&quot;, &quot;The Shioreta gains new Conditions and Statistic Effects that they can use.&quot;, (a: 6), (a:), &quot;Shioreta&quot;), 
+(a: &quot;Long-Term&quot;, &quot;An Otsoa can choose to spend 1.5 times their MP cost for Form Tags, rounded up, to make their transformation last until the end of their next Long Rest as long as none of their Tags run out of Durability.&quot;, (a: 7), (a:), &quot;Otsoa&quot;), 
+(a: &quot;Quick Transformation&quot;, &quot;The Otsoa can choose to cast a second Form Tag on themself when they take the Reaction granted by the (print:$magicMaster&#39;s 10&#39;s 1) skill.&quot;, (a: 10), (a:), &quot;Otsoa&quot;), 
+(a: &quot;Uberheal&quot;, &quot;The Azurite can cast magic from the third and fourth rows of their casting table.&quot;, (a: 8), (a:), &quot;Azurite&quot;), 
+(a: &quot;Impermeable (Otsoa)&quot;, &quot;When the Healthy or Solid tags prevents all of the damage from an effect, the Otsoa is immune to the secondary effects of the source of the damage.&quot;, (a: 7), (a:), &quot;Otsoa&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="86" name="Exterreri" tags="table" position="925,650" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+))}</tw-passagedata><tw-passagedata pid="86" name="Exterreri" tags="table" position="925,725" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
 &lt;p&gt;Exterreri do not have mouths, instead consuming the pain of sapient creatures to survive through a single tentacle-like appendage. They can also sense it in others around them.
@@ -2495,7 +2506,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="87" name="Skathi" tags="table" position="1175,400" size="100,100">$H3[Skathi]
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="87" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
 Short Range: 5ft
 Long Range: 45ft
@@ -2518,7 +2529,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="88" name="Shioreta" tags="table" position="1175,650" size="100,100">$H3[Shioreta]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="88" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
 Short Range: 5ft
 Long Range: 45ft
@@ -2527,7 +2538,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Conditions Cost List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="89" name="Otsoa" tags="table" position="1175,775" size="100,100">$H3[Otsoa]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="89" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
 Short Range: 5ft
 Long Range: 45ft
@@ -2537,7 +2548,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Form Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="90" name="Fyugo" tags="table" position="1175,525" size="100,100">$H3[Fyugo]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="90" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
 Short Range: 20ft
 Long Range: 150ft
@@ -2547,7 +2558,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Summon Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="91" name="Azurite" tags="table" position="1175,900" size="100,100">$H3[Azurite]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="91" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 Short Range: 10ft
 Long Range: 90ft
@@ -2725,7 +2736,146 @@ Adjust the height until the box on the right fits within the screen.
 }
 (link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
 =|
-[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata></tw-storydata>
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="98" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
+$HB3[$H4[(link-repeat:&quot;Blinded ⏷&quot;)[{(replace:?Blinded)[
+$H4[(link:&quot;Blinded ⏶&quot;)[(rerun:?Blinded)]]
+&lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
+&lt;br&gt;The Blinded condition comes in 3 levels. A creature can only have one instance of the Blinded condition, and it will take the higher level of any inflicted.
+&lt;br&gt;Level 1: Dulled senses. The creature has a -5 penalty to all checks that rely on their primary sense.
+&lt;br&gt;Level 2: Primary sense removed. The creature has -5 and disadvantage to checks that rely on their primary sense.
+&lt;br&gt;Level 3: All senses dampened. The creature has -10 and disadvantage to all checks that rely on any of their senses.
+&lt;br&gt;This condition ends when its cause does; if the character is Blinded by an injury, the condition ends when the injury is healed. 
+]}]]]&lt;Blinded|
+$HB3[$H4[(link-repeat:&quot;Charmed ⏷&quot;)[{(replace:?Charmed)[
+$H4[(link:&quot;Charmed ⏶&quot;)[(rerun:?Charmed)]]
+&lt;br&gt;When magic would cause a change in a creature&#39;s behavior, they gain the Charmed condition.
+&lt;br&gt;Each instance of the Charmed condition specifies the change in the creature&#39;s behavior that the charming causes. For example, a creature can be Charmed (calmed) and Charmed (made to like you). Many instances of Charmed can coexist on a single creature.
+&lt;br&gt;Each separate Charmed condition has its own level. 
+&lt;br&gt;A Charmed creature can spend an Action to try and clear the Charmed condition by making a Willpower check with a DC of 10 + the level of Charmed they have. A creature must pass this DC for each instance of Chamed that they have.
+]}]]]&lt;Charmed|
+$HB3[$H4[(link-repeat:&quot;Dizzy ⏷&quot;)[{(replace:?Dizzy)[
+$H4[(link:&quot;Dizzy ⏶&quot;)[(rerun:?Dizzy)]]
+&lt;br&gt;Dizzy represents a loss of control over one&#39;s own mind and body. Vertigo, panic, and various magical effects can cause it.
+&lt;br&gt;A creature can only have one instance of the Dizzy condition. If a creature is already Dizzy, and a new source that is not already making it Dizzy tries to give it the Dizzy condition, it will gain half of the levels of Dizzy that the new source gives it, rounded down.
+&lt;br&gt;When a creature is Dizzy, they gain a penalty to all checks that require precise movement (such as rolls to use weapons, Handiwork checks, or Acrobatics checks) equal to the level of Dizzy that they have.
+&lt;br&gt;A Dizzy creature can spend an Action to try and clear the Dizzy condition by making a Heartiness check with a DC of 6 + twice the level of Dizzy they have. On a success, the condition ends.
+]}]]]&lt;Dizzy|
+$HB3[$H4[(link-repeat:&quot;Frightened ⏷&quot;)[{(replace:?Frightened)[
+$H4[(link:&quot;Frightened ⏶&quot;)[(rerun:?Frightened)]]
+&lt;br&gt;The creature is terrified of something that they face, making facing it all the harder.
+&lt;br&gt;The Frightened condition comes in 3 levels. A creature can only have one instance of the Frightened condition, and it will take the higher level of any inflicted.
+&lt;br&gt;Level 1: The creature has a -5 penalty to checks while the source of the Frightened condition is within its line of sight or range of its primary sense.
+&lt;br&gt;Level 2: The creature has -5 and disadvantage to checks while the source of the Frightened condition is within its line of sight or range of its primary sense. It also must use at least one Action to Move away from the source of the Frightened condition.
+&lt;br&gt;Level 3: The creature is unable to take Actions other than Moving away from the source of the Frightened condition, or taking the Dodge or Hide actions.
+&lt;br&gt;A Frightened creature can spend an Action to try and clear the Frightened condition by making a Willpower check. The DC is 10 + the Intimidation modifier of the source of the fright. On a success, the condition ends. They have disadvantage if they have Frightened 3.
+]}]]]&lt;Frightened|
+$HB3[$H4[(link-repeat:&quot;Grappled ⏷&quot;)[{(replace:?Grappled)[
+$H4[(link:&quot;Grappled ⏶&quot;)[(rerun:?Grappled)]]
+&lt;br&gt;When one creature is grappled by another, they gain the Grappled condition.
+&lt;br&gt;Grappled only comes in one level, and as such does not need to be marked with its level.
+&lt;br&gt;When a creature is Grappled, its movement speed is reduced to 0 for all types of movement. They have disadvantage on checks targeting anything other than the source of the Grappled condition (the Grappler).
+&lt;br&gt;The Grappler has their movement speeds halved, rounded up, unless the creature it is Grappling is willing or unconscious. 
+&lt;br&gt;The Grappled creature can attempt to free itself from the Grappled condition by making a contested skill check against the Grappler. The Grappled creature can choose to make an Acrobatics or Athletics check, and the Grappler can choose to make an Athletics or Sturdy check. If the Grappled creature wins (they win in a tie,) they no longer have the Grappled condition, and they will move to one of the free spaces adjacent to their Grappler.
+]}]]]&lt;Grappled|
+$HB3[$H4[(link-repeat:&quot;Pained ⏷&quot;)[{(replace:?Pained)[
+$H4[(link:&quot;Pained ⏶&quot;)[(rerun:?Pained)]]
+&lt;br&gt;Injuries have caused a creature to be in pain. All creatures increase their level of Pained by 1 when they drop below half of their total HP.
+&lt;br&gt;There are 5 levels of Pained.
+&lt;br&gt;A creature can only have one instance of the Pained condition. If the creature already has the Pained condition, and a source that has not already given them the Pained condition would otherwise give them the Pained condition, they gain one more level of the Pained condition.
+&lt;br&gt;Level 1: The creature gains a -1 to Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition.
+&lt;br&gt;Level 2: The creature gains a -5 to Endurance, Gullet, and Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition.
+&lt;br&gt;Level 3: The creature gains a -5 to Acrobatics, Handiwork, Power, Aura, Willpower, Endurance, Gullet, and Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition. Their movement speeds are also halved, rounded up.
+&lt;br&gt;Level 4: The creature gains all of the effects of Pained III and their movement speed becomes 0.
+&lt;br&gt;Level 5: The creature gains all of the effects of Pained IV and must make a DC20 Willpower or Heartiness save every 6 seconds or become Unconscious.
+&lt;br&gt;The Pained condition ends when the source of the pain ends, such as injuries healing.
+]}]]]&lt;Pained|
+$HB3[$H4[(link-repeat:&quot;Paralyzed ⏷&quot;)[{(replace:?Paralyzed)[
+$H4[(link:&quot;Paralyzed ⏶&quot;)[(rerun:?Paralyzed)]]
+&lt;br&gt;Something has prevented the creature from moving, such as magic or rope.
+&lt;br&gt;There are 3 levels of Paralyzed.
+&lt;br&gt;Level 1: Slowed. The creature loses one Action per round and its movement speeds are halved, rounded up.
+&lt;br&gt;Level 2: The creature gains a -10 penalty to any checks that require them to move move normally, as if not bound. They also lose one Action per round. Their movement speeds become 0.
+&lt;br&gt;Level 3: The creature cannot take Actions that require them to move, and their movement speeds are 0.
+&lt;br&gt;The Paralyzed condition ends when the source of the paralysis ends. This can be done by escaping the bonds or overcoming magic, depending on the source.
+]}]]]&lt;Paralyzed|
+$HB3[$H4[(link-repeat:&quot;Plagued ⏷&quot;)[{(replace:?Plagued)[
+$H4[(link:&quot;Plagued ⏶&quot;)[(rerun:?Plagued)]]
+&lt;br&gt;The creature is plagued by some sort of effect that continues to harm it. When a creature drops to 0 HP or lower, it gains the Plagued (bleeding - typeless) condition with a level equal to one fifth of their total HP, rounded up.
+&lt;br&gt;Each instance of the Charmed condition specifies the kind of damage that the Plagued condition causes. For example, a creature can be Charmed (burning - fire) and Plagued (poisoned - Poison). Many instances of Plagued can coexist on a single creature.
+&lt;br&gt;The Plagued condition causes an amount of damage equal to its level every 6 seconds, of the type attached to it.
+&lt;br&gt;The Plagued condition ends when the source of the plaguing ends.
+]}]]]&lt;Plagued|
+$HB3[$H4[(link-repeat:&quot;Regenerating ⏷&quot;)[{(replace:?Regenerating)[
+$H4[(link:&quot;Regenerating ⏶&quot;)[(rerun:?Regenerating)]]
+&lt;br&gt;Some sort of effect is continuously and slowly healing the creature.
+&lt;br&gt;Instances of Regenerating, from different sources, are additive in level.
+&lt;br&gt;The Regenerating condition causes an amount of HP equal to its level to be restored every 6 seconds. It does not restore HP above maximum.
+&lt;br&gt;Every time that the Regenerating condition heals some HP, its level reduces by 1. Once this level reduces to 0, the condition ends.
+]}]]]&lt;Regenerating|
+$HB3[$H4[(link-repeat:&quot;Stunned ⏷&quot;)[{(replace:?Stunned)[
+$H4[(link:&quot;Stunned ⏶&quot;)[(rerun:?Stunned)]]
+&lt;br&gt;The creature is caught unable to act for a short amount of time.
+&lt;br&gt;The Stunned condition comes in 5 levels (4.1) or 2 levels (4.0). A creature can only have one instance of the Stunned condition, and it will take the higher level of any inflicted from different sources.
+&lt;br&gt;The Stunned condition prevents a creature from taking Actions while the creature has it.
+&lt;br&gt;Every time that the Stunned condition prevents an Action, its level reduces by 1. Once this level reduces to 0, the condition ends.
+]}]]]&lt;Stunned|
+$HB3[$H4[(link-repeat:&quot;Suffocating ⏷&quot;)[{(replace:?Suffocating)[
+$H4[(link:&quot;Suffocating ⏶&quot;)[(rerun:?Suffocating)]]
+&lt;br&gt;The creature is unable to respirate.
+The Suffocating condition comes in 3 levels.
+Level 1: The creature has a -5 penalty to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC12 or gain Suffocating II.
+Level 2: The creature has a -5 penalty to all checks, and disadvantage to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC16 or gain Suffocating III.
+Level 3: The creature has a -7 penalty to all checks, and gains the Unstable condition.
+]}]]]&lt;Suffocating|
+$HB3[$H4[(link-repeat:&quot;Unstable ⏷&quot;)[{(replace:?Unstable)[
+$H4[(link:&quot;Unstable ⏶&quot;)[(rerun:?Unstable)]]
+&lt;br&gt;The creature is actively dying.
+Unstable only comes in one level, and as such does not need to be marked with its level.
+When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
+]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="99" name="Map Grid Tests" tags="section" position="2650,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="100" name="Magic Skills List" tags="" position="1400,600" size="100,100">$H2[Talent Skills]
+(set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
+|SortBy&gt;[Sort by: {
+	(if:_sortByNum is 1)[Name | (link:&quot;Casting Style&quot;)[
+		(set:(_sortByNum) to 5)
+		(rerun:?SortBy)
+	]](else-if:_sortByNum is 5)[(link:&quot;Name&quot;)[
+		(set:(_sortByNum) to 1)
+		(rerun:?SortBy)
+	] | Casting Style]
+}
+{[(for: each _skill, 
+	...(sorted: via its (_sortByNum), 
+		...$magicMaster
+		)
+)[
+	$HB2 + (b4r:&quot;solid&quot;) + \
+	(b4r-color:$talentColor&#39;s (_skill&#39;s 5)) + \
+	(background:(gradient:
+		0,
+		0, (_gray),
+		1, (mix: 0.8, (_gray), 0.2, $talentColor&#39;s (_skill&#39;s 5))
+	))[
+	|=
+	$H4[(print:_skill&#39;s 1)]&lt;br&gt;
+	$H5[(print:_skill&#39;s 5)]&lt;br&gt;
+	&lt;!--print prerequisites--&gt;\
+	(print:&quot;Prerequisites: &quot;)
+	(for:each _prereq, ...(_skill&#39;s 3))[
+		(print:$skillsMaster&#39;s (_prereq)&#39;s 1)
+		&lt;!--no code for multiple prereqs bc thats--&gt;
+		&lt;!--a challenge for the astro version--&gt;
+	]
+	&lt;br&gt;
+	(print: &quot;Unlocks: &quot;)(set:_unlockArr to (a:))
+	(for:each _unlock, ...(_skill&#39;s 4))[
+		(set: _unlockArr to it + (a:$skillsMaster&#39;s (_unlock)&#39;s 1))
+	]
+	(print:_unlockArr)
+	=|
+	(print:_skill&#39;s 2)]&lt;br&gt;
+	]
+]}\
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

@@ -125,7 +125,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -188,7 +190,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.0.12 - 2024-10-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.1.0 - 2024-10-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -216,8 +218,9 @@ Array
 4 Unlocks
 5 Associated Talent
 6 ID
+7 Distance from Talent
 
-(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9), </tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is &quot;7.5&quot;)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
+&lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;</tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is &quot;7.5&quot;)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
 (unless:(history:)&#39;s length &lt; 1)[(link:&quot;←&quot;)[(display:&quot;undo&quot;)]](else:)[←]
 [(unless:$future&#39;s length &lt; 1)[(link:&quot;→&quot;)[(display:&quot;redo&quot;)]](else:)[→]](hid|
 
@@ -753,7 +756,7 @@ Click on a skill&#39;s name to see its description.
 [HTML table ends](c|
 (set:$skillsListView to it + &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;)
 (print:$skillsListView)
-}</tw-passagedata><tw-passagedata pid="15" name="Character Sheet Download" tags="" position="1400,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="16" name="Locations (T)" tags="" position="1600,350" size="100,100">$H2[Locations]
+}</tw-passagedata><tw-passagedata pid="15" name="Character Sheet Download" tags="" position="1400,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="16" name="Locations (T)" tags="" position="2250,1300" size="100,100">$H2[Locations]
 
 $H3[Ventopia]
 A coral reef located on the center of the vents. Its residents are obsessed with beauty, prizing it above everything else. They have a Queen, considered to be the most beautiful creature.
@@ -765,7 +768,7 @@ $H3[Graveyard]
 An old shrine dedicated to Cardinal East, with a graveyard around it. It almost exclusively has the remains of Boneyardians now.
 
 $H3[Shipwreck]
-The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="17" name="Cardinals" tags="" position="1600,475" size="100,100">$H2[Cardinals]
+The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="17" name="Cardinals" tags="" position="2375,1300" size="100,100">$H2[Cardinals]
 
 $H3[Cardinal Down]
 The god of life, safety, and comfort, and the favored god of the Ventopians.
@@ -1276,7 +1279,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="25" name="Hadalite" tags="table" position="925,475" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="25" name="Hadalite" tags="table" position="2125,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Hadalites live long lives— much longer than most other creatures. However, as ambush predators, they spend most of it in-between sleep and waking.
 &lt;p&gt;These long periods of half-sleep can sometimes render their memories fuzzy; a Hadalite can seem like a completely different person after enough years have passed, unable to clearly recall their past selves. In this way, other people are transient in the life of a Hadalite.
@@ -1314,10 +1317,14 @@ Features:
 &#96;[&#96;image&#96;]&#96;
 *The lures at the end of the tentacles as well as the “hairstyle” of the tentacles can be variant. Line down the middle is their mouth, so clothes tend to accommodate it opening.
 Spots on head tend to resemble eyes or features found on other races, but can vary! Colors can be anything, though tend towards more phosphorescent-looking shades.
-Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="26" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen (Deepsea)]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="26" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen(if:$campaign is &quot;TL&quot;)[ (Deepsea)]]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
-Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.
+{(if:$campaign is &quot;TL&quot;)[
+Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.&lt;br&gt;
 &lt;p&gt;Marigen are omnivores, but have little access to plant matter in the Hadal Zone.
+](else:)[
+	Marigen hail from the open sea, building isolated societies on the seafloor, using a combination of vents and magic to keep them ventilated with breathable air. They have a unique set of languages, known as the Click languages, that a Marigen character would be likely to know if they or their parents ever lived undersea.
+]}
 {&lt;table&gt;\
 	&lt;tr&gt;\
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -1326,28 +1333,28 @@ Fabled to have originated from the Above, Marigen lack gills and swim quickly co
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;MP/adv: &lt;b&gt;6&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Speed: &lt;b&gt;35ft Swim&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Speed: &lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Senses: &lt;b&gt;Aurasense 30ft, Echolocation 150ft
-		&lt;/b&gt;&lt;/td&gt;
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
+		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
 		&lt;td&gt;Maturity: &lt;b&gt;22 years&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Eats every other long rest; omnivore.
+			Eats every day; omnivore.
 		&lt;td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)
+(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)]
 
 &#96;[&#96;image&#96;]&#96;
 *Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
 Clothing tends to have holes to accommodate these fins; it’s uncomfortable to crush them.
-Can have fur, but it is rare.
+(if:$campaign is &quot;TL&quot;)[Can have fur, but it is rare.](else:)[Marigen from the icy Northern oceans often have fur, but other Marigen do not. Consider fur fully optional. Marigen fur is the consistency of otter fur.]
 &quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="27" name="ItemsInit" tags="data-storage" position="2250,500" size="100,100">{}</tw-passagedata><tw-passagedata pid="28" name="Code/Admin Stuff" tags="section" position="2275,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="test" tags="table test" position="2900,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
 	&lt;tr&gt;
@@ -1890,44 +1897,39 @@ Take a look at the Talents below!
 {&lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Aurastrong&quot;)[($pop:&quot;Aurastrong&quot;)]
+		(link-repeat:&quot;Agile&quot;)[($pop:&quot;Agile&quot;)]
 	&lt;/td&gt;
+	&lt;td&gt;
+		(link-repeat:&quot;Astute&quot;)[($pop:&quot;Astute&quot;)]
+	&lt;/td&gt;
+	&lt;td&gt;
+		(link-repeat:&quot;Charming&quot;)[($pop:&quot;Charming&quot;)]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 	&lt;td&gt;
 		(link-repeat:&quot;Creative&quot;)[($pop:&quot;Creative&quot;)]
 	&lt;/td&gt;
 	&lt;td&gt;
 		(link-repeat:&quot;Faithful&quot;)[($pop:&quot;Faithful&quot;)]
 	&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
 	&lt;td&gt;
-		(link-repeat:&quot;Fast&quot;)[($pop:&quot;Fast&quot;)]
-	&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Intuitive&quot;)[($pop:&quot;Intuitive&quot;)]
-	&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Tactical&quot;)[($pop:&quot;Tactical&quot;)]
+		(link-repeat:&quot;Keen&quot;)[($pop:&quot;Keen&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Thorough&quot;)[($pop:&quot;Thorough&quot;)]
-	&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
 	&lt;td&gt;
 		(link-repeat:&quot;Tough&quot;)[($pop:&quot;Tough&quot;)]
 	&lt;/td&gt;
-	&lt;td&gt;
-		(link-repeat:&quot;Well-Read&quot;)[($pop:&quot;Well-Read&quot;)]
-	&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-}</tw-passagedata><tw-passagedata pid="54" name="Thalassophobia" tags="" position="1600,225" size="100,100">$H2[Thalassophobia Lore]
+}</tw-passagedata><tw-passagedata pid="54" name="Thalassophobia" tags="" position="2125,1300" size="100,100">$H2[Thalassophobia Lore]
 
 $H3[[[Locations-&gt;Locations (T)]]]
 
 $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Skills List" tags="done" position="1400,350" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
-(link:&quot;scrl&quot;)[(scroll:?page, ?s10)]
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Associated Talent&quot;)[
 		(set:(_sortByNum) to 5)
@@ -1991,48 +1993,48 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Sk
 &lt;!--2nd-to-last (-2): placeholder for base Talent skill--&gt;
 (set: $skillsMaster to (a:
 
-(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1), 
-(a: &quot;Unkillable&quot;, &quot;The character has advantage on Death Saving Throws.&quot;, (a: -2), (a:), &quot;Tough&quot;, 2), 
-(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3), 
-(a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work.&quot;, (a: -2), (a:5), &quot;Creative&quot;, 4), 
-(a: &quot;★Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:7,8,9), &quot;Faithful&quot;, 5), 
-(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, (a: -2), (a:21,,22,23), &quot;Tough&quot;, 6), 
-(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: 15), (a:), &quot;Keen&quot;, 7), 
-(a: &quot;Flickering Life&quot;, &quot;Twice per Long Rest, the character can choose to gain advantage on a Power, Aura, Religion, or Appraisal check.&quot;, (a: -2), (a:2,3), &quot;Keen&quot;, 8), 
-(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9), 
-(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes.&quot;, (a: -2), (a:11,12,13), &quot;Agile&quot;, 10), 
-(a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion or Flair check in an attempt to force it to pass.&quot;, (a: 4), (a:), &quot;Creative&quot;, 11), 
-(a: &quot;★Hidden Purpose&quot;, &quot;When the character succeeds a Invention check to make an improvised tool or weapon, it is good enough that users of said tool or weapon can gain the full bonuses of proficiency, as if the tool or weapon was a normal version.&quot;, (a: -2), (a:15), &quot;Crafty&quot;, 12), 
-(a: &quot;Stratagem&quot;, &quot;As a bonus action, the character can choose to give one other character advantage on their next check or roll to hit by suggesting a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, (a: -2), (a:), &quot;Astute&quot;, 13), 
-(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check. &quot;, (a: -2), (a:18,19), &quot;Astute&quot;, 14), 
-(a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: -2), (a:), &quot;Agile&quot;, 15), 
-(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -2), (a:), &quot;Tough&quot;, 16), 
-(a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, (a: 14), (a:), &quot;Astute&quot;, 17), 
-(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18), 
-(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 19), 
-(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 20), 
-(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 21), 
-(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP.&quot;, (a: 20), (a:), &quot;Tough&quot;, 22), 
-(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 20), (a:), &quot;Tough&quot;, 23), 
-(a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as a Free Action once per six seconds.&quot;, (a: 10), (a:), &quot;Agile&quot;, 24), 
-(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, (a: -2), (a:), &quot;Charming&quot;, 25), 
-(a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past.&quot;, (a: 25), (a:), &quot;Charming&quot;, 26), 
-(a: &quot;Mental Pinboard&quot;, &quot;This character can make an Insight check on a creature to gain specific information from little details, such as pet hair on clothing or smudged lipstick.&quot;, (a: 25), (a:), &quot;Charming&quot;, 27), 
-(a: &quot;Storyteller&quot;, &quot;An experienced teller of tall tales, the character can use movement, magic, and anything else at their disposal to better communicate a story. They can add half of their Flair proficiency, rounded down, to their Persuasion checks.&quot;, (a: 25), (a:), &quot;Charming&quot;, 28), 
-(a: &quot;Seasoned&quot;, &quot;The character can choose a single expertise to become a Deep Expertise, which grants them a +5 instead of a +3.&quot;, (a: 17), (a:), &quot;Astute&quot;, 29), 
-(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, (a: -2), (a:), &quot;Keen&quot;, 30), 
-(a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 31), 
-(a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, (a: 21), (a:), &quot;Faithful&quot;, 32), 
-(a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 33), 
-(a: &quot;&quot;, &quot;When making an unarmed strike as an Action, the character can choose to make a second unarmed strike as part of the same Action.&quot;, (a: -2), (a:), &quot;Agile&quot;, 34), 
-(a: &quot;Creature&quot;, &quot;The character ignores the drawbacks of rough terrain, and their Defense increases by 2 when they are in natural environments they are familiar with.&quot;, (a: -2), (a:), &quot;Keen&quot;, 35), 
-(a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, (a: -2), (a:), &quot;Tough&quot;, 36), 
-(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: -2), (a:), &quot;Tough&quot;, 37), 
-(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, (a: 6), (a:), &quot;Tough&quot;, 38), 
-(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, (a: -2), (a:), &quot;Agile&quot;, 39), 
-(a: &quot;&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, (a: -2), (a:), &quot;Creative&quot;, 40), 
-(a: &quot;&quot;, &quot;&quot;, (a: -2), (a:), &quot;Creative&quot;, 41), 
-(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42), 
+(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1, 1), 
+(a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 3 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3), 
+(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3, 1), 
+(a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work.&quot;, (a: -2), (a:5), &quot;Creative&quot;, 4, 0), 
+(a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:7,8,9), &quot;Faithful&quot;, 5, 0), 
+(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, (a: -2), (a:21,,22,23), &quot;Tough&quot;, 6, 0), 
+(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: 15), (a:), &quot;Keen&quot;, 7, ), 
+(a: &quot;Flickering Life&quot;, &quot;Twice per Long Rest, the character can choose to gain advantage on a Power, Aura, Religion, or Appraisal check.&quot;, (a: -1), (a:2,3), &quot;Keen&quot;, 8, ), 
+(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9, 2), 
+(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes.&quot;, (a: -2), (a:11,12,13), &quot;Agile&quot;, 10, 0), 
+(a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion, Invention or Flair check in an attempt to force it to pass.&quot;, (a: 4), (a:), &quot;Creative&quot;, 11, 1), 
+(a: &quot;Hidden Purpose&quot;, &quot;When the character succeeds a Invention check to make an improvised tool or weapon, it is good enough that users of said tool or weapon can gain the full bonuses of proficiency, as if the tool or weapon was a normal version.&quot;, (a: 4), (a:15), &quot;Creative&quot;, 12, 1), 
+(a: &quot;Stratagem&quot;, &quot;As a bonus action, the character can choose to give one other character advantage on their next check or roll to hit by suggesting a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, (a: 14), (a:), &quot;Astute&quot;, 13, ), 
+(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check. &quot;, (a: -2), (a:18,19), &quot;Astute&quot;, 14, 0), 
+(a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 10), (a:), &quot;Agile&quot;, 15, 2), 
+(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -1), (a:), &quot;Tough&quot;, 16, ), 
+(a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, (a: 14), (a:), &quot;Astute&quot;, 17, 1), 
+(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18, 2), 
+(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 19, 1), 
+(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 20, 1), 
+(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 6), (a:), &quot;Faithful&quot;, 21, 1), 
+(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, (a: 37), (a:), &quot;Tough&quot;, 22, 2), 
+(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 6), (a:), &quot;Tough&quot;, 23, 1), 
+(a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as a Free Action once per six seconds.&quot;, (a: 10), (a:), &quot;Agile&quot;, 24, 1), 
+(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, (a: -2), (a:), &quot;Charming&quot;, 25, 0), 
+(a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past.&quot;, (a: 25), (a:), &quot;Charming&quot;, 26, 1), 
+(a: &quot;Mental Pinboard&quot;, &quot;This character can make an Insight check on a creature to gain specific information from little details, such as pet hair on clothing or smudged lipstick.&quot;, (a: 25), (a:), &quot;Charming&quot;, 27, 1), 
+(a: &quot;Storyteller&quot;, &quot;An experienced teller of tall tales, the character can use movement, magic, and anything else at their disposal to better communicate a story. They can add half of their Flair proficiency, rounded down, to their Persuasion checks.&quot;, (a: 25), (a:), &quot;Charming&quot;, 28, 1), 
+(a: &quot;Seasoned&quot;, &quot;The character can choose a single expertise to become a Deep Expertise, which grants them a +5 instead of a +3.&quot;, (a: 17), (a:), &quot;Astute&quot;, 29, 2), 
+(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, (a: -2), (a:), &quot;Keen&quot;, 30, 0), 
+(a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 31, 2), 
+(a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, (a: 21), (a:), &quot;Faithful&quot;, 32, 2), 
+(a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 33, 2), 
+(a: &quot;Striking Set&quot;, &quot;When making an unarmed strike as an Action, the character can choose to make a second unarmed strike as part of the same Action.&quot;, (a: 10, 24), (a:), &quot;Agile&quot;, 34, 2), 
+(a: &quot;Creature&quot;, &quot;The character ignores the drawbacks of rough terrain, and their Defense increases by 2 when they are in natural environments they are familiar with.&quot;, (a: 30), (a:), &quot;Keen&quot;, 35, ), 
+(a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, (a: 37), (a:), &quot;Tough&quot;, 36, 2), 
+(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: 6), (a:), &quot;Tough&quot;, 37, 1), 
+(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, (a: 6), (a:), &quot;Tough&quot;, 38, 1), 
+(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, (a: 10), (a:), &quot;Agile&quot;, 39, 2), 
+(a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, (a: 11), (a:), &quot;Creative&quot;, 40, 2), 
+(a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, (a: 4), (a:), &quot;Creative&quot;, 41, 1), 
+(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42, ), 
 
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -1), 
@@ -2048,46 +2050,36 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Sk
 &quot;Astute&quot;, #5a9aed, 
 &quot;Crafty&quot;, #03a336, 
 &quot;Charming&quot;, #9b2fde
-))</tw-passagedata><tw-passagedata pid="58" name="Aurastrong" tags="" position="1050,350" size="100,100">$H3[Aurastrong]
+))</tw-passagedata><tw-passagedata pid="58" name="Aurastrong" tags="unused" position="1050,1475" size="100,100">$H3[Aurastrong]
 Those who are Aurastrong have a lot of force behind their magic. Whether that is by hard work, or due to a natural-born affinity, magic of that scale can be difficult to tame and dangerous to wield.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to Power.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Creative" tags="" position="1050,475" size="100,100">$H3[Creative]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Creative" tags="" position="1050,725" size="100,100">$H3[Creative]
 Creative types see beauty in the things around them, and carry with them the ability to enhance the qualities they feel. Through craft or performance, those with creative talent can work with the things around them to make them into something new.
-HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Flair and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Faithful" tags="" position="1050,600" size="100,100">$H3[Faithful]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Faithful" tags="" position="1050,850" size="100,100">$H3[Faithful]
 The world is filled with forces beyond comprehension; some, almost sapient. Those with strong faith have dedicated their time to learning about those forces and working alongside them for a purpose. While some choose their own purpose, others find themselves corrupted by the forces around them and are compelled to act alongside their force&#39;s will.
-HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Fast" tags="" position="1050,725" size="100,100">$H3[Fast]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Agile" tags="" position="1050,350" size="100,100">$H3[Agile]
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
-HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Intuitive" tags="" position="1050,850" size="100,100">$H3[Intuitive]
-Connected to their environment and aware of minute details and changes, those who embrace the world with their intuition and keen senses find themselves seeing one thing when everyone else sees another. A unique outlook lends itself to identifying the unique identities in the world around them.
-(Intuitive ends up leading to both ranger-like archetypes, druid-like archetypes, and crafting-heavy builds.)
-HP: &lt;b&gt;10&lt;/b&gt;
-Proficiency: 3 Bonus Proficiency Points between Perception and Aura.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Tactical" tags="" position="1050,975" size="100,100">$H3[Tactical]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Tactical" tags="unused" position="1050,1850" size="100,100">$H3[Tactical]
 Failure becomes experience, and those who have refined their tactics to this degree have seen it all. Their plans cover many angles and possibilities, and they know how to best bring out the strength of their comrades, whether there is chaos or peace.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Insight, Investigation and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="Thorough" tags="" position="1050,1100" size="100,100">$H3[Thorough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Thorough" tags="unused" position="1050,1600" size="100,100">$H3[Thorough]
 Those who refine their skills thoroughly 
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 4 Bonus Proficiency Points between Stealth, Handiwork, History, Investigation, Tracking, Insight, and Appraisal.
 (Thorough is meant to be similar to a rogue in some ways.)
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="65" name="Tough" tags="" position="1050,1225" size="100,100">$H3[Tough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="Tough" tags="" position="1050,1100" size="100,100">$H3[Tough]
 The toughest of us can rely on their physical might to keep themselves going and control the situation around them. There is technique to asserting strength, developed over years of use-- those who are tough know how to use themselves to the fullest.
-(Tough lends itself to HP tanks and front-line fighters. There should be other directions it can take, though.)
-HP: &lt;b&gt;15&lt;/b&gt;
 Proficiency: 2 Bonus Proficiency Points between Endurance and Heartiness.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 20&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 20&#39;s 2)</tw-passagedata><tw-passagedata pid="66" name="Well-Read" tags="" position="1050,1350" size="100,100">$H3[Well-Read]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="65" name="Well-Read" tags="unused" position="1050,1725" size="100,100">$H3[Well-Read]
 Knowledge is slow to collect and quick to be useful, and no one knows that better than those who focus their efforts on becoming well-read. History, nature, politics-- these characters know it best.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to History.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="67" name="AttributesInit" tags="data-storage" position="2500,375" size="100,100">{
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="66" name="AttributesInit" tags="data-storage" position="2500,375" size="100,100">{
 &lt;!--ATT FORMAT--&gt;
 &lt;!--1: Attribute name--&gt;
 &lt;!--2: Statistic--&gt;
@@ -2130,7 +2122,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 &quot;Magic&quot;, #b552f7
 ))
 }
-</tw-passagedata><tw-passagedata pid="68" name="Attributes Quick Reference" tags="" position="600,350" size="100,100">$H2[Attributes Quick Reference]
+</tw-passagedata><tw-passagedata pid="67" name="Attributes Quick Reference" tags="" position="600,350" size="100,100">$H2[Attributes Quick Reference]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Statistic&quot;)[
@@ -2167,7 +2159,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 	&lt;/td&gt;&lt;/tr&gt;
 (set:_index to it + 1)}]}\
 ]
-</tw-passagedata><tw-passagedata pid="69" name="Nerite" tags="table" position="925,600" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+</tw-passagedata><tw-passagedata pid="68" name="Nerite" tags="table" position="2250,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Frilly and soft, Nerites were likely prey animals before they came to the Hadal Zone. Their strong aurasense followed them even as the need for it faded, and as a result, they have the strongest aurasense among the races. 
 &lt;p&gt;They are the most populous race in Ventopia, covered in many intricate markings that they consider “beautiful.”
@@ -2199,7 +2191,7 @@ Features:
 None-- they get a lot of MP!
 
 &#96;[&#96;image&#96;]&#96;
-*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="70" name="Khetadon" tags="table" position="925,850" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="69" name="Khetadon" tags="table" position="2375,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 The Khetadons are a rough-skinned and bold species likely descended from true top-of-the-food-chain carnivores. With their sharp teeth and acute mid-range senses, they have a bit of an edge in a physical fight; don’t underestimate them in other settings because of that.
 &lt;p&gt;Khetadons deal with exclusion from institutions of knowledge and are shunned by worshippers of South, but can be found in all sorts of places regardless.
@@ -2231,7 +2223,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 6&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 6&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="71" name="Karkani" tags="table" position="925,975" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="70" name="Karkani" tags="table" position="2500,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Karkani take great pride in their shells, often decorating them or carving things into them. These shells make great protection against predators, blunt force trauma, and social embarrassment.
 &lt;p&gt;Karkani have strong internal social structure, and status is often marked on their shells.
@@ -2263,7 +2255,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 7&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 7&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*They can be shaped like any crustacean, including isopods, lobsters, crabs, or shrimp. Shells often stick to adjacent colors, rather than having highly contrastive patterns, and don’t glow very much.</tw-passagedata><tw-passagedata pid="72" name="Advancement and Improvements" tags="" position="600,600" size="100,100">$H2[Advancement and Improvements]
+*They can be shaped like any crustacean, including isopods, lobsters, crabs, or shrimp. Shells often stick to adjacent colors, rather than having highly contrastive patterns, and don’t glow very much.</tw-passagedata><tw-passagedata pid="71" name="Advancement and Improvements" tags="" position="600,600" size="100,100">$H2[Advancement and Improvements]
 As characters go on adventures and learn, they gain experience, pick up new skills and abilities, and become more capable.
 &lt;p&gt;In Remagica, this is captured with the Rank system.
 &lt;p&gt;Ranks can be thought of as a reskinning of Levels in some other systems, granting some combination of Skills, Health, and Statistic Improvements. 
@@ -2283,7 +2275,7 @@ Often, a Rank consists of the following:
 * One Skill gained
 * One Health Improvement
 * One Proficiency Point
-* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="73" name="Magic Ability" tags="in-progress table" position="1175,225" size="100,100">$H2[Magic Ability]
+* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="72" name="Magic Ability" tags="in-progress table" position="1175,225" size="100,100">$H2[Magic Ability]
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
 &lt;p&gt;Often, Abilities are highly specific. Some examples include:
 * Nikita Theodora has the ability to create a shadowy shell around herself in the shape of a were-fox, augmenting her melee capabilities.
@@ -2322,7 +2314,7 @@ $H3[Damage Types]
 A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which is a shorthand for which natural element the magic has the most similar properties to. For example, magic that manipulates fire would deal &quot;fire damage,&quot; which means that it will be more effective at destroying wooden or flammable objects. However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
 The damage types are as follows:
 Earth, Fire, Ice, Life, Light, Lightning, Psychic, Rot, Soul, Sound, Time, Toxin, Water;
-Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="74" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
+Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="73" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
 &quot;Borro&quot;,
 &quot;Skathi&quot;,
 &quot;Fyugo&quot;,
@@ -2352,7 +2344,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 (a: &quot;Solid Form&quot;, &quot;The Otsoa will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 7), 
 (a: &quot;Unrecognizable&quot;, &quot;The Otsoa&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the Otsoa&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 5)
 ))
-}</tw-passagedata><tw-passagedata pid="75" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
+}</tw-passagedata><tw-passagedata pid="74" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
 Borros have a strong connection to the physical, imbuing magic into things they can touch. While this leaves them with a short range, their power is more concentrated as a result.
 Short Range: 5ft
 Long Range: 20ft
@@ -2376,7 +2368,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="76" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="75" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
 
 (a: &quot;Hands-On&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making an Action that involves physical contact, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:15,16), &quot;Borro&quot;), 
 (a: &quot;It Spreads&quot;, &quot;When a Skathi applies a magical effect, they can choose to have it affect any number of targets, up to 3, within their Short Range of the casting’s origin, not passing through barriers such as walls. However, they have to pay for their conditions per-target, and damage is spread between them, meaning each target would take the total damage divided by the number of targets, rounded up. If the character also has the Modifying Monikers skill, Summon Tags that affect damage or give conditions can only apply to one of the targets.&quot;, (a: -2), (a:17), &quot;Skathi&quot;), 
@@ -2403,7 +2395,8 @@ Casting:
 (a: &quot;Uberheal&quot;, &quot;The Azurite can cast magic from the third and fourth rows of their casting table.&quot;, (a: 8), (a:), &quot;Azurite&quot;), 
 (a: &quot;Impermeable (Otsoa)&quot;, &quot;When the Healthy or Solid tags prevents all of the damage from an effect, the Otsoa is immune to the secondary effects of the source of the damage.&quot;, (a: 7), (a:), &quot;Otsoa&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="77" name="Exterreri" tags="table" position="925,725" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+))}</tw-passagedata><tw-passagedata pid="76" name="Exterreri" tags="table" position="925,475" size="100,100">$H2[Exterreri]\
+(if:$campaign is &quot;TL&quot;)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;](else:)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;]
 
 No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
 &lt;p&gt;Exterreri do not have mouths, instead consuming the pain of sapient creatures to survive through a single tentacle-like appendage. They can also sense it in others around them.
@@ -2411,24 +2404,21 @@ No one knows how Exterreri are born; they simply appear out of the darkness of t
 
 {&lt;table&gt;\
 	&lt;tr&gt;\
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
 		&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;MP/adv: &lt;b&gt;6&lt;/b&gt;&lt;/td&gt;
 		&lt;td&gt;Speed: &lt;b&gt;30ft Swim&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Senses: &lt;b&gt;Aurasense 30ft, Painsense 60ft
-		&lt;/b&gt;&lt;/td&gt;
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;(if:$campaign is &quot;TL&quot;)[Aurasense 30ft, ]Painsense 60ft&lt;/b&gt;
+		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;???&lt;/b&gt;&lt;/td&gt;
 		&lt;td&gt;Maturity: &lt;b&gt;30 Long Rests&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Every Long Rest; Cruciavore.
+			Eats every day; Cruciavore.
 		&lt;td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;}
@@ -2437,7 +2427,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="78" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="77" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
 Short Range: 5ft
 Long Range: 45ft
@@ -2460,7 +2450,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
 Short Range: 5ft
 Long Range: 45ft
@@ -2469,7 +2459,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Conditions Cost List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
 Short Range: 5ft
 Long Range: 45ft
@@ -2479,7 +2469,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Form Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
 Short Range: 20ft
 Long Range: 150ft
@@ -2489,7 +2479,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Summon Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="82" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 Short Range: 10ft
 Long Range: 90ft
@@ -2514,7 +2504,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="83" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="82" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2576,7 +2566,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="84" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="85" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="83" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="84" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
@@ -2639,7 +2629,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="86" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="85" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
 (a: &quot;Shiv&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;),
 (a: &quot;Harpoon&quot;, &quot;Athletics check, DC AC; single target within 2 tiles. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 1 tile closer to the user, if possible.&quot;),
 (a: &quot;Staff&quot;, &quot;Acrobatics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Bludgeoning) damage on a success. On a success, the attack will leave the target&#39;s defenses open and lower their AC by 1 for 6 seconds.&quot;),
@@ -2647,7 +2637,7 @@ Casting:
 (a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
 (a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
 (a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
-))}</tw-passagedata><tw-passagedata pid="87" name="Popup" tags="code" position="2125,625" size="100,100">{
+))}</tw-passagedata><tw-passagedata pid="86" name="Popup" tags="code" position="2125,625" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
 		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
@@ -2663,7 +2653,7 @@ Casting:
 		(output-data:&quot;(alert:\&quot;&quot; + (string:_contents) + &quot;\&quot;, \&quot;X\&quot;)&quot;)
 	])
 )
-}</tw-passagedata><tw-passagedata pid="88" name="PopupConfig" tags="settings" position="2250,625" size="100,100">|=
+}</tw-passagedata><tw-passagedata pid="87" name="PopupConfig" tags="settings" position="2250,625" size="100,100">|=
 $H2[Configure Popup Height]
 Adjust the height until the box on the right fits within the screen.
 {&lt;center&gt;
@@ -2675,7 +2665,7 @@ Adjust the height until the box on the right fits within the screen.
 }
 (link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
 =|
-[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="89" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="88" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
 $HB3[$H4[(link-repeat:&quot;Blinded ⏷&quot;)[{(replace:?Blinded)[
 $H4[(link:&quot;Blinded ⏶&quot;)[(rerun:?Blinded)]]
 &lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
@@ -2771,7 +2761,7 @@ $H4[(link:&quot;Unstable ⏶&quot;)[(rerun:?Unstable)]]
 &lt;br&gt;The creature is actively dying.
 Unstable only comes in one level, and as such does not need to be marked with its level.
 When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
-]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="90" name="Map Grid Tests" tags="section" position="2850,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="91" name="Magic Skills List" tags="" position="1400,600" size="100,100">$H2[Talent Skills]
+]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="89" name="Map Grid Tests" tags="section" position="2850,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="90" name="Magic Skills List" tags="" position="1400,600" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Casting Style&quot;)[
@@ -2814,15 +2804,15 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 	(print:_skill&#39;s 2)]&lt;br&gt;
 	]
 ]}\
-]</tw-passagedata><tw-passagedata pid="92" name="redo" tags="code" position="2125,750" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="91" name="redo" tags="code" position="2125,750" size="100,100">{
 (set:$future to (subarray: $future, 1, -2))
-}</tw-passagedata><tw-passagedata pid="93" name="undo" tags="code" position="2125,875" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="92" name="undo" tags="code" position="2125,875" size="100,100">{
 (set:$future to it + (a:(passage:)&#39;s name))
 (set:_dest to (history:)&#39;s last)
 (undo:)
 &lt;!--need some way to remove the most recent passage from (history:)--&gt;
 (go-to: (_dest))
-}</tw-passagedata><tw-passagedata pid="94" name="Deities and Forces of Nature" tags="" position="1725,475" size="100,100">$H2[Deities and Forces of Nature]
+}</tw-passagedata><tw-passagedata pid="93" name="Deities and Forces of Nature" tags="" position="1725,475" size="100,100">$H2[Deities and Forces of Nature]
 $H4[Northern Continent]
 
 $H3[Rekke Panthali]
@@ -2846,15 +2836,163 @@ His domain is that of the nighttime, especially just past sunset, alternating be
 
 $H3[Rattzlagi]
 A bitter god who is trapped in a constant state of rot. She is full of anger at the world, but even more so at the Queen of Nightmares for making her this way. She wants to find a way to either die or become mortal again. She is rarely lucid and often suffering.
-Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="95" name="Nightmare Hunters" tags="" position="1725,225" size="100,100">$H2[Nightmare Hunters Lore]
+Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="94" name="Nightmare Hunters" tags="" position="1725,225" size="100,100">$H2[Nightmare Hunters Lore]
 
 $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="96" name="Locations (NH)" tags="" position="1725,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="97" name="Theodora City" tags="" position="1850,225" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="95" name="Locations (NH)" tags="" position="1725,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="Theodora City" tags="" position="1850,225" size="100,100">$H2[Theodora City]
 
-$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="98" name="Euridza" tags="" position="1675,600" size="100,100">$H2[Euridza: The Realm of Dreams]</tw-passagedata></tw-storydata>
+$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="97" name="Euridza" tags="" position="1675,600" size="100,100">$H2[Euridza: The Realm of Dreams]
+</tw-passagedata><tw-passagedata pid="98" name="Astute" tags="" position="1050,475" size="100,100">$H3[Astute]
+Exceptionally gifted with a variety of skills, those who are astute know a lot about the world around them, and what they can do in it. Whether they are a researcher or a jack of all trades, it is their varied abilities that define them.
+Proficiency: 2 Bonus Proficiency Points between History and Religion.
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="99" name="Charming" tags="" position="1050,600" size="100,100">$H3[Charming]
+Some connect with the world around them through other people. The most charming often have many friends-- often in strange places-- and connections they can rely on. Whether their skill is making new friends, knowing the right people, or pretending to form deeper connections, those who are talented with their charms can often find unique ways of navigating any situation.
+Proficiency: 2 Bonus Proficiency Points between Flair, Persuasion, and Intimidation.
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="100" name="Keen" tags="" position="1050,975" size="100,100">$H3[Keen]
+Attentive and curious, keener folk keep a sharp eye out for anything of interest. They&#39;re well attuned to their environment, knowing where things are and what to do with them. They understand purpose where others do not.
+Proficiency: 2 Bonus Proficiency Points between Perception and Aura.
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="101" name="Proficiencies" tags="" position="1400,1350" size="100,100">$H2[Proficiencies]
+There are three kinds of proficiencies: (link-repeat:&quot;attribute Proficiencies&quot;)[(scroll:?att)], (link-repeat:&quot;tool Proficiencies&quot;)[(scroll:?tool)], and (link-repeat:&quot;other proficiencies&quot;)[(scroll:?other)].
+&lt;p&gt;A character starts with 7 proficiency points that go to their skill Proficiencies, and 3 tool Proficiencies.
+Each kind of proficiency functions a little differently, and can be improved in different ways:
+$H3[Attribute Proficiencies]&lt;att|
+There is a chart of</tw-passagedata><tw-passagedata pid="102" name="Thalassophobia Stuff" tags="section" position="2275,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="103" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+Some Apians come from hives in the wilderness, raised making honey to survive the winter and foraging for food. Others are raised around other peoples, using their flight to get around settlements that are not built for their stature.
+&lt;p&gt;Due to their short lifespans, Apians struggle to be taken seriously, often spending their entire life seen as junior to others around them. They&#39;ve forged a reputation for themselves as hardworking and industrious, fighting for the respect they deserve.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Dex] $HB4[- 1 Wis]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk, 30ft Fly&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;4 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every day; only eats fruit.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="104" name="Ferfaen" tags="table" position="925,725" size="100,100">$H2[Ferfaen]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ferfaen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+Ferfaen are most common on the Central continent due to their sensitivity to magic radiation, which increases as one approaches the edges of the world. Still, they can be found on the Northern continent, living among others.
+&lt;p&gt;Ferfaen have a strong natural affinity for using magic, and this reflects in their physical appearance; their magic often stains the tips of their hair a different color, glowing a little when they cast. It can also cause their eyes to faintly glow.
+&lt;p&gt;They are a little less hardy against the cold than the other races, but an extra layer of clothing does them just fine.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Mag, +1 Kno] $HB4[- 1 Con]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;Aurasense 150ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;18 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats daily; omnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="105" name="Hiverscruffs" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
+&lt;p&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which have the bite strength to crush bones; third, their thick, fluffy coats, which protect them from the cold, and finally, their stature, which is much taller than many other humanoids.
+
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk, 15ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats large quantities of meat once every 4 or so days. Carnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="106" name="Phorads" tags="table" position="925,975" size="100,100">$H2[Phorad]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/phorad.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
+&lt;p&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which have the bite strength to crush bones; third, their thick, fluffy coats, which protect them from the cold, and finally, their stature, which is much taller than many other humanoids.
+
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk, 15ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats large quantities of meat once every 4 or so days. Carnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

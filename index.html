@@ -126,7 +126,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1349,7 +1351,7 @@ Fabled to have originated from the Above, Marigen lack gills and swim quickly co
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)]
+(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 13&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 13&#39;s 2)]
 
 &#96;[&#96;image&#96;]&#96;
 *Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
@@ -1832,7 +1834,8 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 		$HB2[
 		|||=
 		&lt;p&gt;(link-goto:_race&#39;s name, _race&#39;s passName)&lt;br&gt;
-		(print:_race&#39;s desc)&lt;/p&gt;
+		(if:$campaign is &quot;TL&quot;)[(print:_race&#39;s descTL)]\
+		(else-if:$campaign is &quot;NH&quot;)[(print:_race&#39;s descNH)]&lt;/p&gt;
 		=|
 		(print:&quot;&lt;img src=\&quot;&quot; + _race&#39;s image + &quot;\&quot;&gt;&lt;/img&gt;&quot;)]&lt;br&gt;
 		]
@@ -1872,21 +1875,33 @@ $H3[Vision and Movement]
 These quantities can be found on the page for your character&#39;s race.
 $H3[Free Space]
 This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="52" name="RacesPreviewInit" tags="data-storage" position="2375,250" size="100,100">{(set:$racesPreview to (a:
-(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;desc&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;desc&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;desc&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;desc&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;desc&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;desc&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;descTL&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;descNH&quot;, &quot;Marigen are semi-aquatic mammals of action from the sea.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1)),
+(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;descTL&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;descTL&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
+(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;descTL&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;descTL&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Apian&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Their ancestors were hive-dwellers, but modern Apians mostly live around other races.&quot;, &quot;image&quot;, &quot;assets/races/apian.png&quot;, &quot;passName&quot;, &quot;Apian&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Ferfaen&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Magic flows through the veins of every Ferfaen, giving them much more stamina with casting it.&quot;, &quot;image&quot;, &quot;assets/races/ferfaen.png&quot;, &quot;passName&quot;, &quot;Ferfaen&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Hiverscruffs&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Tall and covered in thick fur, Hiverscruffs are the imposing natives of the frozen mountains.&quot;, &quot;image&quot;, &quot;assets/races/hiverscruff.png&quot;, &quot;passName&quot;, &quot;Hiverscruff&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Phorads&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Phorads are parasitic plants that hijack the brain of a sapient creature, and make it their own.&quot;, &quot;image&quot;, &quot;assets/races/phorad.png&quot;, &quot;passName&quot;, &quot;Phorad&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Remagi&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Death is not the end when concentrated magic can bring a Valdien back to life as a Remagus.&quot;, &quot;image&quot;, &quot;assets/races/remagus.png&quot;, &quot;passName&quot;, &quot;Remagus&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Valdiens&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Hardy and resourceful, Valdiens take pride in their individuality.&quot;, &quot;image&quot;, &quot;assets/races/valdien.png&quot;, &quot;passName&quot;, &quot;Valdien&quot;, &quot;campaigns&quot;, (a: 0, 1))
 ))
 (set:$racesFeatures to (a:
-(a: &quot;Sudden Movement&quot;, &quot;In exchange for one of their actions in the next round, a Marigen can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;),
-(a: &quot;Patient&quot;, &quot;Hadalites have advantage on Stealth checks when they are moving half of their movement speed or slower.&quot;),
-(a: &quot;Many Lives&quot;, &quot;Referencing hazy memories of the past grants a Hadalite odd and specific knowledge. Choose two from Investigation, Religion, Invention, Medicine, or Appraisal. The Hadalite can add their History modifier to checks of those two Attributes.&quot;),
-(a: &quot;Thick Skin&quot;, &quot;Hadalites gain 2 more HP per Health Improvement.&quot;),
-(a: &quot;Symbiote&quot;, &quot;When an Exterreri chooses to feed off of a sapient creature, they can remove two levels of the Pained condition. Additionally, they can choose to temporarily restore one True Health to a sapient creature for as long as they are touching them with their tentacle.&quot;),
-(a: &quot;Blood in the Water&quot;, &quot;Khetadons have advantage on Tracking checks for Bleeding creatures, and can add their Tracking modifier to attacks against those creatures. &quot;),
-(a: &quot;Retract&quot;, &quot;Karkani can take the Retract action as a bonus action, which gives other creatures disadvantage on physical attacks against them for that round.&quot;)
+(a: &quot;Sudden Movement&quot;, &quot;Marigen are adept swimmers, capable of surprising speed. In exchange for one of their actions in the next round, a Marigen can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Marigen&quot;), 
+(a: &quot;Patient&quot;, &quot;Hadalites blend into their natural environment well, but these skills can transfer elsewhere. Hadalites have advantage on Stealth checks when they are moving half of their movement speed or slower.&quot;, &quot;Hadalite&quot;), 
+(a: &quot;Many Lives&quot;, &quot;Referencing hazy memories of the past grants a Hadalite odd and specific knowledge. Choose two from Investigation, Religion, Invention, Medicine, or Appraisal. The Hadalite can add their History modifier to checks of those two Attributes.&quot;, &quot;Hadalite&quot;), 
+(a: &quot;Thick Skin&quot;, &quot;Hadalites gain 2 more HP per Health Improvement.&quot;, &quot;Hadalite&quot;), 
+(a: &quot;Symbiote&quot;, &quot;Exterreri feed off of pain. When an Exterreri chooses to feed off of a sapient creature, they can remove two levels of the Pained condition. Additionally, they can choose to temporarily restore one True Health to a sapient creature for as long as they are touching them with their tentacle. Both of these things wear off the moment contact is lost.&quot;, &quot;Exterreri&quot;), 
+(a: &quot;Blood in the Water&quot;, &quot;Khetadons have an especially sharp sense of smell when it comes to blood. Khetadons have advantage on Tracking checks for Bleeding creatures, and can add their Tracking modifier to attacks against those creatures. &quot;, &quot;Khetadon&quot;), 
+(a: &quot;Retract&quot;, &quot;Karkani have a large shell that they can safely hide inside of. Karkani can take the Retract action as a bonus action, which gives other creatures disadvantage on physical attacks against them for that round.&quot;, &quot;Karkani&quot;), 
+(a: &quot;Gossamer Span&quot;, &quot;Apians have small wings that allow them to fly as a bee would. Apians have a Fly speed of 15 ft. If, at the end of the Action, they want to hover, they can spend another Action to do so.&quot;, &quot;Apian&quot;), 
+(a: &quot;Magic Sensitivity&quot;, &quot;Each Ferfaen&#39;s aurasense is sharply attuned. If a Ferfaen focuses for a minute, they can sense the qualities of all auras within 100ft.&quot;, &quot;Ferfaen&quot;), 
+(a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 30ft. While airborne, all damage they take is doubled, and they lose the ability to fly if they gain any levels of Bleed. If this happens while they are airborne, they plummet.&quot;, &quot;Hiverscruff&quot;), 
+(a: &quot;Flora&quot;, &quot;If exposed to direct sunlight, fresh water, and a comfortable amount of heat the entire time, a Phorad can complete a Long Rest in the span of a Short Rest.&quot;, &quot;Phorad&quot;), 
+(a: &quot;Sudden Movement&quot;, &quot;Hazaan are adept runners, capable of surprising speed. In exchange for one of their actions in the next round, a Hazaan can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Hazaan&quot;), 
+(a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;)
 ))
 }</tw-passagedata><tw-passagedata pid="53" name="Talents and Skills" tags="table done" position="1050,225" size="100,100">$H2[Talents and Skills]
 When starting out, all characters have a Talent-- this represents the skills they brought with them from their life before adventuring, and has a profound effect on the Skills they will have access to as they progress.
@@ -2812,7 +2827,7 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 (undo:)
 &lt;!--need some way to remove the most recent passage from (history:)--&gt;
 (go-to: (_dest))
-}</tw-passagedata><tw-passagedata pid="93" name="Deities and Forces of Nature" tags="" position="1725,475" size="100,100">$H2[Deities and Forces of Nature]
+}</tw-passagedata><tw-passagedata pid="93" name="Deities and Forces of Nature" tags="" position="1600,475" size="100,100">$H2[Deities and Forces of Nature]
 $H4[Northern Continent]
 
 $H3[Rekke Panthali]
@@ -2836,15 +2851,15 @@ His domain is that of the nighttime, especially just past sunset, alternating be
 
 $H3[Rattzlagi]
 A bitter god who is trapped in a constant state of rot. She is full of anger at the world, but even more so at the Queen of Nightmares for making her this way. She wants to find a way to either die or become mortal again. She is rarely lucid and often suffering.
-Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="94" name="Nightmare Hunters" tags="" position="1725,225" size="100,100">$H2[Nightmare Hunters Lore]
+Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="94" name="Nightmare Hunters" tags="" position="1600,225" size="100,100">$H2[Nightmare Hunters Lore]
 
 $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="95" name="Locations (NH)" tags="" position="1725,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="Theodora City" tags="" position="1850,225" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="95" name="Locations (NH)" tags="" position="1600,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="96" name="Theodora City" tags="" position="2125,1600" size="100,100">$H2[Theodora City]
 
-$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="97" name="Euridza" tags="" position="1675,600" size="100,100">$H2[Euridza: The Realm of Dreams]
+$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="97" name="Euridza" tags="" position="1600,600" size="100,100">$H2[Euridza: The Realm of Dreams]
 </tw-passagedata><tw-passagedata pid="98" name="Astute" tags="" position="1050,475" size="100,100">$H3[Astute]
 Exceptionally gifted with a variety of skills, those who are astute know a lot about the world around them, and what they can do in it. Whether they are a researcher or a jack of all trades, it is their varied abilities that define them.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
@@ -2888,7 +2903,7 @@ Some Apians come from hives in the wilderness, raised making honey to survive th
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+&lt;b&gt;(print:$racesFeatures&#39;s 8&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 8&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
 *Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="104" name="Ferfaen" tags="table" position="925,725" size="100,100">$H2[Ferfaen]
@@ -2921,10 +2936,10 @@ Ferfaen are most common on the Central continent due to their sensitivity to mag
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+&lt;b&gt;(print:$racesFeatures&#39;s 9&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 9&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="105" name="Hiverscruffs" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
+*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="105" name="Hiverscruff" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
@@ -2954,45 +2969,150 @@ A carnivorous species hardened by the tough climate in the icy north, they are f
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+&lt;b&gt;(print:$racesFeatures&#39;s 10&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 10&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
 *Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
-&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="106" name="Phorads" tags="table" position="925,975" size="100,100">$H2[Phorad]
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="106" name="Phorad" tags="table" position="925,975" size="100,100">$H2[Phorad]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/phorad.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
-A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
-&lt;p&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which have the bite strength to crush bones; third, their thick, fluffy coats, which protect them from the cold, and finally, their stature, which is much taller than many other humanoids.
-
+Phorads are a parasitic plant species originating from the southeast. They reproduce by infecting sapient creatures, eating their internal organs, and modifying their brain to make it their own neural center.
+&lt;p&gt;Victims of Phorad parasitism rarely recover; in fact, once the Phorad has grown to its full size, 4 weeks after implantation, removing it will be lethal to the host. The Phorad and host fight for dominance, and usually, one comes out on top, controlling the body.
+&lt;p&gt;Being plants, creatures infected with Phorads do not need to eat, instead photosynthesizing. This does not necessarily mean they cannot eat-- not every Phorad&#39;s digestive system is destroyed. However, they cannot get sustenance from food anymore.
 
 {&lt;table&gt;\
 	&lt;tr&gt;\
 		&lt;td&gt;\
-			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
+			Stats: $HB4[+ 2 Con] $HB4[- 1 Wis]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk, 15ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+			Speed: &lt;b&gt;Same as host&#39;s walk speed&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;None&lt;/b&gt;
+			Special Senses: &lt;b&gt;Same as host&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;35 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;4 weeks&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Eats large quantities of meat once every 4 or so days. Carnivore.
+			Must photosynthesize with leaves exposed to sunlight for 2 hours per day.
 		&lt;td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;}
 Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+&lt;b&gt;(print:$racesFeatures&#39;s 11&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 11&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
-&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata></tw-storydata>
+*Phorads have a core, which is where the foliage will be the densest. Phorads have a lot of visual variation. Some have thick, woody roots; others have thinner roots, like angel hair pasta. Some fruit, and some flower. Some have bulbs that hold air. Some Phorads can luminesce. Choose how the Phorad looks.</tw-passagedata><tw-passagedata pid="107" name="Remagus" tags="table" position="925,1100" size="100,100">$H2[Remagus]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/remagus.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+Fragmented memories, power spiraling out of control, and constant rejection– such is the life of a Remagus. Remagi are born when Valdiens are resurrected with powerful magic; the parts of their physical form that decay after death are replaced by their own magic, and only some of their memories are stitched back into place. As a result, Remagi wake up in bodies that do not feel like their own, and that contain massive, uncontrollable potential for magic.
+&lt;p&gt;Each Remagus has to work to hold onto their Valdienity; their memories are constantly slipping from their grasp, and the magic that comprises their body threatens to take over.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Mag] $HB4[- 1 Cha]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;span title=&quot;Check skill&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;??&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;N/A&lt;/b&gt; (Remagi do not age)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Omnivorous, but diet can be restricted as a Remagus.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;Mutable.&lt;/b&gt; Remagi have a variety of mutations based off of their Valdien body. Choose one of the following:
+&lt;p&gt;&lt;i&gt;Heat Zone&lt;/i&gt;. The Remagus has resistance to one of Fire or Freezing damage, and vulnerability to the other. (Corresponds to Comfortable.)
+&lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 1T every 6 seconds. This movement does not cost an Action. (Corresponds to Acrobatic.)
+&lt;p&gt;&lt;i&gt;Moonlit Sight&lt;/i&gt;. The Remagus has blindsight 90ft and advantage to Perception checks when they cannot see. However, they have disadvantage to Perception and Handiwork checks in bright light. (Corresponds to Acute Hearing.)
+&lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 9T. (Corresponds to Aquatic.)
+&lt;p&gt;&lt;i&gt;Bulky&lt;/i&gt;. The Remagus&#39;s carry weight increases by 6 slots, their weight is doubled, and they have advantage to Sturdy saves. (Corresponds to Buff.)
+&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
+
+&#96;[&#96;image&#96;]&#96;
+*Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="108" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/valdien.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+Valdiens can be found everywhere. They easily adapt to a variety of environments, and take pride in their heritage.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Mag] $HB4[- 1 Cha]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;span title=&quot;Check skill&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;18 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Omnivorous, and need to eat daily.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;Adaptable.&lt;/b&gt; Valdiens have a variety of mutations. Choose one of the following:
+&lt;p&gt;&lt;i&gt;Comfortable&lt;/i&gt;. The Valdien has advantage on checks against environments that are too hot or too cold.
+&lt;p&gt;&lt;i&gt;Acrobatic&lt;/i&gt;. The Valdien has a climb speed of 30ft, and has resistance to any damage caused by falling.
+&lt;p&gt;&lt;i&gt;Acute Hearing&lt;/i&gt;. If the Valdien&#39;s hearing is unimpeded, they have Blindsight 15ft.
+&lt;p&gt;&lt;i&gt;Aquatic&lt;/i&gt;. The Valdien has advantage on saves against the Drowning condition, and a swim speed of 30ft.
+&lt;p&gt;&lt;i&gt;Buff&lt;/i&gt;. The Valdien&#39;s carry weight increases by 2 slots.
+&lt;p&gt;&lt;i&gt;Weird&lt;/i&gt;. The Valdien can add half of their Mag modifier to Intimidation checks.
+
+&#96;[&#96;image&#96;]&#96;
+*Valdiens basically appear human.</tw-passagedata><tw-passagedata pid="109" name="Hazaan" tags="table" position="925,1350" size="100,100">$H2[Hazaan]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hazaan.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+With long legs and thick fur, Hazaan were once prey animals. Even though they&#39;ve lost that role, the instincts remain, as do the blistering speed and ability to move at a moment&#39;s notice.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Dex, + 1 Wis] $HB4[- 1 Mag]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: &lt;b&gt;35ft Walk&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;Tremorsense 10ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;60 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;16 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Herbivorous; eats daily.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 12&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 12&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

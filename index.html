@@ -13,6 +13,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
 
 .lexend-deca-<uniquifier> {
   font-family: "Lexend Deca", sans-serif;
@@ -33,6 +35,17 @@
 }
 .syne-mono-regular {
   font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.ibarra-real-nova-<uniquifier> {
+  font-family: "Ibarra Real Nova", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.im-fell-dw-pica-sc-regular {
+  font-family: "IM Fell DW Pica SC", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -127,7 +140,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -139,9 +154,9 @@ li {
 
 </script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag>,<tw-tag name="display-macro" color="green"></tw-tag>,<tw-tag name="code" color="red"></tw-tag>,<tw-tag name="settings" color="blue"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_dark.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;](else-if:it is 1)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;](else-if:it is 2)[
+&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;](else-if:it is 3)[
 &lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_thalass.svg&quot; alt=&quot;Remagica Player&#39;s Handbook: Thalassophobia&quot;&gt;&lt;/img&gt;](else:)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.png&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;]
+&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;]
 }
 (unless:$campaign is &quot;TL&quot;)[&lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;]
 |=
@@ -184,7 +199,7 @@ $HB2+(box:&quot;X&quot;, 15)[\
 [[Skills List-&gt;Skills List]]\
 ]
 |==|
-(unless:$campaign is &quot;TL&quot;)[(link:&quot;Thalassophobia player?&quot;)[(set:$campaign to &quot;TL&quot;)(set:$themeChosen to $themeThalass)(go-to:(passage:)&#39;s name)]]
+(unless:$campaign is &quot;TL&quot;)[(link:&quot;Thalassophobia player?&quot;)[(set:$campaign to &quot;TL&quot;)(set:$themeChosen to $themeThalass)(go-to:(passage:)&#39;s name)]](else:)[(link:&quot;Nightmare Hunters player?&quot;)[(set:$campaign to &quot;NH&quot;)(set:$themeChosen to $themeNightHunt)(go-to:(passage:)&#39;s name)]]
 $H2[Lore]
 [[Thalassophobia]]
 [[Theodora City]]
@@ -223,8 +238,8 @@ Array
 7 Distance from Talent
 
 &lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;</tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is &quot;7.5&quot;)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
-(unless:(history:)&#39;s length &lt; 1)[(link:&quot;←&quot;)[(display:&quot;undo&quot;)]](else:)[←]
-[(unless:$future&#39;s length &lt; 1)[(link:&quot;→&quot;)[(display:&quot;redo&quot;)]](else:)[→]](hid|
+(unless:(history:)&#39;s length &lt; 1)[(link:&quot;↶&quot;)[(display:&quot;undo&quot;)]](else:)[←]
+[(unless:$future&#39;s length &lt; 1)[(link:&quot;↷&quot;)[(display:&quot;redo&quot;)]](else:)[→]](hid|
 
 (if:$themeChosen&#39;s 3 is 0)[
 [[&lt;img class=&quot;imgbox&quot; src=&quot;assets/star_icon_dark.svg&quot;&gt;&lt;/img&gt;-&gt;Homepage]]](else-if:it is 1 or it is 2)[
@@ -243,7 +258,7 @@ Array
 
 }
 
-(link:&quot;Minimize&quot;)[(set:$leftPad to &quot;4&quot;)(go-to:(passage:)&#39;s name)]}
+(link:&quot;⬑⬑⬑&quot;)[(set:$leftPad to &quot;4&quot;)(go-to:(passage:)&#39;s name)]}
 
 }&lt;/div&gt;]
 
@@ -253,19 +268,22 @@ Array
 
 &lt;!--prepping SVG stuff--&gt;
 
-&lt;!--SETTING UP THEMES--&gt;
-(set:$leftPad to &quot;7.5&quot;)
-(set:$openingSidebar to false)
+&lt;!--initializing all data--&gt;
+{(display:&quot;SkillsInit&quot;)}
+{(display:&quot;ItemsInit&quot;)}
+{(display:&quot;RacesTechInit&quot;)}
+{(display:&quot;RacesPreviewInit&quot;)}
+{(display:&quot;TalentColorsInit&quot;)}
+{(display:&quot;AttributesInit&quot;)}
+{(display:&quot;MagicSkillsInit&quot;)}
+{(display:&quot;CastingStylesInit&quot;)}
+{(display:&quot;WeaponsInit&quot;)}
+{(display:&quot;MiscInit&quot;)}
+{(display:&quot;ThemesInit&quot;)}
 
 &lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;
 (set:$campaign to &quot;NH&quot;)
-
-(set:$themeDark to (a:&quot;#302f2f&quot;,&quot;#ffffff&quot;,1,&quot;Dark&quot;,&quot;#e4c2ff&quot;,&quot;#4a4a4a&quot;,&quot;#666666&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
-(set:$themeLight to (a:&quot;#ffffff&quot;,&quot;#271838&quot;,0,&quot;Light&quot;,&quot;#6a2ebf&quot;,&quot;#f2f2f2&quot;,&quot;#d9d9d9&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
-(set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,2,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
-(set:$themeNightHunt to (a:&quot;#ffffff&quot;,&quot;#271838&quot;,0,&quot;Thalass&quot;,&quot;#6a2ebf&quot;,&quot;#f2f2f2&quot;,&quot;#d9d9d9&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
-(set:$themeChosen to $themeDark)
-
+(set:$themeChosen to $themeNightHunt)
 
 &lt;!--Setting up Headers--&gt;
 (set:$baseSize to 1)
@@ -276,15 +294,7 @@ Array
 (set:$tableIsIncluded to false)
 (set:$future to (a:))
 
-{(display:&quot;SkillsInit&quot;)}
-{(display:&quot;ItemsInit&quot;)}
-{(display:&quot;RacesTechInit&quot;)}
-{(display:&quot;RacesPreviewInit&quot;)}
-{(display:&quot;TalentColorsInit&quot;)}
-{(display:&quot;AttributesInit&quot;)}
-{(display:&quot;MagicSkillsInit&quot;)}
-{(display:&quot;CastingStylesInit&quot;)}
-{(display:&quot;WeaponsInit&quot;)}
+
 
 {(display:&quot;Popup&quot;)}
 }</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
@@ -425,7 +435,8 @@ div.desc {
 ](else:)[
 	(set:$sbTransition to (t8n:&quot;instant&quot;))
 ]
-}</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="display" position="100,225" size="100,100">Theme:
+}</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="display" position="100,225" size="100,100">---
+Theme:
 {(dropdown: bind _themeSelected, &quot;Light&quot;, &quot;Dark&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;)&lt;br&gt;
 (link-repeat:&quot;Change Theme&quot;)[{
 	(if:_themeSelected is &quot;Light&quot;)[(set:$themeChosen to $themeLight)]
@@ -452,7 +463,9 @@ div.desc {
 
 &lt;br&gt;(link-goto:&quot;Configure popup height&quot;, &quot;PopupConfig&quot;)
 
-&lt;br&gt;(link:&quot;\^\^Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]&lt;br&gt;}</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
+&lt;br&gt;(link:&quot;⬑⬑Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]&lt;br&gt;
+---
+}</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
 Remagica is a game played by voice or text-- words-- where players apart from the DM can interact with the world, and the DM provides information on how the world reacts. The players are limited to a single character as their main link to the world, and the DM has a wider scope to give players more options.
 &lt;p&gt;Primarily, interaction with the world is done through roleplay, due to this one-character restriction. Players describe what their character would do or say, and the DM explains what the world&#39;s reaction would be. When outcomes are indeterminate, the DM will ask the player to make a Skill Check, or in a fast-paced or violent scenario, shift into [[combat-&gt;Combat]].
 $H3[Checks]
@@ -575,7 +588,7 @@ When a character makes a Check, they roll 1d20 and add a set of modifiers to tha
     &lt;td&gt;Charisma&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Damage" tags="in-progress" position="600,475" size="100,100">$H2[Damage, Health, Sanity, and Madness]
+&lt;/table&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Damage" tags="in-progress" position="600,475" size="100,100">$H2[Damage, Health,(if:$campaign is &quot;NH&quot;)[ Sanity,] and Madness]
 In Remagica, there are 4 kinds of health:
 • {(link-repeat:&quot;Physical Health (HP)&quot;)[
 	(replace:?HealthDisplay)[
@@ -592,7 +605,14 @@ In Remagica, there are 4 kinds of health:
 	Magical Health (MP) is used when a creature uses their magical ability, or channels magic to power an item. Creatures cannot use magic at all when they do not have at least one MP unless a Skill allows otherwise.
 	&lt;p&gt;MP is far more difficult to heal than its physical counterpart, HP. It is almost exclusively restored by rests, but is occasionally found in items with MP-Healing effects.
 	]
-]}
+]}\
+(if:$campaign is &quot;NH&quot;)[
+• {(link-repeat:&quot;Magical Health (MP)&quot;)[
+	(replace:?HealthDisplay)[
+	Magical Health (MP) is used when a creature uses their magical ability, or channels magic to power an item. Creatures cannot use magic at all when they do not have at least one MP unless a Skill allows otherwise.
+	&lt;p&gt;MP is far more difficult to heal than its physical counterpart, HP. It is almost exclusively restored by rests, but is occasionally found in items with MP-Healing effects.
+	]
+]}]
 • {(link-repeat:&quot;True Health&quot;)[
 	(replace:?HealthDisplay)[
 	True Health represents the overall, long-term physical health of the character; as such, it is difficult to lower, and heals slowly. Creatures have 5 True Health at maximum, with very few exceptions. The lower a creature&#39;s True Health is, the longer it will take to heal, and the worse the side effects caused. When a creature drops to 0 True Health, it will die.
@@ -1332,13 +1352,10 @@ Fabled to have originated from the Above, Marigen lack gills and swim quickly co
 		&lt;td colspan=&quot;2&quot;&gt;\
 			Stats: $HB4[+ 2 Dex] $HB4[- 1 Con]
 		&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;MP/adv: &lt;b&gt;6&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Speed: &lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Speed: &lt;b&gt;6T walk&lt;/b&gt;, &lt;b&gt;12T swim&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 30T&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
@@ -1760,18 +1777,18 @@ There are 7 statistics in Remagica. When a new character is created, roll 2d10 f
 &lt;/tbody&gt;
 &lt;/table&gt;
 }
-$H3[Attribute Points]
-A character&#39;s attributes determine their more specific capabilities. Every single skill check in the game references an attribute; these attributes stack on top of a character&#39;s main 7 statistics.
-A character starts with 7 points that they can spread between their attributes; any one attribute can have up to 2 attribute points in it.
+$H3[Attribute Proficiency Points]
+A character&#39;s Attribute Proficiencies determine their more specific capabilities. Every single skill check in the game references a Proficiency; these Proficiency bonuses stack on top of a character&#39;s main 7 statistics.
+A character starts with $baseProfPts points that they can spread between their Attribute Proficiencies; any one Attribute Proficiency can have up to 2 Proficiency Points in it.
 (link-repeat:&quot;Show Attributes Quick Reference&quot;)[($pop:&quot;Attributes Quick Reference&quot;)]
 $H3[Derived Statistics]
-The character has a handful of other important numbers, which are derived from their main Statistics and Attributes.
+The character has a handful of other important numbers, which are derived from their main Statistics and Proficiencies.
 {&lt;table&gt;
 &lt;col style=&quot;width:30%&quot;&gt;&lt;col style=&quot;width:70%&quot;&gt;
 &lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Dodge (AC)&quot;)[
+&lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Defense (AC or Def)&quot;)[
 (replace:?StatDesc2)[
-	Equals 10 + Dex Modifier + Dodge Attribute + any other bonuses given by items, such as Armor. Certain items, especially armor, can have other effects on this number. The higher this score is, the less likely the character will be hit by an attack.
+	Equals 10 + the character&#39;s Dex bonus by default, but can be modified by skills or items, such as armor.
 ]
 ]&lt;/td&gt;&lt;td rowspan=4&gt;[]&lt;StatDesc2|&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Physical Health (HP)&quot;)[
@@ -1848,17 +1865,19 @@ Start by making a copy of the (link-repeat:&quot;character sheet&quot;)[(open-ur
 In Remagica 4e, a character is mainly defined by three mutually-exclusive traits at creation. Those are their race, their Talent, and their magic Casting Style.
 Create a concept in your mind of a character, then look through these stats and see which ones best fit your character idea.
 $H3[Race]
-A character&#39;s race represents what kind of creature they are, determines their appearance and HP, and has a minor impact on their Statistics. See the races [[here-&gt;Race List]].
+A character&#39;s race represents what kind of creature they are, determines their appearance, and has a minor impact on their Statistics. See the races [[here-&gt;Race List]].
 $H3[Talent]
 A character&#39;s Talent represents what they were good at going into adventuring, and what their inclinations may be. As they gain Skills, their abilities may branch out more into more archetypal roles that reflect what they have learned in their adventure. Many of the endgame Skills can be accessed from multiple different Talents via branches, and all of the Talents will offer at least one choice in their progression. The unique combination of starting point and direction determines the kind of build the character will have as different Skills interact. Look at the [[Talents-&gt;Talents and Skills]] page to get an idea of what they&#39;re like.
 $H3[Casting Style]
 A character&#39;s magic Casting Style represents the way they express their magic. Every character has access to a unique magic ability; see the page on [[magic abilities-&gt;Magic Ability]] for more information.
+$H3[Boon (and bane? TODO)]
+A character will have one boon and one bane from the [[boons and banes page-&gt;Boons and Banes]] on creation. This affects things like HP, MP, and other bits of flavor.
 $H3[Statistics and Attributes]
 A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Roll 2d10 for all seven stats (rerolling stats that total to 5 or less) and assign them as you would like.
-A character also has Attributes; each of these attributes can have proficiency points. The Attribute table on the character sheet has zeros next to each Attribute name; this is because Attributes begin with no proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;7 Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
+A character also has Attributes; each of these attributes can have proficiency points. The Attribute table on the character sheet has zeros next to each Attribute name; this is because Attributes begin with no proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;$baseProfPoints Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
 On top of that, there are derived Statistics based on combinations of other bonuses:
-* HP is double the base HP given in the Talent plus your Con bonus.
-* MP is double the base MP given in the Race plus your Mag bonus.
+* HP is double base HP ($baseHP, unless a boon says otherwise) plus the character&#39;s Con bonus.
+* MP is double base MP ($baseMP, unless a boon says otherwise).
 * Defense is 10 + Dex, but is often changed by Skills and items that the character can start with.
 $H3[The Skills section]
 There is a section for Skills to be added to the sheet beneath the major block of stats.
@@ -1875,15 +1894,16 @@ $H3[Vision and Movement]
 These quantities can be found on the page for your character&#39;s race.
 $H3[Free Space]
 This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="52" name="RacesPreviewInit" tags="data-storage" position="2375,250" size="100,100">{(set:$racesPreview to (a:
-(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;descTL&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;descNH&quot;, &quot;Marigen are semi-aquatic mammals of action from the sea.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;descTL&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;descTL&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;descTL&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;descTL&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0)),
 (dm: &quot;name&quot;, &quot;Apian&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Their ancestors were hive-dwellers, but modern Apians mostly live around other races.&quot;, &quot;image&quot;, &quot;assets/races/apian.png&quot;, &quot;passName&quot;, &quot;Apian&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
 (dm: &quot;name&quot;, &quot;Ferfaen&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Magic flows through the veins of every Ferfaen, giving them much more stamina with casting it.&quot;, &quot;image&quot;, &quot;assets/races/ferfaen.png&quot;, &quot;passName&quot;, &quot;Ferfaen&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;descTL&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Hazaan&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Swift and strong, the Hazaan are prey no longer, using their speed in creative ways.&quot;, &quot;image&quot;, &quot;assets/races/hazaan.png&quot;, &quot;passName&quot;, &quot;Hazaan&quot;, &quot;campaigns&quot;, (a: 0, 1)),
 (dm: &quot;name&quot;, &quot;Hiverscruffs&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Tall and covered in thick fur, Hiverscruffs are the imposing natives of the frozen mountains.&quot;, &quot;image&quot;, &quot;assets/races/hiverscruff.png&quot;, &quot;passName&quot;, &quot;Hiverscruff&quot;, &quot;campaigns&quot;, (a: 0, 1)),
+(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;descTL&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;descTL&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0)),
+(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;descTL&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;descNH&quot;, &quot;Marigen are semi-aquatic mammals of action from the sea.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1)),
+(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;descTL&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
 (dm: &quot;name&quot;, &quot;Phorads&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Phorads are parasitic plants that hijack the brain of a sapient creature, and make it their own.&quot;, &quot;image&quot;, &quot;assets/races/phorad.png&quot;, &quot;passName&quot;, &quot;Phorad&quot;, &quot;campaigns&quot;, (a: 0, 1)),
 (dm: &quot;name&quot;, &quot;Remagi&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Death is not the end when concentrated magic can bring a Valdien back to life as a Remagus.&quot;, &quot;image&quot;, &quot;assets/races/remagus.png&quot;, &quot;passName&quot;, &quot;Remagus&quot;, &quot;campaigns&quot;, (a: 0, 1)),
 (dm: &quot;name&quot;, &quot;Valdiens&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Hardy and resourceful, Valdiens take pride in their individuality.&quot;, &quot;image&quot;, &quot;assets/races/valdien.png&quot;, &quot;passName&quot;, &quot;Valdien&quot;, &quot;campaigns&quot;, (a: 0, 1))
@@ -1896,9 +1916,9 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Symbiote&quot;, &quot;Exterreri feed off of pain. When an Exterreri chooses to feed off of a sapient creature, they can remove two levels of the Pained condition. Additionally, they can choose to temporarily restore one True Health to a sapient creature for as long as they are touching them with their tentacle. Both of these things wear off the moment contact is lost.&quot;, &quot;Exterreri&quot;), 
 (a: &quot;Blood in the Water&quot;, &quot;Khetadons have an especially sharp sense of smell when it comes to blood. Khetadons have advantage on Tracking checks for Bleeding creatures, and can add their Tracking modifier to attacks against those creatures. &quot;, &quot;Khetadon&quot;), 
 (a: &quot;Retract&quot;, &quot;Karkani have a large shell that they can safely hide inside of. Karkani can take the Retract action as a bonus action, which gives other creatures disadvantage on physical attacks against them for that round.&quot;, &quot;Karkani&quot;), 
-(a: &quot;Gossamer Span&quot;, &quot;Apians have small wings that allow them to fly as a bee would. Apians have a Fly speed of 15 ft. If, at the end of the Action, they want to hover, they can spend another Action to do so.&quot;, &quot;Apian&quot;), 
-(a: &quot;Magic Sensitivity&quot;, &quot;Each Ferfaen&#39;s aurasense is sharply attuned. If a Ferfaen focuses for a minute, they can sense the qualities of all auras within 100ft.&quot;, &quot;Ferfaen&quot;), 
-(a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 30ft. While airborne, all damage they take is doubled, and they lose the ability to fly if they gain any levels of Bleed. If this happens while they are airborne, they plummet.&quot;, &quot;Hiverscruff&quot;), 
+(a: &quot;Gossamer Span&quot;, &quot;Apians have small wings that allow them to fly as a bee would. Apians have a Fly speed of 3T. If, at the end of the Action, they want to hover, they can spend another Bonus Action to do so.&quot;, &quot;Apian&quot;), 
+(a: &quot;Magic Sensitivity&quot;, &quot;Each Ferfaen&#39;s aurasense is sharply attuned. If a Ferfaen focuses for a minute, they can sense the qualities of all auras within 30T.&quot;, &quot;Ferfaen&quot;), 
+(a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 6T. However, they cannot fly up. They can increase this Fly speed to 12T if they choose to lose 1T for every 2T traveled horizontally.&quot;, &quot;Hiverscruff&quot;), 
 (a: &quot;Flora&quot;, &quot;If exposed to direct sunlight, fresh water, and a comfortable amount of heat the entire time, a Phorad can complete a Long Rest in the span of a Short Rest.&quot;, &quot;Phorad&quot;), 
 (a: &quot;Sudden Movement&quot;, &quot;Hazaan are adept runners, capable of surprising speed. In exchange for one of their actions in the next round, a Hazaan can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Hazaan&quot;), 
 (a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;)
@@ -2422,7 +2442,7 @@ No one knows how Exterreri are born; they simply appear out of the darkness of t
 		&lt;td&gt;\
 			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
 		&lt;/td&gt;
-		&lt;td&gt;Speed: &lt;b&gt;30ft Swim&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Speed: &lt;b&gt;6T Swim&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
 			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;(if:$campaign is &quot;TL&quot;)[Aurasense 30ft, ]Painsense 60ft&lt;/b&gt;
@@ -2886,7 +2906,7 @@ Some Apians come from hives in the wilderness, raised making honey to survive th
 			Stats: $HB4[+ 2 Dex] $HB4[- 1 Wis]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk, 30ft Fly&lt;/b&gt;
+			Speed: &lt;b&gt;6T Walk, 6T Fly&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -2919,11 +2939,11 @@ Ferfaen are most common on the Central continent due to their sensitivity to mag
 			Stats: $HB4[+ 1 Mag, +1 Kno] $HB4[- 1 Con]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+			Speed: &lt;b&gt;6T Walk&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;Aurasense 150ft&lt;/b&gt;
+			Special Senses: &lt;b&gt;Aurasense 30T&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
@@ -2952,7 +2972,7 @@ A carnivorous species hardened by the tough climate in the icy north, they are f
 			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk, 15ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+			Speed: &lt;b&gt;30ft Walk, 30ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -3052,7 +3072,7 @@ Valdiens can be found everywhere. They easily adapt to a variety of environments
 {&lt;table&gt;\
 	&lt;tr&gt;\
 		&lt;td&gt;\
-			Stats: $HB4[+ 2 Mag] $HB4[- 1 Cha]\
+			Stats: $HB4[+ 1 Str + 1 Kno] $HB4[- 1 Mag]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
 			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
@@ -3112,7 +3132,31 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 12&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 12&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata></tw-storydata>
+*Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata><tw-passagedata pid="110" name="Boons and Banes" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="111" name="MiscInit" tags="data-storage" position="2375,500" size="100,100">{
+(set:$baseHP to 10)
+(set:$baseMP to 6)
+(set:$baseProfPts to 7)
+}</tw-passagedata><tw-passagedata pid="112" name="ThemesInit" tags="data-storage" position="2250,750" size="100,100">{
+(set:$leftPad to &quot;7.5&quot;)
+(set:$openingSidebar to false)
+
+&lt;!--THEME STUFF--&gt;
+[Array
+1 Background Color
+2 Foreground Color
+3 State of Logo (0Dark/1Light/2Gray/3Thalass)
+4 Theme Name
+5 Shade of purple for links
+6 Grey 1
+7 Grey 2
+8 Header Font
+9 Text Font](h|
+
+(set:$themeDark to (a:&quot;#302f2f&quot;,&quot;#ffffff&quot;,1,&quot;Dark&quot;,&quot;#e4c2ff&quot;,&quot;#4a4a4a&quot;,&quot;#666666&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
+(set:$themeLight to (a:&quot;#ffffff&quot;,&quot;#271838&quot;,0,&quot;Light&quot;,&quot;#6a2ebf&quot;,&quot;#f2f2f2&quot;,&quot;#d9d9d9&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
+(set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
+(set:$themeNightHunt to (a:&quot;#e0e0e0&quot;,&quot;#484963&quot;,2,&quot;NightHunt&quot;,&quot;#6d1e96&quot;,&quot;#d1d1d1&quot;,&quot;#cfcfcf&quot;,&quot;IM Fell DW Pica SC&quot;,&quot;Ibarra Real Nova&quot;))
+}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

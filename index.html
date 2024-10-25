@@ -142,6 +142,7 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -154,11 +155,9 @@ li {
 
 
 
-</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag>,<tw-tag name="display-macro" color="green"></tw-tag>,<tw-tag name="code" color="red"></tw-tag>,<tw-tag name="settings" color="blue"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{(if:$themeChosen&#39;s 3 is 0)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_dark.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;](else-if:it is 1)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_light.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;](else-if:it is 3)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_thalass.svg&quot; alt=&quot;Remagica Player&#39;s Handbook: Thalassophobia&quot;&gt;&lt;/img&gt;](else:)[
-&lt;img class=&quot;imgbox&quot; src=&quot;assets/logo_gray.svg&quot; alt=&quot;Remagica Player&#39;s Handbook&quot;&gt;&lt;/img&gt;]
+
+</script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag>,<tw-tag name="display-macro" color="green"></tw-tag>,<tw-tag name="code" color="red"></tw-tag>,<tw-tag name="settings" color="blue"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{
+(print:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetLogo&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot; alt=\&quot;Remagica Player&#39;s Handbook\&quot;&gt;&lt;/img&gt;&quot;)
 }
 (unless:$campaign is &quot;TL&quot;)[&lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;]
 |=
@@ -239,13 +238,12 @@ Array
 6 ID
 7 Distance from Talent
 
-&lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;</tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is &quot;7.5&quot;)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
+&lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;</tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is 7.5)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
 (unless:(history:)&#39;s length &lt; 1)[(link:&quot;↶&quot;)[(display:&quot;undo&quot;)]](else:)[←]
 [(unless:$future&#39;s length &lt; 1)[(link:&quot;↷&quot;)[(display:&quot;redo&quot;)]](else:)[→]](hid|
 
-(if:$themeChosen&#39;s 3 is 0)[
-[[&lt;img class=&quot;imgbox&quot; src=&quot;assets/star_icon_dark.svg&quot;&gt;&lt;/img&gt;-&gt;Homepage]]](else-if:it is 1 or it is 2)[
-[[&lt;img class=&quot;imgbox&quot; src=&quot;assets/star_icon_light.svg&quot;&gt;&lt;/img&gt;-&gt;Homepage]]]
+
+(link-goto:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;, &quot;Homepage&quot;)
 
 (unless:$optionsShown)[(link:&quot;Options&quot;)[(set:$optionsShown to true)(show:?Options)]]
 (if:$optionsShown)[\
@@ -260,7 +258,7 @@ Array
 
 }
 
-(link:&quot;⬑⬑⬑&quot;)[(set:$leftPad to &quot;4&quot;)(go-to:(passage:)&#39;s name)]}
+(link:&quot;⬑⬑⬑&quot;)[(set:$leftPad to 4)(go-to:(passage:)&#39;s name)]}
 
 }&lt;/div&gt;]
 
@@ -305,19 +303,16 @@ Array
 (set:$formattingString to &quot;tw-story {
   background-color:&quot; + $themeChosen&#39;s 1 + &quot;;
   color:&quot; + $themeChosen&#39;s 2 + &quot;;
-  padding-left: &quot; + $leftPad + &quot;em;
+  padding-left: &quot; + (string:$leftPad) + &quot;em;
   font-family:\&quot;&quot; + $themeChosen&#39;s 9 + &quot;\&quot;, sans-serif;
 }
 tw-dialog {
   background-color:&quot; + $themeChosen&#39;s 1 + &quot;;
   color:&quot; + $themeChosen&#39;s 2 + &quot;;
 }
-&quot;)
 
-(if:$leftPad is &quot;7.5&quot;)[
-(set:$formattingString to it + &quot;
-	tw-passage tw-include[type=\&quot;footer\&quot;] {
-		width: 7em;
+tw-passage tw-include[type=\&quot;footer\&quot;] {
+		width: &quot; + (string:$leftPad - 0.5) + &quot;em;
 		position: fixed;
 		left:.5em;
 		top:1em;
@@ -326,8 +321,13 @@ tw-dialog {
 		font-size: &quot; + (string: $baseSize * 100) + &quot;%;
 	}
 &quot;)
-](else:)[
+
+(if:$leftPad is 7.5)[
 (set:$formattingString to it + &quot;
+	
+&quot;)
+](else:)[
+(set:$formattingString2 to &quot;
 	tw-passage tw-include[type=\&quot;footer\&quot;] {
 		width: 3.5em;
 		position: fixed;
@@ -1528,9 +1528,9 @@ TweeTowhee&lt;/b&gt;]
 		&lt;td&gt;??&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="35" name="DropdownButton" tags="" position="2125,1000" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
-](else-if:it is 1)[
-(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="36" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="35" name="DropdownButton" tags="" position="2125,1000" size="100,100">{
+(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to 7.5)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
+}</tw-passagedata><tw-passagedata pid="36" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
 &lt;!--header--&gt;
@@ -3198,7 +3198,7 @@ Traits are neutral flavor options, designed for players who want to codify sligh
 &lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
 }</tw-passagedata><tw-passagedata pid="111" name="ThemesInit" tags="data-storage" position="2250,750" size="100,100">{
-(set:$leftPad to &quot;7.5&quot;)
+(set:$leftPad to 7.5)
 (set:$openingSidebar to false)
 
 &lt;!--THEME STUFF--&gt;
@@ -3213,11 +3213,18 @@ Traits are neutral flavor options, designed for players who want to codify sligh
 8 Header Font
 9 Text Font](h|
 
-(set:$themeDark to (a:&quot;#302f2f&quot;,&quot;#ffffff&quot;,1,&quot;Dark&quot;,&quot;#e4c2ff&quot;,&quot;#4a4a4a&quot;,&quot;#666666&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
 (set:$themeLight to (a:&quot;#ffffff&quot;,&quot;#271838&quot;,0,&quot;Light&quot;,&quot;#6a2ebf&quot;,&quot;#f2f2f2&quot;,&quot;#d9d9d9&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
-(set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
+(set:$themeDark to (a:&quot;#302f2f&quot;,&quot;#ffffff&quot;,1,&quot;Dark&quot;,&quot;#e4c2ff&quot;,&quot;#4a4a4a&quot;,&quot;#666666&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
 (set:$themeNightHunt to (a:&quot;#e0e0e0&quot;,&quot;#484963&quot;,2,&quot;NightHunt&quot;,&quot;#6d1e96&quot;,&quot;#d1d1d1&quot;,&quot;#cfcfcf&quot;,&quot;IM Fell DW Pica SC&quot;,&quot;Ibarra Real Nova&quot;))
+(set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
+
+(set:$assetLogo to (a:&quot;assets/logo_dark.svg&quot;, &quot;assets/logo_light.svg&quot;, &quot;assets/logo_gray.svg&quot;, &quot;assets/logo_thalass.svg&quot;))
+(set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;))
+
 }</tw-passagedata><tw-passagedata pid="112" name="Backstory and Personality" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="113" name="Inventory" tags="in-progress" position="800,475" size="100,100">$H2[Inventory]
+
+&lt;center&gt;$H3[⚠️ Numbers are Placeholders ⚠️]&lt;/center&gt;
+
 Characters tend to have possessions, which they keep inside of an Inventory. What possessions they begin the campaign with, and how many items they can carry with them, are governed by the inventory system.
 &lt;p&gt;If you&#39;re making a character, (link-repeat:&quot;you can jump down to the Starting Out section&quot;)[(scroll:?page, ?making)].
 
@@ -3240,7 +3247,7 @@ A character can only hold 4 Slots&#39; worth of items on their person without an
 
 $H3[Starting Out]&lt;making|
 Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $baseInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
-&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 2/3 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata></tw-storydata>
+&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

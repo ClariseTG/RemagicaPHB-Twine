@@ -141,7 +141,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -278,7 +280,7 @@ Array
 {(display:&quot;MagicSkillsInit&quot;)}
 {(display:&quot;CastingStylesInit&quot;)}
 {(display:&quot;WeaponsInit&quot;)}
-{(display:&quot;MiscInit&quot;)}
+{(display:&quot;ConstInit&quot;)}
 {(display:&quot;ThemesInit&quot;)}
 
 &lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;
@@ -679,7 +681,7 @@ Only one of these can be done per session that involved a (link-goto:&quot;Long 
 Click on one to see more.
 []&lt;ImprovementDisplay|
 
-Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="" position="800,350" size="100,100">$H2[Creating a Concept]
+Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="3e" position="3100,1000" size="100,100">$H2[Creating a Concept]
 Each character is unique, and while the rules below will help fit a concept into the game system, they are very freeform, and will not give much aid in coming up with said concept. That said, there are some choices that can help guide character creation.
 a. &lt;b&gt;Playstyle.&lt;/b&gt;
 Do you want a character who spends a lot of time negotiating with NPCs, or do you want a character who punches first and asks questions later?
@@ -698,8 +700,7 @@ Is there a niche in the party that seems like it’s necessary? Did the party fo
 
 Some notable things to keep in mind throughout the process:
 &lt;p&gt;A character starts with 35 EXP. EXP can be spent on all sorts of things, such as the quality of the character’s starting inventory, how many of their racial bonuses they have at the start, and how many EXP skills they have. EXP does not need to all be spent now, and can be saved for later. However, there are some things that can only be purchased with EXP during character creation.
-</tw-passagedata><tw-passagedata pid="12" name="Inventory, Backstory and Personality" tags="in-progress" position="800,600" size="100,100">$H2[Inventory, Backstory and Personality]
-Inventory page in progress! :)</tw-passagedata><tw-passagedata pid="13" name="Items List" tags="" position="1400,225" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="14" name="Skills List (3e)" tags="table 3e" position="100,1375" size="100,100">{
+</tw-passagedata><tw-passagedata pid="12" name="Items List" tags="" position="1400,225" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="13" name="Skills List (3e)" tags="table 3e" position="100,1375" size="100,100">{
 Click on a skill&#39;s name to see its description.
 [Header to the HTML table](c|
 (set:$skillsListView to &quot;&lt;table&gt;
@@ -778,7 +779,7 @@ Click on a skill&#39;s name to see its description.
 [HTML table ends](c|
 (set:$skillsListView to it + &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;)
 (print:$skillsListView)
-}</tw-passagedata><tw-passagedata pid="15" name="Character Sheet Download" tags="" position="1400,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="16" name="Locations (T)" tags="" position="2250,1300" size="100,100">$H2[Locations]
+}</tw-passagedata><tw-passagedata pid="14" name="Character Sheet Download" tags="" position="1400,475" size="100,100">Tap this passage, then the pencil icon to edit it.</tw-passagedata><tw-passagedata pid="15" name="Locations (T)" tags="" position="2250,1300" size="100,100">$H2[Locations]
 
 $H3[Ventopia]
 A coral reef located on the center of the vents. Its residents are obsessed with beauty, prizing it above everything else. They have a Queen, considered to be the most beautiful creature.
@@ -790,7 +791,7 @@ $H3[Graveyard]
 An old shrine dedicated to Cardinal East, with a graveyard around it. It almost exclusively has the remains of Boneyardians now.
 
 $H3[Shipwreck]
-The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="17" name="Cardinals" tags="" position="2375,1300" size="100,100">$H2[Cardinals]
+The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="16" name="Cardinals" tags="" position="2375,1300" size="100,100">$H2[Cardinals]
 
 $H3[Cardinal Down]
 The god of life, safety, and comfort, and the favored god of the Ventopians.
@@ -811,7 +812,7 @@ The god of mania, madness, and transformation.
 
 $H3[Cardinal Up]
 Up is a god feared by almost all. She represents unknowable things, the open Above, the pitch black, and agoraphobia. Her lucidity is unclear. She is respected in the Boneyard, and hated in Ventopia, considered ultimately ugly.
-Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="18" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="19" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Compendium" tags="section" position="1400,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="22" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
+Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="17" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="19" name="Compendium" tags="section" position="1400,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
 
 Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
 
@@ -822,7 +823,7 @@ $H3[Short Rests]
 Short rests last for 2 hours. A short rest heals half of the damage the character currently has; for example, a character at half health prior to a Short Rest would heal one quarter of their maximum HP. Two Short Rests can be taken for each Long Rest.
 [
 $H3[Alt Ruleset: Gritty Realism]
-Long and Short rests can be stretched to one week and one day respectively with this ruleset.](Hidden|</tw-passagedata><tw-passagedata pid="23" name="Conditions List (3.2)" tags="3e" position="3100,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
+Long and Short rests can be stretched to one week and one day respectively with this ruleset.(if:$campaign is &quot;NH&quot;)[ The Nightmare Hunters campaign uses the Gritty Realism ruleset.]]</tw-passagedata><tw-passagedata pid="22" name="Conditions List (3.2)" tags="3e" position="3100,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
 Click on a condition to see details:
 (box:&quot;X&quot;,6)+(border:&quot;solid&quot;)+(corner-radius:10)+(border-color:#9659eb)[• {(link-repeat:&quot;Absorbent&quot;)[
 	(replace:?ConditionDisplay)[
@@ -924,7 +925,7 @@ Click on a condition to see details:
 ]}
 (display:&quot;Conditions Temp Storage (to reduce input lag)&quot;)]
 
-[]&lt;ConditionDisplay|</tw-passagedata><tw-passagedata pid="24" name="Conditions Temp Storage (to reduce input lag)" tags="unused" position="100,750" size="100,100">• {(link-repeat:&quot;Controlled&quot;)[
+[]&lt;ConditionDisplay|</tw-passagedata><tw-passagedata pid="23" name="Conditions Temp Storage (to reduce input lag)" tags="unused" position="100,750" size="100,100">• {(link-repeat:&quot;Controlled&quot;)[
 	(replace:?ConditionDisplay)[
 	[Absorbent]&lt;H3|
 	&lt;br&gt;&lt;i&gt;Tags: Healing&lt;/i&gt;
@@ -1301,7 +1302,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="25" name="Hadalite" tags="table" position="2125,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="24" name="Hadalite" tags="table" position="2125,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Hadalites live long lives— much longer than most other creatures. However, as ambush predators, they spend most of it in-between sleep and waking.
 &lt;p&gt;These long periods of half-sleep can sometimes render their memories fuzzy; a Hadalite can seem like a completely different person after enough years have passed, unable to clearly recall their past selves. In this way, other people are transient in the life of a Hadalite.
@@ -1339,7 +1340,7 @@ Features:
 &#96;[&#96;image&#96;]&#96;
 *The lures at the end of the tentacles as well as the “hairstyle” of the tentacles can be variant. Line down the middle is their mouth, so clothes tend to accommodate it opening.
 Spots on head tend to resemble eyes or features found on other races, but can vary! Colors can be anything, though tend towards more phosphorescent-looking shades.
-Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="26" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen(if:$campaign is &quot;TL&quot;)[ (Deepsea)]]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="25" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen(if:$campaign is &quot;TL&quot;)[ (Deepsea)]]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 {(if:$campaign is &quot;TL&quot;)[
 Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.&lt;br&gt;
@@ -1374,7 +1375,7 @@ Features:
 *Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
 Clothing tends to have holes to accommodate these fins; it’s uncomfortable to crush them.
 (if:$campaign is &quot;TL&quot;)[Can have fur, but it is rare.](else:)[Marigen from the icy Northern oceans often have fur, but other Marigen do not. Consider fur fully optional. Marigen fur is the consistency of otter fur.]
-&quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="27" name="ItemsInit" tags="data-storage" position="2250,500" size="100,100">{}</tw-passagedata><tw-passagedata pid="28" name="Code/Admin Stuff" tags="section" position="2275,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="test" tags="table test" position="2900,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
+&quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="26" name="ItemsInit" tags="data-storage" position="2250,500" size="100,100">{}</tw-passagedata><tw-passagedata pid="27" name="Code/Admin Stuff" tags="section" position="2275,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="test" tags="table test" position="2900,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
 	&lt;tr&gt;
 	(for: each _j, ...(range:1,9))[
@@ -1394,7 +1395,7 @@ Clothing tends to have holes to accommodate these fins; it’s uncomfortable to 
 	]
 	&lt;/tr&gt;
 ]
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="30" name="og not working code for skills" tags="unused" position="100,875" size="100,100">&lt;!--ok so this is how this is SUPPOSED to work:--&gt;
+&lt;/table&gt;</tw-passagedata><tw-passagedata pid="29" name="og not working code for skills" tags="unused" position="100,875" size="100,100">&lt;!--ok so this is how this is SUPPOSED to work:--&gt;
 &lt;!--one, we use the index of the skill to generate a new description variable unique to each row and corresponding to it. the generation works.--&gt;
 &lt;!--two, we use the unique variable to retrieve the relevant data once the button is clicked. this does not work, since for some reason every single variable is getting set to the final one, even though their data filling is still in the loop.--&gt;
 [(set:$skillsListView to it + &quot;
@@ -1408,7 +1409,7 @@ Clothing tends to have holes to accommodate these fins; it’s uncomfortable to 
 		&lt;td&gt;&quot; + (string:$skillsTS&#39;s 3) + &quot;&lt;/td&gt;
 	&lt;/tr&gt;
 &quot;)](c|&lt;!--this part was the original code. its issue was--&gt;
-&lt;!--that it wouldnt load each specific message--&gt;</tw-passagedata><tw-passagedata pid="31" name="Credits" tags="" position="100,1000" size="100,100">&lt;center&gt;(box:&quot;=XXXX=&quot;)+$H2[Credits]
+&lt;!--that it wouldnt load each specific message--&gt;</tw-passagedata><tw-passagedata pid="30" name="Credits" tags="" position="100,1000" size="100,100">&lt;center&gt;(box:&quot;=XXXX=&quot;)+$H2[Credits]
 $HB2+(box:&quot;=XXXXXX=&quot;)[Main Writer
 &lt;b&gt;ClariseTG&lt;/b&gt;]
 $HB2+(box:&quot;=XXXXXX=&quot;)[&lt;span title=&quot;Everyone who bounced ideas with me early on in 3.0&quot;&gt;Idea Squad™
@@ -1444,7 +1445,7 @@ Carbon
 Tardzard (Celes)
 TweeTowhee&lt;/b&gt;]
 &lt;/center&gt;
-[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="32" name="test 2" tags="test" position="2900,375" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
+[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="31" name="test 2" tags="test" position="2900,375" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;&lt;tr&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1480,7 +1481,7 @@ TweeTowhee&lt;/b&gt;]
 ]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="33" name="test 3" tags="test" position="2900,500" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
+</tw-passagedata><tw-passagedata pid="32" name="test 3" tags="test" position="2900,500" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;$mapFormat&quot; + (string:_i) + (string:_j)&quot;[&lt;div class=\&quot;mapCol2\&quot;&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1495,7 +1496,7 @@ TweeTowhee&lt;/b&gt;]
 ]
 (set:$mapGrid to it + &quot;&lt;/div&gt;&quot;)
 (print:$mapGrid)}
-</tw-passagedata><tw-passagedata pid="34" name="MapInit" tags="" position="2900,625" size="100,100">{
+</tw-passagedata><tw-passagedata pid="33" name="MapInit" tags="" position="2900,625" size="100,100">{
 (for: each _i, ...(range:1,9))[
 	(for: each _j, ...(range:1,9))[
 		(print:&quot;
@@ -1507,7 +1508,7 @@ TweeTowhee&lt;/b&gt;]
 	]
 ]
 
-}</tw-passagedata><tw-passagedata pid="35" name="og race table" tags="unused" position="100,1125" size="100,100">{&lt;table&gt;
+}</tw-passagedata><tw-passagedata pid="34" name="og race table" tags="unused" position="100,1125" size="100,100">{&lt;table&gt;
 	&lt;tbody&gt;
 	&lt;tr&gt;
 		&lt;td class=&quot;gray2&quot; rowspan=&quot;2&quot;&gt;Diet: [Fruit, Sugary Food]&lt;b|&lt;/td&gt;
@@ -1527,9 +1528,9 @@ TweeTowhee&lt;/b&gt;]
 		&lt;td&gt;??&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="36" name="DropdownButton" tags="" position="2125,1000" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="35" name="DropdownButton" tags="" position="2125,1000" size="100,100">{(if:$themeChosen&#39;s 3 is 0)[(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_dark.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
 ](else-if:it is 1)[
-(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="37" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
+(link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;assets/star_icon_light.svg\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to &quot;7.5&quot;)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]]}</tw-passagedata><tw-passagedata pid="36" name="Weapons" tags="table" position="1400,725" size="100,100">$H2[Weapons List]
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
 &lt;!--header--&gt;
@@ -1562,11 +1563,11 @@ TweeTowhee&lt;/b&gt;]
 	]
 (set:_index to it + 1)}]}\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="38" name="Race Skills" tags="data-processing" position="2250,250" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="37" name="Race Skills" tags="data-processing" position="2250,250" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
 (for: each _skill, ...$racialSkills)[
 
 $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quot;)[((print:_skill&#39;s 3) EXP)](else:)[(Required)] (print:_skill&#39;s 5)
-]}</tw-passagedata><tw-passagedata pid="39" name="Character Sheet" tags="table 3e" position="3100,375" size="100,100">{{&lt;style&gt;tw-hook {
+]}</tw-passagedata><tw-passagedata pid="38" name="Character Sheet" tags="table 3e" position="3100,375" size="100,100">{{&lt;style&gt;tw-hook {
 }&lt;/style&gt;}
 &lt;i&gt;$H2[Character Name (Nickname)]&lt;/i&gt;
 &lt;table&gt;
@@ -1610,7 +1611,8 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 	]
 ]
 
-}</tw-passagedata><tw-passagedata pid="40" name="skill-popup" tags="display 3e" position="3100,625" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="41" name="Combat" tags="table done" position="600,875" size="100,100">$H2[Combat]
+}</tw-passagedata><tw-passagedata pid="39" name="skill-popup" tags="display 3e" position="3100,625" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="40" name="Combat" tags="table done" position="600,875" size="100,100">$H2[Combat]
+&lt;center&gt;[⚠️ Outdated ⚠️]&lt;/center&gt;
 &lt;i&gt;Scroll to...&lt;/i&gt;
 (link-repeat:&quot;Starting Combat&quot;)[(scroll:?page, ?StartingCombat)]
 (link-repeat:&quot;Rounds, Turns and Initiative&quot;)[(scroll:?page, ?RoundsTurnsandInitiative)]
@@ -1699,10 +1701,10 @@ $H3[Pseudo-Combat]&lt;PseudoCombat|
 Pseudo-Combat is a variant of combat where initiative is not clearly established and held. It is up to the DM and players to ensure all players engage as much as they&#39;d like to. Rather than adhering to a structure of turns and actions, all characters act and react as if they were in a non-combat roleplay setting. However, statistics such as damage, health, and conditions are upheld, with conditions taking round-by-round effects roughly once every 6 seconds within roleplay time.
 
 $H3[Contests]&lt;Contests|
-When two characters, creatures or entities are both actively resisting each other-- such as, for example, a grappler and a creature attempting to escape the grapple-- both will have to make checks with their relevant attributes. Whichever rolls higher wins the Contest; since there is no initiator, the characters simply reroll until someone wins.</tw-passagedata><tw-passagedata pid="42" name="Death Saves" tags="" position="600,1000" size="100,100">Death Saves are a series of Endurance checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="43" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
+When two characters, creatures or entities are both actively resisting each other-- such as, for example, a grappler and a creature attempting to escape the grapple-- both will have to make checks with their relevant attributes. Whichever rolls higher wins the Contest; since there is no initiator, the characters simply reroll until someone wins.</tw-passagedata><tw-passagedata pid="41" name="Death Saves" tags="" position="600,1000" size="100,100">Death Saves are a series of Endurance checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="42" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
 (link-repeat:&quot;🔎 Search&quot;)[(replace:?Results)[{(alert: &quot;(display:\&quot;SearchResults\&quot;)&quot;, &quot;X&quot;)}]]{
 }\
-[]&lt;Results|</tw-passagedata><tw-passagedata pid="44" name="SearchResults" tags="data-processing" position="350,550" size="100,100">{$H4[&lt;i&gt;Search Results for &quot;$search&quot;...&lt;/i&gt;]&lt;br&gt;
+[]&lt;Results|</tw-passagedata><tw-passagedata pid="43" name="SearchResults" tags="data-processing" position="350,550" size="100,100">{$H4[&lt;i&gt;Search Results for &quot;$search&quot;...&lt;/i&gt;]&lt;br&gt;
 (unless:$search is 0)[&lt;!--SETTING UP THE SEARCH--&gt;
 &lt;!--search term: $\search--&gt;
 &lt;!--looks for exact matches, like ctrl f--&gt;
@@ -1728,15 +1730,15 @@ When two characters, creatures or entities are both actively resisting each othe
 	• (link-goto:_result)&lt;br&gt;
 ]]]
 (if:$results&#39;s length is 0)[No results found.]
-}</tw-passagedata><tw-passagedata pid="45" name="Password Lock" tags="Temporary" position="100,1250" size="100,100">Please enter the password to access the beta PHB.
+}</tw-passagedata><tw-passagedata pid="44" name="Password Lock" tags="Temporary" position="100,1250" size="100,100">Please enter the password to access the beta PHB.
 (input-box: bind _entryPasscode, &quot;X&quot;, 1)\
-(link-repeat:&quot;Enter&quot;)[(if:_entryPasscode is &quot;buttquack&quot;)[(go-to:&quot;Homepage&quot;)]]</tw-passagedata><tw-passagedata pid="46" name="Statistics and Proficiencies" tags="table done" position="800,475" size="100,100">$H2[Rolling Statistics and Choosing Proficiencies]
+(link-repeat:&quot;Enter&quot;)[(if:_entryPasscode is &quot;buttquack&quot;)[(go-to:&quot;Homepage&quot;)]]</tw-passagedata><tw-passagedata pid="45" name="Statistics and Proficiencies" tags="table done" position="800,350" size="100,100">$H2[Rolling Statistics and Choosing Proficiencies]
 When making skill checks in-game, the source of a character&#39;s roll modifiers are their Statistics– or core numerical scores for their capabilities– and their Proficiency points, which flesh out the finer details of their skillsets.
 $H3[Statistics]
 There are 7 statistics in Remagica. When a new character is created, roll 2d10 for each statistic, totalling up to 7 numbers ranged 1-20. Numbers under 6 can be rerolled. These 7 numbers can be assigned to the statistics as the player chooses upon character creation.
 &lt;i&gt;Click one to learn more about it.&lt;/i&gt;
 {
-&lt;table&gt;
+&lt;table style=&quot;border-bottom: &quot;&gt;
 &lt;col style=&quot;width:30%&quot;&gt;&lt;col style=&quot;width:70%&quot;&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Strength&quot;)[
@@ -1783,7 +1785,7 @@ A character starts with $baseProfPts points that they can spread between their A
 (link-repeat:&quot;Show Attributes Quick Reference&quot;)[($pop:&quot;Attributes Quick Reference&quot;)]
 $H3[Derived Statistics]
 The character has a handful of other important numbers, which are derived from their main Statistics and Proficiencies.
-{&lt;table&gt;
+{[&lt;table style=&quot;border-bottom: .18em solid;&quot;&gt;
 &lt;col style=&quot;width:30%&quot;&gt;&lt;col style=&quot;width:70%&quot;&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Defense (AC or Def)&quot;)[
@@ -1793,22 +1795,22 @@ The character has a handful of other important numbers, which are derived from t
 ]&lt;/td&gt;&lt;td rowspan=4&gt;[]&lt;StatDesc2|&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Physical Health (HP)&quot;)[
 (replace:?StatDesc2)[
-	The character&#39;s physical resilience. It is equal to the base HP given by the character&#39;s talent plus their Constitution bonus. Further advancements grant the same amount again.
+	The character&#39;s physical resilience. It is equal to twice the character&#39;s base HP plus their Constitution bonus. Further advancements grant the base amount of HP plus the character&#39;s Constitution bonus. Base HP is equal to $baseHP unless a boon or skill states otherwise.
 ]
 ]&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Magical Health (MP)&quot;)[
 (replace:?StatDesc2)[
-	The character&#39;s resilience towards magic corrosion. It is equal to the base MP given by the character&#39;s race plus their Magic bonus. Further advancements grant the same amount again.
+	The character&#39;s resilience towards magic corrosion. It is equal to twice the character&#39;s base MP. Further advancements grant the base amount of MP. Base MP is equal to $baseMP unless a boon or skill states otherwise.
 ]
 ]&lt;/td&gt;&lt;/tr&gt;
-[&lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Sanity&quot;)[
+&lt;tr&gt;&lt;td&gt;(link-repeat:&quot;Sanity&quot;)[
 (replace:?StatDesc2)[
-	Equals 28 + twice the character&#39;s Charisma modifier, minimum 7. This score determines how much sanity damage the character can take before having a Mental Breakdown.
+	A character&#39;s presence of mind and mental stability. It is equal to $baseSanity.
 ]
-]&lt;/td&gt;&lt;/tr&gt;](Deprecated|
+]&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-}</tw-passagedata><tw-passagedata pid="47" name="Rolling Health" tags="in-progress unused" position="3100,250" size="100,100">$H2[Rolling Health]{
+]}</tw-passagedata><tw-passagedata pid="46" name="Rolling Health" tags="in-progress unused" position="3100,250" size="100,100">$H2[Rolling Health]{
 (set:_names to (a:))
 (for: each _race, ...$racesTech)[(set:_names to it + (a:_race&#39;s 1))]
 (set:_raceIndices to (dm:...(interlaced:_names, (range:1,11))))
@@ -1828,7 +1830,7 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 1)d(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 2) + Mag MP&lt;/center&gt;]
 
 &lt;/td&gt;}&lt;/tr&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="48" name="RacesTechInit" tags="data-storage 3e" position="3100,875" size="100,100">{
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="47" name="RacesTechInit" tags="data-storage 3e" position="3100,875" size="100,100">{
 (set:$raceIndex to (a:&quot;Apians&quot;))
 &lt;!--TITLE|HP|MP|Skills List--&gt;
 (set:$racesTech to (a:
@@ -1843,7 +1845,7 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 (a:&quot;Remagus&quot;, 21, (a:3,6), 40, (a:5,8)),
 (a:&quot;Valdien&quot;, 25, (a:3,6), 20, (a:3,6)),
 (a:&quot;Wyrmling&quot;, 25, (a:3,6), 18, (a:2,6))
-))}</tw-passagedata><tw-passagedata pid="49" name="Race List" tags="" position="925,225" size="100,100">$H2[Races]
+))}</tw-passagedata><tw-passagedata pid="48" name="Race List" tags="" position="925,225" size="100,100">$H2[Races]
 {(for: each _race, ...$racesPreview)[
 	(if: ($campaign is &quot;??&quot;) or
 		($campaign is &quot;TL&quot; and _race&#39;s campaigns&#39;s 1 is 1) or
@@ -1860,40 +1862,52 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 }
 
 
-	</tw-passagedata><tw-passagedata pid="50" name="Character Sheet Links" tags="" position="350,700" size="100,100">[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="51" name="Character Creation Tutorial" tags="done" position="800,225" size="100,100">$H2[Getting Started - Creating a character]
+	</tw-passagedata><tw-passagedata pid="49" name="Character Sheet Links" tags="" position="350,700" size="100,100">$H2[Character Sheet Links]
+&lt;center&gt;$H3[(link-repeat:&quot;Main 4e (Google Docs)&quot;)[(open-url:&quot;https://docs.google.com/document/d/1DyE7iG9tpKhT4TlhoUN_5d17lYgybaObrgW24JZC_a0/edit?usp=sharing&quot;)]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="50" name="Character Creation Tutorial" tags="done" position="800,225" size="100,100">$H2[Getting Started - Creating a character]
 Start by making a copy of the (link-repeat:&quot;character sheet&quot;)[(open-url:&quot;https://docs.google.com/document/d/1DyE7iG9tpKhT4TlhoUN_5d17lYgybaObrgW24JZC_a0/edit?usp=sharing&quot;)] template! Filling it out will give you a great direction.
-In Remagica 4e, a character is mainly defined by three mutually-exclusive traits at creation. Those are their race, their Talent, and their magic Casting Style.
-Create a concept in your mind of a character, then look through these stats and see which ones best fit your character idea.
+&lt;p&gt;In Remagica 4e, a character is mainly defined by three mutually-exclusive traits at creation. Those are their race, their Talent, and their magic Casting Style.
+&lt;p&gt;Create a concept in your mind of a character, then look through these stats and see which ones best fit your character idea.
+
 $H3[Race]
 A character&#39;s race represents what kind of creature they are, determines their appearance, and has a minor impact on their Statistics. See the races [[here-&gt;Race List]].
+
 $H3[Talent]
 A character&#39;s Talent represents what they were good at going into adventuring, and what their inclinations may be. As they gain Skills, their abilities may branch out more into more archetypal roles that reflect what they have learned in their adventure. Many of the endgame Skills can be accessed from multiple different Talents via branches, and all of the Talents will offer at least one choice in their progression. The unique combination of starting point and direction determines the kind of build the character will have as different Skills interact. Look at the [[Talents-&gt;Talents and Skills]] page to get an idea of what they&#39;re like.
+
 $H3[Casting Style]
 A character&#39;s magic Casting Style represents the way they express their magic. Every character has access to a unique magic ability; see the page on [[magic abilities-&gt;Magic Ability]] for more information.
+
 $H3[Boon (and bane? TODO)]
 A character will have one boon and one bane from the [[boons and banes page-&gt;Boons and Banes]] on creation. This affects things like HP, MP, and other bits of flavor.
+
 $H3[Statistics and Attributes]
 A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Roll 2d10 for all seven stats (rerolling stats that total to 5 or less) and assign them as you would like.
-A character also has Attributes; each of these attributes can have proficiency points. The Attribute table on the character sheet has zeros next to each Attribute name; this is because Attributes begin with no proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;$baseProfPoints Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
-On top of that, there are derived Statistics based on combinations of other bonuses:
+&lt;p&gt;A character also has Attributes; each of these attributes can have proficiency points. The Attribute table on the character sheet has zeros next to each Attribute name; this is because Attributes begin with no proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;$baseProfPoints Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
+&lt;p&gt;On top of that, there are derived Statistics based on combinations of other bonuses:
 * HP is double base HP ($baseHP, unless a boon says otherwise) plus the character&#39;s Con bonus.
 * MP is double base MP ($baseMP, unless a boon says otherwise).
 * Defense is 10 + Dex, but is often changed by Skills and items that the character can start with.
+
 $H3[The Skills section]
 There is a section for Skills to be added to the sheet beneath the major block of stats.
-By default, it has categories of &quot;actives&quot; and &quot;passives,&quot; suggesting Skills that are used as an Action and Skills that are always active. That is a suggestion of a possible way of sorting the Skills; a different way may work better for you.
-It is up to you whether or not you want to put magic-related Skills in the Magic section or the normal Skills section.
-Don&#39;t forget to fill in Skills from all three sources: race, Talent, and Casting Style! All three can award Skills.
+&lt;p&gt;By default, it has categories of &quot;actives&quot; and &quot;passives,&quot; suggesting Skills that are used as an Action and Skills that are always active. That is a suggestion of a possible way of sorting the Skills; a different way may work better for you.
+&lt;p&gt;It is up to you whether or not you want to put magic-related Skills in the Magic section or the normal Skills section.
+&lt;p&gt;Don&#39;t forget to fill in Skills from all three sources: race, Talent, and Casting Style! All three can award Skills.
+
 $H3[Inventory]
-A character&#39;s Inventory is what items they start with. Take a look at the [[Inventory-&gt;Inventory, Backstory and Personality]] page for more information.
+A character&#39;s Inventory is what items they start with. Take a look at the [[Inventory]] page for more information.
+
 $H3[Backstory]
 A character&#39;s backstory is what events they experienced prior to the adventure of the campaign. For guidance, look to the lore pages for the campaign you are making the character for; these can be found at the bottom of the [[Homepage]].
+
 $H3[RP Guide]
 The RP Guide is for your future self! Make it useful for you!
+
 $H3[Vision and Movement]
 These quantities can be found on the page for your character&#39;s race.
+
 $H3[Free Space]
-This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="52" name="RacesPreviewInit" tags="data-storage" position="2375,250" size="100,100">{(set:$racesPreview to (a:
+This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="51" name="RacesPreviewInit" tags="data-storage" position="2375,250" size="100,100">{(set:$racesPreview to (a:
 (dm: &quot;name&quot;, &quot;Apian&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Their ancestors were hive-dwellers, but modern Apians mostly live around other races.&quot;, &quot;image&quot;, &quot;assets/races/apian.png&quot;, &quot;passName&quot;, &quot;Apian&quot;, &quot;campaigns&quot;, (a: 0, 1)),
 (dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
 (dm: &quot;name&quot;, &quot;Ferfaen&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Magic flows through the veins of every Ferfaen, giving them much more stamina with casting it.&quot;, &quot;image&quot;, &quot;assets/races/ferfaen.png&quot;, &quot;passName&quot;, &quot;Ferfaen&quot;, &quot;campaigns&quot;, (a: 0, 1)),
@@ -1923,7 +1937,7 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Sudden Movement&quot;, &quot;Hazaan are adept runners, capable of surprising speed. In exchange for one of their actions in the next round, a Hazaan can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Hazaan&quot;), 
 (a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;)
 ))
-}</tw-passagedata><tw-passagedata pid="53" name="Talents and Skills" tags="table done" position="1050,225" size="100,100">$H2[Talents and Skills]
+}</tw-passagedata><tw-passagedata pid="52" name="Talents and Skills" tags="table done" position="1050,225" size="100,100">$H2[Talents and Skills]
 When starting out, all characters have a Talent-- this represents the skills they brought with them from their life before adventuring, and has a profound effect on the Skills they will have access to as they progress.
 A Talent comes with a few bonus Attribute Proficiency points and an associated Skill. It also determines how much HP a character gains per Advancement. (MP is determined by the choice of race.)
 Keep in mind that end-game Skills are not always exclusive to a single Talent; in fact, the Skills&#39; prerequisites and unlocks are designed to provide multiple paths from the Talents&#39; Skills to the capstone Skills acquired by very powerful characters.
@@ -1959,11 +1973,11 @@ Take a look at the Talents below!
 	&lt;/td&gt;
 	&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-}</tw-passagedata><tw-passagedata pid="54" name="Thalassophobia" tags="" position="2125,1300" size="100,100">$H2[Thalassophobia Lore]
+}</tw-passagedata><tw-passagedata pid="53" name="Thalassophobia" tags="" position="2125,1300" size="100,100">$H2[Thalassophobia Lore]
 
 $H3[[[Locations-&gt;Locations (T)]]]
 
-$H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Skills List" tags="done" position="1400,350" size="100,100">$H2[Talent Skills]
+$H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="54" name="Skills List" tags="done" position="1400,350" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Associated Talent&quot;)[
@@ -2017,7 +2031,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Sk
 	]
 ]}\
 ]
-[[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="56" name="SkillsInit" tags="data-storage" position="2125,250" size="100,100">{&lt;!--FORMAT OF A SKILL--&gt;\
+[[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="55" name="SkillsInit" tags="data-storage" position="2125,250" size="100,100">{&lt;!--FORMAT OF A SKILL--&gt;\
 &lt;!--1: Name--&gt;
 &lt;!--2: Description--&gt;
 &lt;!--3: Prerequisites--&gt;
@@ -2076,7 +2090,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Sk
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -2)
 
 ))
-}</tw-passagedata><tw-passagedata pid="57" name="TalentColorsInit" tags="data-storage" position="2500,250" size="100,100">(set:$talentColor to (dm:
+}</tw-passagedata><tw-passagedata pid="56" name="TalentColorsInit" tags="data-storage" position="2500,250" size="100,100">(set:$talentColor to (dm:
 &quot;Creative&quot;, #e340b7, 
 &quot;Faithful&quot;, #e3d040, 
 &quot;Agile&quot;, #e63119, 
@@ -2085,36 +2099,36 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="55" name="Sk
 &quot;Astute&quot;, #5a9aed, 
 &quot;Crafty&quot;, #03a336, 
 &quot;Charming&quot;, #9b2fde
-))</tw-passagedata><tw-passagedata pid="58" name="Aurastrong" tags="unused" position="1050,1475" size="100,100">$H3[Aurastrong]
+))</tw-passagedata><tw-passagedata pid="57" name="Aurastrong" tags="unused" position="3300,250" size="100,100">$H3[Aurastrong]
 Those who are Aurastrong have a lot of force behind their magic. Whether that is by hard work, or due to a natural-born affinity, magic of that scale can be difficult to tame and dangerous to wield.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to Power.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Creative" tags="" position="1050,725" size="100,100">$H3[Creative]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="58" name="Creative" tags="" position="1050,725" size="100,100">$H3[Creative]
 Creative types see beauty in the things around them, and carry with them the ability to enhance the qualities they feel. Through craft or performance, those with creative talent can work with the things around them to make them into something new.
 Proficiency: 2 Bonus Proficiency Points between Flair and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Faithful" tags="" position="1050,850" size="100,100">$H3[Faithful]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Faithful" tags="" position="1050,850" size="100,100">$H3[Faithful]
 The world is filled with forces beyond comprehension; some, almost sapient. Those with strong faith have dedicated their time to learning about those forces and working alongside them for a purpose. While some choose their own purpose, others find themselves corrupted by the forces around them and are compelled to act alongside their force&#39;s will.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Agile" tags="" position="1050,350" size="100,100">$H3[Agile]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Agile" tags="" position="1050,350" size="100,100">$H3[Agile]
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Tactical" tags="unused" position="1050,1850" size="100,100">$H3[Tactical]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Tactical" tags="unused" position="3300,625" size="100,100">$H3[Tactical]
 Failure becomes experience, and those who have refined their tactics to this degree have seen it all. Their plans cover many angles and possibilities, and they know how to best bring out the strength of their comrades, whether there is chaos or peace.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Insight, Investigation and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Thorough" tags="unused" position="1050,1600" size="100,100">$H3[Thorough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Thorough" tags="unused" position="3300,375" size="100,100">$H3[Thorough]
 Those who refine their skills thoroughly 
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 4 Bonus Proficiency Points between Stealth, Handiwork, History, Investigation, Tracking, Insight, and Appraisal.
 (Thorough is meant to be similar to a rogue in some ways.)
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="Tough" tags="" position="1050,1100" size="100,100">$H3[Tough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Tough" tags="" position="1050,1100" size="100,100">$H3[Tough]
 The toughest of us can rely on their physical might to keep themselves going and control the situation around them. There is technique to asserting strength, developed over years of use-- those who are tough know how to use themselves to the fullest.
 Proficiency: 2 Bonus Proficiency Points between Endurance and Heartiness.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="65" name="Well-Read" tags="unused" position="1050,1725" size="100,100">$H3[Well-Read]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="Well-Read" tags="unused" position="3300,500" size="100,100">$H3[Well-Read]
 Knowledge is slow to collect and quick to be useful, and no one knows that better than those who focus their efforts on becoming well-read. History, nature, politics-- these characters know it best.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to History.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="66" name="AttributesInit" tags="data-storage" position="2500,375" size="100,100">{
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="65" name="AttributesInit" tags="data-storage" position="2500,375" size="100,100">{
 &lt;!--ATT FORMAT--&gt;
 &lt;!--1: Attribute name--&gt;
 &lt;!--2: Statistic--&gt;
@@ -2157,7 +2171,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 &quot;Magic&quot;, #b552f7
 ))
 }
-</tw-passagedata><tw-passagedata pid="67" name="Attributes Quick Reference" tags="" position="600,350" size="100,100">$H2[Attributes Quick Reference]
+</tw-passagedata><tw-passagedata pid="66" name="Attributes Quick Reference" tags="" position="600,350" size="100,100">$H2[Attributes Quick Reference]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Statistic&quot;)[
@@ -2194,7 +2208,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 	&lt;/td&gt;&lt;/tr&gt;
 (set:_index to it + 1)}]}\
 ]
-</tw-passagedata><tw-passagedata pid="68" name="Nerite" tags="table" position="2250,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+</tw-passagedata><tw-passagedata pid="67" name="Nerite" tags="table" position="2250,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Frilly and soft, Nerites were likely prey animals before they came to the Hadal Zone. Their strong aurasense followed them even as the need for it faded, and as a result, they have the strongest aurasense among the races. 
 &lt;p&gt;They are the most populous race in Ventopia, covered in many intricate markings that they consider “beautiful.”
@@ -2226,7 +2240,7 @@ Features:
 None-- they get a lot of MP!
 
 &#96;[&#96;image&#96;]&#96;
-*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="69" name="Khetadon" tags="table" position="2375,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="68" name="Khetadon" tags="table" position="2375,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 The Khetadons are a rough-skinned and bold species likely descended from true top-of-the-food-chain carnivores. With their sharp teeth and acute mid-range senses, they have a bit of an edge in a physical fight; don’t underestimate them in other settings because of that.
 &lt;p&gt;Khetadons deal with exclusion from institutions of knowledge and are shunned by worshippers of South, but can be found in all sorts of places regardless.
@@ -2258,7 +2272,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 6&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 6&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="70" name="Karkani" tags="table" position="2500,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="69" name="Karkani" tags="table" position="2500,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Karkani take great pride in their shells, often decorating them or carving things into them. These shells make great protection against predators, blunt force trauma, and social embarrassment.
 &lt;p&gt;Karkani have strong internal social structure, and status is often marked on their shells.
@@ -2290,27 +2304,35 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 7&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 7&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*They can be shaped like any crustacean, including isopods, lobsters, crabs, or shrimp. Shells often stick to adjacent colors, rather than having highly contrastive patterns, and don’t glow very much.</tw-passagedata><tw-passagedata pid="71" name="Advancement and Improvements" tags="" position="600,600" size="100,100">$H2[Advancement and Improvements]
+*They can be shaped like any crustacean, including isopods, lobsters, crabs, or shrimp. Shells often stick to adjacent colors, rather than having highly contrastive patterns, and don’t glow very much.</tw-passagedata><tw-passagedata pid="70" name="Advancement and Improvements" tags="" position="600,600" size="100,100">$H2[Advancement and Improvements]
 As characters go on adventures and learn, they gain experience, pick up new skills and abilities, and become more capable.
 &lt;p&gt;In Remagica, this is captured with the Rank system.
 &lt;p&gt;Ranks can be thought of as a reskinning of Levels in some other systems, granting some combination of Skills, Health, and Statistic Improvements. 
 &lt;p&gt;Rather than using numbers, Remagica encourages DMs to come up with a naming scheme for Ranks; for example, Bronze Rank at the beginning, Improving to Silver Rank and then Gold Rank and beyond. This means that many traditionally hard limits-- such as a level cap or a fixed progression-- are more open.
 &lt;p&gt;Additionally, the Ranks *themselves* are customizable by the DM, allowing for any range of small, incremental Improvements or a few large ones. They do not need to always grant the same bonuses; different Ranks can improve characters by different amounts. There are examples below.
+
 $H3[Components of a Rank]
+
 $H4[Skills]
 A character&#39;s most interesting abilities are often defined by their Skills. Refer to the [[list of skills-&gt;Skills List]] to see what they are; the system is meant for each skill to represent a step from the bottom of the tree (their talent) towards the top (the skills that represent archetypes.)
 &lt;p&gt;Skills include both Talent Skills and Magic Skills.
+
 $H4[Health Improvement]
-A character&#39;s health increases by the amount of HP listed in their Talent and MP listed in their Race, plus their Constitution or Magic modifier, respectively. A Rank can also grant partial Health Improvements, granting half of the amount otherwise gained; in these cases, always round up. Do not divide Health Improvements into pieces more precise than halves; for example, 1.5 Improvements is okay, but 2/3 of one is not.
+A character&#39;s Physical Health improves by $baseHP plus their Constitution modifier, unless a Boon or Skill says otherwise. Similarly, their Magic Health improves by $baseMP-- note the lack of any modifier.
+If you&#39;re a DM, keep in mind that you can also grant partial Health Improvements with a rank, granting half of the amount otherwise gained; in these cases, always round up. Do not divide Health Improvements into pieces more precise than halves; for example, 1.5 Improvements is okay, but 2/3 of one is not.
+
 $H4[Proficiency Point]
 A character&#39;s (link-repeat:&quot;Attribute Proficiencies&quot;)[($pop:&quot;Attributes Quick Reference&quot;)] are determined by how many points are put into each one. Each Proficiency Point can be added directly to the amount of points in any given Attribute, raising the bonus the character has with that type of check by one.
-$H4[Statistic Point]TODO
+
+$H4[Statistic Point]
+⚠️ Under Construction ⚠️
+
 $H3[A Typical Rank]
 Often, a Rank consists of the following:
 * One Skill gained
 * One Health Improvement
 * One Proficiency Point
-* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="72" name="Magic Ability" tags="table" position="1175,225" size="100,100">$H2[Magic Ability]
+* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="71" name="Magic Ability" tags="table" position="1175,225" size="100,100">$H2[Magic Ability]
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
 &lt;p&gt;Often, Abilities are highly specific. Some examples include:
 * Nikita Theodora has the ability to create a shadowy shell around herself in the shape of a were-fox, augmenting her melee capabilities.
@@ -2349,7 +2371,7 @@ $H3[Damage Types]
 A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which is a shorthand for which natural element the magic has the most similar properties to. For example, magic that manipulates fire would deal &quot;fire damage,&quot; which means that it will be more effective at destroying wooden or flammable objects. However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
 The damage types are as follows:
 Earth, Fire, Freezing, Life, Light, Lightning, Psychic, Rot, Soul, Sound, Time, Toxin, Water;
-Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="73" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
+Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="72" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
 &quot;Borro&quot;,
 &quot;Skathi&quot;,
 &quot;Fyugo&quot;,
@@ -2379,7 +2401,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 (a: &quot;Solid Form&quot;, &quot;The Otsoa will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 7), 
 (a: &quot;Unrecognizable&quot;, &quot;The Otsoa&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the Otsoa&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 5)
 ))
-}</tw-passagedata><tw-passagedata pid="74" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
+}</tw-passagedata><tw-passagedata pid="73" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
 Borros have a strong connection to the physical, imbuing magic into things they can touch. While this leaves them with a short range, their power is more concentrated as a result.
 Short Range: 5ft
 Long Range: 20ft
@@ -2403,7 +2425,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="75" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="74" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
 
 (a: &quot;Hands-On&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making an Action that involves physical contact, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:15,16), &quot;Borro&quot;), 
 (a: &quot;It Spreads&quot;, &quot;When a Skathi applies a magical effect, they can choose to have it affect any number of targets, up to 3, within their Short Range of the casting’s origin, not passing through barriers such as walls. However, they have to pay for their conditions per-target, and damage is spread between them, meaning each target would take the total damage divided by the number of targets, rounded up. If the character also has the Modifying Monikers skill, Summon Tags that affect damage or give conditions can only apply to one of the targets.&quot;, (a: -2), (a:17), &quot;Skathi&quot;), 
@@ -2430,7 +2452,7 @@ Casting:
 (a: &quot;Uberheal&quot;, &quot;The Azurite can cast magic from the third and fourth rows of their casting table.&quot;, (a: 8), (a:), &quot;Azurite&quot;), 
 (a: &quot;Impermeable (Otsoa)&quot;, &quot;When the Healthy or Solid tags prevents all of the damage from an effect, the Otsoa is immune to the secondary effects of the source of the damage.&quot;, (a: 7), (a:), &quot;Otsoa&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="76" name="Exterreri" tags="table" position="925,475" size="100,100">$H2[Exterreri]\
+))}</tw-passagedata><tw-passagedata pid="75" name="Exterreri" tags="table" position="925,475" size="100,100">$H2[Exterreri]\
 (if:$campaign is &quot;TL&quot;)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;](else:)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;]
 
 No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
@@ -2462,7 +2484,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="77" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="76" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
 Short Range: 5ft
 Long Range: 45ft
@@ -2485,7 +2507,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="77" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
 Short Range: 5ft
 Long Range: 45ft
@@ -2494,7 +2516,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Conditions Cost List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
 Short Range: 5ft
 Long Range: 45ft
@@ -2504,7 +2526,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Form Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
 Short Range: 20ft
 Long Range: 150ft
@@ -2514,7 +2536,7 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 Casting:
 See [[Summon Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 Short Range: 10ft
 Long Range: 90ft
@@ -2539,7 +2561,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="82" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2601,7 +2623,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="83" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="84" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="82" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="83" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
@@ -2664,7 +2686,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="85" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="84" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
 (a: &quot;Shiv&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;),
 (a: &quot;Harpoon&quot;, &quot;Athletics check, DC AC; single target within 2 tiles. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 1 tile closer to the user, if possible.&quot;),
 (a: &quot;Staff&quot;, &quot;Acrobatics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Bludgeoning) damage on a success. On a success, the attack will leave the target&#39;s defenses open and lower their AC by 1 for 6 seconds.&quot;),
@@ -2672,7 +2694,7 @@ Casting:
 (a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
 (a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
 (a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
-))}</tw-passagedata><tw-passagedata pid="86" name="Popup" tags="code" position="2125,625" size="100,100">{
+))}</tw-passagedata><tw-passagedata pid="85" name="Popup" tags="code" position="2125,625" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
 		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
@@ -2688,7 +2710,7 @@ Casting:
 		(output-data:&quot;(alert:\&quot;&quot; + (string:_contents) + &quot;\&quot;, \&quot;X\&quot;)&quot;)
 	])
 )
-}</tw-passagedata><tw-passagedata pid="87" name="PopupConfig" tags="settings" position="2250,625" size="100,100">|=
+}</tw-passagedata><tw-passagedata pid="86" name="PopupConfig" tags="settings" position="2250,625" size="100,100">|=
 $H2[Configure Popup Height]
 Adjust the height until the box on the right fits within the screen.
 {&lt;center&gt;
@@ -2700,7 +2722,7 @@ Adjust the height until the box on the right fits within the screen.
 }
 (link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
 =|
-[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="88" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="87" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
 $HB3[$H4[(link-repeat:&quot;Blinded ⏷&quot;)[{(replace:?Blinded)[
 $H4[(link:&quot;Blinded ⏶&quot;)[(rerun:?Blinded)]]
 &lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
@@ -2787,16 +2809,16 @@ $HB3[$H4[(link-repeat:&quot;Suffocating ⏷&quot;)[{(replace:?Suffocating)[
 $H4[(link:&quot;Suffocating ⏶&quot;)[(rerun:?Suffocating)]]
 &lt;br&gt;The creature is unable to respirate.
 The Suffocating condition comes in 3 levels.
-&lt;br&gt;Level 1: The creature has a -5 penalty to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC12 or gain Suffocating II.
-&lt;br&gt;Level 2: The creature has a -5 penalty to all checks, and disadvantage to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC16 or gain Suffocating III.
-&lt;br&gt;Level 3: The creature has a -7 penalty to all checks, and gains the Unstable condition.
+Level 1: The creature has a -5 penalty to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC12 or gain Suffocating II.
+Level 2: The creature has a -5 penalty to all checks, and disadvantage to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC16 or gain Suffocating III.
+Level 3: The creature has a -7 penalty to all checks, and gains the Unstable condition.
 ]}]]]&lt;Suffocating|
 $HB3[$H4[(link-repeat:&quot;Unstable ⏷&quot;)[{(replace:?Unstable)[
 $H4[(link:&quot;Unstable ⏶&quot;)[(rerun:?Unstable)]]
 &lt;br&gt;The creature is actively dying.
 Unstable only comes in one level, and as such does not need to be marked with its level.
-&lt;br&gt;When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
-]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="89" name="Map Grid Tests" tags="section" position="2850,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="90" name="Magic Skills List" tags="" position="1400,600" size="100,100">$H2[Talent Skills]
+When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
+]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="88" name="Map Grid Tests" tags="section" position="2850,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="89" name="Magic Skills List" tags="" position="1400,600" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Casting Style&quot;)[
@@ -2839,15 +2861,15 @@ Unstable only comes in one level, and as such does not need to be marked with it
 	(print:_skill&#39;s 2)]&lt;br&gt;
 	]
 ]}\
-]</tw-passagedata><tw-passagedata pid="91" name="redo" tags="code" position="2125,750" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="90" name="redo" tags="code" position="2125,750" size="100,100">{
 (set:$future to (subarray: $future, 1, -2))
-}</tw-passagedata><tw-passagedata pid="92" name="undo" tags="code" position="2125,875" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="91" name="undo" tags="code" position="2125,875" size="100,100">{
 (set:$future to it + (a:(passage:)&#39;s name))
 (set:_dest to (history:)&#39;s last)
 (undo:)
 &lt;!--need some way to remove the most recent passage from (history:)--&gt;
 (go-to: (_dest))
-}</tw-passagedata><tw-passagedata pid="93" name="Deities and Forces of Nature" tags="" position="1600,475" size="100,100">$H2[Deities and Forces of Nature]
+}</tw-passagedata><tw-passagedata pid="92" name="Deities and Forces of Nature" tags="" position="1600,475" size="100,100">$H2[Deities and Forces of Nature]
 $H4[Northern Continent]
 
 $H3[Rekke Panthali]
@@ -2871,30 +2893,30 @@ His domain is that of the nighttime, especially just past sunset, alternating be
 
 $H3[Rattzlagi]
 A bitter god who is trapped in a constant state of rot. She is full of anger at the world, but even more so at the Queen of Nightmares for making her this way. She wants to find a way to either die or become mortal again. She is rarely lucid and often suffering.
-Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="94" name="Nightmare Hunters" tags="" position="1600,225" size="100,100">$H2[Nightmare Hunters Lore]
+Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="93" name="Nightmare Hunters" tags="" position="1600,225" size="100,100">$H2[Nightmare Hunters Lore]
 
 $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="95" name="Locations (NH)" tags="" position="1600,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="96" name="Theodora City" tags="" position="2125,1600" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="94" name="Locations (NH)" tags="" position="1600,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="95" name="Theodora City" tags="" position="2125,1600" size="100,100">$H2[Theodora City]
 
-$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="97" name="Euridza" tags="" position="1600,600" size="100,100">$H2[Euridza: The Realm of Dreams]
-</tw-passagedata><tw-passagedata pid="98" name="Astute" tags="" position="1050,475" size="100,100">$H3[Astute]
+$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="96" name="Euridza" tags="" position="1600,600" size="100,100">$H2[Euridza: The Realm of Dreams]
+</tw-passagedata><tw-passagedata pid="97" name="Astute" tags="" position="1050,475" size="100,100">$H3[Astute]
 Exceptionally gifted with a variety of skills, those who are astute know a lot about the world around them, and what they can do in it. Whether they are a researcher or a jack of all trades, it is their varied abilities that define them.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="99" name="Charming" tags="" position="1050,600" size="100,100">$H3[Charming]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="98" name="Charming" tags="" position="1050,600" size="100,100">$H3[Charming]
 Some connect with the world around them through other people. The most charming often have many friends-- often in strange places-- and connections they can rely on. Whether their skill is making new friends, knowing the right people, or pretending to form deeper connections, those who are talented with their charms can often find unique ways of navigating any situation.
 Proficiency: 2 Bonus Proficiency Points between Flair, Persuasion, and Intimidation.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="100" name="Keen" tags="" position="1050,975" size="100,100">$H3[Keen]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="99" name="Keen" tags="" position="1050,975" size="100,100">$H3[Keen]
 Attentive and curious, keener folk keep a sharp eye out for anything of interest. They&#39;re well attuned to their environment, knowing where things are and what to do with them. They understand purpose where others do not.
 Proficiency: 2 Bonus Proficiency Points between Perception and Aura.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="101" name="Proficiencies" tags="" position="1400,1350" size="100,100">$H2[Proficiencies]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="100" name="Proficiencies" tags="" position="1400,1350" size="100,100">$H2[Proficiencies]
 There are three kinds of proficiencies: (link-repeat:&quot;attribute Proficiencies&quot;)[(scroll:?att)], (link-repeat:&quot;tool Proficiencies&quot;)[(scroll:?tool)], and (link-repeat:&quot;other proficiencies&quot;)[(scroll:?other)].
 &lt;p&gt;A character starts with 7 proficiency points that go to their skill Proficiencies, and 3 tool Proficiencies.
 Each kind of proficiency functions a little differently, and can be improved in different ways:
 $H3[Attribute Proficiencies]&lt;att|
-There is a chart of</tw-passagedata><tw-passagedata pid="102" name="Thalassophobia Stuff" tags="section" position="2275,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="103" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
+There is a chart of</tw-passagedata><tw-passagedata pid="101" name="Thalassophobia Stuff" tags="section" position="2275,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="102" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Some Apians come from hives in the wilderness, raised making honey to survive the winter and foraging for food. Others are raised around other peoples, using their flight to get around settlements that are not built for their stature.
@@ -2926,7 +2948,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 8&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 8&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="104" name="Ferfaen" tags="table" position="925,725" size="100,100">$H2[Ferfaen]
+*Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="103" name="Ferfaen" tags="table" position="925,725" size="100,100">$H2[Ferfaen]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ferfaen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Ferfaen are most common on the Central continent due to their sensitivity to magic radiation, which increases as one approaches the edges of the world. Still, they can be found on the Northern continent, living among others.
@@ -2959,7 +2981,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 9&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 9&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="105" name="Hiverscruff" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
+*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="104" name="Hiverscruff" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
@@ -2993,7 +3015,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
-&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="106" name="Phorad" tags="table" position="925,975" size="100,100">$H2[Phorad]
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="105" name="Phorad" tags="table" position="925,975" size="100,100">$H2[Phorad]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/phorad.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Phorads are a parasitic plant species originating from the southeast. They reproduce by infecting sapient creatures, eating their internal organs, and modifying their brain to make it their own neural center.
@@ -3026,7 +3048,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 11&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 11&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Phorads have a core, which is where the foliage will be the densest. Phorads have a lot of visual variation. Some have thick, woody roots; others have thinner roots, like angel hair pasta. Some fruit, and some flower. Some have bulbs that hold air. Some Phorads can luminesce. Choose how the Phorad looks.</tw-passagedata><tw-passagedata pid="107" name="Remagus" tags="table" position="925,1100" size="100,100">$H2[Remagus]
+*Phorads have a core, which is where the foliage will be the densest. Phorads have a lot of visual variation. Some have thick, woody roots; others have thinner roots, like angel hair pasta. Some fruit, and some flower. Some have bulbs that hold air. Some Phorads can luminesce. Choose how the Phorad looks.</tw-passagedata><tw-passagedata pid="106" name="Remagus" tags="table" position="925,1100" size="100,100">$H2[Remagus]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/remagus.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Fragmented memories, power spiraling out of control, and constant rejection– such is the life of a Remagus. Remagi are born when Valdiens are resurrected with powerful magic; the parts of their physical form that decay after death are replaced by their own magic, and only some of their memories are stitched back into place. As a result, Remagi wake up in bodies that do not feel like their own, and that contain massive, uncontrollable potential for magic.
@@ -3064,7 +3086,7 @@ Features:
 &lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
 
 &#96;[&#96;image&#96;]&#96;
-*Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="108" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]
+*Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="107" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/valdien.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Valdiens can be found everywhere. They easily adapt to a variety of environments, and take pride in their heritage.
@@ -3105,7 +3127,7 @@ Features:
 &lt;p&gt;&lt;i&gt;Weird&lt;/i&gt;. The Valdien can add half of their Mag modifier to Intimidation checks.
 
 &#96;[&#96;image&#96;]&#96;
-*Valdiens basically appear human.</tw-passagedata><tw-passagedata pid="109" name="Hazaan" tags="table" position="925,1350" size="100,100">$H2[Hazaan]
+*Valdiens basically appear human.</tw-passagedata><tw-passagedata pid="108" name="Hazaan" tags="table" position="925,1350" size="100,100">$H2[Hazaan]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hazaan.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 With long legs and thick fur, Hazaan were once prey animals. Even though they&#39;ve lost that role, the instincts remain, as do the blistering speed and ability to move at a moment&#39;s notice.
@@ -3136,11 +3158,46 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 12&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 12&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata><tw-passagedata pid="110" name="Boons and Banes" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="111" name="MiscInit" tags="data-storage" position="2375,500" size="100,100">{
+*Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata><tw-passagedata pid="109" name="Boons and Banes" tags="" position="800,600" size="100,100">$H2[Boons and Traits]
+⚠️ Flavor Text Under Construction ⚠️
+
+$H3[Boons]
+A character starts with one Boon at creation.
+
+$H4[Healthy]
+The character&#39;s base HP is (print:$baseHP + 2) instead of $baseHP.
+
+$H4[Soulful]
+The character&#39;s base MP is (print:$baseMP + 2) instead of $baseMP.
+
+$H4[Animal Companion]
+The character starts with an animal companion. Choose one of the following:
+* Pet &lt;br&gt;This animal has a movement speed of 6T in a style that makes the most sense for it. It cannot attack, but it can carry objects that would be reasonable for it to carry, and is fully loyal to the character. It has $baseHP HP, 8 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. Taking a Long Rest with the pet while it is in good condition will restore 2 Sanity.
+* Steed &lt;br&gt;This animal has a movement speed of 9T walk. It cannot attack, but has a Carrying Capacity of (print: 4 * $baseCarry). The character can ride the steed and equip it with bags. It has $baseHP HP, 10 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2.
+* Hunting Animal &lt;br&gt;This animal has a movement speed of 6T in a style that makes the most sense for it. It has (print: 2 *(ceil:0.35 * $baseHP)) HP, 12 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. It can attack, using either its Dex or Str modifier as its bonus to hit, and deals a total of 2 damage, or 1 damage if its speed is a Fly speed.
+
+$H4[God&#39;s Mark]
+The character starts with a god&#39;s mark, and can be recognized by followers of that god for their history.
+
+$H4[Well-Off]
+The character starts with (print:(ceil: $baseInvPoints * 0.6) * 2) Inventory Points.
+
+$H3[Traits]
+Traits are neutral flavor options, designed for players who want to codify slight mechanical differences in their characters due to unique traits they have. Traits are meant to not increase or decrease power, but rather add a mechanical basis for flavor decisions, and enforce certain roleplay decisions.
+&lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="110" name="ConstInit" tags="data-storage" position="2375,500" size="100,100">{
+&lt;!--HEALTH--&gt;
 (set:$baseHP to 10)
 (set:$baseMP to 6)
+(set:$baseSanity to 20)
+
+&lt;!--INVENTORY--&gt;
+(set:$baseCarry to 20)
+(set:$baseCarryAdd to 2)
+(set:$maxInvPoints to 20)
+
+&lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
-}</tw-passagedata><tw-passagedata pid="112" name="ThemesInit" tags="data-storage" position="2250,750" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="111" name="ThemesInit" tags="data-storage" position="2250,750" size="100,100">{
 (set:$leftPad to &quot;7.5&quot;)
 (set:$openingSidebar to false)
 
@@ -3160,7 +3217,30 @@ Features:
 (set:$themeLight to (a:&quot;#ffffff&quot;,&quot;#271838&quot;,0,&quot;Light&quot;,&quot;#6a2ebf&quot;,&quot;#f2f2f2&quot;,&quot;#d9d9d9&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
 (set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
 (set:$themeNightHunt to (a:&quot;#e0e0e0&quot;,&quot;#484963&quot;,2,&quot;NightHunt&quot;,&quot;#6d1e96&quot;,&quot;#d1d1d1&quot;,&quot;#cfcfcf&quot;,&quot;IM Fell DW Pica SC&quot;,&quot;Ibarra Real Nova&quot;))
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="112" name="Backstory and Personality" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="113" name="Inventory" tags="in-progress" position="800,475" size="100,100">$H2[Inventory]
+Characters tend to have possessions, which they keep inside of an Inventory. What possessions they begin the campaign with, and how many items they can carry with them, are governed by the inventory system.
+&lt;p&gt;If you&#39;re making a character, (link-repeat:&quot;you can jump down to the Starting Out section&quot;)[(scroll:?page, ?making)].
+
+$H3[In General]
+A character&#39;s inventory size is limited by their Carrying Capacity, which is a whole number of Slots. 
+&lt;p&gt;Every item has a Size, which is a whole number; this is the number of Slots that the item occupies when it is in the inventory. No character can move a set of items with a total Size greater than their Carrying Capacity.
+&lt;p&gt;Some items are small enough that multiple of them can fit in one slot, such as an array of little candies. Some other items, such as large bundles of rope, can have a Size larger than 1 but reduce over time to smaller whole numbered amounts.
+&lt;p&gt;Always, items occupy entire Slots. Small items and parts of items that can grow or shrink always round up to the nearest whole of how many Slots they take up.
+
+$H4[Carrying Capacity of a character]
+A character&#39;s carrying capacity is equal to $baseCarry + $baseCarryAdd &#96;*&#96; their Strength modifier.
+&lt;p&gt;For example, a wildsman with a Strength score of 16, or a +3 Strength modifier, would have a carry weight of:
+&lt;center&gt;$baseCarry + (3 &#96;*&#96; $baseCarryAdd) = (print:$baseCarry + 3*$baseCarryAdd) Slots&lt;/center&gt;\
+&lt;p&gt;This defines the maximum possible weight they could carry on their own, assuming they had a pack large enough to carry it.
+
+$H4[Carrying Capacity of a pack]
+A character can only hold 4 Slots&#39; worth of items on their person without any way to hold onto them. However, items that can hold other items can increase this amount.
+&lt;p&gt;The maximum amount of items a character can move with them is the minimum of the Carrying Capacity determined by their strength and the capacity of whatever they&#39;re using to hold the items, such as a backpack.
+&lt;p&gt;There are also ways of transporting items that bypass this limit, such as using a yak or blorse to carry the items.
+
+$H3[Starting Out]&lt;making|
+Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $baseInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
+&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 2/3 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

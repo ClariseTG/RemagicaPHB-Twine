@@ -143,7 +143,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -239,8 +241,8 @@ Array
 7 Distance from Talent
 
 &lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;</tw-passagedata><tw-passagedata pid="3" name="Sidebar" tags="sidebar footer" position="100,350" size="100,100">(unless:(passage:)&#39;s name is &quot;Password Lock&quot;)[(if:$leftPad is 7.5)[$sbTransition[{(if:$showBorder)[&lt;div class=&quot;SBarBorder&quot;&gt;{
-(unless:(history:)&#39;s length &lt; 1)[(link:&quot;↶&quot;)[(display:&quot;undo&quot;)]](else:)[←]
-[(unless:$future&#39;s length &lt; 1)[(link:&quot;↷&quot;)[(display:&quot;redo&quot;)]](else:)[→]](hid|
+(if:$managedHist&#39;s length &gt; 1)[(link:&quot;↶&quot;)[(display:&quot;undo&quot;)]](else:)[←]
+[(if:$managedRedo&#39;s length &gt; 0)[(link:&quot;↷&quot;)[(display:&quot;redo&quot;)]](else:)[→]]
 
 
 (link-goto:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;, &quot;Homepage&quot;)
@@ -249,6 +251,8 @@ Array
 (if:$optionsShown)[\
 (display:&quot;Settings&quot;)\
 ]&lt;Options|
+
+[[Compendium]]
 
 [[Attributes-&gt;Attributes Quick Reference]]{{
 
@@ -437,6 +441,9 @@ div.desc {
 ](else:)[
 	(set:$sbTransition to (t8n:&quot;instant&quot;))
 ]
+
+&lt;!--history management--&gt;
+{(display:&quot;ManageHistory&quot;)}
 }</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="display" position="100,225" size="100,100">---
 Theme:
 {(dropdown: bind _themeSelected, &quot;Light&quot;, &quot;Dark&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;)&lt;br&gt;
@@ -812,7 +819,17 @@ The god of mania, madness, and transformation.
 
 $H3[Cardinal Up]
 Up is a god feared by almost all. She represents unknowable things, the open Above, the pitch black, and agoraphobia. Her lucidity is unclear. She is respected in the Boneyard, and hated in Ventopia, considered ultimately ugly.
-Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="17" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="19" name="Compendium" tags="section" position="1400,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
+Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="17" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="19" name="Compendium" tags="section" position="1400,100" size="100,100">$H2[Compendium Quick Links]
+
+[[Items-&gt;Items List]] 
+[[Talent Skills-&gt;Skills List]]
+[[Magic Skills-&gt;Magic Skills List]] 
+[[Weapons]] 
+[[Summon Tags-&gt;Summon Tags List]] 
+[[Form Tags-&gt;Form Tags List]] 
+[[Conditions]]
+
+(link-goto:&quot;Back&quot;, (history:)&#39;s last)</tw-passagedata><tw-passagedata pid="20" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
 
 Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
 
@@ -2166,7 +2183,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 &quot;Dexterity&quot;, #4f64ff, 
 &quot;Constitution&quot;, #bf7026, 
 &quot;Knowledge&quot;, #37db42, 
-&quot;Wisdom&quot;, #6ab7cc, 
+&quot;Wisdom&quot;, #00e0e8, 
 &quot;Charisma&quot;, #f2449b, 
 &quot;Magic&quot;, #b552f7
 ))
@@ -2862,13 +2879,15 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 	]
 ]}\
 ]</tw-passagedata><tw-passagedata pid="90" name="redo" tags="code" position="2125,750" size="100,100">{
-(set:$future to (subarray: $future, 1, -2))
+(set:$managedCurr to $managedRedo&#39;s last)
+(set:$managedRedo to its 1stto2ndlast)
+(set:$wasRedone to true)
+(go-to:$managedCurr)
 }</tw-passagedata><tw-passagedata pid="91" name="undo" tags="code" position="2125,875" size="100,100">{
-(set:$future to it + (a:(passage:)&#39;s name))
-(set:_dest to (history:)&#39;s last)
-(undo:)
-&lt;!--need some way to remove the most recent passage from (history:)--&gt;
-(go-to: (_dest))
+(set:$managedRedo to it + (a:$managedHist&#39;s last))
+(set:$managedHist to its 1stto2ndlast)
+(set:$managedCurr to $managedHist&#39;s last)
+(go-to:$managedCurr)
 }</tw-passagedata><tw-passagedata pid="92" name="Deities and Forces of Nature" tags="" position="1600,475" size="100,100">$H2[Deities and Forces of Nature]
 $H4[Northern Continent]
 
@@ -2911,7 +2930,7 @@ Proficiency: 2 Bonus Proficiency Points between Flair, Persuasion, and Intimidat
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="99" name="Keen" tags="" position="1050,975" size="100,100">$H3[Keen]
 Attentive and curious, keener folk keep a sharp eye out for anything of interest. They&#39;re well attuned to their environment, knowing where things are and what to do with them. They understand purpose where others do not.
 Proficiency: 2 Bonus Proficiency Points between Perception and Aura.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="100" name="Proficiencies" tags="" position="1400,1350" size="100,100">$H2[Proficiencies]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="100" name="Proficiencies" tags="" position="800,850" size="100,100">$H2[Proficiencies]
 There are three kinds of proficiencies: (link-repeat:&quot;attribute Proficiencies&quot;)[(scroll:?att)], (link-repeat:&quot;tool Proficiencies&quot;)[(scroll:?tool)], and (link-repeat:&quot;other proficiencies&quot;)[(scroll:?other)].
 &lt;p&gt;A character starts with 7 proficiency points that go to their skill Proficiencies, and 3 tool Proficiencies.
 Each kind of proficiency functions a little differently, and can be improved in different ways:
@@ -3082,8 +3101,8 @@ Features:
 &lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 1T every 6 seconds. This movement does not cost an Action. (Corresponds to Acrobatic.)
 &lt;p&gt;&lt;i&gt;Moonlit Sight&lt;/i&gt;. The Remagus has blindsight 90ft and advantage to Perception checks when they cannot see. However, they have disadvantage to Perception and Handiwork checks in bright light. (Corresponds to Acute Hearing.)
 &lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 9T. (Corresponds to Aquatic.)
-&lt;p&gt;&lt;i&gt;Bulky&lt;/i&gt;. The Remagus&#39;s carry weight increases by 6 slots, their weight is doubled, and they have advantage to Sturdy saves. (Corresponds to Buff.)
-&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
+&lt;p&gt;&lt;i&gt;Bulky&lt;/i&gt;. The Remagus&#39;s carry weight increases by (print: (ceil: 2.5 * $baseCarryAdd)) slots, their weight is doubled, and they have advantage to Sturdy saves. (Corresponds to Buff.)
+&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, gains a +2 bonus to Intimidation checks, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
 
 &#96;[&#96;image&#96;]&#96;
 *Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="107" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]
@@ -3191,9 +3210,16 @@ Traits are neutral flavor options, designed for players who want to codify sligh
 (set:$baseSanity to 20)
 
 &lt;!--INVENTORY--&gt;
-(set:$baseCarry to 20)
-(set:$baseCarryAdd to 2)
+(set:$baseCarry to 10)
+(set:$baseCarryAdd to 4)
+(set:$baseCarrySub to 1)
 (set:$maxInvPoints to 20)
+
+&lt;!--HISTORY--&gt;
+(set:$managedHist to (a:))
+(set:$managedRedo to (a:))
+(set:$managedCurr to &quot;&quot;)
+(set:$wasRedone to false)
 
 &lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
@@ -3235,9 +3261,11 @@ A character&#39;s inventory size is limited by their Carrying Capacity, which is
 &lt;p&gt;Always, items occupy entire Slots. Small items and parts of items that can grow or shrink always round up to the nearest whole of how many Slots they take up.
 
 $H4[Carrying Capacity of a character]
-A character&#39;s carrying capacity is equal to $baseCarry + $baseCarryAdd &#96;*&#96; their Strength modifier.
+A character&#39;s carrying capacity is equal to $baseCarry + $baseCarryAdd &#96;*&#96; their Strength modifier if, it is positive, or $baseCarry + $baseCarrySub &#96;*&#96; their Strength modifier if it is negative.
 &lt;p&gt;For example, a wildsman with a Strength score of 16, or a +3 Strength modifier, would have a carry weight of:
 &lt;center&gt;$baseCarry + (3 &#96;*&#96; $baseCarryAdd) = (print:$baseCarry + 3*$baseCarryAdd) Slots&lt;/center&gt;\
+A noble with a Strength score of 8, or a -1 Strength modifier, would instead have a maximum carry weight of:
+&lt;center&gt;$baseCarry + (-1 &#96;*&#96; $baseCarrySub) = (print:$baseCarry - 1*$baseCarryAdd) Slots&lt;/center&gt;\
 &lt;p&gt;This defines the maximum possible weight they could carry on their own, assuming they had a pack large enough to carry it.
 
 $H4[Carrying Capacity of a pack]
@@ -3247,7 +3275,19 @@ A character can only hold 4 Slots&#39; worth of items on their person without an
 
 $H3[Starting Out]&lt;making|
 Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $baseInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
-&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata></tw-storydata>
+&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="114" name="ManageHistory" tags="code" position="2250,875" size="100,100">{
+(if: $managedHist&#39;s length &gt; 0)[ &lt;!--no short circuiting--&gt;
+	(if:(passage:)&#39;s name is not $managedHist&#39;s last)[
+		(set:$managedHist to it + (a: (passage:)&#39;s name))
+		(if: $managedRedo&#39;s length &gt; 0 and not $wasRedone)[
+			(set:$managedRedo to (a:))
+		]
+	]
+](else:)[
+	(set:$managedHist to it + (a: (passage:)&#39;s name))
+]
+(set:$wasRedone to false)
+}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Remagica 4.0 Site</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<title>Remagica 4.2 PHB</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
@@ -145,7 +146,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -214,7 +217,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.2.0 - 2025-1-9*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.2.2 - 2025-1-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -306,6 +309,7 @@ Array
 
 {(display:&quot;Popup&quot;)}
 }</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
+
 (set:$pageUrl to (page-url:))
 
 (set:$formattingString to &quot;tw-story {
@@ -436,6 +440,7 @@ div.desc {
 (set:$HB2 to (background: $themeChosen&#39;s 6) + (corner-radius:12))
 (set:$HB3 to (background: $themeChosen&#39;s 6) + (corner-radius:12) + (css:&quot;display: block;&quot;))
 (set:$HB4 to (css:&quot;line-height: 48px; padding: 3px&quot;) + (background: $themeChosen&#39;s 1) + (corner-radius:8) + $H4)
+(set:$HB5 to (b4r:&quot;solid&quot;) + (b4r-color: $themeChosen&#39;s 6) + (b4r-size: 6) + (corner-radius:12) + (css:&quot;display: block;&quot;))
 (set:$Hchar to (size:0.5*$baseSize)+(css:&quot;line-height:0px;&quot;))
 (set:$Hhp to (text-style:&quot;bold&quot;) + (size:2.5*$baseSize)+(css:&quot;line-height:0.8;&quot;))
 
@@ -717,7 +722,11 @@ Some notable things to keep in mind throughout the process:
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:$themeChosen&#39;s 7)[\
 	|=
 	Name
-	|||=
+	|=
+	Size
+	|=
+	Points
+	||=
 	Effect
 ]
 &lt;!--table body--&gt;
@@ -730,14 +739,22 @@ Some notable things to keep in mind throughout the process:
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	|=
 	(print:_weapon&#39;s 1)
-	|||=
+	|=
+	(print:_weapon&#39;s 3)
+	|=
+	(print:_weapon&#39;s 4)
+	||=
 	(print:_weapon&#39;s 2)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
 	|=
 	(print:_weapon&#39;s 1)
-	|||=
+	|=
+	(print:_weapon&#39;s 3)
+	|=
+	(print:_weapon&#39;s 4)
+	||=
 	(print:_weapon&#39;s 2)
 	]
 	]
@@ -1604,9 +1621,13 @@ TweeTowhee&lt;/b&gt;]
 {
 &lt;!--header--&gt;
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	Name
 	|=
+	Size
+	|=
+	Points
+	||||||||=
 	Effect
 ]
 &lt;!--table body--&gt;
@@ -1617,17 +1638,27 @@ TweeTowhee&lt;/b&gt;]
 )[{
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
-	|=
+	||=
 	(print:_weapon&#39;s 1)
 	|=
+	(print:_weapon&#39;s 4)
+	|=
+	(print:_weapon&#39;s 5)
+	||||||||=
 	(print:_weapon&#39;s 2)
+	&lt;br&gt;$H4[Proficiencies: ](print:_weapon&#39;s 3)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
-	|=
+	||=
 	(print:_weapon&#39;s 1)
 	|=
+	(print:_weapon&#39;s 4)
+	|=
+	(print:_weapon&#39;s 5)
+	||||||||=
 	(print:_weapon&#39;s 2)
+	&lt;br&gt;$H4[Proficiencies: ](print:_weapon&#39;s 3)
 	]
 	]
 (set:_index to it + 1)}]}\
@@ -1954,7 +1985,7 @@ A character will have one boon and one bane from the [[boons and banes page-&gt;
 
 $H3[Statistics and Attribute Proficiencies]
 A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Roll 2d10 for all seven stats (rerolling stats that total to 5 or less) and assign them as you would like.
-&lt;p&gt;A character also has Attribute proficiencies, which can be allotted points. The Attribute table on the character sheet has zeros next to each Attribute proficiency name; this is because Attribute proficiencies begin with no Proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with &lt;b&gt;$baseProfPoints Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
+&lt;p&gt;A character also has Attribute proficiencies, which can be allotted points. The Attribute table on the character sheet has zeros next to each Attribute proficiency name; this is because Attribute proficiencies begin with no Proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with&lt;b&gt; $baseProfPts Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
 &lt;p&gt;On top of that, there are derived Statistics based on combinations of other bonuses:
 * HP is double base HP ($baseHP, unless a boon says otherwise) plus the character&#39;s Con bonus.
 * MP is double base MP ($baseMP, unless a boon says otherwise).
@@ -2111,58 +2142,58 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="54" name="Sk
 ]
 [[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="55" name="SkillsInit" tags="data-storage" position="2125,250" size="100,100">(set:$skillsMaster to (a:
 
+(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1, 1), 
+(a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3), 
+(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3, 1), 
 (a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work. They cannot target the same creature more than once with this skill within a 6 second span.&quot;, (a: -2), (a:), &quot;Creative&quot;, 4, 0), 
 (a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 5, 0), 
 (a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, (a: -2), (a:), &quot;Tough&quot;, 6, 0), 
-(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage or make a save, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes. This skill can only be used once every 6 seconds.&quot;, (a: -2), (a:), &quot;Agile&quot;, 10, 0), 
-(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check.&quot;, (a: -2), (a:), &quot;Astute&quot;, 14, 0), 
-(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, (a: -2), (a:), &quot;Charming&quot;, 25, 0), 
-(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, (a: -2), (a:), &quot;Keen&quot;, 30, 0), 
-(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42, 0), 
-(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1, 1), 
-(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3, 1), 
+(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: -1), (a:), &quot;Keen&quot;, 7, 100), 
 (a: &quot;Moment of Truth&quot;, &quot;Once per Long Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, (a: 30), (a:), &quot;Keen&quot;, 8, 1), 
+(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9, 2), 
+(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage or make a save, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes. This skill can only be used once every 6 seconds.&quot;, (a: -2), (a:), &quot;Agile&quot;, 10, 0), 
 (a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion, Invention or Flair check in an attempt to force it to pass.&quot;, (a: 4), (a:), &quot;Creative&quot;, 11, 1), 
 (a: &quot;Hidden Purpose&quot;, &quot;When the character succeeds a Invention check to make an improvised tool or weapon, it is good enough that users of said tool or weapon can gain the full bonuses of proficiency, as if the tool or weapon was a normal version.&quot;, (a: 4), (a:), &quot;Creative&quot;, 12, 1), 
 (a: &quot;Stratagem&quot;, &quot;The character can choose to give one other character advantage on their next check or roll to hit by taking one Action to suggest a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, (a: 14), (a:), &quot;Astute&quot;, 13, 1), 
+(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check.&quot;, (a: -2), (a:), &quot;Astute&quot;, 14, 0), 
 (a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 10), (a:), &quot;Agile&quot;, 15, 1), 
+(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -1), (a:), &quot;Tough&quot;, 16, 100), 
 (a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, (a: 14), (a:), &quot;Astute&quot;, 17, 1), 
+(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18, 2), 
 (a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 19, 1), 
 (a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 20, 1), 
 (a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 21, 1), 
+(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, (a: 37), (a:), &quot;Tough&quot;, 22, 2), 
 (a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 6), (a:), &quot;Tough&quot;, 23, 1), 
 (a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as part of the same Action once per six seconds.&quot;, (a: 10), (a:), &quot;Agile&quot;, 24, 1), 
+(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, (a: -2), (a:), &quot;Charming&quot;, 25, 0), 
 (a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past, to a maximum of 7.&quot;, (a: 25), (a:), &quot;Charming&quot;, 26, 1), 
 (a: &quot;Mental Pinboard&quot;, &quot;This character can make an Insight check on a creature to gain specific information from little details, such as pet hair on clothing or smudged lipstick.&quot;, (a: 25), (a:), &quot;Charming&quot;, 27, 1), 
 (a: &quot;Storyteller&quot;, &quot;An experienced teller of tall tales, the character can use movement, magic, and anything else at their disposal to better communicate a story. They can add half of their Flair proficiency, rounded down, to their Persuasion checks.&quot;, (a: 25), (a:), &quot;Charming&quot;, 28, 1), 
-(a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 35, 1), 
-(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: 6), (a:), &quot;Tough&quot;, 37, 1), 
-(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, (a: 6), (a:), &quot;Tough&quot;, 38, 1), 
-(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, (a: 10), (a:), &quot;Agile&quot;, 39, 1), 
-(a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, (a: 4), (a:), &quot;Creative&quot;, 41, 1), 
-(a: &quot;Silent but Deadly&quot;, &quot;Sharp senses make careful movements, and this character uses that to the fullest. If this character is Hidden from the target of one of their effects, they can choose to take another Action against them every 6 seconds in exchange for no longer being Hidden.&quot;, (a: 30), (a:), &quot;Keen&quot;, 46, 1), 
-(a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 47, 1), 
-(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, (a: 30), (a:), &quot;Keen&quot;, 48, 1), 
-(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9, 2), 
-(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18, 2), 
-(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, (a: 37), (a:), &quot;Tough&quot;, 22, 2), 
 (a: &quot;Seasoned&quot;, &quot;The character can choose a single expertise to become a Deep Expertise, which grants them a +5 instead of a +3.&quot;, (a: 17), (a:), &quot;Astute&quot;, 29, 2), 
+(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, (a: -2), (a:), &quot;Keen&quot;, 30, 0), 
 (a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 31, 2), 
 (a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, (a: 21), (a:), &quot;Faithful&quot;, 32, 2), 
 (a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 33, 2), 
 (a: &quot;Striking Set&quot;, &quot;Unarmed strikes only take one Action.&quot;, (a: 24), (a:), &quot;Agile&quot;, 34, 2), 
+(a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 35, 1), 
 (a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, (a: 37), (a:), &quot;Tough&quot;, 36, 2), 
+(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: 6), (a:), &quot;Tough&quot;, 37, 1), 
+(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, (a: 6), (a:), &quot;Tough&quot;, 38, 1), 
+(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, (a: 10), (a:), &quot;Agile&quot;, 39, 1), 
 (a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, (a: 11), (a:), &quot;Creative&quot;, 40, 2), 
+(a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, (a: 4), (a:), &quot;Creative&quot;, 41, 1), 
+(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42, 0), 
 (a: &quot;xXx placeholder for indices xXx&quot;, &quot;n/a&quot;, (a: 27), (a:), &quot;Charming&quot;, 43, 2), 
 (a: &quot;xXx evil placeholder for indices xXx&quot;, &quot;n/a&quot;, (a: 26, 28), (a:), &quot;Charming&quot;, 44, 2), 
 (a: &quot;Flashback&quot;, &quot;The character can make an Insight or Investigation check on any object they find to determine a bit of its recent history.&quot;, (a: 8), (a:), &quot;Keen&quot;, 45, 2), 
-(a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3), 
-(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: -1), (a:), &quot;Keen&quot;, 7, 100), 
-(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -1), (a:), &quot;Tough&quot;, 16, 100), 
+(a: &quot;Silent but Deadly&quot;, &quot;Sharp senses make careful movements, and this character uses that to the fullest. If this character is Hidden from the target of one of their effects, they can choose to take another Action against them every 6 seconds in exchange for no longer being Hidden.&quot;, (a: 30), (a:), &quot;Keen&quot;, 46, 1), 
+(a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 47, 1), 
+(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, (a: 30), (a:), &quot;Keen&quot;, 48, 1), 
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -2, 0), 
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -1, 0)
-))</tw-passagedata><tw-passagedata pid="56" name="TalentColorsInit" tags="data-storage" position="2500,250" size="100,100">(set:$talentColor to (dm:
+))</tw-passagedata><tw-passagedata pid="56" name="TalentColorsInit" tags="data-storage" position="2500,750" size="100,100">(set:$talentColor to (dm:
 &quot;Creative&quot;, #e340b7, 
 &quot;Faithful&quot;, #e3d040, 
 &quot;Agile&quot;, #e63119, 
@@ -2696,7 +2727,26 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="82" name="Conditions Cost List" tags="" position="1400,975" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="83" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="82" name="Conditions Cost List" tags="table" position="1400,975" size="100,100">$H2[Shioreta Conditions]
+
+Shioretas are able to place Conditions on targets and afflict them with Statistic Changes based on which Skills they have. The Conditions here are in boxes headed by the name of the Skill that unlocks them.
+
+$HB5[\
+$H4[(print:$magicMaster&#39;s 6&#39;s 1)]
+{&lt;table&gt;
+&lt;tr colspan=&quot;2&quot;&gt;&lt;td colspan=&quot;2&quot;&gt;$H4[Touch Range: (Roll to hit with Handiwork)]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&gt;Blinded 1&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Plagued 4 (not bleeding)&lt;/td&gt;&lt;td&gt;3 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;tr colspan=&quot;2&quot;&gt;&lt;td colspan=&quot;2&quot;&gt;$H4[5ft Range: (They save)]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Dizzy 1&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Charmed 1 (stop paying attention/look somewhere)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Plagued 2 (not bleeding)&lt;/td&gt;&lt;td&gt;3 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;}
+]
+{[&lt;tr&gt;&lt;td&gt;Charmed 1 (calmed)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td&gt;Charmed 1 (become uneasy/fearful)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Charmed 1 (become more explosive)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;](later|}</tw-passagedata><tw-passagedata pid="83" name="Form Tags List" tags="" position="1400,1100" size="100,100">$H2[Form Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
@@ -2760,13 +2810,20 @@ Casting:
 ]\
 &lt;!--this is spaghetti code--&gt;\
 &lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="84" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
-(a: &quot;Shiv&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;),
-(a: &quot;Harpoon&quot;, &quot;Athletics check, DC AC; single target within 2 tiles. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 1 tile closer to the user, if possible.&quot;),
-(a: &quot;Staff&quot;, &quot;Acrobatics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Bludgeoning) damage on a success. On a success, the attack will leave the target&#39;s defenses open and lower their AC by 1 for 6 seconds.&quot;),
-(a: &quot;Shortsword&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 + 2 Physical (Slashing) damage on a success. On a critical success, the target must make a Heartiness check against a DC of 10 + the user&#39;s total Handiwork bonus or gain a level of Bleeding.&quot;),
-(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, DC AC; single target that is grappled. Deals 2d4 + 2 Physical (Slashing) damage on a success.&quot;),
-(a: &quot;Rapier&quot;, &quot;Handiwork check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;),
-(a: &quot;War Hammer&quot;, &quot;Athletics check, DC AC; single target within 1 tile. Deals 1d4 Physical (Piercing) damage on a success. On a success, the target must make a DC 10 Heartiness check or gain 1 level of Dizzy.&quot;) 
+(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d4 + 4 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Deals 4d4 + 4 Physical (Slashing) damage on a success instead of 2d4 + 4.&quot;, 1, 5),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d4 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
+(a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
+(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d4 + 1 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slashing, Bludgeoning, or Piercing damage.&quot;, 1, 5),
+(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5) 
 ))}</tw-passagedata><tw-passagedata pid="85" name="Popup" tags="code" position="2125,625" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
@@ -2795,7 +2852,7 @@ Adjust the height until the box on the right fits within the screen.
 }
 (link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
 =|
-[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="87" name="Conditions" tags="" position="1400,1225" size="100,100">$H2[Conditions]
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="87" name="Conditions (Old)" tags="unused" position="3425,250" size="100,100">$H2[Conditions]
 $HB3[$H4[(link-repeat:&quot;Blinded ⏷&quot;)[{(replace:?Blinded)[
 $H4[(link:&quot;Blinded ⏶&quot;)[(rerun:?Blinded)]]
 &lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
@@ -3328,7 +3385,7 @@ A character&#39;s carrying capacity is equal to $baseCarry + $baseCarryAdd &#96;
 &lt;p&gt;For example, a wildsman with a Strength score of 16, or a +3 Strength modifier, would have a carry weight of:
 &lt;center&gt;$baseCarry + (3 &#96;*&#96; $baseCarryAdd) = (print:$baseCarry + 3*$baseCarryAdd) Slots&lt;/center&gt;\
 A noble with a Strength score of 8, or a -1 Strength modifier, would instead have a maximum carry weight of:
-&lt;center&gt;$baseCarry + (-1 &#96;*&#96; $baseCarrySub) = (print:$baseCarry - 1*$baseCarryAdd) Slots&lt;/center&gt;\
+&lt;center&gt;$baseCarry + (-1 &#96;*&#96; $baseCarrySub) = (print:$baseCarry - $baseCarrySub) Slots&lt;/center&gt;\
 &lt;p&gt;This defines the maximum possible weight they could carry on their own, assuming they had a pack large enough to carry it.
 
 $H4[Carrying Capacity of a pack]
@@ -3350,7 +3407,140 @@ Each item has a point value alongside its Size. When a character is starting out
 	(set:$managedHist to it + (a: (passage:)&#39;s name))
 ]
 (set:$wasRedone to false)
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="115" name="Conditions" tags="table" position="1400,1225" size="100,100">$H2[Conditions]
+
+{&lt;table&gt;
+&lt;tr&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;👁️ Blinded&quot;)[{(replace:?Cond)[
+$H4[Blinded]
+&lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
+&lt;br&gt;The Blinded condition comes in 3 levels. A creature can only have one instance of the Blinded condition, and it will take the higher level of any inflicted.
+&lt;br&gt;Level 1: Dulled senses. The creature has a -5 penalty to all checks that rely on their primary sense.
+&lt;br&gt;Level 2: Primary sense removed. The creature has -5 and disadvantage to checks that rely on their primary sense.
+&lt;br&gt;Level 3: All senses dampened. The creature has -10 and disadvantage to all checks that rely on any of their senses.
+&lt;br&gt;This condition ends when its cause does; if the character is Blinded by an injury, the condition ends when the injury is healed. 
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;💪 Grappled&quot;)[{(replace:?Cond)[
+$H4[Grappled]
+&lt;br&gt;When one creature is grappled by another, they gain the Grappled condition.
+&lt;br&gt;Grappled only comes in one level, and as such does not need to be marked with its level.
+&lt;br&gt;When a creature is Grappled, its movement speed is reduced to 0 for all types of movement. They have disadvantage on checks targeting anything other than the source of the Grappled condition (the Grappler).
+&lt;br&gt;The Grappler has their movement speeds halved, rounded up, unless the creature it is Grappling is willing or unconscious. 
+&lt;br&gt;The Grappled creature can attempt to free itself from the Grappled condition by making a contested skill check against the Grappler. The Grappled creature can choose to make an Acrobatics or Athletics check, and the Grappler can choose to make an Athletics or Sturdy check. If the Grappled creature wins (they win in a tie,) they no longer have the Grappled condition, and they will move to one of the free spaces adjacent to their Grappler.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;💖 Regenerating&quot;)[{(replace:?Cond)[
+$H4[Regenerating]
+&lt;br&gt;Some sort of effect is continuously and slowly healing the creature.
+&lt;br&gt;Instances of Regenerating, from different sources, are additive in level.
+&lt;br&gt;The Regenerating condition causes an amount of HP equal to its level to be restored every 6 seconds. It does not restore HP above maximum.
+&lt;br&gt;Every time that the Regenerating condition heals some HP, its level reduces by 1. Once this level reduces to 0, the condition ends.
+]}]]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;🧠 Charmed&quot;)[{(replace:?Cond)[
+$H4[Charmed]
+&lt;br&gt;When magic would cause a change in a creature&#39;s behavior, they gain the Charmed condition.
+&lt;br&gt;Each instance of the Charmed condition specifies the change in the creature&#39;s behavior that the charming causes. For example, a creature can be Charmed (calmed) and Charmed (made to like you). Many instances of Charmed can coexist on a single creature.
+&lt;br&gt;Each separate Charmed condition has its own level. 
+&lt;br&gt;A Charmed creature can spend an Action to try and clear the Charmed condition by making a Willpower check with a DC of 10 + the level of Charmed they have. A creature must pass this DC for each instance of Chamed that they have.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;‼️ Pained&quot;)[{(replace:?Cond)[
+$H4[Pained]
+&lt;br&gt;Injuries have caused a creature to be in pain. All creatures increase their level of Pained by 1 when they drop below half of their total HP.
+&lt;br&gt;There are 5 levels of Pained.
+&lt;br&gt;A creature can only have one instance of the Pained condition. If the creature already has the Pained condition, and a source that has not already given them the Pained condition would otherwise give them the Pained condition, they gain one more level of the Pained condition.
+&lt;br&gt;Level 1: The creature gains a -1 to Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition.
+&lt;br&gt;Level 2: The creature gains a -5 to Endurance, Gullet, and Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition.
+&lt;br&gt;Level 3: The creature gains a -5 to Acrobatics, Handiwork, Power, Aura, Willpower, Endurance, Gullet, and Heartiness checks, and disadvantage to checks removing levels of the Bleeding condition. Their movement speeds are also halved, rounded up.
+&lt;br&gt;Level 4: The creature gains all of the effects of Pained III and their movement speed becomes 0.
+&lt;br&gt;Level 5: The creature gains all of the effects of Pained IV and must make a DC20 Willpower or Heartiness save every 6 seconds or become Unconscious.
+&lt;br&gt;The Pained condition ends when the source of the pain ends, such as injuries healing.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;💫 Stunned&quot;)[{(replace:?Cond)[
+$H4[Stunned]
+&lt;br&gt;The creature is caught unable to act for a short amount of time.
+&lt;br&gt;The Stunned condition comes in 5 levels (4.1) or 2 levels (4.0). A creature can only have one instance of the Stunned condition, and it will take the higher level of any inflicted from different sources.
+&lt;br&gt;The Stunned condition prevents a creature from taking Actions while the creature has it.
+&lt;br&gt;Every time that the Stunned condition prevents an Action, its level reduces by 1. Once this level reduces to 0, the condition ends.
+]}]]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;🧭 Dizzy&quot;)[{(replace:?Cond)[
+$H4[Dizzy]
+&lt;br&gt;Dizzy represents a loss of control over one&#39;s own mind and body. Vertigo, panic, and various magical effects can cause it.
+&lt;br&gt;A creature can only have one instance of the Dizzy condition. If a creature is already Dizzy, and a new source that is not already making it Dizzy tries to give it the Dizzy condition, it will gain half of the levels of Dizzy that the new source gives it, rounded down.
+&lt;br&gt;When a creature is Dizzy, they gain a penalty to all checks that require precise movement (such as rolls to use weapons, Handiwork checks, or Acrobatics checks) equal to the level of Dizzy that they have.
+&lt;br&gt;A Dizzy creature can spend an Action to try and clear the Dizzy condition by making a Heartiness check with a DC of 6 + twice the level of Dizzy they have. On a success, the condition ends.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;⚡ Paralyzed&quot;)[{(replace:?Cond)[
+$H4[Paralyzed]
+&lt;br&gt;Something has prevented the creature from moving, such as magic or rope.
+&lt;br&gt;There are 3 levels of Paralyzed.
+&lt;br&gt;Level 1: Slowed. The creature loses one Action per round and its movement speeds are halved, rounded up.
+&lt;br&gt;Level 2: The creature gains a -10 penalty to any checks that require them to move move normally, as if not bound. They also lose one Action per round. Their movement speeds become 0.
+&lt;br&gt;Level 3: The creature cannot take Actions that require them to move, and their movement speeds are 0.
+&lt;br&gt;The Paralyzed condition ends when the source of the paralysis ends. This can be done by escaping the bonds or overcoming magic, depending on the source.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;💨 Suffocating&quot;)[{(replace:?Cond)[
+$H4[Suffocating]
+&lt;br&gt;The creature is unable to respirate.
+The Suffocating condition comes in 3 levels.
+Level 1: The creature has a -5 penalty to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC12 or gain Suffocating II.
+Level 2: The creature has a -5 penalty to all checks, and disadvantage to Willpower, Endurance, and Heartiness checks. Every six seconds, they must make an Endurance check DC16 or gain Suffocating III.
+Level 3: The creature has a -7 penalty to all checks, and gains the Unstable condition.
+]}]]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;👻 Frightened&quot;)[{(replace:?Cond)[
+$H4[Frightened]
+&lt;br&gt;The creature is terrified of something that they face, making facing it all the harder.
+&lt;br&gt;The Frightened condition comes in 3 levels. A creature can only have one instance of the Frightened condition, and it will take the higher level of any inflicted.
+&lt;br&gt;Level 1: The creature has a -5 penalty to checks while the source of the Frightened condition is within its line of sight or range of its primary sense.
+&lt;br&gt;Level 2: The creature has -5 and disadvantage to checks while the source of the Frightened condition is within its line of sight or range of its primary sense. It also must use at least one Action to Move away from the source of the Frightened condition.
+&lt;br&gt;Level 3: The creature is unable to take Actions other than Moving away from the source of the Frightened condition, or taking the Dodge or Hide actions.
+&lt;br&gt;A Frightened creature can spend an Action to try and clear the Frightened condition by making a Willpower check. The DC is 10 + the Intimidation modifier of the source of the fright. On a success, the condition ends. They have disadvantage if they have Frightened 3.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;💀 Plagued&quot;)[{(replace:?Cond)[
+$H4[Plagued]
+&lt;br&gt;The creature is plagued by some sort of effect that continues to harm it. When a creature drops to 0 HP or lower, it gains the Plagued (bleeding - typeless) condition with a level equal to one fifth of their total HP, rounded up.
+&lt;br&gt;Each instance of the Charmed condition specifies the kind of damage that the Plagued condition causes. For example, a creature can be Charmed (burning - fire) and Plagued (poisoned - Poison). Many instances of Plagued can coexist on a single creature.
+&lt;br&gt;The Plagued condition causes an amount of damage equal to its level every 6 seconds, of the type attached to it.
+&lt;br&gt;The Plagued condition ends when the source of the plaguing ends.
+]}]]
+	&lt;/td&gt;
+	&lt;td&gt;
+	$H4[(link-repeat:&quot;❌ Unstable&quot;)[{(replace:?Cond)[
+$H4[Unstable]
+&lt;br&gt;The creature is actively dying.
+Unstable only comes in one level, and as such does not need to be marked with its level.
+When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
+]}]]
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+}
+$HB3[]&lt;Cond|</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

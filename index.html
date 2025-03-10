@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<title>Remagica 4.2 PHB</title>
+<title>Remagica 4.3 PHB</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
@@ -16,6 +16,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .lexend-deca-<uniquifier> {
   font-family: "Lexend Deca", sans-serif;
@@ -49,6 +51,34 @@
   font-family: "IM Fell DW Pica SC", serif;
   font-weight: 400;
   font-style: normal;
+}
+.anta-regular {
+  font-family: "Anta", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ubuntu-mono-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 
@@ -147,7 +177,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -176,7 +208,11 @@ $HB2+(box:&quot;X&quot;, 15)[\
 
 [[Long and Short Rests]]
 
-[[Combat]]
+[[Combat]]\
+(if:$campaign is &quot;CT&quot;)[
+
+⭐[[Combat Test]]⭐
+]\
 ]
 =|=
 $H3[Characters]
@@ -200,16 +236,11 @@ $HB2+(box:&quot;X&quot;, 15)[\
 
 [[Character Sheet Links]]
 
-[[Conditions]]
-
-[[Weapons]]
-
-[[Items-&gt;Items List]]
-
-[[Skills List-&gt;Skills List]]\
+[[Full Compendium-&gt;Compendium]]\
 ]
 |==|
-(unless:$campaign is &quot;TL&quot;)[(link:&quot;Thalassophobia player?&quot;)[(set:$campaign to &quot;TL&quot;)(set:$themeChosen to $themeThalass)(go-to:(passage:)&#39;s name)]](else:)[(link:&quot;Nightmare Hunters player?&quot;)[(set:$campaign to &quot;NH&quot;)(set:$themeChosen to $themeNightHunt)(go-to:(passage:)&#39;s name)]]
+{(unless:$campaign is &quot;CT&quot;)[Looking for the (link:&quot;combat test&quot;)[(set:$campaign to &quot;CT&quot;)(set:$themeChosen to $themeWyrmling)(go-to:&quot;Homepage&quot;)]?](else:)[You can change the content display in the Options menu.]}
+
 $H2[Lore]
 [[Thalassophobia]]
 [[Theodora City]]
@@ -217,7 +248,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.2.2 - 2025-1-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.3.0 / 4.4.CT - 2025-3-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -254,10 +285,7 @@ Array
 
 (link-goto:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;, &quot;Homepage&quot;)
 
-(unless:$optionsShown)[(link:&quot;Options&quot;)[(set:$optionsShown to true)(show:?Options)]]
-(if:$optionsShown)[\
-(display:&quot;Settings&quot;)\
-]&lt;Options|
+(link-goto:&quot;Options&quot;)
 
 [[Compendium]]
 
@@ -280,6 +308,8 @@ Array
 &lt;!--prepping SVG stuff--&gt;
 
 &lt;!--initializing all data--&gt;
+{(display:&quot;ThemesInit&quot;)}
+{(display:&quot;ConstInit&quot;)}
 {(display:&quot;SkillsInit&quot;)}
 {(display:&quot;ItemsInit&quot;)}
 {(display:&quot;RacesTechInit&quot;)}
@@ -289,12 +319,6 @@ Array
 {(display:&quot;MagicSkillsInit&quot;)}
 {(display:&quot;CastingStylesInit&quot;)}
 {(display:&quot;WeaponsInit&quot;)}
-{(display:&quot;ConstInit&quot;)}
-{(display:&quot;ThemesInit&quot;)}
-
-&lt;!--TL (Thalassophobia), NH (Nightmare Hunters), EU (Eupharia/Theodora), ?? (Any)--&gt;
-(set:$campaign to &quot;NH&quot;)
-(set:$themeChosen to $themeNightHunt)
 
 &lt;!--Setting up Headers--&gt;
 (set:$baseSize to 1)
@@ -453,19 +477,21 @@ div.desc {
 
 &lt;!--history management--&gt;
 {(display:&quot;ManageHistory&quot;)}
-}</tw-passagedata><tw-passagedata pid="6" name="Settings" tags="display" position="100,225" size="100,100">---
+}</tw-passagedata><tw-passagedata pid="6" name="Options" tags="display" position="100,225" size="100,100">$H2[Options]
+
 Theme:
-{(dropdown: bind _themeSelected, &quot;Light&quot;, &quot;Dark&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;)&lt;br&gt;
+{(dropdown: bind _themeSelected, &quot;Light&quot;, &quot;Dark&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;, &quot;Xaiai&quot;)&lt;br&gt;
 (link-repeat:&quot;Change Theme&quot;)[{
 	(if:_themeSelected is &quot;Light&quot;)[(set:$themeChosen to $themeLight)]
 	(else-if:_themeSelected is &quot;Dark&quot;)[(set:$themeChosen to $themeDark)]
 	(else-if:_themeSelected is &quot;Thalassophobia&quot;)[(set:$themeChosen to $themeThalass)]
 	(else-if:_themeSelected is &quot;Nightmare Hunters&quot;)[(set:$themeChosen to $themeNightHunt)]
+	(else-if:_themeSelected is &quot;Xaiai&quot;)[(set:$themeChosen to $themeWyrmling)]
 (go-to:(passage:)&#39;s name)
 }]
 &lt;br&gt;
 
-&lt;br&gt;Text Size:&lt;br&gt;&lt;center&gt;
+&lt;br&gt;Text Size:&lt;br&gt;
 {(unless:$baseSize &lt; 0.3)[
 	(link-repeat:&quot;&lt;&quot;)[
 		(set:$baseSize to it - 0.1)
@@ -477,12 +503,14 @@ Theme:
 (link-repeat:&quot;&gt;&quot;)[
 	(set:$baseSize to it + 0.1)
 	(go-to:(passage:)&#39;s name)
-]}&lt;/center&gt;
+]}
+
 
 &lt;br&gt;(link-goto:&quot;Configure popup height&quot;, &quot;PopupConfig&quot;)
 
 &lt;br&gt;(link:&quot;⬑⬑Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]&lt;br&gt;
----
+
+(link:&quot;Back&quot;)[(display:&quot;undo&quot;)]
 }</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
 Remagica is a game played by voice or text-- words-- where players apart from the DM can interact with the world, and the DM provides information on how the world reacts. The players are limited to a single character as their main link to the world, and the DM has a wider scope to give players more options.
 &lt;p&gt;Primarily, interaction with the world is done through roleplay, due to this one-character restriction. Players describe what their character would do or say, and the DM explains what the world&#39;s reaction would be. When outcomes are indeterminate, the DM will ask the player to make a Skill Check, or in a fast-paced or violent scenario, shift into [[combat-&gt;Combat]].
@@ -872,15 +900,23 @@ $H3[Cardinal Up]
 Up is a god feared by almost all. She represents unknowable things, the open Above, the pitch black, and agoraphobia. Her lucidity is unclear. She is respected in the Boneyard, and hated in Ventopia, considered ultimately ugly.
 Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="17" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="19" name="Compendium" tags="section" position="1400,100" size="100,100">$H2[Compendium Quick Links]
 
-[[Items-&gt;Items List]] 
+$H3[Talents and Races]
 [[Talent Skills-&gt;Skills List]]
-[[Magic Skills-&gt;Magic Skills List]] 
-[[Weapons]] 
-[[Summon Tags-&gt;Summon Tags List]] 
-[[Form Tags-&gt;Form Tags List]] 
-[[Conditions]]
+[[Races-&gt;Race List]]
 
-(link-goto:&quot;Back&quot;, (history:)&#39;s last)</tw-passagedata><tw-passagedata pid="20" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
+$H3[Inventory]
+[[Items-&gt;Items List]] 
+[[Weapons]] 
+
+$H3[Magic]
+[[Magic Skills-&gt;Magic Skills List]] 
+[[Summon Tags-&gt;Summon Tags List]] 
+[[Form Tags-&gt;Form Tags List]]
+[[Terrain Tags-&gt;Terrain Tags List]]
+
+$H3[Misc]
+[[Conditions]]
+[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="20" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="21" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
 
 Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
 
@@ -1421,10 +1457,14 @@ Fabled to have originated from the Above, Marigen lack gills and swim quickly co
 		&lt;td colspan=&quot;2&quot;&gt;\
 			Stats: $HB4[+ 2 Dex] $HB4[- 1 Con]
 		&lt;/td&gt;
-		&lt;td&gt;Speed: &lt;b&gt;6T walk&lt;/b&gt;, &lt;b&gt;12T swim&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk&lt;/b&gt;, &lt;b&gt;40ft swim&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
+			]}
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 30T&lt;/b&gt;
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
@@ -2470,9 +2510,16 @@ A character begins with only one Casting Style. Take a look at them below:
 		(link-repeat:&quot;Skathi&quot;)[($pop:&quot;Skathi&quot;)]
 	&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td /&gt;
+	&lt;td colspan=&quot;2&quot;&gt;
+		(link-repeat:&quot;Aldatu&quot;)[($pop:&quot;Aldatu&quot;)]
+	&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/table&gt;}
 $H3[Damage Types]
 A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which is a shorthand for which natural element the magic has the most similar properties to. For example, magic that manipulates fire would deal &quot;fire damage,&quot; which means that it will be more effective at destroying wooden or flammable objects. However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
+The damage types listed here will lose support after 4.3.x. The list will be updated in 4.4.x.
 The damage types are as follows:
 Earth, Fire, Freezing, Life, Light, Lightning, Psychic, Rot, Soul, Sound, Time, Toxin, Water;
 Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="72" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
@@ -2484,34 +2531,67 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 &quot;Azurite&quot;
 ))
 (set:$fyugoTags to (a:
-	(a: &quot;Attack I&quot;, &quot;The summon can take the Attack action. When it Attacks, its target must make a save of a reasonable proficiency based off of the nature of the attack with a DC of 8 + the Fyugo&#39;s Power proficiency. On a fail, the target will take 4 damage.&quot;, &quot;Persistent Fabrications&quot;, 2, 5), 
-(a: &quot;Defend I&quot;, &quot;The summon can take the Defend reaction, which allows them to intercept a source of damage and take the damage instead, within reason. &quot;, &quot;Persistent Fabrications&quot;, 1, 5), 
-(a: &quot;Grapple I&quot;, &quot;The summon can take the Grapple action.&quot;, &quot;Persistent Fabrications&quot;, 2, 5), 
-(a: &quot;Equippable&quot;, &quot;The summon can be grabbed to use or wear as an item. Any Skill that allows the user to use an item now applies to the summon. This Tag causes the summon to lose the ability to take actions, but the durability from action-giving tags still remains.&quot;, &quot;Persistent Fabrications&quot;, 2, 4), 
-(a: &quot;Sharp I&quot;, &quot;When the summon is used as an item, the action can become an Attack action. The summon then counts as a weapon, dealing the damage type that the summon would otherwise do. When Attacking, the Fyugo makes either a Handiwork or Athletics check (depending on which is more reasonable for the weapon type) with a DC of the target&#39;s AC. On a success, they deal 4 damage. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 4), 
-(a: &quot;Solid I&quot;, &quot;No effect.&quot;, &quot;Persistent Fabrications&quot;, 10, 5), 
-(a: &quot;Shield I&quot;, &quot;The summon can be used as a shield, raising the Fyugo&#39;s AC by 1. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 5), 
-(a: &quot;Statistic Change I&quot;, &quot;The bonus for one of the Summon&#39;s statistics rises by 1. This tag can be applied multiple times to the same Summon.&quot;, &quot;Persistent Fabrications&quot;, 5, 12)
+
+(a: &quot;Attack I&quot;, &quot;The summon can take the Attack action. When it Attacks, its target must make a save of a reasonable proficiency based off of the nature of the attack with a DC of 10 + the caster&#39;s Power proficiency. On a fail, the target will take 12 damage.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
+(a: &quot;Defend I&quot;, &quot;The summon can take the Defend reaction, which allows them to intercept a source of damage and take the damage instead, within reason. &quot;, &quot;Persistent Fabrications&quot;, 1, 3), 
+(a: &quot;Grapple I&quot;, &quot;The summon can take the Grapple action.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
+(a: &quot;Equippable&quot;, &quot;The summon can be grabbed to use or wear as an item. Any Skill that allows the user to use an item now applies to the summon. This Tag causes the summon to lose the ability to take actions, but the durability from action-giving tags still remains.&quot;, &quot;Persistent Fabrications&quot;, 2, 2), 
+(a: &quot;Sharp I&quot;, &quot;When the summon is used as an item, the action can become an Attack action. The summon then counts as a weapon, dealing the damage type that the summon would otherwise do. When Attacking, the caster makes either a Handiwork or Athletics check (depending on which is more reasonable for the weapon type) with a DC of the target&#39;s AC. On a success, they deal 4 damage. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 2), 
+(a: &quot;Solid I&quot;, &quot;No effect.&quot;, &quot;Persistent Fabrications&quot;, 10, 4), 
+(a: &quot;Shield I&quot;, &quot;The summon can be used as a shield, raising the caster&#39;s AC by 1. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
+(a: &quot;Statistic Change I&quot;, &quot;The bonus for one of the Summon&#39;s statistics rises by 1. This tag can be applied multiple times to the same Summon.&quot;, &quot;Persistent Fabrications&quot;, 5, 12), 
+(a: &quot;Luminous I&quot;, &quot;All creatures within 10ft of the summon are illuminated, lowering their DEF by 2 and increasing the range of their critical successes by 1.&quot;, &quot;&quot;, 2, 5), 
+(a: &quot;Glowing I&quot;, &quot;The summon casts light within 30ft of its center.&quot;, &quot;&quot;, 5, 2), 
+(a: &quot;Bonding&quot;, &quot;The summon gains the Attach action, which allows them to attach to a creature, moving with them whenever they move. This Tag makes them functionally massless. The Attach action can be performed as part of the Action used to cast this Tag. If the summon attached to a creature, that creature can make a Handiwork check against a DC of 10 + the caster&#39;s Power bonus to remove it (making the summon free-moving again.) Otherwise, if the creature or object moves outside of the caster&#39;s Long Range, the summon loses its attachment and becomes free-moving again.&quot;, &quot;&quot;, 2, 2), 
+(a: &quot;Siphon I&quot;, &quot;When the summon takes the Attack action, half of the damage dealt is restored to the caster.&quot;, &quot;&quot;, 2, 7), 
+(a: &quot;Infestation I&quot;, &quot;The summon gives all creatures within 5ft Plagued 4 (X). If it is Attached to a creature, it only affects that creature, but gives that one creature Plagued 12 (X).&quot;, &quot;&quot;, 2, 3), 
+(a: &quot;Pretty I&quot;, &quot;The summon is very pretty. Sapient creatures that view it with eyesight or aurasense make a DC 12 Willpower save or gain Charmed 1 (Pretty). This makes them feel a desire not to break the summon.&quot;, &quot;&quot;, 1, 3), 
+(a: &quot;Fixation I&quot;, &quot;The summon draws attention easily. Sapient creatures around it must make a DC 12 Willpower save or gain Charmed 1 (Fixated). This makes them want to destroy the summon above all else.&quot;, &quot;&quot;, 2, 5)
+
 ))
 
 (set:$otsoaTags to (a:
-	(a: &quot;Statistic Change I&quot;, &quot;The Otsoa raises their bonus for a particular statistic by 1.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Toe Beans&quot;, &quot;The Otsoa gains advantage to Stealth and Acrobatics checks.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Quick I&quot;, &quot;The Otsoa gains 15 feet of movement.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Fluff&quot;, &quot;The Otsoa becomes unaffected by weather and temperature effects.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Thick Hide&quot;, &quot;The Otsoa gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;Metamorphosis&quot;, 1, 8), 
-(a: &quot;Super-Senses&quot;, &quot;The Otsoa&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to the Otsoa&#39;s senses.&quot;, &quot;Metamorphosis&quot;, 2, 5), 
-(a: &quot;Healthy I&quot;, &quot;No effect.&quot;, &quot;Metamorphosis&quot;, 6, 6), 
-(a: &quot;Solid Form&quot;, &quot;The Otsoa will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 7), 
-(a: &quot;Unrecognizable&quot;, &quot;The Otsoa&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the Otsoa&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 5)
+
+(a: &quot;Statistic Change I&quot;, &quot;The caster raises their bonus for a particular statistic by 1.&quot;, &quot;Metamorphosis&quot;, 2, 3), 
+(a: &quot;Toe Beans&quot;, &quot;The caster gains advantage to Stealth and Acrobatics checks.&quot;, &quot;Metamorphosis&quot;, 2, 2), 
+(a: &quot;Quick I&quot;, &quot;The caster gains 15 feet of movement. [10 in the Combat test.]&quot;, &quot;Metamorphosis&quot;, 2, 3), 
+(a: &quot;Fluff&quot;, &quot;The caster becomes unaffected by weather and temperature effects.&quot;, &quot;Metamorphosis&quot;, 2, 3), 
+(a: &quot;Thick Hide&quot;, &quot;The caster gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;Metamorphosis&quot;, 1, 6), 
+(a: &quot;Super-Senses&quot;, &quot;The caster&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to the caster&#39;s senses.&quot;, &quot;Metamorphosis&quot;, 2, 4), 
+(a: &quot;Healthy I&quot;, &quot;No effect.&quot;, &quot;Metamorphosis&quot;, 6, 4), 
+(a: &quot;Solid Form&quot;, &quot;The caster will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 5), 
+(a: &quot;Unrecognizable&quot;, &quot;The caster&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the caster&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 2), 
+(a: &quot;Leap I&quot;, &quot;The caster can take the Leap action by using 10 MP, which has the effect of taking the Move action with a move speed of 45ft fly.&quot;, &quot;&quot;, 2, 4), 
+(a: &quot;Ooze I&quot;, &quot;The caster gains 1 DEF and becomes able to fit into any space that could contain their volume, regardless of shape.&quot;, &quot;&quot;, 2, 5), 
+(a: &quot;Hunger I&quot;, &quot;The caster has Regeneration 5. If they do not either hit a melee attack or eat something every round, they lose this Tag. The tag peters out anyway after 2 minutes.&quot;, &quot;&quot;, 5, 5), 
+(a: &quot;Shortcut I&quot;, &quot;The caster’s corporeality changes. Choose one of the following: shadows (dark areas), water, plants, or stone (that is not metallic or crystalline). They gain a movement speed of 60ft through a contiguous span of that material, and can choose not to be affected by any hazard tiles between them and their destination.&quot;, &quot;&quot;, 2, 5), 
+(a: &quot;Stubborn I&quot;, &quot;Whenever the caster would receive any levels of Charmed, reduce that level by 1.&quot;, &quot;&quot;, 4, 5), 
+(a: &quot;Feral I&quot;, &quot;The caster gains a Condition specific to this ability: Feral. Each time they take damage, raise the level of Feral that they have by 1. They can add the level of Feral that they have to any damage they deal directly.&quot;, &quot;&quot;, 2, 5), 
+(a: &quot;Beloathed&quot;, &quot;This tag causes all creatures within 10ft to make a Willpower save against a DC of 8 + the caster’s Persuasion modifier or gain Charmed (Fixated.) This condition causes them to want to attack the caster above all else. This tag also gives the caster a +2 to Intimidation checks.&quot;, &quot;&quot;, 2, 5)
+
+))
+
+(set:$aldatuTags to (a:
+
+(a: &quot;Slowing&quot;, &quot;The Tile costs 5 extra feet of movement to move out of.&quot;, &quot;Sculptor&quot;, 2), 
+(a: &quot;Strangling&quot;, &quot;When a creature enters this Tile, they must make an Athletics or Acrobatics check DC 8 or become Grappled by the Tile and unable to leave.&quot;, &quot;&quot;, 4), 
+(a: &quot;Slippery&quot;, &quot;When a creature attempts to leave this Tile, they must make an Acrobatics check DC 8 or fall over, giving them Stun II (Stun I in the 2 Action System).&quot;, &quot;&quot;, 3), 
+(a: &quot;Raised / Lowered&quot;, &quot;The Tile is considered 5 feet higher or lower than it was before, costing the appropriate amount of extra movement to move to it in 3D space. This tag only costs 2 MP if it is being stacked on itself.&quot;, &quot;Sculptor&quot;, 3), 
+(a: &quot;Climbable&quot;, &quot;When cast on a vertical face, this Tile makes it so that any character who could climb has a Climb speed of half of their Walk speed up this Tile.&quot;, &quot;&quot;, 3), 
+(a: &quot;Open&quot;, &quot;The Tile is now a normal Tile if before, it was either empty (and the source of this Tag could reasonably fill it,) or full (and the source of this Tag could remove the blockage.)&quot;, &quot;Sculptor&quot;, 2), 
+(a: &quot;Active&quot;, &quot;The Tile is currently rife with magic, such as that a Skathi would set. Entering this Tile triggers the effects of the magic that was the source of this Tag.&quot;, &quot;&quot;, -1)
+
 ))
 }</tw-passagedata><tw-passagedata pid="73" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
-Borros have a strong connection to the physical, imbuing magic into things they can touch. While this leaves them with a short range, their power is more concentrated as a result.
+Borros have a strong connection to the physical, imbuing magic into things they can touch.
+
 Short Range: 5ft
 Long Range: 20ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 1&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+
 Casting:
 {&lt;table&gt;
 &lt;tr&gt;
@@ -2529,6 +2609,7 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
+
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="74" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
 
 (a: &quot;Hands-On&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making an Action that involves physical contact, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:15,16), &quot;Borro&quot;), 
@@ -2536,7 +2617,7 @@ Casting:
 (a: &quot;Distant Target&quot;, &quot;A Skathi’s magic casting does not need to be centered on themself; they can choose any point within their long range as the origin of their magic casting. This point has to be a space that the Skathi could theoretically move to themself; that is, if the Skathi cannot fly, the point should be on the ground, and the point cannot be inside walls or in areas physically inaccessible to the Skathi.&quot;, (a: -2), (a:18), &quot;Skathi&quot;), 
 (a: &quot;Persistent Fabrications&quot;, &quot;When a Fyugo casts magic– whether it is to create matter or manipulate it– the spell will persist for 10min or until dismissed, rather than dissipating immediately, and have its own Contact and Short Range of 5ft. The Fyugo can move their creation by 15ft and use one of their Actions to grant creations the ability to use their own Actions. Without any Tags, each creation has one Action per Round, and can only use the Move action, or do simple tasks that the Fyugo directly controls them to do, such as opening doors or springing traps.&quot;, (a: -2), (a:), &quot;Fyugo&quot;), 
 (a: &quot;Modifying Monikers&quot;, &quot;Fyugos can add Summon Tags to their creations, which each have their own durability. When the durability of a Tag expires, the creation loses the Tag. Tags lose durability and break in the order that they are applied. Fyugos can choose to cast a summon with up to two Summon Tags as a Reaction to rolling initiative.&quot;, (a: -2), (a:19), &quot;Fyugo&quot;), 
-(a: &quot;Snowball Effect&quot;, &quot;Shioretas can apply Conditions and Statistic Effects from their Conditions and Statistic Effects table within their Short Range. &quot;, (a: -2), (a:20), &quot;Shioreta&quot;), 
+(a: &quot;Snowball Effect&quot;, &quot;A Shioreta can choose to afflict a creature with Conditions and Statistic Modifications if they are within range. Choose one of Heartiness, Insight, Willpower, or Power when the Shioreta gains this skill. This is the save any targets must make against a DC of 12 + the caster&#39;s Power modifier or gain the Condition. This condition lasts for three minutes.&quot;, (a: -2), (a:20), &quot;Shioreta&quot;), 
 (a: &quot;Metamorphosis&quot;, &quot;When Otsoas cast magic, it lasts until their next Short or Long Rest, and is cast on themself. These magical effects are called Form Tags, and each have their own Durability, which acts just as HP would and is affected by the Resistances and Vulnerabilities of the Otsoa, as well as their Conditions. Durability is reduced before HP is. When the Durability of a tag is reduced to 0, the tag dissipates and the associated magical effect disappears.&quot;, (a: -2), (a:21,24), &quot;Otsoa&quot;), 
 (a: &quot;Give and Take&quot;, &quot;When an Azurite heals someone else with their magic, the residual energies heal them a little bit, too. They recover 1/4 of the HP healed to another creature (rounded up) themself, whenever they heal.&quot;, (a: -2), (a:23), &quot;Azurite&quot;), 
 (a: &quot;Restoration&quot;, &quot;An Azurite can remove one Stage I or II Condition for 10 MP.&quot;, (a: -2), (a:), &quot;Azurite&quot;), 
@@ -2554,7 +2635,10 @@ Casting:
 (a: &quot;Long-Term&quot;, &quot;An Otsoa can choose to spend 1.5 times their MP cost for Form Tags, rounded up, to make their transformation last until the end of their next Long Rest as long as none of their Tags run out of Durability.&quot;, (a: 7), (a:), &quot;Otsoa&quot;), 
 (a: &quot;Quick Transformation&quot;, &quot;The Otsoa can choose to cast a second Form Tag on themself when they take the Reaction granted by the (print:$magicMaster&#39;s 10&#39;s 1) skill.&quot;, (a: 10), (a:), &quot;Otsoa&quot;), 
 (a: &quot;Uberheal&quot;, &quot;The Azurite can cast magic from the third and fourth rows of their casting table.&quot;, (a: 8), (a:), &quot;Azurite&quot;), 
-(a: &quot;Impermeable (Otsoa)&quot;, &quot;When the Healthy or Solid tags prevents all of the damage from an effect, the Otsoa is immune to the secondary effects of the source of the damage.&quot;, (a: 7), (a:), &quot;Otsoa&quot;)
+(a: &quot;Impermeable (Otsoa)&quot;, &quot;When the Healthy or Solid tags prevents all of the damage from an effect, the Otsoa is immune to the secondary effects of the source of the damage.&quot;, (a: 7), (a:), &quot;Otsoa&quot;), 
+(a: &quot;Sculptor&quot;, &quot;Aldatu cast magic targeting Tiles. Using two Actions, they can apply a Terrain Tag to a Tile. If a Tile has a DC for an effect, they can add their Power proficiency to that DC.&quot;, (a: -2), (a:26,27), &quot;Aldatu&quot;), 
+(a: &quot;Setpiece&quot;, &quot;The Aldatu can choose to target the 4 Tiles adjacent in the cardinal directions to the Tile they select in addition to that Tile when they apply a Terrain Tag.&quot;, (a: 25), (a:), &quot;Aldatu&quot;), 
+(a: &quot;Layered&quot;, &quot;Applying a Terrain Tag only takes one Action. / The Aldatu can apply up to 2 Terrain Tags per Action (2 Action system.)&quot;, (a: 25), (a:), &quot;Aldatu&quot;)
 
 ))}</tw-passagedata><tw-passagedata pid="75" name="Exterreri" tags="table" position="925,475" size="100,100">$H2[Exterreri]\
 (if:$campaign is &quot;TL&quot;)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;](else:)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;]
@@ -2568,7 +2652,13 @@ No one knows how Exterreri are born; they simply appear out of the darkness of t
 		&lt;td&gt;\
 			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
 		&lt;/td&gt;
-		&lt;td&gt;Speed: &lt;b&gt;6T Swim&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](if:$campaign is &quot;TL&quot;)[
+			Speed: &lt;b&gt;30ft swim&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
 			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;(if:$campaign is &quot;TL&quot;)[Aurasense 30ft, ]Painsense 60ft&lt;/b&gt;
@@ -2590,12 +2680,15 @@ Features:
 *Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
 Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="76" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
+
 Short Range: 5ft
 Long Range: 45ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 2&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 2&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 3&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 3&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+
 Casting:
 {&lt;table&gt;
 &lt;tr&gt;
@@ -2611,44 +2704,57 @@ Casting:
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
+
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="77" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
+
 Short Range: 5ft
 Long Range: 45ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 6&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+
 Casting:
 See [[Conditions Cost List]] for casting costs.
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
+
 Short Range: 5ft
 Long Range: 45ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 7&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 7&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 10&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+
 Casting:
 See [[Form Tags List]] for casting costs.
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
+
 Short Range: 20ft
 Long Range: 150ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 4&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 5&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 5&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
+
 Casting:
 See [[Summon Tags List]] for casting costs.
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
+
 Short Range: 10ft
 Long Range: 90ft
+
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 8&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 8&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 9&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 9&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 14&#39;s 2)
+
 Casting:
 {&lt;table&gt;
 &lt;tr&gt;
@@ -2665,7 +2771,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Summon Tags List" tags="" position="1400,850" size="100,100">$H2[Summon Tags List]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="81" name="Summon Tags List" tags="" position="1400,975" size="100,100">$H2[Summon Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2727,7 +2833,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="82" name="Conditions Cost List" tags="table" position="1400,975" size="100,100">$H2[Shioreta Conditions]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="82" name="Conditions Cost List" tags="table" position="1400,850" size="100,100">$H2[Shioreta Conditions]
 
 Shioretas are able to place Conditions on targets and afflict them with Statistic Changes based on which Skills they have. The Conditions here are in boxes headed by the name of the Skill that unlocks them.
 
@@ -2810,20 +2916,24 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 ]\
 &lt;!--this is spaghetti code--&gt;\
 &lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="84" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
-(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
-(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
-(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
-(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d4 + 4 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Deals 4d4 + 4 Physical (Slashing) damage on a success instead of 2d4 + 4.&quot;, 1, 5),
-(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
-(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d4 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
+
+(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
 (a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
-(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
-(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d4 + 1 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 Physical (Piercing) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slashing, Bludgeoning, or Piercing damage.&quot;, 1, 5),
-(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d4 + 2 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5) 
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
+(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slice) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Bash, Slice, or Pierce damage.&quot;, 1, 5),
+(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
+(a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5)
+
 ))}</tw-passagedata><tw-passagedata pid="85" name="Popup" tags="code" position="2125,625" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
@@ -3066,7 +3176,11 @@ Some Apians come from hives in the wilderness, raised making honey to survive th
 			Stats: $HB4[+ 2 Dex] $HB4[- 1 Wis]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;6T Walk, 6T Fly&lt;/b&gt;
+			{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk, 20ft fly&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk, 30ft fly&lt;/b&gt;&lt;/td&gt;
+			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -3099,11 +3213,15 @@ Ferfaen are most common on the Central continent due to their sensitivity to mag
 			Stats: $HB4[+ 1 Mag, +1 Kno] $HB4[- 1 Con]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;6T Walk&lt;/b&gt;
+			{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;Aurasense 30T&lt;/b&gt;
+			Special Senses: &lt;b&gt;Aurasense 160ft&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
@@ -3132,7 +3250,12 @@ A carnivorous species hardened by the tough climate in the icy north, they are f
 			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk, 30ft Fly&lt;span title=&quot;See racial feature below.&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+			Speed: {(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;20ft fly*&lt;/span&gt;&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
+			&lt;b&gt;30ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;30ft fly*&lt;/span&gt;&lt;/b&gt;&lt;/td&gt;
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -3198,11 +3321,17 @@ Fragmented memories, power spiraling out of control, and constant rejection– s
 			Stats: $HB4[+ 2 Mag] $HB4[- 1 Cha]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+			Speed:{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](if:$campaign is &quot;TL&quot;)[
+			Speed: &lt;b&gt;30ft swim&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;None&lt;span title=&quot;Check skill&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+			Special Senses: &lt;b&gt;&lt;span title=&quot;Check skill&quot;&gt;None*&lt;/span&gt;&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;??&lt;/b&gt;&lt;/td&gt;
@@ -3239,11 +3368,15 @@ Valdiens can be found everywhere. They easily adapt to a variety of environments
 >>>>>>> bfa48bbf35811ff61f14a1214848b3be54798c6c
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;30ft Walk&lt;/b&gt;
+			Speed:{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;None&lt;span title=&quot;Check skill&quot;&gt;*&lt;/span&gt;&lt;/b&gt;
+			Special Senses: &lt;b&gt;&lt;span title=&quot;Check skill&quot;&gt;None*&lt;/span&gt;&lt;/b&gt;
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
@@ -3276,7 +3409,11 @@ With long legs and thick fur, Hazaan were once prey animals. Even though they&#3
 			Stats: $HB4[+ 1 Dex, + 1 Wis] $HB4[- 1 Mag]\
 		&lt;/td&gt;\
 		&lt;td&gt;\
-			Speed: &lt;b&gt;35ft Walk&lt;/b&gt;
+			Speed:{(if:$campaign is &quot;CT&quot;)[
+			Speed: &lt;b&gt;25ft walk&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			Speed: &lt;b&gt;35ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -3323,6 +3460,17 @@ The character starts with (print:(ceil: $baseInvPoints * 0.6) * 2) Inventory Poi
 $H3[Traits]
 Traits are neutral flavor options, designed for players who want to codify slight mechanical differences in their characters due to unique traits they have. Traits are meant to not increase or decrease power, but rather add a mechanical basis for flavor decisions, and enforce certain roleplay decisions.
 &lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="110" name="ConstInit" tags="data-storage" position="2375,500" size="100,100">{
+|CampaignsKey)[
+TL  (Thalassophobia)
+NH  (Nightmare Hunters)
+EU  (Eupharia/Theodora)
+CT  (Combat Test)
+??  (Any)
+]
+&lt;!--DEFAULT THEMES--&gt;
+(set:$campaign to &quot;NH&quot;)
+(set:$themeChosen to $themeNightHunt)
+
 &lt;!--HEALTH--&gt;
 (set:$baseHP to 10)
 (set:$baseMP to 6)
@@ -3351,7 +3499,7 @@ Traits are neutral flavor options, designed for players who want to codify sligh
 [Array
 1 Background Color
 2 Foreground Color
-3 State of Logo (0Dark/1Light/2Gray/3Thalass)
+3 State of Logo (0White/1Purple/2Gray/3Thalass)
 4 Theme Name
 5 Shade of purple for links
 6 Grey 1
@@ -3363,6 +3511,8 @@ Traits are neutral flavor options, designed for players who want to codify sligh
 (set:$themeDark to (a:&quot;#302f2f&quot;,&quot;#ffffff&quot;,1,&quot;Dark&quot;,&quot;#e4c2ff&quot;,&quot;#4a4a4a&quot;,&quot;#666666&quot;,&quot;Montserrat&quot;,&quot;Lexend Deca&quot;))
 (set:$themeNightHunt to (a:&quot;#e0e0e0&quot;,&quot;#484963&quot;,2,&quot;NightHunt&quot;,&quot;#6d1e96&quot;,&quot;#d1d1d1&quot;,&quot;#cfcfcf&quot;,&quot;IM Fell DW Pica SC&quot;,&quot;Ibarra Real Nova&quot;))
 (set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
+(set:$themeWyrmling to (a:&quot;#4a1170&quot;,&quot;#fff2ff&quot;,1,&quot;Wyrmling&quot;,&quot;#ff47ea&quot;,&quot;#43187a&quot;,&quot;#432191&quot;,&quot;Anta&quot;, &quot;Ubuntu&quot;))
+
 
 (set:$assetLogo to (a:&quot;assets/logo_dark.svg&quot;, &quot;assets/logo_light.svg&quot;, &quot;assets/logo_gray.svg&quot;, &quot;assets/logo_thalass.svg&quot;))
 (set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;))
@@ -3407,7 +3557,7 @@ Each item has a point value alongside its Size. When a character is starting out
 	(set:$managedHist to it + (a: (passage:)&#39;s name))
 ]
 (set:$wasRedone to false)
-}</tw-passagedata><tw-passagedata pid="115" name="Conditions" tags="table" position="1400,1225" size="100,100">$H2[Conditions]
+}</tw-passagedata><tw-passagedata pid="115" name="Conditions" tags="table" position="1400,1350" size="100,100">$H2[Conditions]
 
 {&lt;table&gt;
 &lt;tr&gt;
@@ -3540,7 +3690,100 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 &lt;/tr&gt;
 &lt;/table&gt;
 }
-$HB3[]&lt;Cond|</tw-passagedata></tw-storydata>
+$HB3[]&lt;Cond|</tw-passagedata><tw-passagedata pid="116" name="Xperiment" tags="section" position="1800,100" size="100,100">&lt;!--SECTION TITLE--&gt;</tw-passagedata><tw-passagedata pid="117" name="Combat Test" tags="" position="1800,225" size="100,100">$H2[Combat Test]
+
+For the 4e combat test, the following rules are changed:
+- Each character has 3 Actions per round.
+- Skills and items have updated descriptions to account for the new action system.
+- Race features (especially movement + senses) are updated to account for the new action system.
+- Generally, using a tool (weapon) is 2 actions, and other items are 1 action, with exceptions
+- An action considered a &#39;big&#39; or &#39;burst&#39; action (these are not technical terms) such as a finisher or thing that causes a bunch of statuses will take 3 actions.
+
+Big note:
+When making combat skills, I intend to interpret them as &#39;things the character can do that happen to be useful in combat.&#39; This means every skill has to be multipurpose and there has to be an explanation why they can do it in combat but not outside (or they can do it outside of combat.)</tw-passagedata><tw-passagedata pid="118" name="CTWeaponsInit" tags="data-storage" position="2250,1000" size="100,100">{(set:$weaponsList to (a:
+(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d6 + 4 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slashing) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
+(a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
+(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slashing, Bludgeoning, or Piercing damage.&quot;, 1, 5),
+(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Piercing) damage on a success.&quot;, 1, 5)
+))}</tw-passagedata><tw-passagedata pid="119" name="Terrain Tags List" tags="" position="1400,1225" size="100,100">$H2[Terrain Tags List]
+(set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
+|SortBy&gt;[Sort by: {
+	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
+		(set:(_sortByNum) to 3)
+		(rerun:?SortBy)
+	]](else-if:_sortByNum is 3)[(link:&quot;Name&quot;)[
+		(set:(_sortByNum) to 1)
+		(rerun:?SortBy)
+	] | Unlocked by]
+	(set:_index to 0)
+}\
+{
+&lt;!--header--&gt;
+(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	Name
+	||||=
+	Description
+	||=
+	Unlocked by
+	|=
+	Cost
+]
+&lt;!--table body--&gt;
+(for: each (_tag), 
+	...(sorted: via its (_sortByNum), 
+		...$aldatuTags
+		)
+)[{
+	(if:_index % 2 is 1)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	(print:_tag&#39;s 1)
+	||||=
+	(print:_tag&#39;s 2)
+	||=
+	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	]
+	](else:)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
+	||=
+	(print:_tag&#39;s 1)
+	||||=
+	(print:_tag&#39;s 2)
+	||=
+	(print:_tag&#39;s 3)
+	|=
+	(print:_tag&#39;s 4)
+	]
+	]
+(set:_index to it + 1)}]}\
+]\
+&lt;!--this is spaghetti code--&gt;\
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="120" name="Aldatu" tags="table" position="1175,1100" size="100,100">$H3[Aldatu]
+Aldatu&#39;s magic allows them to feel the malleability of the world around them and shape it to what they need.
+
+Short Range: 5ft
+Long Range: 30ft
+
+Skills:
+&lt;b&gt;(print:$magicMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 7&#39;s 2)
+
+Casting:
+See [[Terrain Tags List]] for casting costs.
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

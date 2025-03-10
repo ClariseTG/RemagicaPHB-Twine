@@ -1,5 +1,5 @@
 ![Remagica Logo](assets/logo_dark.svg#gh-light-mode-only)![Remagica Logo](assets/logo_light.svg#gh-dark-mode-only)  
-# Remagica 4.1.X 
+# Remagica 4.3.X 
 This is the source for the Remagica 4e PHB!
 This is a WIP repo that I'm using to synchronize changes across devices, but feel free to take a look around!  
 Some of this information may be incorrect, and broken versions of the site may be on the main branch. You've been warned.

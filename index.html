@@ -12,12 +12,21 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Remagica 4.0 Site.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Remagica 4.0 Site" startnode="1" creator="Twine" creator-version="2.3.0-beta1" ifid="DEB89225-E185-4437-AF46-E0CA21C8B86F" zoom="0.6" format="Harlowe" format-version="3.0.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
 
 .lexend-deca-<uniquifier> {
   font-family: "Lexend Deca", sans-serif;
@@ -81,6 +90,30 @@
   font-style: italic;
 }
 
+.grandstander-regular {
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.reggae-one-regular {
+  font-family: "Reggae One", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.trade-winds-regular {
+  font-family: "Trade Winds", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.autour-one-regular {
+  font-family: "Autour One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 tw-story {
   background-color:#ffffff;
@@ -240,7 +273,8 @@ $HB2+(box:&quot;X&quot;, 15)[\
 [[Full Compendium-&gt;Compendium]]\
 ]
 |==|
-{(unless:$campaign is &quot;CT&quot;)[Looking for the (link:&quot;combat test&quot;)[(set:$campaign to &quot;CT&quot;)(set:$themeChosen to $themeWyrmling)(go-to:&quot;Homepage&quot;)]?](else:)[You can change the content display in the Options menu.]}
+{(unless:$campaign is &quot;NH&quot;)[Are you a (link:&quot;Nightmare Hunters&quot;)[(set:$campaign to &quot;NH&quot;)(set:$themeChosen to $themeNightHunt)(go-to:&quot;Homepage&quot;)] player?]}
+{(unless:$campaign is &quot;CT&quot;)[Looking for the (link:&quot;combat test&quot;)[(display:&quot;CTsetup&quot;)(go-to:&quot;Homepage&quot;)]?](else:)[You can change the content display in the Options menu.]}
 
 $H2[Lore]
 [[Thalassophobia]]
@@ -249,7 +283,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.3.1 / 4.4.CT - 2025-3-23*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.3.4 / 4.4.CT - 2025-3-24*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -289,7 +323,7 @@ Array
 
 (link-goto:&quot;Options&quot;)
 
-[[Compendium]]
+[[Comp.-&gt;Compendium]]
 
 [[Attributes-&gt;Attributes Quick Reference]]{{
 
@@ -310,6 +344,7 @@ Array
 &lt;!--prepping SVG stuff--&gt;
 
 &lt;!--initializing all data--&gt;
+(set:$campaign to &quot;&quot;)
 {(display:&quot;ThemesInit&quot;)}
 {(display:&quot;ConstInit&quot;)}
 {(display:&quot;SkillsInit&quot;)}
@@ -358,6 +393,10 @@ tw-passage tw-include[type=\&quot;footer\&quot;] {
 		text-overflow: clip;
 		font-size: &quot; + (string: $baseSize * 100) + &quot;%;
 	}
+
+tw-story select {
+	background-color: &quot; + $themeChosen&#39;s 6 + &quot;;
+}
 &quot;)
 
 (if:$leftPad is 7.5)[
@@ -482,18 +521,38 @@ div.desc {
 }</tw-passagedata><tw-passagedata pid="6" name="Options" tags="display" position="100,225" size="100,100">$H2[Options]
 
 Theme:
-{(dropdown: bind _themeSelected, &quot;Light&quot;, &quot;Dark&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;, &quot;Xaiai&quot;)&lt;br&gt;
+(dropdown: bind _themeSelected, &quot;Legible&quot;, &quot;Dark Legible&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;, &quot;Xaiai&quot;, &quot;Jungle&quot;)
 (link-repeat:&quot;Change Theme&quot;)[{
-	(if:_themeSelected is &quot;Light&quot;)[(set:$themeChosen to $themeLight)]
-	(else-if:_themeSelected is &quot;Dark&quot;)[(set:$themeChosen to $themeDark)]
+	(if:_themeSelected is &quot;Legible&quot;)[(set:$themeChosen to $themeLight)]
+	(else-if:_themeSelected is &quot;Dark Legible&quot;)[(set:$themeChosen to $themeDark)]
 	(else-if:_themeSelected is &quot;Thalassophobia&quot;)[(set:$themeChosen to $themeThalass)]
 	(else-if:_themeSelected is &quot;Nightmare Hunters&quot;)[(set:$themeChosen to $themeNightHunt)]
 	(else-if:_themeSelected is &quot;Xaiai&quot;)[(set:$themeChosen to $themeWyrmling)]
+	(else-if:_themeSelected is &quot;Jungle&quot;)[(set:$themeChosen to $themeEastern)]
 (go-to:(passage:)&#39;s name)
 }]
-&lt;br&gt;
 
-&lt;br&gt;Text Size:&lt;br&gt;
+(dropdown: bind _campaignSelected, &quot;Any/Current&quot;, &quot;Eupharia/Theodora&quot;, &quot;Thalassophobia&quot;, &quot;Nightmare Hunters&quot;, &quot;Eastern Continent&quot;)
+(link-repeat:&quot;Change Displayed Content&quot;)[{
+	(if:_campaignSelected is &quot;Any/Current&quot;)[
+		(set:$campaign to &quot;??&quot;)
+	]
+	(else-if:_campaignSelected is &quot;Eupharia/Theodora&quot;)[
+		(set:$campaign to &quot;EU&quot;)
+	]
+	(else-if:_campaignSelected is &quot;Thalassophobia&quot;)[
+		(set:$campaign to &quot;TL&quot;)
+	]
+	(else-if:_campaignSelected is &quot;Nightmare Hunters&quot;)[
+		(set:$campaign to &quot;NH&quot;)
+	]
+	(else-if:_campaignSelected is &quot;Eastern Continent&quot;)[
+		(set:$campaign to &quot;XA&quot;)
+	]
+(go-to:(passage:)&#39;s name)
+}]
+
+Text Size:
 {(unless:$baseSize &lt; 0.3)[
 	(link-repeat:&quot;&lt;&quot;)[
 		(set:$baseSize to it - 0.1)
@@ -507,13 +566,9 @@ Theme:
 	(go-to:(passage:)&#39;s name)
 ]}
 
+(link-goto:&quot;Configure popup height&quot;, &quot;PopupConfig&quot;)
 
-&lt;br&gt;(link-goto:&quot;Configure popup height&quot;, &quot;PopupConfig&quot;)
-
-&lt;br&gt;(link:&quot;⬑⬑Hide&quot;)[(set:$optionsShown to false)(go-to:(passage:)&#39;s name)]&lt;br&gt;
-
-(link:&quot;Back&quot;)[(display:&quot;undo&quot;)]
-}</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
+(link:&quot;Back&quot;)[(display:&quot;undo&quot;)]</tw-passagedata><tw-passagedata pid="7" name="Overall Gameplay" tags="done" position="600,225" size="100,100">$H2[Overall Gameplay]
 Remagica is a game played by voice or text-- words-- where players apart from the DM can interact with the world, and the DM provides information on how the world reacts. The players are limited to a single character as their main link to the world, and the DM has a wider scope to give players more options.
 &lt;p&gt;Primarily, interaction with the world is done through roleplay, due to this one-character restriction. Players describe what their character would do or say, and the DM explains what the world&#39;s reaction would be. When outcomes are indeterminate, the DM will ask the player to make a Skill Check, or in a fast-paced or violent scenario, shift into [[combat-&gt;Combat]].
 $H3[Checks]
@@ -690,7 +745,7 @@ In Remagica, there are 4 kinds of health:
 
 Click on a health type to learn more.
 
-[]&lt;HealthDisplay|</tw-passagedata><tw-passagedata pid="10" name="Advancement and Improvements (3e)" tags="in-progress 3e" position="3100,500" size="100,100">$H2[Advancement and Improvements]
+[]&lt;HealthDisplay|</tw-passagedata><tw-passagedata pid="10" name="Advancement and Improvements (3e)" tags="in-progress 3e" position="3225,500" size="100,100">$H2[Advancement and Improvements]
 Characters become stronger as they gain experience through the course of a campaign. This experience translates into Experience Points, or EXP.
 This EXP can be spent in a variety of ways, one of which is through improvement checks.
 There are five kinds of improvements:
@@ -725,7 +780,7 @@ Only one of these can be done per session that involved a (link-goto:&quot;Long 
 Click on one to see more.
 []&lt;ImprovementDisplay|
 
-Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="3e" position="3100,1000" size="100,100">$H2[Creating a Concept]
+Additionally, EXP can be spent on (link-goto:&quot;skills&quot;,&quot;Skills List&quot;).</tw-passagedata><tw-passagedata pid="11" name="Creating a Concept" tags="3e" position="3225,1000" size="100,100">$H2[Creating a Concept]
 Each character is unique, and while the rules below will help fit a concept into the game system, they are very freeform, and will not give much aid in coming up with said concept. That said, there are some choices that can help guide character creation.
 a. &lt;b&gt;Playstyle.&lt;/b&gt;
 Do you want a character who spends a lot of time negotiating with NPCs, or do you want a character who punches first and asks questions later?
@@ -744,7 +799,7 @@ Is there a niche in the party that seems like it’s necessary? Did the party fo
 
 Some notable things to keep in mind throughout the process:
 &lt;p&gt;A character starts with 35 EXP. EXP can be spent on all sorts of things, such as the quality of the character’s starting inventory, how many of their racial bonuses they have at the start, and how many EXP skills they have. EXP does not need to all be spent now, and can be saved for later. However, there are some things that can only be purchased with EXP during character creation.
-</tw-passagedata><tw-passagedata pid="12" name="Items List" tags="" position="1400,225" size="100,100">$H2[Items List]
+</tw-passagedata><tw-passagedata pid="12" name="Items List" tags="" position="1525,225" size="100,100">$H2[Items List]
 (Not including [[weapons-&gt;Weapons]])
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
@@ -867,7 +922,7 @@ Click on a skill&#39;s name to see its description.
 [HTML table ends](c|
 (set:$skillsListView to it + &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;)
 (print:$skillsListView)
-}</tw-passagedata><tw-passagedata pid="14" name="Locations (T)" tags="" position="2250,1300" size="100,100">$H2[Locations]
+}</tw-passagedata><tw-passagedata pid="14" name="Locations (T)" tags="" position="2375,1300" size="100,100">$H2[Locations]
 
 $H3[Ventopia]
 A coral reef located on the center of the vents. Its residents are obsessed with beauty, prizing it above everything else. They have a Queen, considered to be the most beautiful creature.
@@ -879,7 +934,7 @@ $H3[Graveyard]
 An old shrine dedicated to Cardinal East, with a graveyard around it. It almost exclusively has the remains of Boneyardians now.
 
 $H3[Shipwreck]
-The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="15" name="Cardinals" tags="" position="2375,1300" size="100,100">$H2[Cardinals]
+The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="15" name="Cardinals" tags="" position="2500,1300" size="100,100">$H2[Cardinals]
 
 $H3[Cardinal Down]
 The god of life, safety, and comfort, and the favored god of the Ventopians.
@@ -900,7 +955,7 @@ The god of mania, madness, and transformation.
 
 $H3[Cardinal Up]
 Up is a god feared by almost all. She represents unknowable things, the open Above, the pitch black, and agoraphobia. Her lucidity is unclear. She is respected in the Boneyard, and hated in Ventopia, considered ultimately ugly.
-Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="16" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="17" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Compendium" tags="section" position="1400,100" size="100,100">$H2[Compendium Quick Links]
+Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="16" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="17" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Compendium" tags="section" position="1525,100" size="100,100">$H2[Compendium Quick Links]
 
 $H3[Talents and Races]
 [[Talent Skills-&gt;Skills List]]
@@ -918,7 +973,7 @@ $H3[Magic]
 
 $H3[Misc]
 [[Conditions]]
-[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
+[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
 
 Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
 
@@ -929,7 +984,7 @@ $H3[Short Rests]
 Short rests last for 2 hours. A short rest heals half of the damage the character currently has; for example, a character at half health prior to a Short Rest would heal one quarter of their maximum HP. Two Short Rests can be taken for each Long Rest.
 [
 $H3[Alt Ruleset: Gritty Realism]
-Long and Short rests can be stretched to one week and one day respectively with this ruleset.(if:$campaign is &quot;NH&quot;)[ The Nightmare Hunters campaign uses the Gritty Realism ruleset.]]</tw-passagedata><tw-passagedata pid="21" name="Conditions List (3.2)" tags="3e" position="3100,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
+Long and Short rests can be stretched to one week and one day respectively with this ruleset.(if:$campaign is &quot;NH&quot;)[ The Nightmare Hunters campaign uses the Gritty Realism ruleset.]]</tw-passagedata><tw-passagedata pid="21" name="Conditions List (3.2)" tags="3e" position="3225,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
 Click on a condition to see details:
 (box:&quot;X&quot;,6)+(border:&quot;solid&quot;)+(corner-radius:10)+(border-color:#9659eb)[• {(link-repeat:&quot;Absorbent&quot;)[
 	(replace:?ConditionDisplay)[
@@ -1408,7 +1463,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="23" name="Hadalite" tags="table" position="2125,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="23" name="Hadalite" tags="table" position="2250,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Hadalites live long lives— much longer than most other creatures. However, as ambush predators, they spend most of it in-between sleep and waking.
 &lt;p&gt;These long periods of half-sleep can sometimes render their memories fuzzy; a Hadalite can seem like a completely different person after enough years have passed, unable to clearly recall their past selves. In this way, other people are transient in the life of a Hadalite.
@@ -1446,46 +1501,7 @@ Features:
 &#96;[&#96;image&#96;]&#96;
 *The lures at the end of the tentacles as well as the “hairstyle” of the tentacles can be variant. Line down the middle is their mouth, so clothes tend to accommodate it opening.
 Spots on head tend to resemble eyes or features found on other races, but can vary! Colors can be anything, though tend towards more phosphorescent-looking shades.
-Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="24" name="Marigen" tags="table done" position="925,350" size="100,100">$H2[Marigen(if:$campaign is &quot;TL&quot;)[ (Deepsea)]]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
-
-{(if:$campaign is &quot;TL&quot;)[
-Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.&lt;br&gt;
-&lt;p&gt;Marigen are omnivores, but have little access to plant matter in the Hadal Zone.
-](else:)[
-	Marigen hail from the open sea, building isolated societies on the seafloor, using a combination of vents and magic to keep them ventilated with breathable air. They have a unique set of languages, known as the Click languages, that a Marigen character would be likely to know if they or their parents ever lived undersea.
-]}
-{&lt;table&gt;\
-	&lt;tr&gt;\
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Stats: $HB4[+ 2 Dex] $HB4[- 1 Con]
-		&lt;/td&gt;
-		&lt;td&gt;{(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;20ft walk&lt;/b&gt;, &lt;b&gt;40ft swim&lt;/b&gt;&lt;/td&gt;
-			](else:)[
-			Speed: &lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
-			]}
-	&lt;/tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
-		&lt;/td&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
-		&lt;td&gt;Maturity: &lt;b&gt;22 years&lt;/b&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Eats every day; omnivore.
-		&lt;td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;}
-Features:
-(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 13&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 13&#39;s 2)]
-
-&#96;[&#96;image&#96;]&#96;
-*Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
-Clothing tends to have holes to accommodate these fins; it’s uncomfortable to crush them.
-(if:$campaign is &quot;TL&quot;)[Can have fur, but it is rare.](else:)[Marigen from the icy Northern oceans often have fur, but other Marigen do not. Consider fur fully optional. Marigen fur is the consistency of otter fur.]
-&quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="25" name="ItemsInit" tags="data-storage" position="2250,500" size="100,100">{
+Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="24" name="Marigen" tags="table done" position="925,350" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Marigen (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Marigen (TL)&quot;)]</tw-passagedata><tw-passagedata pid="25" name="ItemsInit" tags="data-storage" position="2375,500" size="100,100">{
 (set:$itemsMaster to (a:
 
 (a: &quot;Light Armor&quot;, &quot;Highly flexible and lightweight armor, such as padded or leather armor. Raises the wearer&#39;s Defense by 2 if worn. Cannot be worn with other armor.&quot;, 1, 5),
@@ -1503,7 +1519,7 @@ Clothing tends to have holes to accommodate these fins; it’s uncomfortable to 
 (a: &quot;Fishing Rod&quot;, &quot;Enables the character to fish.&quot;, 1, 5)
 
 ))
-}</tw-passagedata><tw-passagedata pid="26" name="Code/Admin Stuff" tags="section" position="2275,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="test" tags="table test" position="2900,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="26" name="Code/Admin Stuff" tags="section" position="2400,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="test" tags="table test" position="3025,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
 	&lt;tr&gt;
 	(for: each _j, ...(range:1,9))[
@@ -1573,7 +1589,7 @@ Carbon
 Tardzard (Celes)
 TweeTowhee&lt;/b&gt;]
 &lt;/center&gt;
-[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="30" name="test 2" tags="test" position="2900,375" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
+[[Back-&gt;Homepage]]</tw-passagedata><tw-passagedata pid="30" name="test 2" tags="test" position="3025,375" size="100,100">{(set:$mapGrid to &quot;&lt;table class=\&quot;mapGridTable\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;&lt;tr&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1609,7 +1625,7 @@ TweeTowhee&lt;/b&gt;]
 ]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="31" name="test 3" tags="test" position="2900,500" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
+</tw-passagedata><tw-passagedata pid="31" name="test 3" tags="test" position="3025,500" size="100,100">{(set:$mapGrid to &quot;&lt;div class=\&quot;mapGrid2\&quot;&gt;&quot;)
 (for: each _i, ...(range:1,9))[
 	{(set:$mapGridto it +&quot;$mapFormat&quot; + (string:_i) + (string:_j)&quot;[&lt;div class=\&quot;mapCol2\&quot;&gt;&quot;)
 	(for: each _j, ...(range:1,9))[
@@ -1624,7 +1640,7 @@ TweeTowhee&lt;/b&gt;]
 ]
 (set:$mapGrid to it + &quot;&lt;/div&gt;&quot;)
 (print:$mapGrid)}
-</tw-passagedata><tw-passagedata pid="32" name="MapInit" tags="" position="2900,625" size="100,100">{
+</tw-passagedata><tw-passagedata pid="32" name="MapInit" tags="" position="3025,625" size="100,100">{
 (for: each _i, ...(range:1,9))[
 	(for: each _j, ...(range:1,9))[
 		(print:&quot;
@@ -1656,9 +1672,9 @@ TweeTowhee&lt;/b&gt;]
 		&lt;td&gt;??&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="34" name="DropdownButton" tags="" position="2125,1000" size="100,100">{
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="34" name="DropdownButton" tags="" position="2250,1000" size="100,100">{
 (link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to 7.5)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
-}</tw-passagedata><tw-passagedata pid="35" name="Weapons" tags="table" position="1400,975" size="100,100">$H2[Weapons List]
+}</tw-passagedata><tw-passagedata pid="35" name="Weapons" tags="table" position="1525,975" size="100,100">$H2[Weapons List]
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
 &lt;!--header--&gt;
@@ -1675,7 +1691,7 @@ TweeTowhee&lt;/b&gt;]
 &lt;!--table body--&gt;
 (for: each (_weapon), 
 	...(sorted: via its 1, 
-		...$weaponsList
+		...$weaponsMaster
 		)
 )[{
 	(if:_index % 2 is 1)[
@@ -1705,11 +1721,11 @@ TweeTowhee&lt;/b&gt;]
 	]
 (set:_index to it + 1)}]}\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="36" name="Race Skills" tags="data-processing" position="2250,250" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="36" name="Race Skills" tags="data-processing" position="2375,250" size="100,100">{(set:$raceViewed to $raceIndex&#39;s $raceViewed)
 (for: each _skill, ...$racialSkills)[
 
 $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quot;)[((print:_skill&#39;s 3) EXP)](else:)[(Required)] (print:_skill&#39;s 5)
-]}</tw-passagedata><tw-passagedata pid="37" name="Character Sheet" tags="table 3e" position="3100,375" size="100,100">{{&lt;style&gt;tw-hook {
+]}</tw-passagedata><tw-passagedata pid="37" name="Character Sheet" tags="table 3e" position="3225,375" size="100,100">{{&lt;style&gt;tw-hook {
 }&lt;/style&gt;}
 &lt;i&gt;$H2[Character Name (Nickname)]&lt;/i&gt;
 &lt;table&gt;
@@ -1753,7 +1769,7 @@ $skillName[(print:_skill&#39;s 1).] (unless:_skill&#39;s 3 is &quot;Required&quo
 	]
 ]
 
-}</tw-passagedata><tw-passagedata pid="38" name="skill-popup" tags="display 3e" position="3100,625" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="39" name="Combat" tags="table done" position="600,875" size="100,100">$H2[Combat]
+}</tw-passagedata><tw-passagedata pid="38" name="skill-popup" tags="display 3e" position="3225,625" size="100,100">&lt;div style=&quot;text-indent:-2em; padding-left:2em&quot;&gt;(color:$themeChosen&#39;s 5)[&lt;i&gt;&lt;b&gt;(print:$skillsMaster&#39;s $skillSelected&#39;s 1).&lt;/b&gt;&lt;/i&gt;] (print:$skillsMaster&#39;s $skillSelected&#39;s 5)</tw-passagedata><tw-passagedata pid="39" name="Combat" tags="table done" position="600,875" size="100,100">$H2[Combat]
 
 &lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;
 
@@ -1957,7 +1973,7 @@ The character has a handful of other important numbers, which are derived from t
 ]&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-]}</tw-passagedata><tw-passagedata pid="45" name="Rolling Health" tags="in-progress unused" position="3100,250" size="100,100">$H2[Rolling Health]{
+]}</tw-passagedata><tw-passagedata pid="45" name="Rolling Health" tags="in-progress unused" position="3225,250" size="100,100">$H2[Rolling Health]{
 (set:_names to (a:))
 (for: each _race, ...$racesTech)[(set:_names to it + (a:_race&#39;s 1))]
 (set:_raceIndices to (dm:...(interlaced:_names, (range:1,11))))
@@ -1977,7 +1993,7 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 1)d(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#39;s 5&#39;s 2) + Mag MP&lt;/center&gt;]
 
 &lt;/td&gt;}&lt;/tr&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="46" name="RacesTechInit" tags="data-storage 3e" position="3100,875" size="100,100">{
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="46" name="RacesTechInit" tags="data-storage 3e" position="3225,875" size="100,100">{
 (set:$raceIndex to (a:&quot;Apians&quot;))
 &lt;!--TITLE|HP|MP|Skills List--&gt;
 (set:$racesTech to (a:
@@ -1996,12 +2012,14 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 {(for: each _race, ...$racesPreview)[
 	(if: ($campaign is &quot;??&quot;) or
 		($campaign is &quot;TL&quot; and _race&#39;s campaigns&#39;s 1 is 1) or
-		($campaign is &quot;NH&quot; and _race&#39;s campaigns&#39;s 2 is 1))[
+		($campaign is &quot;NH&quot; and _race&#39;s campaigns&#39;s 2 is 1) or 
+		($campaign is &quot;XA&quot; and _race&#39;s campaigns&#39;s 4 is 1))[
 		$HB2[
 		|||=
 		&lt;p&gt;(link-goto:_race&#39;s name, _race&#39;s passName)&lt;br&gt;
 		(if:$campaign is &quot;TL&quot;)[(print:_race&#39;s descTL)]\
-		(else-if:$campaign is &quot;NH&quot;)[(print:_race&#39;s descNH)]&lt;/p&gt;
+		(else-if:$campaign is &quot;NH&quot;)[(print:_race&#39;s descNH)]\
+		(else-if:$campaign is &quot;XA&quot;)[(print:_race&#39;s descXA)]&lt;/p&gt;
 		=|
 		(print:&quot;&lt;img src=\&quot;&quot; + _race&#39;s image + &quot;\&quot;&gt;&lt;/img&gt;&quot;)]&lt;br&gt;
 		]
@@ -2060,20 +2078,21 @@ $H3[Vision and Movement]
 These quantities can be found on the page for your character&#39;s race.
 
 $H3[Free Space]
-This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="50" name="RacesPreviewInit" tags="data-storage" position="2375,250" size="100,100">{(set:$racesPreview to (a:
-(dm: &quot;name&quot;, &quot;Apian&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Their ancestors were hive-dwellers, but modern Apians mostly live around other races.&quot;, &quot;image&quot;, &quot;assets/races/apian.png&quot;, &quot;passName&quot;, &quot;Apian&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Ferfaen&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Magic flows through the veins of every Ferfaen, giving them much more stamina with casting it.&quot;, &quot;image&quot;, &quot;assets/races/ferfaen.png&quot;, &quot;passName&quot;, &quot;Ferfaen&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;descTL&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Hazaan&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Swift and strong, the Hazaan are prey no longer, using their speed in creative ways.&quot;, &quot;image&quot;, &quot;assets/races/hazaan.png&quot;, &quot;passName&quot;, &quot;Hazaan&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Hiverscruffs&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Tall and covered in thick fur, Hiverscruffs are the imposing natives of the frozen mountains.&quot;, &quot;image&quot;, &quot;assets/races/hiverscruff.png&quot;, &quot;passName&quot;, &quot;Hiverscruff&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;descTL&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;descTL&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;descTL&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;descNH&quot;, &quot;Marigen are semi-aquatic mammals of action from the sea.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1)),
-(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;descTL&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0)),
-(dm: &quot;name&quot;, &quot;Phorads&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Phorads are parasitic plants that hijack the brain of a sapient creature, and make it their own.&quot;, &quot;image&quot;, &quot;assets/races/phorad.png&quot;, &quot;passName&quot;, &quot;Phorad&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Remagi&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Death is not the end when concentrated magic can bring a Valdien back to life as a Remagus.&quot;, &quot;image&quot;, &quot;assets/races/remagus.png&quot;, &quot;passName&quot;, &quot;Remagus&quot;, &quot;campaigns&quot;, (a: 0, 1)),
-(dm: &quot;name&quot;, &quot;Valdiens&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Hardy and resourceful, Valdiens take pride in their individuality.&quot;, &quot;image&quot;, &quot;assets/races/valdien.png&quot;, &quot;passName&quot;, &quot;Valdien&quot;, &quot;campaigns&quot;, (a: 0, 1))
+This is a small bit of extra space right at the top of your sheet-- prime real estate! I like to use it for actions my character may need to take on short notice, such as in Combat, but you can use it however you&#39;d like.</tw-passagedata><tw-passagedata pid="50" name="RacesPreviewInit" tags="data-storage" position="2500,250" size="100,100">{(set:$racesPreview to (a:
+(dm: &quot;name&quot;, &quot;Apians&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Their ancestors were hive-dwellers, but modern Apians mostly live around other races.&quot;,&quot;descXA&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/apian.png&quot;, &quot;passName&quot;, &quot;Apian&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Exterreri&quot;, &quot;descTL&quot;, &quot;From unknown origin, Exterreri aren&#39;t quite alive; still, they find a place for themselves among the living.&quot;, &quot;descNH&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;,&quot;descXA&quot;, &quot;Exterreri walk a fine line between the world of souls and the world of the living.&quot;, &quot;image&quot;, &quot;assets/races/exterreri.png&quot;, &quot;passName&quot;, &quot;Exterreri&quot;, &quot;campaigns&quot;, (a: 1, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Ferfaen&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Magic flows through the veins of every Ferfaen, giving them much more stamina with casting it.&quot;, &quot;image&quot;, &quot;assets/races/ferfaen.png&quot;, &quot;passName&quot;, &quot;Ferfaen&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 0)),
+(dm: &quot;name&quot;, &quot;Hadalites&quot;, &quot;descTL&quot;, &quot;Hadalites live a lot longer than other races, lending them an almost mythological role in their communities.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/hadalite.png&quot;, &quot;passName&quot;, &quot;Hadalite&quot;, &quot;campaigns&quot;, (a: 1, 0, 1, 0)),
+(dm: &quot;name&quot;, &quot;Hazaan&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Swift and strong, the Hazaan are prey no longer, using their speed in creative ways.&quot;, &quot;image&quot;, &quot;assets/races/hazaan.png&quot;, &quot;passName&quot;, &quot;Hazaan&quot;, &quot;campaigns&quot;, (a: 0, 1, 0, 0)),
+(dm: &quot;name&quot;, &quot;Hiverscruffs&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Tall and covered in thick fur, Hiverscruffs are the imposing natives of the frozen mountains.&quot;,&quot;descXA&quot;, &quot;With colorful feathers and beautiful songs, Hiverscruffs are birds of paradise.&quot;, &quot;image&quot;, &quot;assets/races/hiverscruff.png&quot;, &quot;passName&quot;, &quot;Hiverscruff&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Karkani&quot;, &quot;descTL&quot;, &quot;With hard shells and soft interiors, Karkani take to self-decoration in their society.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/karkani.png&quot;, &quot;passName&quot;, &quot;Karkani&quot;, &quot;campaigns&quot;, (a: 1, 0, 0, 0)),
+(dm: &quot;name&quot;, &quot;Khetadons&quot;, &quot;descTL&quot;, &quot;Strong and hearty, Khetadons face unjust treatment regularly and live on.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/khetadon.png&quot;, &quot;passName&quot;, &quot;Khetadon&quot;, &quot;campaigns&quot;, (a: 1, 0, 0, 0)),
+(dm: &quot;name&quot;, &quot;Marigen&quot;, &quot;descTL&quot;, &quot;Sleek and swift-moving, Marigen tend to get where they want to go quickly.&quot;, &quot;descNH&quot;, &quot;Marigen are semi-aquatic mammals of action from the sea.&quot;, &quot;image&quot;, &quot;assets/races/marigen.png&quot;, &quot;passName&quot;, &quot;Marigen&quot;, &quot;campaigns&quot;, (a: 1, 1, 1, 0)),
+(dm: &quot;name&quot;, &quot;Nerites&quot;, &quot;descTL&quot;, &quot;Soft and covered in frills and color, Nerites rely on their beauty and strong magic.&quot;, &quot;descNH&quot;, &quot;&quot;, &quot;image&quot;, &quot;assets/races/nerite.png&quot;, &quot;passName&quot;, &quot;Nerite&quot;, &quot;campaigns&quot;, (a: 1, 0, 0, 0)),
+(dm: &quot;name&quot;, &quot;Phorads&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Phorads are parasitic plants that hijack the brain of a sapient creature, and make it their own.&quot;,&quot;descXA&quot;, &quot;Phorads are parasitic plants that hijack the brain of a sapient creature, and make it their own.&quot;, &quot;image&quot;, &quot;assets/races/phorad.png&quot;, &quot;passName&quot;, &quot;Phorad&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Remagi&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Death is not the end when concentrated magic can bring a Valdien back to life as a Remagus.&quot;,&quot;descXA&quot;, &quot;Death is not the end when concentrated magic can bring a Valdien back to life as a Remagus.&quot;, &quot;image&quot;, &quot;assets/races/remagus.png&quot;, &quot;passName&quot;, &quot;Remagus&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Valdiens&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;Hardy and resourceful, Valdiens take pride in their individuality.&quot;,&quot;descXA&quot;, &quot;An unstable genome allows Valdiens to survive in any environment.&quot;, &quot;image&quot;, &quot;assets/races/valdien.png&quot;, &quot;passName&quot;, &quot;Valdien&quot;, &quot;campaigns&quot;, (a: 0, 1, 1, 1)),
+(dm: &quot;name&quot;, &quot;Wyrmlings&quot;, &quot;descTL&quot;, &quot;&quot;, &quot;descNH&quot;, &quot;&quot;,&quot;descXA&quot;, &quot;Wyrmlings carve something new out of the living wood they live in.&quot;, &quot;image&quot;, &quot;assets/races/wyrmling.png&quot;, &quot;passName&quot;, &quot;Wyrmling&quot;, &quot;campaigns&quot;, (a: 0, 0, 1, 1))
 ))
 (set:$racesFeatures to (a:
 (a: &quot;Sudden Movement&quot;, &quot;Marigen are adept swimmers, capable of surprising speed. In exchange for one of their actions in the next round, a Marigen can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Marigen&quot;), 
@@ -2083,14 +2102,15 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Symbiote&quot;, &quot;Exterreri feed off of pain. When an Exterreri chooses to feed off of a sapient creature, they can remove two levels of the Pained condition. Additionally, they can choose to temporarily restore one True Health to a sapient creature for as long as they are touching them with their tentacle. Both of these things wear off the moment contact is lost.&quot;, &quot;Exterreri&quot;), 
 (a: &quot;Blood in the Water&quot;, &quot;Khetadons have an especially sharp sense of smell when it comes to blood. Khetadons have advantage on Tracking checks for Bleeding creatures, and can add their Tracking modifier to attacks against those creatures. &quot;, &quot;Khetadon&quot;), 
 (a: &quot;Retract&quot;, &quot;Karkani have a large shell that they can safely hide inside of. Karkani can take the Retract action as a bonus action, which gives other creatures disadvantage on physical attacks against them for that round.&quot;, &quot;Karkani&quot;), 
-(a: &quot;Gossamer Span&quot;, &quot;Apians have small wings that allow them to fly as a bee would. Apians have a Fly speed of 3T. If, at the end of the Action, they want to hover, they can spend another Bonus Action to do so.&quot;, &quot;Apian&quot;), 
-(a: &quot;Magic Sensitivity&quot;, &quot;Each Ferfaen&#39;s aurasense is sharply attuned. If a Ferfaen focuses for a minute, they can sense the qualities of all auras within 30T.&quot;, &quot;Ferfaen&quot;), 
-(a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 6T. However, they cannot fly up. They can increase this Fly speed to 12T if they choose to lose 1T for every 2T traveled horizontally.&quot;, &quot;Hiverscruff&quot;), 
+(a: &quot;Gossamer Span&quot;, &quot;Apians have small wings that allow them to fly as a bee would. Apians have a Fly speed of 20ft. If, at the end of the Action, they want to hover, they can spend another Bonus Action to do so.&quot;, &quot;Apian&quot;), 
+(a: &quot;Magic Sensitivity&quot;, &quot;Each Ferfaen&#39;s aurasense is sharply attuned. If a Ferfaen focuses for a minute, they can sense the qualities of all auras within 150ft.&quot;, &quot;Ferfaen&quot;), 
+(a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 30ft. However, they cannot fly up. They can increase this Fly speed to 60ft if they choose to lose 5ft for every 10ft traveled horizontally.&quot;, &quot;Hiverscruff&quot;), 
 (a: &quot;Flora&quot;, &quot;If exposed to direct sunlight, fresh water, and a comfortable amount of heat the entire time, a Phorad can complete a Long Rest in the span of a Short Rest.&quot;, &quot;Phorad&quot;), 
 (a: &quot;Sudden Movement&quot;, &quot;Hazaan are adept runners, capable of surprising speed. In exchange for one of their actions in the next round, a Hazaan can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Hazaan&quot;), 
-(a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;)
+(a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;), 
+(a: &quot;Arboreal&quot;, &quot;Wyrmlings do not take damage from falling from a height.&quot;, &quot;Wyrmling&quot;)
 ))
-}</tw-passagedata><tw-passagedata pid="51" name="Talents and Skills" tags="table done" position="1050,225" size="100,100">$H2[Talents and Skills]
+}</tw-passagedata><tw-passagedata pid="51" name="Talents and Skills" tags="table done" position="1175,225" size="100,100">$H2[Talents and Skills]
 When starting out, all characters have a Talent-- this represents the skills they brought with them from their life before adventuring, and has a profound effect on the Skills they will have access to as they progress.
 A Talent comes with a few bonus Attribute Proficiency points and an associated Skill. It also determines how much HP a character gains per Advancement. (MP is determined by the choice of race.)
 Keep in mind that end-game Skills are not always exclusive to a single Talent; in fact, the Skills&#39; prerequisites and unlocks are designed to provide multiple paths from the Talents&#39; Skills to the capstone Skills acquired by very powerful characters.
@@ -2126,11 +2146,11 @@ Take a look at the Talents below!
 	&lt;/td&gt;
 	&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-}</tw-passagedata><tw-passagedata pid="52" name="Thalassophobia" tags="" position="2125,1300" size="100,100">$H2[Thalassophobia Lore]
+}</tw-passagedata><tw-passagedata pid="52" name="Thalassophobia" tags="" position="2250,1300" size="100,100">$H2[Thalassophobia Lore]
 
 $H3[[[Locations-&gt;Locations (T)]]]
 
-$H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Skills List" tags="done" position="1400,350" size="100,100">$H2[Talent Skills]
+$H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Skills List" tags="done" position="1525,350" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Associated Talent&quot;)[
@@ -2185,7 +2205,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 	]]
 ]}\
 ]
-[[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="54" name="SkillsInit" tags="data-storage" position="2125,250" size="100,100">(set:$skillsMaster to (a:
+[[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="54" name="SkillsInit" tags="data-storage" position="2250,250" size="100,100">(set:$skillsMaster to (a:
 
 (a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1, 1, True), 
 (a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3, True), 
@@ -2238,7 +2258,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -2, 0), 
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -1, 0)
-))</tw-passagedata><tw-passagedata pid="55" name="TalentColorsInit" tags="data-storage" position="2500,750" size="100,100">(set:$talentColor to (dm:
+))</tw-passagedata><tw-passagedata pid="55" name="TalentColorsInit" tags="data-storage" position="2625,750" size="100,100">(set:$talentColor to (dm:
 &quot;Creative&quot;, #e340b7, 
 &quot;Faithful&quot;, #e3d040, 
 &quot;Agile&quot;, #e63119, 
@@ -2247,36 +2267,36 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 &quot;Astute&quot;, #5a9aed, 
 &quot;Crafty&quot;, #03a336, 
 &quot;Charming&quot;, #9b2fde
-))</tw-passagedata><tw-passagedata pid="56" name="Aurastrong" tags="unused" position="3300,250" size="100,100">$H3[Aurastrong]
+))</tw-passagedata><tw-passagedata pid="56" name="Aurastrong" tags="unused" position="3425,250" size="100,100">$H3[Aurastrong]
 Those who are Aurastrong have a lot of force behind their magic. Whether that is by hard work, or due to a natural-born affinity, magic of that scale can be difficult to tame and dangerous to wield.
 HP: &lt;b&gt;8&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to Power.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="57" name="Creative" tags="" position="1050,725" size="100,100">$H3[Creative]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 1&#39;s 2)</tw-passagedata><tw-passagedata pid="57" name="Creative" tags="" position="1175,725" size="100,100">$H3[Creative]
 Creative types see beauty in the things around them, and carry with them the ability to enhance the qualities they feel. Through craft or performance, those with creative talent can work with the things around them to make them into something new.
 Proficiency: 2 Bonus Proficiency Points between Flair and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="58" name="Faithful" tags="" position="1050,850" size="100,100">$H3[Faithful]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="58" name="Faithful" tags="" position="1175,850" size="100,100">$H3[Faithful]
 The world is filled with forces beyond comprehension; some, almost sapient. Those with strong faith have dedicated their time to learning about those forces and working alongside them for a purpose. While some choose their own purpose, others find themselves corrupted by the forces around them and are compelled to act alongside their force&#39;s will.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Agile" tags="" position="1050,350" size="100,100">$H3[Agile]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Agile" tags="" position="1175,350" size="100,100">$H3[Agile]
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Tactical" tags="unused" position="3300,625" size="100,100">$H3[Tactical]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Tactical" tags="unused" position="3425,625" size="100,100">$H3[Tactical]
 Failure becomes experience, and those who have refined their tactics to this degree have seen it all. Their plans cover many angles and possibilities, and they know how to best bring out the strength of their comrades, whether there is chaos or peace.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points between Insight, Investigation and Persuasion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Thorough" tags="unused" position="3300,375" size="100,100">$H3[Thorough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 16&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 16&#39;s 2)</tw-passagedata><tw-passagedata pid="61" name="Thorough" tags="unused" position="3425,375" size="100,100">$H3[Thorough]
 Those who refine their skills thoroughly 
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 4 Bonus Proficiency Points between Stealth, Handiwork, History, Investigation, Tracking, Insight, and Appraisal.
 (Thorough is meant to be similar to a rogue in some ways.)
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Tough" tags="" position="1050,1100" size="100,100">$H3[Tough]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 17&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 17&#39;s 2)</tw-passagedata><tw-passagedata pid="62" name="Tough" tags="" position="1175,1100" size="100,100">$H3[Tough]
 The toughest of us can rely on their physical might to keep themselves going and control the situation around them. There is technique to asserting strength, developed over years of use-- those who are tough know how to use themselves to the fullest.
 Proficiency: 2 Bonus Proficiency Points between Endurance and Heartiness.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Well-Read" tags="unused" position="3300,500" size="100,100">$H3[Well-Read]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 6&#39;s 2)</tw-passagedata><tw-passagedata pid="63" name="Well-Read" tags="unused" position="3425,500" size="100,100">$H3[Well-Read]
 Knowledge is slow to collect and quick to be useful, and no one knows that better than those who focus their efforts on becoming well-read. History, nature, politics-- these characters know it best.
 HP: &lt;b&gt;10&lt;/b&gt;
 Proficiency: 3 Bonus Proficiency Points to History.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="AttributesInit" tags="data-storage" position="2500,375" size="100,100">{
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 24&#39;s 2)</tw-passagedata><tw-passagedata pid="64" name="AttributesInit" tags="data-storage" position="2625,375" size="100,100">{
 &lt;!--ATT FORMAT--&gt;
 &lt;!--1: Attribute name--&gt;
 &lt;!--2: Statistic--&gt;
@@ -2305,8 +2325,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 (a: &quot;Stealth&quot;, &quot;Dexterity&quot;), 
 (a: &quot;Sturdy&quot;, &quot;Strength&quot;), 
 (a: &quot;Tracking&quot;, &quot;Wisdom&quot;), 
-(a: &quot;Willpower&quot;, &quot;Charisma&quot;), 
-(a: &quot;Dodge (Deprecated in 4.1)&quot;, &quot;Dexterity&quot;)
+(a: &quot;Willpower&quot;, &quot;Charisma&quot;)
 ))
 
 (set:$statColor to (dm:
@@ -2356,7 +2375,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 	&lt;/td&gt;&lt;/tr&gt;
 (set:_index to it + 1)}]}\
 ]
-</tw-passagedata><tw-passagedata pid="66" name="Nerite" tags="table" position="2250,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+</tw-passagedata><tw-passagedata pid="66" name="Nerite" tags="table" position="2375,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Frilly and soft, Nerites were likely prey animals before they came to the Hadal Zone. Their strong aurasense followed them even as the need for it faded, and as a result, they have the strongest aurasense among the races. 
 &lt;p&gt;They are the most populous race in Ventopia, covered in many intricate markings that they consider “beautiful.”
@@ -2388,7 +2407,7 @@ Features:
 None-- they get a lot of MP!
 
 &#96;[&#96;image&#96;]&#96;
-*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="67" name="Khetadon" tags="table" position="2375,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="67" name="Khetadon" tags="table" position="2500,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 The Khetadons are a rough-skinned and bold species likely descended from true top-of-the-food-chain carnivores. With their sharp teeth and acute mid-range senses, they have a bit of an edge in a physical fight; don’t underestimate them in other settings because of that.
 &lt;p&gt;Khetadons deal with exclusion from institutions of knowledge and are shunned by worshippers of South, but can be found in all sorts of places regardless.
@@ -2420,7 +2439,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 6&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 6&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="68" name="Karkani" tags="table" position="2500,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="68" name="Karkani" tags="table" position="2625,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Karkani take great pride in their shells, often decorating them or carving things into them. These shells make great protection against predators, blunt force trauma, and social embarrassment.
 &lt;p&gt;Karkani have strong internal social structure, and status is often marked on their shells.
@@ -2481,7 +2500,7 @@ Often, a Rank consists of the following:
 * One Skill gained
 * One Health Improvement
 * One Proficiency Point
-* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="70" name="Magic Ability" tags="table" position="1175,225" size="100,100">$H2[Magic Ability]
+* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="70" name="Magic Ability" tags="table" position="1300,225" size="100,100">$H2[Magic Ability]
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
 &lt;p&gt;Often, Abilities are highly specific. Some examples include:
 * Nikita Theodora has the ability to create a shadowy shell around herself in the shape of a were-fox, augmenting her melee capabilities.
@@ -2527,7 +2546,7 @@ A character&#39;s magic will primarily deal damage of one &quot;damage type,&quo
 The damage types listed here will lose support after 4.3.x. The list will be updated in 4.4.x.
 The damage types are as follows:
 Earth, Fire, Freezing, Life, Light, Lightning, Psychic, Rot, Soul, Sound, Time, Toxin, Water;
-Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="71" name="CastingStylesInit" tags="data-storage" position="2125,500" size="100,100">{(set:$castingStyles to (a:
+Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="71" name="CastingStylesInit" tags="data-storage" position="2250,500" size="100,100">{(set:$castingStyles to (a:
 &quot;Borro&quot;,
 &quot;Skathi&quot;,
 &quot;Fyugo&quot;,
@@ -2587,7 +2606,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 (a: &quot;Active&quot;, &quot;The Tile is currently rife with magic, such as that a Skathi would set. Entering this Tile triggers the effects of the magic that was the source of this Tag.&quot;, &quot;&quot;, -1)
 
 ))
-}</tw-passagedata><tw-passagedata pid="72" name="Borro" tags="table" position="1175,350" size="100,100">$H3[Borro]
+}</tw-passagedata><tw-passagedata pid="72" name="Borro" tags="table" position="1300,350" size="100,100">$H3[Borro]
 Borros have a strong connection to the physical, imbuing magic into things they can touch.
 
 Short Range: 5ft
@@ -2615,7 +2634,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="73" name="MagicSkillsInit" tags="data-storage" position="2125,375" size="100,100">{(set:$magicMaster to (a:
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="73" name="MagicSkillsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$magicMaster to (a:
 
 (a: &quot;Hands-On&quot;, &quot;Borros can choose to imbue other Actions with their magic; when making an Action that involves physical contact, a Borro can choose to use their magic alongside it. This will result in the combined effects of both the magic and the original action. However, this concentration of power leaves them unable to affect things outside of their short range.&quot;, (a: -2), (a:15,16), &quot;Borro&quot;), 
 (a: &quot;It Spreads&quot;, &quot;When a Skathi applies a magical effect, they can choose to have it affect any number of targets, up to 3, within their Short Range of the casting’s origin, not passing through barriers such as walls. However, they have to pay for their conditions per-target, and damage is spread between them, meaning each target would take the total damage divided by the number of targets, rounded up. If the character also has the Modifying Monikers skill, Summon Tags that affect damage or give conditions can only apply to one of the targets.&quot;, (a: -2), (a:17), &quot;Skathi&quot;), 
@@ -2645,45 +2664,7 @@ Casting:
 (a: &quot;Setpiece&quot;, &quot;The Aldatu can choose to target the 4 Tiles adjacent in the cardinal directions to the Tile they select in addition to that Tile when they apply a Terrain Tag.&quot;, (a: 25), (a:), &quot;Aldatu&quot;), 
 (a: &quot;Layered&quot;, &quot;Applying a Terrain Tag only takes one Action. / The Aldatu can apply up to 2 Terrain Tags per Action (2 Action system.)&quot;, (a: 25), (a:), &quot;Aldatu&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="74" name="Exterreri" tags="table" position="925,475" size="100,100">$H2[Exterreri]\
-(if:$campaign is &quot;TL&quot;)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;](else:)[&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;]
-
-No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
-&lt;p&gt;Exterreri do not have mouths, instead consuming the pain of sapient creatures to survive through a single tentacle-like appendage. They can also sense it in others around them.
-&lt;p&gt;Sometimes, they wither and die in weeks; other times, they seemingly live forever.
-
-{&lt;table&gt;\
-	&lt;tr&gt;\
-		&lt;td&gt;\
-			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
-		&lt;/td&gt;
-		&lt;td&gt;{(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
-			](if:$campaign is &quot;TL&quot;)[
-			Speed: &lt;b&gt;30ft swim&lt;/b&gt;&lt;/td&gt;
-			](else:)[
-			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
-			]}
-	&lt;/tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;(if:$campaign is &quot;TL&quot;)[Aurasense 30ft, ]Painsense 60ft&lt;/b&gt;
-		&lt;/td&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Lifespan: &lt;b&gt;???&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Maturity: &lt;b&gt;30 Long Rests&lt;/b&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Eats every day; Cruciavore.
-		&lt;td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;}
-Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
-
-&#96;[&#96;image&#96;]&#96;
-*Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="75" name="Skathi" tags="table" position="1175,475" size="100,100">$H3[Skathi]
+))}</tw-passagedata><tw-passagedata pid="74" name="Exterreri" tags="table" position="925,475" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Exterreri (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Exterreri (TL)&quot;)]</tw-passagedata><tw-passagedata pid="75" name="Skathi" tags="table" position="1300,475" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
 
 Short Range: 5ft
@@ -2710,7 +2691,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="76" name="Shioreta" tags="table" position="1175,725" size="100,100">$H3[Shioreta]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="76" name="Shioreta" tags="table" position="1300,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
 
 Short Range: 5ft
@@ -2722,7 +2703,7 @@ Skills:
 
 Casting:
 See [[Conditions Cost List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="77" name="Otsoa" tags="table" position="1175,850" size="100,100">$H3[Otsoa]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="77" name="Otsoa" tags="table" position="1300,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
 
 Short Range: 5ft
@@ -2735,7 +2716,7 @@ Skills:
 
 Casting:
 See [[Form Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Fyugo" tags="table" position="1175,600" size="100,100">$H3[Fyugo]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Fyugo" tags="table" position="1300,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
 
 Short Range: 20ft
@@ -2748,7 +2729,7 @@ Skills:
 
 Casting:
 See [[Summon Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Azurite" tags="table" position="1175,975" size="100,100">$H3[Azurite]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Azurite" tags="table" position="1300,975" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 
 Short Range: 10ft
@@ -2776,7 +2757,7 @@ Casting:
 &lt;/tr&gt;
 &lt;/table&gt;}
 
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Summon Tags List" tags="" position="1400,600" size="100,100">$H2[Summon Tags List]
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Summon Tags List" tags="" position="1525,600" size="100,100">$H2[Summon Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2838,7 +2819,7 @@ Casting:
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="81" name="Conditions Cost List" tags="table" position="1400,725" size="100,100">$H2[Shioreta Conditions]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="81" name="Conditions Cost List" tags="table" position="1525,725" size="100,100">$H2[Shioreta Conditions]
 
 Shioretas are able to place Conditions on targets and afflict them with Statistic Changes based on which Skills they have. The Conditions here are in boxes headed by the name of the Skill that unlocks them.
 
@@ -2857,7 +2838,7 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 {[&lt;tr&gt;&lt;td&gt;Charmed 1 (calmed)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td&gt;Charmed 1 (become uneasy/fearful)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Charmed 1 (become more explosive)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;](later|}</tw-passagedata><tw-passagedata pid="82" name="Form Tags List" tags="" position="1400,850" size="100,100">$H2[Form Tags List]
+&lt;tr&gt;&lt;td&gt;Charmed 1 (become more explosive)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;](later|}</tw-passagedata><tw-passagedata pid="82" name="Form Tags List" tags="" position="1525,850" size="100,100">$H2[Form Tags List]
 
 &lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;
 
@@ -2922,7 +2903,9 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="83" name="WeaponsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$weaponsList to (a:
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="83" name="WeaponsInit" tags="data-storage" position="2375,375" size="100,100">{
+&lt;!--initializes weapons for the TWO ACTION SYSTEM--&gt;
+(set:$weaponsMaster to (a:
 
 (a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
 (a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
@@ -2939,9 +2922,10 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Bash, Slice, or Pierce damage.&quot;, 1, 5),
 (a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
 (a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
-(a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5)
+(a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Weaponized Tail&quot;, &quot;Acrobatics or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(2+) When the character uses this tool, they can use it again as part of the same action, dealing 2d6 this time.&quot;, 0, -1)
 
-))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2125,625" size="100,100">{
+))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,625" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
 		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
@@ -2957,7 +2941,7 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 		(output-data:&quot;(alert:\&quot;&quot; + (string:_contents) + &quot;\&quot;, \&quot;X\&quot;)&quot;)
 	])
 )
-}</tw-passagedata><tw-passagedata pid="85" name="PopupConfig" tags="settings" position="2250,625" size="100,100">|=
+}</tw-passagedata><tw-passagedata pid="85" name="PopupConfig" tags="settings" position="2375,625" size="100,100">|=
 $H2[Configure Popup Height]
 Adjust the height until the box on the right fits within the screen.
 {&lt;center&gt;
@@ -2969,7 +2953,7 @@ Adjust the height until the box on the right fits within the screen.
 }
 (link-repeat:&quot;Click to test a real popup!&quot;)[($pop:&quot;Overall Gameplay&quot;)]
 =|
-[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="86" name="Conditions (Old)" tags="unused" position="3425,250" size="100,100">$H2[Conditions]
+[(box:&quot;X&quot;, $popupHeight)+(b4r:&quot;solid&quot;)+(css:&quot;padding:8%&quot;)[(display:&quot;Overall Gameplay&quot;)]]</tw-passagedata><tw-passagedata pid="86" name="Conditions (Old)" tags="unused" position="3550,250" size="100,100">$H2[Conditions]
 $HB3[$H4[(link-repeat:&quot;Blinded ⏷&quot;)[{(replace:?Blinded)[
 $H4[(link:&quot;Blinded ⏶&quot;)[(rerun:?Blinded)]]
 &lt;br&gt;The creature&#39;s senses-- especially their primary sense-- are dulled or prevented from working at all, reducing their ability to navigate their enviroment.
@@ -3065,7 +3049,7 @@ $H4[(link:&quot;Unstable ⏶&quot;)[(rerun:?Unstable)]]
 &lt;br&gt;The creature is actively dying.
 Unstable only comes in one level, and as such does not need to be marked with its level.
 When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves&quot;, &quot;Damage&quot;).
-]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="87" name="Map Grid Tests" tags="section" position="2850,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="88" name="Magic Skills List" tags="" position="1400,475" size="100,100">$H2[Talent Skills]
+]}]]]&lt;Unstable|</tw-passagedata><tw-passagedata pid="87" name="Map Grid Tests" tags="section" position="2975,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="88" name="Magic Skills List" tags="" position="1525,475" size="100,100">$H2[Talent Skills]
 (set:_sortByNum to 1)(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Casting Style&quot;)[
@@ -3108,17 +3092,17 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 	(print:_skill&#39;s 2)]&lt;br&gt;
 	]
 ]}\
-]</tw-passagedata><tw-passagedata pid="89" name="redo" tags="code" position="2125,750" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="89" name="redo" tags="code" position="2250,750" size="100,100">{
 (set:$managedCurr to $managedRedo&#39;s last)
 (set:$managedRedo to its 1stto2ndlast)
 (set:$wasRedone to true)
 (go-to:$managedCurr)
-}</tw-passagedata><tw-passagedata pid="90" name="undo" tags="code" position="2125,875" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="90" name="undo" tags="code" position="2250,875" size="100,100">{
 (set:$managedRedo to it + (a:$managedHist&#39;s last))
 (set:$managedHist to its 1stto2ndlast)
 (set:$managedCurr to $managedHist&#39;s last)
 (go-to:$managedCurr)
-}</tw-passagedata><tw-passagedata pid="91" name="Deities and Forces of Nature" tags="" position="1600,475" size="100,100">$H2[Deities and Forces of Nature]
+}</tw-passagedata><tw-passagedata pid="91" name="Deities and Forces of Nature" tags="" position="1725,475" size="100,100">$H2[Deities and Forces of Nature]
 $H4[Northern Continent]
 
 $H3[Rekke Panthali]
@@ -3142,22 +3126,22 @@ His domain is that of the nighttime, especially just past sunset, alternating be
 
 $H3[Rattzlagi]
 A bitter god who is trapped in a constant state of rot. She is full of anger at the world, but even more so at the Queen of Nightmares for making her this way. She wants to find a way to either die or become mortal again. She is rarely lucid and often suffering.
-Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="92" name="Nightmare Hunters" tags="" position="1600,225" size="100,100">$H2[Nightmare Hunters Lore]
+Her domain is of decay and consumption, focusing on how things are broken down to become part of the world again. A shame, then, that she can never fully come apart.</tw-passagedata><tw-passagedata pid="92" name="Nightmare Hunters" tags="" position="1725,225" size="100,100">$H2[Nightmare Hunters Lore]
 
 $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1600,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2125,1600" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1725,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2250,1800" size="100,100">$H2[Theodora City]
 
-$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="95" name="Euridza" tags="" position="1600,600" size="100,100">$H2[Euridza: The Realm of Dreams]
-</tw-passagedata><tw-passagedata pid="96" name="Astute" tags="" position="1050,475" size="100,100">$H3[Astute]
+$H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="95" name="Euridza" tags="" position="1725,600" size="100,100">$H2[Euridza: The Realm of Dreams]
+</tw-passagedata><tw-passagedata pid="96" name="Astute" tags="" position="1175,475" size="100,100">$H3[Astute]
 Exceptionally gifted with a variety of skills, those who are astute know a lot about the world around them, and what they can do in it. Whether they are a researcher or a jack of all trades, it is their varied abilities that define them.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="97" name="Charming" tags="" position="1050,600" size="100,100">$H3[Charming]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 14&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 14&#39;s 2)</tw-passagedata><tw-passagedata pid="97" name="Charming" tags="" position="1175,600" size="100,100">$H3[Charming]
 Some connect with the world around them through other people. The most charming often have many friends-- often in strange places-- and connections they can rely on. Whether their skill is making new friends, knowing the right people, or pretending to form deeper connections, those who are talented with their charms can often find unique ways of navigating any situation.
 Proficiency: 2 Bonus Proficiency Points between Flair, Persuasion, and Intimidation.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="98" name="Keen" tags="" position="1050,975" size="100,100">$H3[Keen]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 25&#39;s 2)</tw-passagedata><tw-passagedata pid="98" name="Keen" tags="" position="1175,975" size="100,100">$H3[Keen]
 Attentive and curious, keener folk keep a sharp eye out for anything of interest. They&#39;re well attuned to their environment, knowing where things are and what to do with them. They understand purpose where others do not.
 Proficiency: 2 Bonus Proficiency Points between Perception and Aura.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 30&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 30&#39;s 2)</tw-passagedata><tw-passagedata pid="99" name="Proficiencies" tags="" position="800,850" size="100,100">$H2[Proficiencies]
@@ -3171,7 +3155,7 @@ Attribute Proficiencies are a measure of proficiency in specific Attributes, whi
 $H3[Tool Proficiencies]&lt;tool|
 Tool Proficiencies 
 
-$H3[Other Proficiencies]&lt;other|</tw-passagedata><tw-passagedata pid="100" name="Thalassophobia Stuff" tags="section" position="2275,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
+$H3[Other Proficiencies]&lt;other|</tw-passagedata><tw-passagedata pid="100" name="Thalassophobia Stuff" tags="section" position="2400,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Some Apians come from hives in the wilderness, raised making honey to survive the winter and foraging for food. Others are raised around other peoples, using their flight to get around settlements that are not built for their stature.
@@ -3207,7 +3191,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 8&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 8&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="102" name="Ferfaen" tags="table" position="925,725" size="100,100">$H2[Ferfaen]
+*Lots of variation in the exoskeleton. Chitin can be in many different places. Generally come in yellow, black, and white, but any coloration found on bees in the real world is normal for an Apian. The chitin color can also vary, but is typically black.</tw-passagedata><tw-passagedata pid="102" name="Ferfaen" tags="table" position="925,850" size="100,100">$H2[Ferfaen]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ferfaen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Ferfaen are most common on the Central continent due to their sensitivity to magic radiation, which increases as one approaches the edges of the world. Still, they can be found on the Northern continent, living among others.
@@ -3244,46 +3228,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 9&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 9&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="103" name="Hiverscruff" tags="table" position="925,850" size="100,100">$H2[Hiverscruff]
-&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
-
-A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
-&lt;p&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which have the bite strength to crush bones; third, their thick, fluffy coats, which protect them from the cold, and finally, their stature, which is much taller than many other humanoids.
-
-
-{&lt;table&gt;\
-	&lt;tr&gt;\
-		&lt;td&gt;\
-			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
-		&lt;/td&gt;\
-		&lt;td&gt;\
-			Speed: {(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;20ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;20ft fly*&lt;/span&gt;&lt;/b&gt;&lt;/td&gt;
-			](else:)[
-			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
-			]}
-			&lt;b&gt;30ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;30ft fly*&lt;/span&gt;&lt;/b&gt;&lt;/td&gt;
-		&lt;/td&gt;
-	&lt;/tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Special Senses: &lt;b&gt;None&lt;/b&gt;
-		&lt;/td&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td colspan=&quot;2&quot;&gt;\
-			Eats large quantities of meat once every 4 or so days. Carnivore.
-		&lt;td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;}
-Features:
-&lt;b&gt;(print:$racesFeatures&#39;s 10&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 10&#39;s 2)
-
-&#96;[&#96;image&#96;]&#96;
-*Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
-&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="104" name="Phorad" tags="table" position="925,975" size="100,100">$H2[Phorad]
+*Color of hair tips and eyes do not need to match. Eyes can have white pupils or colored ones. Eyes glowing is optional.</tw-passagedata><tw-passagedata pid="103" name="Hiverscruff" tags="table" position="925,725" size="100,100">(unless:$campaign is &quot;XA&quot;)[(display:&quot;Hiverscruff (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;XA&quot; or it is &quot;??&quot;)[(display:&quot;Hiverscruff (XA)&quot;)]</tw-passagedata><tw-passagedata pid="104" name="Phorad" tags="table" position="925,975" size="100,100">$H2[Phorad]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/phorad.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Phorads are a parasitic plant species originating from the southeast. They reproduce by infecting sapient creatures, eating their internal organs, and modifying their brain to make it their own neural center.
@@ -3329,11 +3274,9 @@ Fragmented memories, power spiraling out of control, and constant rejection– s
 		&lt;/td&gt;\
 		&lt;td&gt;\
 			Speed:{(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
-			](if:$campaign is &quot;TL&quot;)[
-			Speed: &lt;b&gt;30ft swim&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
 			](else:)[
-			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
 			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
@@ -3368,17 +3311,13 @@ Valdiens can be found everywhere. They easily adapt to a variety of environments
 {&lt;table&gt;\
 	&lt;tr&gt;\
 		&lt;td&gt;\
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-			Stats: $HB4[+ 1 Str +1 Kno] $HB4[- 1 Mag]\
-=======
 			Stats: $HB4[+ 1 Str + 1 Kno] $HB4[- 1 Mag]\
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; bfa48bbf35811ff61f14a1214848b3be54798c6c
 		&lt;/td&gt;\
 		&lt;td&gt;\
 			Speed:{(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
 			](else:)[
-			Speed: &lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
 			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
@@ -3417,9 +3356,9 @@ With long legs and thick fur, Hazaan were once prey animals. Even though they&#3
 		&lt;/td&gt;\
 		&lt;td&gt;\
 			Speed:{(if:$campaign is &quot;CT&quot;)[
-			Speed: &lt;b&gt;25ft walk&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;25ft walk&lt;/b&gt;&lt;/td&gt;
 			](else:)[
-			Speed: &lt;b&gt;35ft walk&lt;/b&gt;&lt;/td&gt;
+			&lt;b&gt;35ft walk&lt;/b&gt;&lt;/td&gt;
 			]}
 		&lt;/td&gt;
 	&lt;/tr&gt;
@@ -3462,21 +3401,29 @@ $H4[God&#39;s Mark]
 The character starts with a god&#39;s mark, and can be recognized by followers of that god for their history.
 
 $H4[Well-Off]
-The character starts with (print:(ceil: $baseInvPoints * 0.6) * 2) Inventory Points.
+The character starts with (print:(ceil: $baseInvPoints * 0.6) * 2) Inventory Points.(if:$campaign is &quot;XA&quot; or it is &quot;??&quot;)[
+
+$H4[Cybernetic Enhancement]
+The character starts with a cybernetic enhancement made of living wood and magic crystal. Choose one of the following:
+* Crystal eye(s) &lt;br&gt;The character cannot gain the Blinded condition.
+* Mechanical limb(s) &lt;br&gt;The character gains 5ft to their movement.
+* Weaponized tail &lt;br&gt;The character starts with a proficiency point in Weaponized Tail, and starts with it in their inventory.
+* Multi-Tool Hands &lt;br&gt;The character starts with a proficiency point in one non-weapon tool of their choice, and that item already in their inventory with a Size of 0.]
 
 $H3[Traits]
 Traits are neutral flavor options, designed for players who want to codify slight mechanical differences in their characters due to unique traits they have. Traits are meant to not increase or decrease power, but rather add a mechanical basis for flavor decisions, and enforce certain roleplay decisions.
-&lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="109" name="ConstInit" tags="data-storage" position="2375,500" size="100,100">{
+&lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="109" name="ConstInit" tags="data-storage" position="2500,500" size="100,100">{
 |CampaignsKey)[
 TL  (Thalassophobia)
 NH  (Nightmare Hunters)
 EU  (Eupharia/Theodora)
+XA  (Eastern Cont./Xaiai)
 CT  (Combat Test)
 ??  (Any)
 ]
 &lt;!--DEFAULT THEMES--&gt;
-(set:$campaign to &quot;NH&quot;)
-(set:$themeChosen to $themeNightHunt)
+(set:$campaign to &quot;XA&quot;)
+(set:$themeChosen to $themeEastern)
 
 &lt;!--HEALTH--&gt;
 (set:$baseHP to 10)
@@ -3498,7 +3445,7 @@ CT  (Combat Test)
 
 &lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
-}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2500,625" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,625" size="100,100">{
 (set:$leftPad to 7.5)
 (set:$openingSidebar to false)
 
@@ -3506,7 +3453,7 @@ CT  (Combat Test)
 [Array
 1 Background Color
 2 Foreground Color
-3 State of Logo (0White/1Purple/2Gray/3Thalass)
+3 State of Logo (0Purple/1LightPurple/2Gray/3Thalass/4Eastern)
 4 Theme Name
 5 Shade of purple for links
 6 Grey 1
@@ -3519,10 +3466,11 @@ CT  (Combat Test)
 (set:$themeNightHunt to (a:&quot;#e0e0e0&quot;,&quot;#484963&quot;,2,&quot;NightHunt&quot;,&quot;#6d1e96&quot;,&quot;#d1d1d1&quot;,&quot;#cfcfcf&quot;,&quot;IM Fell DW Pica SC&quot;,&quot;Ibarra Real Nova&quot;))
 (set:$themeThalass to (a:&quot;#0e133d&quot;,&quot;#f5edff&quot;,3,&quot;Thalass&quot;,&quot;#8f73ff&quot;,&quot;#142d4a&quot;,&quot;#1a3d54&quot;,&quot;Keania One&quot;,&quot;Syne Mono&quot;))
 (set:$themeWyrmling to (a:&quot;#4a1170&quot;,&quot;#fff2ff&quot;,1,&quot;Wyrmling&quot;,&quot;#ff47ea&quot;,&quot;#43187a&quot;,&quot;#432191&quot;,&quot;Anta&quot;, &quot;Ubuntu&quot;))
+(set:$themeEastern to (a:&quot;#2a4529&quot;,&quot;#e1f5b0&quot;,4,&quot;Eastern&quot;,&quot;#10c491&quot;,&quot;#385949&quot;,&quot;#4b7368&quot;,&quot;Grandstander&quot;, &quot;Reggae One&quot;))
 
 
-(set:$assetLogo to (a:&quot;assets/logo_dark.svg&quot;, &quot;assets/logo_light.svg&quot;, &quot;assets/logo_gray.svg&quot;, &quot;assets/logo_thalass.svg&quot;))
-(set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;))
+(set:$assetLogo to (a:&quot;assets/logo_dark.svg&quot;, &quot;assets/logo_light.svg&quot;, &quot;assets/logo_gray.svg&quot;, &quot;assets/logo_thalass.svg&quot;, &quot;assets/logo_eastern.svg&quot;))
+(set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_mint.svg&quot;))
 
 }</tw-passagedata><tw-passagedata pid="111" name="Backstory and Personality" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="112" name="Inventory" tags="in-progress" position="800,475" size="100,100">$H2[Inventory]
 
@@ -3552,7 +3500,7 @@ A character can only hold 4 Slots&#39; worth of items on their person without an
 
 $H3[Starting Out]&lt;making|
 Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $baseInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
-&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="113" name="ManageHistory" tags="code" position="2250,875" size="100,100">{
+&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="113" name="ManageHistory" tags="code" position="2375,875" size="100,100">{
 (if: $managedHist&#39;s length &gt; 0)[ &lt;!--no short circuiting--&gt;
 	(if:(passage:)&#39;s name is not $managedHist&#39;s last)[
 		(set:$managedHist to it + (a: (passage:)&#39;s name))
@@ -3564,7 +3512,7 @@ Each item has a point value alongside its Size. When a character is starting out
 	(set:$managedHist to it + (a: (passage:)&#39;s name))
 ]
 (set:$wasRedone to false)
-}</tw-passagedata><tw-passagedata pid="114" name="Conditions" tags="table" position="1400,1225" size="100,100">$H2[Conditions]
+}</tw-passagedata><tw-passagedata pid="114" name="Conditions" tags="table" position="1525,1225" size="100,100">$H2[Conditions]
 
 {&lt;table&gt;
 &lt;tr&gt;
@@ -3697,7 +3645,7 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 &lt;/tr&gt;
 &lt;/table&gt;
 }
-$HB3[]&lt;Cond|</tw-passagedata><tw-passagedata pid="115" name="Xperiment" tags="section" position="1800,100" size="100,100">&lt;!--SECTION TITLE--&gt;</tw-passagedata><tw-passagedata pid="116" name="Combat Test" tags="" position="1800,225" size="100,100">$H2[Combat Test]
+$HB3[]&lt;Cond|</tw-passagedata><tw-passagedata pid="115" name="Xperiment" tags="section" position="1925,100" size="100,100">&lt;!--SECTION TITLE--&gt;</tw-passagedata><tw-passagedata pid="116" name="Combat Test" tags="" position="1925,225" size="100,100">$H2[Combat Test]
 
 &lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;
 
@@ -3709,23 +3657,28 @@ For the 4e combat test, the following rules are changed:
 - An action considered a &#39;big&#39; or &#39;burst&#39; action (these are not technical terms) such as a finisher or thing that causes a bunch of statuses will take 3 actions.
 
 Big note:
-When making combat skills, I intend to interpret them as &#39;things the character can do that happen to be useful in combat.&#39; This means every skill has to be multipurpose and there has to be an explanation why they can do it in combat but not outside (or they can do it outside of combat.)</tw-passagedata><tw-passagedata pid="117" name="CTWeaponsInit" tags="data-storage" position="2250,1000" size="100,100">{(set:$weaponsList to (a:
-(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
-(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
-(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
-(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d6 + 4 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slashing) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
-(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
-(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bludgeoning) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
+When making combat skills, I intend to interpret them as &#39;things the character can do that happen to be useful in combat.&#39; This means every skill has to be multipurpose and there has to be an explanation why they can do it in combat but not outside (or they can do it outside of combat.)</tw-passagedata><tw-passagedata pid="117" name="CTWeaponsInit" tags="data-storage" position="2375,1000" size="100,100">{
+&lt;!--initializes weapons for the COMBAT TEST--&gt;
+(set:$weaponsMaster to (a:
+
+(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
 (a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
-(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
-(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slashing) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slashing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slashing, Bludgeoning, or Piercing damage.&quot;, 1, 5),
-(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Piercing) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Piercing) damage on a success.&quot;, 1, 5)
-))}</tw-passagedata><tw-passagedata pid="118" name="Terrain Tags List" tags="" position="1400,1100" size="100,100">$H2[Terrain Tags List]
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
+(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slice) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Bash, Slice, or Pierce damage.&quot;, 1, 5),
+(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
+(a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5)
+
+))}</tw-passagedata><tw-passagedata pid="118" name="Terrain Tags List" tags="" position="1525,1100" size="100,100">$H2[Terrain Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -3781,7 +3734,7 @@ When making combat skills, I intend to interpret them as &#39;things the charact
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="119" name="Aldatu" tags="table" position="1175,1100" size="100,100">$H3[Aldatu]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="119" name="Aldatu" tags="table" position="1300,1100" size="100,100">$H3[Aldatu]
 Aldatu&#39;s magic allows them to feel the malleability of the world around them and shape it to what they need.
 
 Short Range: 5ft
@@ -3792,7 +3745,269 @@ Skills:
 
 Casting:
 See [[Terrain Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata></tw-storydata>
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="120" name="CTsetup" tags="code" position="1925,350" size="100,100">{
+(set:$campaign to &quot;CT&quot;)
+(display:&quot;CTWeaponsInit&quot;)
+(set:$themeChosen to $themeWyrmling)
+}</tw-passagedata><tw-passagedata pid="121" name="unCTsetup" tags="code" position="1925,475" size="100,100">(set:$campaign to &quot;NH&quot;)
+(display:&quot;WeaponsInit&quot;)
+(set:$themeChosen to $themeNightHunt)</tw-passagedata><tw-passagedata pid="122" name="Wyrmling" tags="table" position="925,1475" size="100,100">$H2[Hazaan]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/wyrmling.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+Wyrmlings, known in their jungle as the People of the Quetzalcōātl, are an arboreal people that seek innovation and discovery. Some live in harmony with all life; others meddle in its fabric without hesitation.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Kno, + 1 Wis] $HB4[- 1 Con]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed:{(if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			&lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;Darkvision 150ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;26 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Omnivorous; eats daily.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 14&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 14&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Feathers can be any color; often, they are the same fur/feather colors and patterns seen on cats or common songbirds, but cybernetics or magic can cause these colors to change. </tw-passagedata><tw-passagedata pid="123" name="Exterreri (TL)" tags="" position="2375,1550" size="100,100">$H2[Deepsea Exterreri]\
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
+&lt;p&gt;Exterreri do not have mouths, instead consuming the pain of sapient creatures to survive through a single tentacle-like appendage. They can also sense it in others around them.
+&lt;p&gt;Sometimes, they wither and die in weeks; other times, they seemingly live forever.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
+		&lt;/td&gt;
+		&lt;td&gt;{
+			Speed: &lt;b&gt;30ft swim&lt;/b&gt;&lt;/td&gt;
+			}
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Senses: &lt;b&gt;Aurasense 30ft, Painsense 60ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;???&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;30 Long Rests&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every day; Cruciavore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="124" name="Marigen (TL)" tags="" position="2250,1550" size="100,100">$H2[Deepsea Marigen]\
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+
+Fabled to have originated from the Above, Marigen lack gills and swim quickly compared to the other peoples of the Hadal Zone. They have fully streamlined bodies and powerful flippers, using a pair of long tongues instead of hands to manipulate objects.
+&lt;p&gt;Marigen are omnivores, but have little access to plant matter in the Hadal Zone.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Stats: $HB4[+ 2 Dex] $HB4[- 1 Con]
+		&lt;/td&gt;
+		&lt;td&gt;{Speed: (if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk&lt;/b&gt;, &lt;b&gt;40ft swim&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			&lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
+			]}
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;22 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every day; omnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 13&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 13&#39;s 2)]
+
+&#96;[&#96;image&#96;]&#96;
+*Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
+Clothing tends to have holes to accommodate these fins; it’s uncomfortable to crush them.
+Can have fur, but it is rare.
+&quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="125" name="Marigen (other)" tags="" position="1050,350" size="100,100">$H2[Marigen]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+
+	Marigen hail from the open sea, building isolated societies on the seafloor, using a combination of vents and magic to keep them ventilated with breathable air. They have a unique set of languages, known as the Click languages, that a Marigen character would be likely to know if they or their parents ever lived undersea.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Stats: $HB4[+ 1 Con + 1 Dex] $HB4[- 1 Wis]
+		&lt;/td&gt;
+		&lt;td&gt;{Speed: (if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk&lt;/b&gt;, &lt;b&gt;40ft swim&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			&lt;b&gt;30ft walk&lt;/b&gt;, &lt;b&gt;60ft swim&lt;/b&gt;&lt;/td&gt;
+			]}
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			(unless:$campaign is &quot;TL&quot;)[Special ]Senses: &lt;b&gt;Echolocation 150ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;70 years&lt;/b&gt; (average)&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;22 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every day; omnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+(if:$campaign is &quot;TL&quot;)[&lt;b&gt;(print:$racesFeatures&#39;s 1&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 1&#39;s 2)](else:)[&lt;b&gt;(print:$racesFeatures&#39;s 13&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 13&#39;s 2)]
+
+&#96;[&#96;image&#96;]&#96;
+*Fins on head and back can fold down/retract. These fins’ shape, pattern and number varies between individuals. Same with the tail fins.
+Clothing tends to have holes to accommodate these fins; it’s uncomfortable to crush them.
+Marigen from the icy Northern oceans often have fur, but other Marigen do not. Consider fur fully optional. Marigen fur is the consistency of otter fur.
+&quot;Whiskers&quot; are antennae that allow them to hear. Never trimmed or covered.</tw-passagedata><tw-passagedata pid="126" name="Exterreri (other)" tags="" position="1050,475" size="100,100">$H2[Exterreri]\
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+The definition of an Exterreri varies, but they are always Nightmare Creatures. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
+&lt;p&gt;Exterreri do not have mouths, instead consuming the pain of sapient creatures to survive through a single tentacle-like appendage. They can also sense it in others around them.
+&lt;p&gt;Exterreri lifespans are often cut short by those who fear Nightmare Creatures.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 2 Wis] $HB4[- 1 Dex]\
+		&lt;/td&gt;
+		&lt;td&gt;{Speed: (if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			&lt;b&gt;30ft walk&lt;/b&gt;&lt;/td&gt;
+			]}
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Senses: &lt;b&gt;Painsense 60ft&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;???&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;30 Long Rests&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every day; Cruciavore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 5&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 5&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Always shaped like one of the other races, but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="127" name="Hiverscruff (XA)" tags="" position="2950,1300" size="100,100">$H2[Hiverscruff (Eastern Jungle)]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+With bright and colorful plumage in a variety of shapes and patterns, Hiverscruffs are known for their beautiful song and intricate rituals. They lack the fur or down of their Northern counterparts, instead completely covered in feathers.
+&lt;b&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which are often lined with bony horns like a beak; third, their bright feathers, and finally, their musical voices.
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+2 Cha] $HB4[- 1 Kno]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: {(if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk, 20ft fly*&lt;/b&gt;&lt;/td&gt;
+			](else:)[
+			&lt;b&gt;30ft walk, 30ft fly*&lt;/b&gt;&lt;/td&gt;
+			]}
+			
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats every 2 days. Omnivorous, with a lean towards meat.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 10&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 10&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*These Hiverscruffs are based off of birds of paradise and often have similar decorative feathers. The extra colors are not restricted to males; sexual dimorphism is common, but females often have a completely different but still flashy appearance.
+Hiverscruffs can still have tusks or horns, but horns/etc are often in different shapes complementing their plumage.</tw-passagedata><tw-passagedata pid="128" name="Hiverscruff (other)" tags="" position="1050,725" size="100,100">$H2[Hiverscruff]
+&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+
+A carnivorous species hardened by the tough climate in the icy north, they are feared in the cold valleys and plains in which they live; however, outside of those areas, they can fare quite poorly due to their sensitivity to heat.
+&lt;p&gt;An Hiverscruff is most recognizable for four main traits: first, their broad wings, which allow them to fly and glide; second, their snouts, which have the bite strength to crush bones; third, their thick, fluffy coats, which protect them from the cold, and finally, their stature, which is much taller than many other humanoids.
+
+
+{&lt;table&gt;\
+	&lt;tr&gt;\
+		&lt;td&gt;\
+			Stats: $HB4[+ 1 Str, +1 Dex] $HB4[- 1 Kno]\
+		&lt;/td&gt;\
+		&lt;td&gt;\
+			Speed: {(if:$campaign is &quot;CT&quot;)[
+			&lt;b&gt;20ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;20ft fly*&lt;/span&gt;&lt;/b&gt;
+			](else:)[
+			&lt;b&gt;30ft walk, &lt;span title=&quot;See racial feature below.&quot;&gt;30ft fly*&lt;/span&gt;&lt;/b&gt;
+			]}
+			
+		&lt;/td&gt;
+	&lt;/tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Special Senses: &lt;b&gt;None&lt;/b&gt;
+		&lt;/td&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Lifespan: &lt;b&gt;80 years&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;20 years&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan=&quot;2&quot;&gt;\
+			Eats large quantities of meat once every 4 or so days. Carnivore.
+		&lt;td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;}
+Features:
+&lt;b&gt;(print:$racesFeatures&#39;s 10&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 10&#39;s 2)
+
+&#96;[&#96;image&#96;]&#96;
+*Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="129" name="Eastern Continent Stuff" tags="section" position="3100,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

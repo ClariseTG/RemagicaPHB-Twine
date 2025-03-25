@@ -2565,7 +2565,7 @@ Additionally, there are three physical damage types: Bash, Slice, and Pierce.</t
 (a: &quot;Solid I&quot;, &quot;No effect.&quot;, &quot;Persistent Fabrications&quot;, 10, 4), 
 (a: &quot;Shield I&quot;, &quot;The summon can be used as a shield, raising the caster&#39;s AC by 1. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
 (a: &quot;Statistic Change I&quot;, &quot;The bonus for one of the Summon&#39;s statistics rises by 1. This tag can be applied multiple times to the same Summon.&quot;, &quot;Persistent Fabrications&quot;, 5, 12), 
-(a: &quot;Luminous I&quot;, &quot;All creatures within 10ft of the summon are illuminated, lowering their DEF by 2 and increasing the range of their critical successes by 1.&quot;, &quot;&quot;, 2, 5), 
+(a: &quot;Luminous I&quot;, &quot;All creatures within 10ft of the summon are illuminated, lowering their DEF by 2 and increasing the range of critical successes against them by 1.&quot;, &quot;&quot;, 2, 5), 
 (a: &quot;Glowing I&quot;, &quot;The summon casts light within 30ft of its center.&quot;, &quot;&quot;, 5, 2), 
 (a: &quot;Bonding&quot;, &quot;The summon gains the Attach action, which allows them to attach to a creature, moving with them whenever they move. This Tag makes them functionally massless. The Attach action can be performed as part of the Action used to cast this Tag. If the summon attached to a creature, that creature can make a Handiwork check against a DC of 10 + the caster&#39;s Power bonus to remove it (making the summon free-moving again.) Otherwise, if the creature or object moves outside of the caster&#39;s Long Range, the summon loses its attachment and becomes free-moving again.&quot;, &quot;&quot;, 2, 2), 
 (a: &quot;Siphon I&quot;, &quot;When the summon takes the Attack action, half of the damage dealt is restored to the caster.&quot;, &quot;&quot;, 2, 7), 
@@ -3629,7 +3629,7 @@ $H4[Frightened]
 	$H4[(link-repeat:&quot;💀 Plagued&quot;)[{(replace:?Cond)[
 $H4[Plagued]
 &lt;br&gt;The creature is plagued by some sort of effect that continues to harm it. When a creature drops to 0 HP or lower, it gains the Plagued (bleeding - typeless) condition with a level equal to one fifth of their total HP, rounded up.
-&lt;br&gt;Each instance of the Charmed condition specifies the kind of damage that the Plagued condition causes. For example, a creature can be Charmed (burning - fire) and Plagued (poisoned - Poison). Many instances of Plagued can coexist on a single creature.
+&lt;br&gt;Each instance of the Plagued condition specifies the kind of damage that the Plagued condition causes. For example, a creature can be Charmed (burning - fire) and Plagued (poisoned - Poison). Many instances of Plagued can coexist on a single creature.
 &lt;br&gt;The Plagued condition causes an amount of damage equal to its level every 6 seconds, of the type attached to it.
 &lt;br&gt;The Plagued condition ends when the source of the plaguing ends.
 ]}]]

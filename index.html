@@ -212,7 +212,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -234,7 +236,6 @@ li {
 </script><tw-tag name="Header" color="green"></tw-tag>,<tw-tag name="header" color="green"></tw-tag>,<tw-tag name="unused" color="purple"></tw-tag>,<tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="technical" color="green"></tw-tag>,<tw-tag name="section" color="purple"></tw-tag>,<tw-tag name="done" color="blue"></tw-tag>,<tw-tag name="in-progress" color="orange"></tw-tag>,<tw-tag name="table" color="yellow"></tw-tag>,<tw-tag name="sidebar" color="green"></tw-tag>,<tw-tag name="footer" color="green"></tw-tag>,<tw-tag name="data-storage" color="green"></tw-tag>,<tw-tag name="data-processing" color="green"></tw-tag>,<tw-tag name="display" color="green"></tw-tag>,<tw-tag name="test" color="purple"></tw-tag>,<tw-tag name="Temporary" color="purple"></tw-tag>,<tw-tag name="unsearchable" color="gray"></tw-tag>,<tw-tag name="3e" color="purple"></tw-tag>,<tw-tag name="display-macro" color="green"></tw-tag>,<tw-tag name="code" color="red"></tw-tag>,<tw-tag name="settings" color="blue"></tw-tag><tw-passagedata pid="1" name="Homepage" tags="unsearchable" position="300,100" size="200,200">{
 (print:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetLogo&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot; alt=\&quot;Remagica Player&#39;s Handbook\&quot;&gt;&lt;/img&gt;&quot;)
 }
-&lt;img src=&quot;&quot;&gt;
 |=
 $H3[Gameplay]
 $HB2+(box:&quot;X&quot;, 15)[\
@@ -3298,11 +3299,12 @@ Fragmented memories, power spiraling out of control, and constant rejection– s
 Features:
 &lt;b&gt;Mutable.&lt;/b&gt; Remagi have a variety of mutations based off of their Valdien body. Choose one of the following:
 &lt;p&gt;&lt;i&gt;Heat Zone&lt;/i&gt;. The Remagus has resistance to one of Fire or Freezing damage, and vulnerability to the other. (Corresponds to Comfortable.)
-&lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 1T every 6 seconds. This movement does not cost an Action. (Corresponds to Acrobatic.)
+&lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 5ft every 6 seconds. If the Remagus does not use a Move Action, they will move 5ft in a random direction without consuming an Action. (Corresponds to Acrobatic.)
 &lt;p&gt;&lt;i&gt;Moonlit Sight&lt;/i&gt;. The Remagus has blindsight 90ft and advantage to Perception checks when they cannot see. However, they have disadvantage to Perception and Handiwork checks in bright light. (Corresponds to Acute Hearing.)
-&lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 9T. (Corresponds to Aquatic.)
+&lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 45ft. (Corresponds to Aquatic.)
 &lt;p&gt;&lt;i&gt;Bulky&lt;/i&gt;. The Remagus&#39;s carry weight increases by (print: (ceil: 2.5 * $baseCarryAdd)) slots, their weight is doubled, and they have advantage to Sturdy saves. (Corresponds to Buff.)
-&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, gains a +2 bonus to Intimidation checks, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
+&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, gains a +2 bonus to Intimidation checks, and can add 1d6 damage of the same type as their magic to all attacks they make without a weapon. (Corresponds to Weird.)
+&lt;b&gt;Undead.&lt;/b&gt; The Remagus&#39;s base HP is reduced by 2 (this stacks with any boons that modify HP.)
 
 &#96;[&#96;image&#96;]&#96;
 *Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="106" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]

@@ -212,7 +212,11 @@ li {
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -283,7 +287,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.3.4 / 4.4.CT - 2025-3-24*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.3.7 / 4.4.CT - 2025-4-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -356,6 +360,7 @@ Array
 {(display:&quot;MagicSkillsInit&quot;)}
 {(display:&quot;CastingStylesInit&quot;)}
 {(display:&quot;WeaponsInit&quot;)}
+{(display:&quot;DivineBlessingsInit&quot;)}
 
 &lt;!--Setting up Headers--&gt;
 (set:$baseSize to 1)
@@ -692,6 +697,8 @@ When a character makes a Check, they roll 1d20 and add a set of modifiers to tha
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Damage" tags="in-progress" position="600,475" size="100,100">$H2[Damage, Health,(if:$campaign is &quot;NH&quot;)[ Sanity,] and Madness]
+⚠️ Super Outdated ⚠️
+
 In Remagica, there are 4 kinds of health:
 • {(link-repeat:&quot;Physical Health (HP)&quot;)[
 	(replace:?HealthDisplay)[
@@ -955,7 +962,7 @@ The god of mania, madness, and transformation.
 
 $H3[Cardinal Up]
 Up is a god feared by almost all. She represents unknowable things, the open Above, the pitch black, and agoraphobia. Her lucidity is unclear. She is respected in the Boneyard, and hated in Ventopia, considered ultimately ugly.
-Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="16" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="17" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Compendium" tags="section" position="1525,100" size="100,100">$H2[Compendium Quick Links]
+Up was once known as Cardinal Past by the Ancients of Above, and still retains memories of the surface.</tw-passagedata><tw-passagedata pid="16" name="Gameplay" tags="section" position="600,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="17" name="Character Creation" tags="section" position="800,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="18" name="Compendium" tags="" position="1525,100" size="100,100">$H2[Compendium Quick Links]
 
 $H3[Talents and Races]
 [[Talent Skills-&gt;Skills List]]
@@ -973,18 +980,29 @@ $H3[Magic]
 
 $H3[Misc]
 [[Conditions]]
-[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Long Rests and Short Rests]
+[[Deities and Forces of Nature]]
+[[Divine Blessings List]]
+[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Downtime]
 
-Characters can restore their health by resting, and by other means. There are a two main kinds of natural health restoration: Long Rests and Short Rests.
+When characters are not actively adventuring or achieving goals, they are on Downtime! Being on Downtime is a healing experience, recovering a character&#39;s energy after their ordeals. They can also still grow during downtime through practice!
 
-$H3[Long Rests]
-Long Rests last for 8-24 hours, and will heal all of a character&#39;s Physical and Magical Health. It also resets the uses for many Features.
+$H3[Break]
+A Break lasts for 1 hour. Creatures recover HP equivalent to one-third of the damage they have taken, rounded up. For example, a character with 30 HP who has taken 10 damage would heal 4 HP and end at 24 HP.
+Each break a creature takes before taking a Rest takes twice as long as the last.
 
-$H3[Short Rests]
-Short rests last for 2 hours. A short rest heals half of the damage the character currently has; for example, a character at half health prior to a Short Rest would heal one quarter of their maximum HP. Two Short Rests can be taken for each Long Rest.
-[
-$H3[Alt Ruleset: Gritty Realism]
-Long and Short rests can be stretched to one week and one day respectively with this ruleset.(if:$campaign is &quot;NH&quot;)[ The Nightmare Hunters campaign uses the Gritty Realism ruleset.]]</tw-passagedata><tw-passagedata pid="21" name="Conditions List (3.2)" tags="3e" position="3225,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
+$H3[Rest]
+A Rest lasts for 8-24 hours.
+It will allow creatures to recover HP equivalent to half of the damage the character has taken, rounded up. For example, a character with 30 HP maximum who has taken 25 damage, and is at 5 HP, would heal 13 HP on a Rest.
+A Rest will also allow creatures to recover MP equivalent to twice their Mag bonus, at a minimum of 2.
+
+$H3[Respite]
+A Respite requires a full week. In that time, all creatures will heal all of their Physical and Magical Health. If the campaign is using the Alt Ruleset of Sanity, a Respite will restore 1 Sanity.
+Over the course of a Respite, the DM can allow players to train, gaining one attribute proficiency point.
+
+$H3[Alt Ruleset: Fast Downtime]
+For a more accelerated campaign, these three kinds of downtime can be condensed into two:
+A Rest lasts for 2 hours, and will heal HP equivalent to half of the damage the character has taken, rounded up.
+A Respite lasts for 8-24 hours, and will heal all of a character&#39;s Physical and Magical Health. The DM can optionally allow training during these respites.</tw-passagedata><tw-passagedata pid="21" name="Conditions List (3.2)" tags="3e" position="3225,750" size="100,100">$H2[Conditions (WIP SUPER WIP)]
 Click on a condition to see details:
 (box:&quot;X&quot;,6)+(border:&quot;solid&quot;)+(corner-radius:10)+(border-color:#9659eb)[• {(link-repeat:&quot;Absorbent&quot;)[
 	(replace:?ConditionDisplay)[
@@ -2011,7 +2029,7 @@ $H4[&lt;center&gt;(print:$racesTech&#39;s (_raceIndices&#39;s (_raceSelected))&#
 (a:&quot;Wyrmling&quot;, 25, (a:3,6), 18, (a:2,6))
 ))}</tw-passagedata><tw-passagedata pid="47" name="Race List" tags="" position="925,225" size="100,100">$H2[Races]
 {(for: each _race, ...$racesPreview)[
-	(if: ($campaign is &quot;??&quot;) or
+	(if: ($campaign is &quot;??&quot;) or ($campaign is &quot;CT&quot;) or
 		($campaign is &quot;TL&quot; and _race&#39;s campaigns&#39;s 1 is 1) or
 		($campaign is &quot;NH&quot; and _race&#39;s campaigns&#39;s 2 is 1) or 
 		($campaign is &quot;XA&quot; and _race&#39;s campaigns&#39;s 4 is 1))[
@@ -2043,11 +2061,11 @@ A character&#39;s Talent represents what they were good at going into adventurin
 $H3[Casting Style]
 A character&#39;s magic Casting Style represents the way they express their magic. Every character has access to a unique magic ability; see the page on [[magic abilities-&gt;Magic Ability]] for more information.
 
-$H3[Boon (and bane? TODO)]
-A character will have one boon and one bane from the [[boons and banes page-&gt;Boons and Banes]] on creation. This affects things like HP, MP, and other bits of flavor.
+$H3[Boons]
+A character will have one boon from the [[boons and traits page-&gt;Boons and Banes]] on creation. This affects things like HP, MP, and other bits of flavor. Optionally, they can also have traits, which provide mechanical changes representing traits such as blindness.
 
 $H3[Statistics and Attribute Proficiencies]
-A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Roll 2d10 for all seven stats (rerolling stats that total to 5 or less) and assign them as you would like.
+A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, and Magic. Ask your DM whether or not stats are allocated by rolling (2d10 for each stat, and reroll rolls that are 5 or lower) or [[point buy-&gt;Point Buy Calculator]].
 &lt;p&gt;A character also has Attribute proficiencies, which can be allotted points. The Attribute table on the character sheet has zeros next to each Attribute proficiency name; this is because Attribute proficiencies begin with no Proficiency points. Your character gains a couple of bonus proficiency points from their Talent, but on top of that, you start with&lt;b&gt; $baseProfPts Attribute proficiency points&lt;/b&gt; that you can allot to any attribute you want. However, you can only put up to 2 in any one Attribute.
 &lt;p&gt;On top of that, there are derived Statistics based on combinations of other bonuses:
 * HP is double base HP ($baseHP, unless a boon says otherwise) plus the character&#39;s Con bonus.
@@ -2055,8 +2073,8 @@ A character has 7 main Statistics: Strength, Dexterity, Constitution, Knowledge,
 * Defense is 10 + Dex, but is often changed by Skills and items that the character can start with.
 
 $H3[Other Proficiencies]
-A character will also have $toolProf Tool Proficiency points, which must all be spent on different Tools, and at most 2 weapons.
-&lt;p&gt;The number of Tool Proficiency points put into a specific tool will be directly added to checks made by the tool. As well, many tools have secondary effects that are only usable if the user has a prerequisite number of Tool Proficiency points allocated to them.
+A character will also have $toolProfs Tool Proficiency points, which must all be spent on different Tools, and at most 2 weapons.
+&lt;p&gt;The number of Tool Proficiency points put into a specific tool will be directly added to checks made by the tool. As well, many tools have secondary effects that are only usable if the user has a prerequisite number of Tool Proficiency points allocated to them. 
 &lt;p&gt;There are also &quot;other&quot; proficiencies. These proficiencies are mostly flavor-based, but may be developed into a true system later. Feel free to pick one that makes sense for your character.
 
 $H3[The Skills section]
@@ -2212,7 +2230,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3, True), 
 (a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3, 1, True), 
 (a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work. They cannot target the same creature more than once with this skill within a 6 second span.&quot;, (a: -2), (a:), &quot;Creative&quot;, 4, 0, True), 
-(a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 5, 0, True), 
+(a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 5, 0, False), 
 (a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, (a: -2), (a:), &quot;Tough&quot;, 6, 0, True), 
 (a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: -1), (a:), &quot;Keen&quot;, 7, 100, False), 
 (a: &quot;Moment of Truth&quot;, &quot;Once per Long Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, (a: 30), (a:), &quot;Keen&quot;, 8, 1, True), 
@@ -2226,9 +2244,9 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -1), (a:), &quot;Tough&quot;, 16, 100, False), 
 (a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, (a: 14), (a:), &quot;Astute&quot;, 17, 1, True), 
 (a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18, 2, True), 
-(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 19, 1, True), 
-(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 20, 1, True), 
-(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 5), (a:), &quot;Faithful&quot;, 21, 1, True), 
+(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 19, 1, True), 
+(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 20, 1, True), 
+(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 21, 1, True), 
 (a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, (a: 37), (a:), &quot;Tough&quot;, 22, 2, True), 
 (a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 6), (a:), &quot;Tough&quot;, 23, 1, True), 
 (a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as part of the same Action once per six seconds.&quot;, (a: 10), (a:), &quot;Agile&quot;, 24, 1, True), 
@@ -2241,7 +2259,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 31, 2, True), 
 (a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, (a: 21), (a:), &quot;Faithful&quot;, 32, 2, True), 
 (a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 33, 2, True), 
-(a: &quot;Striking Set&quot;, &quot;Unarmed strikes only take one Action.&quot;, (a: 24), (a:), &quot;Agile&quot;, 34, 2, True), 
+(a: &quot;Five Swords&quot;, &quot;When the character makes an attack without using a tool, they deal 2d6, and can choose to attack again as part of the same action, for the same damage. (CT: These attacks deal 2d6 and only cost one Action.) As well, they can add their Fisticuffs proficiency plus either their Dex or Str bonus to hit. They can also choose to make these unarmed attacks Techniques, which they can unlock in later skills.&quot;, (a: 24), (a:), &quot;Agile&quot;, 34, 2, True), 
 (a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 35, 1, True), 
 (a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, (a: 37), (a:), &quot;Tough&quot;, 36, 2, True), 
 (a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: 6), (a:), &quot;Tough&quot;, 37, 1, True), 
@@ -2250,12 +2268,20 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, (a: 11), (a:), &quot;Creative&quot;, 40, 2, True), 
 (a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, (a: 4), (a:), &quot;Creative&quot;, 41, 1, True), 
 (a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42, 0, True), 
-(a: &quot;xXx placeholder for indices xXx&quot;, &quot;n/a&quot;, (a: 27), (a:), &quot;Charming&quot;, 43, 2, False), 
-(a: &quot;xXx evil placeholder for indices xXx&quot;, &quot;n/a&quot;, (a: 26, 28), (a:), &quot;Charming&quot;, 44, 2, False), 
+(a: &quot;Lie Detector&quot;, &quot;If the character notices they are being lied to with an Insight check, they home in on what specific information is wrong and get a hint about what the correct information is.&quot;, (a: 27), (a:), &quot;Charming&quot;, 43, 2, True), 
+(a: &quot;Calming Presence&quot;, &quot;The character&#39;s skill at talking others up or down allows them to use the Help action on others&#39; Willpower checks, as well as gain a +3 to Persuasion checks against hostile characters.&quot;, (a: 26, 28), (a:), &quot;Charming&quot;, 44, 2, True), 
 (a: &quot;Flashback&quot;, &quot;The character can make an Insight or Investigation check on any object they find to determine a bit of its recent history.&quot;, (a: 8), (a:), &quot;Keen&quot;, 45, 2, True), 
 (a: &quot;Silent but Deadly&quot;, &quot;Sharp senses make careful movements, and this character uses that to the fullest. If this character is Hidden from the target of one of their effects, they can choose to take another Action against them every 6 seconds in exchange for no longer being Hidden.&quot;, (a: 30), (a:), &quot;Keen&quot;, 46, 1, True), 
 (a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 47, 1, True), 
-(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, (a: 30), (a:), &quot;Keen&quot;, 48, 1, True),
+(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, (a: 30), (a:), &quot;Keen&quot;, 48, 1, True), 
+
+(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, (a: -1), (a:), &quot;Agile&quot;, 50, 100, False), 
+(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, (a: -1), (a:), &quot;Agile&quot;, 51, 100, False), 
+(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, (a: -1), (a:), &quot;Agile&quot;, 52, 100, False), 
+(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used a Technique. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 3d6.&quot;, (a: -1), (a:), &quot;Agile&quot;, 53, 100, False), 
+(a: &quot;&quot;, &quot;When the character takes damage, they can choose to reduce that damage by 2d6 once per 6 seconds.&quot;, , (a:), &quot;Tough&quot;, 54, 100, False), 
+(a: &quot;Black and Blue&quot;, &quot;If the character chooses to make an attack without a weapon, this attack deals 3d6 Bash damage. On a hit, they can choose to move the object or creature 5ft back.&quot;, (a: 6), (a:), &quot;Tough&quot;, 55, 2, True), 
+(a: &quot;Weapons Specialist&quot;, &quot;The character can treat any weapon they have used before at least once as if it has one proficiency point. However, they do not get the +1 bonus to rolls to hit or damage.&quot;, (a: -1), (a:), &quot;Astute&quot;, 56, 100, False), 
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -2, 0), 
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -1, 0)
@@ -2278,7 +2304,9 @@ Proficiency: 2 Bonus Proficiency Points between Flair and Persuasion.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 4&#39;s 2)</tw-passagedata><tw-passagedata pid="58" name="Faithful" tags="" position="1175,850" size="100,100">$H3[Faithful]
 The world is filled with forces beyond comprehension; some, almost sapient. Those with strong faith have dedicated their time to learning about those forces and working alongside them for a purpose. While some choose their own purpose, others find themselves corrupted by the forces around them and are compelled to act alongside their force&#39;s will.
 Proficiency: 2 Bonus Proficiency Points between History and Religion.
-Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)</tw-passagedata><tw-passagedata pid="59" name="Agile" tags="" position="1175,350" size="100,100">$H3[Agile]
+Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)
+All of the abilities associated with specific entities can be seen [[here-&gt;Divine Blessings List]].
+A list of the entities themselves can be seen [[here-&gt;Deities and Forces of Nature]].</tw-passagedata><tw-passagedata pid="59" name="Agile" tags="" position="1175,350" size="100,100">$H3[Agile]
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
 Proficiency: 2 Bonus Proficiency Points between Acrobatics and Dodge.
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 10&#39;s 2)</tw-passagedata><tw-passagedata pid="60" name="Tactical" tags="unused" position="3425,625" size="100,100">$H3[Tactical]
@@ -2907,23 +2935,23 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 &lt;!--initializes weapons for the TWO ACTION SYSTEM--&gt;
 (set:$weaponsMaster to (a:
 
-(a: &quot;Shiv&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
+(a: &quot;Shiv&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) IIf the raw roll on the die of the Handiwork check was an even number, the target gains Plagued 4/1 (Rust Poisoning).&quot;, 1, 5),
 (a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
 (a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
-(a: &quot;Shortsword&quot;, &quot;Handiwork check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Giant Scissors&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target that is grappled. Deals 4d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Fisticuffs check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target that is grappled. Deals 2d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
 (a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
 (a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 12 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
 (a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
-(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user.&quot;, 1, 5),
-(a: &quot;Shortbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user or the target is within 45ft.&quot;, 1, 5),
+(a: &quot;Shortbow&quot;, &quot;Acrobatics check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Acrobatics check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 5),
 (a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slice) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Machete&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
 (a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Bash, Slice, or Pierce damage.&quot;, 1, 5),
 (a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
 (a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
-(a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
-(a: &quot;Weaponized Tail&quot;, &quot;Acrobatics or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(2+) When the character uses this tool, they can use it again as part of the same action, dealing 2d6 this time.&quot;, 0, -1)
+(a: &quot;Gauntlets&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Weaponized Tail&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(2+) When the character uses this tool, they can use it again as part of the same action, dealing 2d6 this time.&quot;, 0, -1),
 
 ))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,625" size="100,100">{
 (set:$pop to 
@@ -3132,7 +3160,7 @@ $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1725,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2250,1800" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1725,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2250,1825" size="100,100">$H2[Theodora City]
 
 $H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="95" name="Euridza" tags="" position="1725,600" size="100,100">$H2[Euridza: The Realm of Dreams]
 </tw-passagedata><tw-passagedata pid="96" name="Astute" tags="" position="1175,475" size="100,100">$H3[Astute]
@@ -3296,11 +3324,12 @@ Fragmented memories, power spiraling out of control, and constant rejection– s
 Features:
 &lt;b&gt;Mutable.&lt;/b&gt; Remagi have a variety of mutations based off of their Valdien body. Choose one of the following:
 &lt;p&gt;&lt;i&gt;Heat Zone&lt;/i&gt;. The Remagus has resistance to one of Fire or Freezing damage, and vulnerability to the other. (Corresponds to Comfortable.)
-&lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 1T every 6 seconds. This movement does not cost an Action. (Corresponds to Acrobatic.)
+&lt;p&gt;&lt;i&gt;Scrambler&lt;/i&gt;. The Remagus is immune to fall damage, and has a climb speed of 30ft, but must move 5ft every 6 seconds. If the Remagus does not use a Move Action, they will move 5ft in a random direction without consuming an Action. (Corresponds to Acrobatic.)
 &lt;p&gt;&lt;i&gt;Moonlit Sight&lt;/i&gt;. The Remagus has blindsight 90ft and advantage to Perception checks when they cannot see. However, they have disadvantage to Perception and Handiwork checks in bright light. (Corresponds to Acute Hearing.)
-&lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 9T. (Corresponds to Aquatic.)
+&lt;p&gt;&lt;i&gt;Hydrophilic&lt;/i&gt;. The Remagus cannot drown, and has a swim speed of 45ft. (Corresponds to Aquatic.)
 &lt;p&gt;&lt;i&gt;Bulky&lt;/i&gt;. The Remagus&#39;s carry weight increases by (print: (ceil: 2.5 * $baseCarryAdd)) slots, their weight is doubled, and they have advantage to Sturdy saves. (Corresponds to Buff.)
-&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, gains a +2 bonus to Intimidation checks, and can add 1d4 damage of the same type as their magic to all unarmed strikes. (Corresponds to Weird.)
+&lt;p&gt;&lt;i&gt;Monstrous&lt;/i&gt;. The Remagus is unrecognizable as their Valdien self, gains a +2 bonus to Intimidation checks, and can add 1d6 damage of the same type as their magic to all attacks they make without a weapon. (Corresponds to Weird.)
+&lt;b&gt;Fading Valdienity.&lt;/b&gt; The Remagus&#39;s base HP is reduced by 2 (this stacks with any boons that modify HP.) As well, when the Remagus is reduced to 0 HP, they must succeed on a DC 10 Willpower save or Frenzy for 3 turns. When Frenzying, they ignore the effects of having less than 1 HP, and are hostile towards all creatures nearby, prioritizing creatures with higher Mag bonuses over others.
 
 &#96;[&#96;image&#96;]&#96;
 *Generally appear similar to their appearance as a Valdien. Their magic ability heavily influences their appearance, turning hair and extremities into other substances, such as water or lightning, only taking the shape of the original parts. The longer the Remagus was dead before being revived, the less they look like their Valdien self.</tw-passagedata><tw-passagedata pid="106" name="Valdien" tags="table" position="925,1225" size="100,100">$H2[Valdien]
@@ -3380,7 +3409,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Fur colors can be anything seen on hares and rabbits. Fur can start as low as the thighs or as high as the chest, but leg shape is always digitigrade. Hair color often matches fur color, but not always. Hair can be streaky or have a gradient.</tw-passagedata><tw-passagedata pid="108" name="Boons and Banes" tags="" position="800,600" size="100,100">$H2[Boons and Traits]
-⚠️ Flavor Text Under Construction ⚠️
+⚠️ Under Construction ⚠️
 
 $H3[Boons]
 A character starts with one Boon at creation.
@@ -3393,15 +3422,15 @@ The character&#39;s base MP is (print:$baseMP + 2) instead of $baseMP.
 
 $H4[Animal Companion]
 The character starts with an animal companion. Choose one of the following:
-* Pet &lt;br&gt;This animal has a movement speed of 6T in a style that makes the most sense for it. It cannot attack, but it can carry objects that would be reasonable for it to carry, and is fully loyal to the character. It has $baseHP HP, 8 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. Taking a Long Rest with the pet while it is in good condition will restore 2 Sanity.
-* Steed &lt;br&gt;This animal has a movement speed of 9T walk. It cannot attack, but has a Carrying Capacity of (print: 4 * $baseCarry). The character can ride the steed and equip it with bags. It has $baseHP HP, 10 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2.
-* Hunting Animal &lt;br&gt;This animal has a movement speed of 6T in a style that makes the most sense for it. It has (print: 2 *(ceil:0.35 * $baseHP)) HP, 12 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. It can attack, using either its Dex or Str modifier as its bonus to hit, and deals a total of 2 damage, or 1 damage if its speed is a Fly speed.
+* Pet &lt;br&gt;This animal has a movement speed of 30ft in a style that makes the most sense for it. It cannot attack, but it can carry objects that would be reasonable for it to carry, and is fully loyal to the character. It has $baseHP HP, 8 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. Taking a Respite with the pet while it is in good condition will restore 3 Sanity if the campaign has the Alt Ruleset for Sanity.
+* Steed &lt;br&gt;This animal has a movement speed of 45ft walk. It cannot attack, but has a Carrying Capacity of (print: 4 * $baseCarry). The character can ride the steed and equip it with bags. It has $baseHP HP, 10 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2.
+* Hunting Animal &lt;br&gt;This animal has a movement speed of 30ft in a style that makes the most sense for it. It has (print: 2 *(ceil:0.35 * $baseHP)) HP, 12 AC, and stats with an average bonus of +0 and maximum bonuses of +/- 2. It can attack, using either its Dex or Str modifier as its bonus to hit, and deals a total of 2 damage, or 1 damage if its speed is a Fly speed.
 
 $H4[God&#39;s Mark]
 The character starts with a god&#39;s mark, and can be recognized by followers of that god for their history.
 
 $H4[Well-Off]
-The character starts with (print:(ceil: $baseInvPoints * 0.6) * 2) Inventory Points.(if:$campaign is &quot;XA&quot; or it is &quot;??&quot;)[
+The character starts with (if:$campaign is &quot;NH&quot;)[(print:(ceil: $maxInvPoints * 0.6) * 2)](else:)[(print:$maxInvPoints * 2)] Inventory Points.
 
 $H4[Cybernetic Enhancement]
 The character starts with a cybernetic enhancement made of living wood and magic crystal. Choose one of the following:
@@ -3422,8 +3451,8 @@ CT  (Combat Test)
 ??  (Any)
 ]
 &lt;!--DEFAULT THEMES--&gt;
-(set:$campaign to &quot;XA&quot;)
-(set:$themeChosen to $themeEastern)
+(set:$campaign to &quot;NH&quot;)
+(set:$themeChosen to $themeNightHunt)
 
 &lt;!--HEALTH--&gt;
 (set:$baseHP to 10)
@@ -3499,7 +3528,7 @@ A character can only hold 4 Slots&#39; worth of items on their person without an
 &lt;p&gt;There are also ways of transporting items that bypass this limit, such as using a yak or blorse to carry the items.
 
 $H3[Starting Out]&lt;making|
-Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $baseInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
+Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $maxInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
 &lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="113" name="ManageHistory" tags="code" position="2375,875" size="100,100">{
 (if: $managedHist&#39;s length &gt; 0)[ &lt;!--no short circuiting--&gt;
 	(if:(passage:)&#39;s name is not $managedHist&#39;s last)[
@@ -3917,7 +3946,7 @@ The definition of an Exterreri varies, but they are always Nightmare Creatures. 
 		&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Lifespan: &lt;b&gt;???&lt;/b&gt;&lt;/td&gt;
-		&lt;td&gt;Maturity: &lt;b&gt;30 Long Rests&lt;/b&gt;&lt;/td&gt;
+		&lt;td&gt;Maturity: &lt;b&gt;30 Rests&lt;/b&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td colspan=&quot;2&quot;&gt;\
@@ -4007,7 +4036,227 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
-&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="129" name="Eastern Continent Stuff" tags="section" position="3100,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+&lt;p&gt;Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="129" name="Eastern Continent Stuff" tags="section" position="3100,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="130" name="Point Buy Calculator" tags="" position="800,975" size="100,100">{(set:$totalPoints to 38)(set:$pointThreshold to 13)
+&lt;!--if GREATER THAN threshold, increase by 2 per one increase--&gt;
+&lt;!--math derived from UPB, credit smorebob--&gt;
+(set:_pbStr to 10)
+(set:_pbDex to 10)
+(set:_pbCon to 10)
+(set:_pbKno to 10)
+(set:_pbWis to 10)
+(set:_pbCha to 10)
+(set:_pbMag to 10)
+(set:_minVal to 6)
+(set:$maxVals to (a:7,8,9,10,11,12,13,-1,14,-1,15,-1,16,-1,17))
+}[
+Points Remaining: {(set: $remPoints to 
+	$totalPoints - 
+	(_pbStr - 6 + (max: 0, _pbStr - 13)) -
+	(_pbDex - 6 + (max: 0, _pbDex - 13)) -
+	(_pbCon - 6 + (max: 0, _pbCon - 13)) - 
+	(_pbKno - 6 + (max: 0, _pbKno - 13)) - 
+	(_pbWis - 6 + (max: 0, _pbWis - 13)) - 
+	(_pbCha - 6 + (max: 0, _pbCha - 13)) - 
+	(_pbMag - 6 + (max: 0, _pbMag - 13))
+)(print:$remPoints)
+&lt;!--CURRENT BUG: NEED TO ADD THE VALUE OF THE STAT BEING INCREASED--&gt;
+&lt;!--TO THE $remPoints VARIABLE--&gt;
+}
+(color:$statColor&#39;s &quot;Strength&quot;)[Str: _pbStr {
+(if:_pbStr &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+	(set:_pointsSpent to $remPoints)
+	(if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+	(if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+		(set:_pointsSpent to it - 1)
+	]
+	(set:_pbStr to $maxVals&#39;s (_pointsSpent))
+	(rerun:?display)
+]]]
+(if:_pbStr &lt; 17)[(link:&quot;+&quot;)[(set:_pbStr to it + 1)(rerun:?display)]]
+ | 
+(if:_pbStr &gt;  6)[(link:&quot;-&quot;)[(set:_pbStr to it - 1)(rerun:?display)]]
+(if:_pbStr &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+	(set:_pbStr to 6)
+	(rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Dexterity&quot;)[Dex: _pbDex {
+(if:_pbDex &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbDex to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbDex &lt; 17)[(link:&quot;+&quot;)[(set:_pbDex to it + 1)(rerun:?display)]]
+ | 
+(if:_pbDex &gt;  6)[(link:&quot;-&quot;)[(set:_pbDex to it - 1)(rerun:?display)]]
+(if:_pbDex &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbDex to 6)
+        (rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Constitution&quot;)[Con: _pbCon {
+(if:_pbCon &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbCon to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbCon &lt; 17)[(link:&quot;+&quot;)[(set:_pbCon to it + 1)(rerun:?display)]]
+ | 
+(if:_pbCon &gt;  6)[(link:&quot;-&quot;)[(set:_pbCon to it - 1)(rerun:?display)]]
+(if:_pbCon &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbCon to 6)
+        (rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Knowledge&quot;)[Kno: _pbKno {
+(if:_pbKno &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbKno to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbKno &lt; 17)[(link:&quot;+&quot;)[(set:_pbKno to it + 1)(rerun:?display)]]
+ | 
+(if:_pbKno &gt;  6)[(link:&quot;-&quot;)[(set:_pbKno to it - 1)(rerun:?display)]]
+(if:_pbKno &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbKno to 6)
+        (rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Wisdom&quot;)[Wis: _pbWis {
+(if:_pbWis &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbWis to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbWis &lt; 17)[(link:&quot;+&quot;)[(set:_pbWis to it + 1)(rerun:?display)]]
+ | 
+(if:_pbWis &gt;  6)[(link:&quot;-&quot;)[(set:_pbWis to it - 1)(rerun:?display)]]
+(if:_pbWis &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbWis to 6)
+        (rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Charisma&quot;)[Cha: _pbCha {
+(if:_pbCha &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbCha to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbCha &lt; 17)[(link:&quot;+&quot;)[(set:_pbCha to it + 1)(rerun:?display)]]
+ | 
+(if:_pbCha &gt;  6)[(link:&quot;-&quot;)[(set:_pbCha to it - 1)(rerun:?display)]]
+(if:_pbCha &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbCha to 6)
+        (rerun:?display)
+]]]
+}]
+(color:$statColor&#39;s &quot;Magic&quot;)[Mag: _pbMag {
+(if:_pbMag &lt; 17)[(size:2)[(link:&quot;+&quot;)[
+        (set:_pointsSpent to $remPoints)
+        (if:_pointsSpent &gt; 15)[(set:_pointsSpent to 15)]
+        (if:_pointsSpent &gt; 7 and (_pointsSpent % 1 is 1))[
+                (set:_pointsSpent to it - 1)
+        ]
+        (set:_pbMag to $maxVals&#39;s (_pointsSpent))
+        (rerun:?display)
+]]]
+(if:_pbMag &lt; 17)[(link:&quot;+&quot;)[(set:_pbMag to it + 1)(rerun:?display)]]
+ | 
+(if:_pbMag &gt;  6)[(link:&quot;-&quot;)[(set:_pbMag to it - 1)(rerun:?display)]]
+(if:_pbMag &gt; _minVal)[(size:2)[(link:&quot;-&quot;)[
+        (set:_pbMag to 6)
+        (rerun:?display)
+]]]
+}]
+]&lt;display|</tw-passagedata><tw-passagedata pid="131" name="Eupharia Stuff" tags="section" position="2400,1700" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="132" name="Divine Blessings List" tags="" position="1525,1350" size="100,100">$H2[Divine Blessings List]
+(set:_sortByNum to 4)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
+|SortBy&gt;[Sort by: {
+	(if:_sortByNum is 4)[Entity | (link:&quot;Skill&quot;)[
+		(set:(_sortByNum) to 3)
+		(rerun:?SortBy)
+	]](else-if:_sortByNum is 3)[(link:&quot;Entity&quot;)[
+		(set:(_sortByNum) to 4)
+		(rerun:?SortBy)
+	] | Skill]
+	(set:_index to 0)
+}\
+{
+&lt;!--header--&gt;
+(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	Name
+	|||||=
+	Description
+	|=
+	Skill
+	||=
+	Entity
+]
+&lt;!--table body--&gt;
+(for: each (_tag), 
+	...(sorted: via its (_sortByNum), 
+		...$divineMaster
+		)
+)[{
+	(if:_index % 2 is 1)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	(print:_tag&#39;s 1)
+	|||||=
+	(print:_tag&#39;s 2)
+	|=
+	(print:_tag&#39;s 3)
+	||=
+	(print:_tag&#39;s 4)
+	]
+	](else:)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
+	||=
+	(print:_tag&#39;s 1)
+	|||||=
+	(print:_tag&#39;s 2)
+	|=
+	(print:_tag&#39;s 3)
+	||=
+	(print:_tag&#39;s 4)
+	]
+	]
+(set:_index to it + 1)}]}\
+]\
+&lt;!--this is spaghetti code--&gt;\
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="133" name="DivineBlessingsInit" tags="data-storage" position="2625,250" size="100,100">{(set:$divineMaster to (a:
+
+(a: &quot;Seeing Ghosts&quot;, &quot;The character sees flashes of the corresponding location in Euridza, seeing whatever spirits are in the area. Sometimes, the spirits will warn them of nearby danger, or give them hints.&quot;, &quot;Divine Spirit&quot;, &quot;Queen of Nightmares&quot;), 
+(a: &quot;Whispers&quot;, &quot;With the whispers of spirits, all Investigation and Insight checks within 10ft of the character gain a +2 bonus.&quot;, &quot;Sigil of Power&quot;, &quot;Queen of Nightmares&quot;), 
+(a: &quot;Oozing and Festering&quot;, &quot;The character does not take damage from the Plagued (Bleeding) condition, as their blood coagulates into thick black sludge. Feeding this blood to a creature or rubbing it into their wounds (the latter of which can be done on a successful Fisticuffs check against the Def of the target, if they are not at full health) causes them to become disoriented and twitchy, gaining Stun I every 6 seconds.&quot;, &quot;Divine Spirit&quot;, &quot;Rattzlagi&quot;), 
+(a: &quot;Eternal Life?&quot;, &quot;The character will not permanently die, instead only being unstable until something makes them stable again, such as HP recovery or a Medicine check. When below half of their maximum health, they can attack organic creatures with a Bite attack using 2 actions, which counts as an attack without a weapon, is an Acrobatics or Athletics check against the target&#39;s Def, and deals 1d6 + 2 Pierce damage. On a success, the character regains the damage they just dealt as HP.&quot;, &quot;??&quot;, &quot;Rattzlagi&quot;), 
+(a: &quot;As a River&quot;, &quot;Skimming the flow of fate, the character can roll 1d20 each time they take a Short Rest. They can replace one 1d20 roll that they witness with that number as fate reorients to their benefit.&quot;, &quot;Divine Spirit&quot;, &quot;Rekke Panthali&quot;), 
+(a: &quot;Constant Flow&quot;, &quot;Within 10ft of the character, critical failures may be rerolled once. If the resulting roll is another critical failure, it is kept-- some things are meant to be.&quot;, &quot;Sigil of Power&quot;, &quot;Rekke Panthali&quot;), 
+(a: &quot;??&quot;, &quot;TBD&quot;, &quot;Divine Purpose&quot;, &quot;Queen of Nightmares&quot;), 
+(a: &quot;Rotten Inside&quot;, &quot;Desecrating corpses after killing creatures will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rattzlagi&quot;), 
+(a: &quot;Having Faith&quot;, &quot;Rekke Panthali will give the character visions. Acting to fulfill these visions will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rekke Panthali&quot;)
+
+))}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

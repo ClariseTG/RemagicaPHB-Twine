@@ -214,7 +214,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -244,9 +246,11 @@ $HB2+(box:&quot;X&quot;, 15)[\
 
 [[Damage-&gt;Damage]]
 
-[[Long and Short Rests]]
+[[Downtime]]
 
-[[Combat]]\
+[[Combat]]
+
+[[Summon, Form, and Terrain Tags]]\
 (if:$campaign is &quot;CT&quot;)[
 
 ⭐[[Combat Test]]⭐
@@ -287,7 +291,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.3.7 / 4.4.CT - 2025-4-10*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.4.0 / 4.CT.X - 2025-6-20*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -371,9 +375,9 @@ Array
 (set:$tableIsIncluded to false)
 (set:$future to (a:))
 
-
-
+&lt;!--custom macros--&gt;
 {(display:&quot;Popup&quot;)}
+{(display:&quot;prereqPrint&quot;)}
 }</tw-passagedata><tw-passagedata pid="5" name="Formatting Header" tags="header" position="100,600" size="100,100">{
 
 (set:$pageUrl to (page-url:))
@@ -982,7 +986,7 @@ $H3[Misc]
 [[Conditions]]
 [[Deities and Forces of Nature]]
 [[Divine Blessings List]]
-[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Long and Short Rests" tags="done" position="600,750" size="100,100">$H2[Downtime]
+[[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Downtime" tags="done" position="600,750" size="100,100">$H2[Downtime]
 
 When characters are not actively adventuring or achieving goals, they are on Downtime! Being on Downtime is a healing experience, recovering a character&#39;s energy after their ordeals. They can also still grow during downtime through practice!
 
@@ -2201,17 +2205,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 	
 	$H5[(print:_skill&#39;s 5)]&lt;br&gt;
 	&lt;!--print prerequisites--&gt;\
-	(print:&quot;Prerequisites: &quot;)
-	(for:each _prereq, ...(_skill&#39;s 3))[
-		(print:
-			&quot;(link-repeat:\&quot;&quot; + 
-			$skillsMaster&#39;s (_prereq)&#39;s 1 +
-			&quot;\&quot;)[(scroll: ?page, ?s&quot; + 
-			(string:(_prereq)) + 
-			&quot;)]&quot;)
-		&lt;!--no code for multiple prereqs bc thats--&gt;
-		&lt;!--a challenge for the astro version--&gt;
-	]
+	Prerequisites: ($prereqPrint: _skill&#39;s 3)
 	&lt;br&gt;
 	(print: &quot;Unlocks: &quot;)(set:_unlockArr to (a:))
 	(for:each _unlock, ...(_skill&#39;s 4))[
@@ -2226,62 +2220,64 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 ]
 [[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="54" name="SkillsInit" tags="data-storage" position="2250,250" size="100,100">(set:$skillsMaster to (a:
 
-(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, (a: 10), (a:), &quot;Agile&quot;, 1, 1, True), 
-(a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, (a: 36), (a:), &quot;Tough&quot;, 2, 3, True), 
-(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, (a: 14), (a:), &quot;Astute&quot;, 3, 1, True), 
-(a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work. They cannot target the same creature more than once with this skill within a 6 second span.&quot;, (a: -2), (a:), &quot;Creative&quot;, 4, 0, True), 
-(a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 5, 0, False), 
-(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, (a: -2), (a:), &quot;Tough&quot;, 6, 0, True), 
-(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, (a: -1), (a:), &quot;Keen&quot;, 7, 100, False), 
-(a: &quot;Moment of Truth&quot;, &quot;Once per Long Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, (a: 30), (a:), &quot;Keen&quot;, 8, 1, True), 
-(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, (a: 24), (a:), &quot;Agile&quot;, 9, 2, True), 
-(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage or make a save, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes. This skill can only be used once every 6 seconds.&quot;, (a: -2), (a:), &quot;Agile&quot;, 10, 0, True), 
-(a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion, Invention or Flair check in an attempt to force it to pass.&quot;, (a: 4), (a:), &quot;Creative&quot;, 11, 1, True), 
-(a: &quot;Hidden Purpose&quot;, &quot;When the character succeeds a Invention check to make an improvised tool or weapon, it is good enough that users of said tool or weapon can gain the full bonuses of proficiency, as if the tool or weapon was a normal version.&quot;, (a: 4), (a:), &quot;Creative&quot;, 12, 1, True), 
-(a: &quot;Stratagem&quot;, &quot;The character can choose to give one other character advantage on their next check or roll to hit by taking one Action to suggest a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, (a: 14), (a:), &quot;Astute&quot;, 13, 1, True), 
-(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check.&quot;, (a: -2), (a:), &quot;Astute&quot;, 14, 0, True), 
-(a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 10), (a:), &quot;Agile&quot;, 15, 1, True), 
-(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, (a: -1), (a:), &quot;Tough&quot;, 16, 100, False), 
-(a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, (a: 14), (a:), &quot;Astute&quot;, 17, 1, True), 
-(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, (a: 3), (a:), &quot;Astute&quot;, 18, 2, True), 
-(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 19, 1, True), 
-(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 20, 1, True), 
-(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, (a: 42), (a:), &quot;Faithful&quot;, 21, 1, True), 
-(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, (a: 37), (a:), &quot;Tough&quot;, 22, 2, True), 
-(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, (a: 6), (a:), &quot;Tough&quot;, 23, 1, True), 
-(a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as part of the same Action once per six seconds.&quot;, (a: 10), (a:), &quot;Agile&quot;, 24, 1, True), 
-(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, (a: -2), (a:), &quot;Charming&quot;, 25, 0, True), 
-(a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past, to a maximum of 7.&quot;, (a: 25), (a:), &quot;Charming&quot;, 26, 1, True), 
-(a: &quot;Mental Pinboard&quot;, &quot;This character can make an Insight check on a creature to gain specific information from little details, such as pet hair on clothing or smudged lipstick.&quot;, (a: 25), (a:), &quot;Charming&quot;, 27, 1, True), 
-(a: &quot;Storyteller&quot;, &quot;An experienced teller of tall tales, the character can use movement, magic, and anything else at their disposal to better communicate a story. They can add half of their Flair proficiency, rounded down, to their Persuasion checks.&quot;, (a: 25), (a:), &quot;Charming&quot;, 28, 1, True), 
-(a: &quot;Seasoned&quot;, &quot;The character can choose a single expertise to become a Deep Expertise, which grants them a +5 instead of a +3.&quot;, (a: 17), (a:), &quot;Astute&quot;, 29, 2, True), 
-(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, (a: -2), (a:), &quot;Keen&quot;, 30, 0, True), 
-(a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 31, 2, True), 
-(a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, (a: 21), (a:), &quot;Faithful&quot;, 32, 2, True), 
-(a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, (a: 20), (a:), &quot;Faithful&quot;, 33, 2, True), 
-(a: &quot;Five Swords&quot;, &quot;When the character makes an attack without using a tool, they deal 2d6, and can choose to attack again as part of the same action, for the same damage. (CT: These attacks deal 2d6 and only cost one Action.) As well, they can add their Fisticuffs proficiency plus either their Dex or Str bonus to hit. They can also choose to make these unarmed attacks Techniques, which they can unlock in later skills.&quot;, (a: 24), (a:), &quot;Agile&quot;, 34, 2, True), 
-(a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 35, 1, True), 
-(a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, (a: 37), (a:), &quot;Tough&quot;, 36, 2, True), 
-(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, (a: 6), (a:), &quot;Tough&quot;, 37, 1, True), 
-(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, (a: 6), (a:), &quot;Tough&quot;, 38, 1, True), 
-(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, (a: 10), (a:), &quot;Agile&quot;, 39, 1, True), 
-(a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, (a: 11), (a:), &quot;Creative&quot;, 40, 2, True), 
-(a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, (a: 4), (a:), &quot;Creative&quot;, 41, 1, True), 
-(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, (a: -2), (a:), &quot;Faithful&quot;, 42, 0, True), 
-(a: &quot;Lie Detector&quot;, &quot;If the character notices they are being lied to with an Insight check, they home in on what specific information is wrong and get a hint about what the correct information is.&quot;, (a: 27), (a:), &quot;Charming&quot;, 43, 2, True), 
-(a: &quot;Calming Presence&quot;, &quot;The character&#39;s skill at talking others up or down allows them to use the Help action on others&#39; Willpower checks, as well as gain a +3 to Persuasion checks against hostile characters.&quot;, (a: 26, 28), (a:), &quot;Charming&quot;, 44, 2, True), 
-(a: &quot;Flashback&quot;, &quot;The character can make an Insight or Investigation check on any object they find to determine a bit of its recent history.&quot;, (a: 8), (a:), &quot;Keen&quot;, 45, 2, True), 
-(a: &quot;Silent but Deadly&quot;, &quot;Sharp senses make careful movements, and this character uses that to the fullest. If this character is Hidden from the target of one of their effects, they can choose to take another Action against them every 6 seconds in exchange for no longer being Hidden.&quot;, (a: 30), (a:), &quot;Keen&quot;, 46, 1, True), 
-(a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, (a: 30), (a:), &quot;Keen&quot;, 47, 1, True), 
-(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, (a: 30), (a:), &quot;Keen&quot;, 48, 1, True), 
+(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 1, 1, True), 
+(a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, &quot;{36}&quot;, (a:), &quot;Tough&quot;, 2, 3, True), 
+(a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 3, 1, True), 
+(a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work. They cannot target the same creature more than once with this skill within a 6 second span.&quot;, &quot;Talent: Creative&quot;, (a:), &quot;Creative&quot;, 4, 0, True), 
+(a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, &quot;Talent: Faithful&quot;, (a:), &quot;Faithful&quot;, 5, 0, False), 
+(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, &quot;Talent: Tough&quot;, (a:), &quot;Tough&quot;, 6, 0, True), 
+(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, &quot;N/A&quot;, (a:), &quot;Keen&quot;, 7, 100, False), 
+(a: &quot;Moment of Truth&quot;, &quot;Once per Long Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 8, 1, True), 
+(a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, &quot;{24}&quot;, (a:), &quot;Agile&quot;, 9, 2, True), 
+(a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage or make a save, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes. This skill can only be used once every 6 seconds.&quot;, &quot;Talent: Agile&quot;, (a:), &quot;Agile&quot;, 10, 0, True), 
+(a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion, Invention or Flair check in an attempt to force it to pass.&quot;, &quot;{4}&quot;, (a:), &quot;Creative&quot;, 11, 1, True), 
+(a: &quot;Hidden Purpose&quot;, &quot;When the character succeeds a Invention check to make an improvised tool or weapon, it is good enough that users of said tool or weapon can gain the full bonuses of proficiency, as if the tool or weapon was a normal version.&quot;, &quot;{4}&quot;, (a:), &quot;Creative&quot;, 12, 1, True), 
+(a: &quot;Stratagem&quot;, &quot;The character can choose to give one other character advantage on their next check or roll to hit by taking one Action to suggest a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 13, 1, True), 
+(a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check.&quot;, &quot;Talent: Astute&quot;, (a:), &quot;Astute&quot;, 14, 0, True), 
+(a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 15, 1, True), 
+(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, &quot;N/A&quot;, (a:), &quot;Tough&quot;, 16, 100, False), 
+(a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 17, 1, True), 
+(a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, &quot;{3}&quot;, (a:), &quot;Astute&quot;, 18, 2, True), 
+(a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 19, 1, True), 
+(a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 20, 1, True), 
+(a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 21, 1, True), 
+(a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, &quot;{37}&quot;, (a:), &quot;Tough&quot;, 22, 2, True), 
+(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 23, 1, True), 
+(a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as part of the same Action once per six seconds.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 24, 1, True), 
+(a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, &quot;Talent: Charming&quot;, (a:), &quot;Charming&quot;, 25, 0, True), 
+(a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past, to a maximum of 7.&quot;, &quot;{25}&quot;, (a:), &quot;Charming&quot;, 26, 1, True), 
+(a: &quot;Mental Pinboard&quot;, &quot;This character can make an Insight check on a creature to gain specific information from little details, such as pet hair on clothing or smudged lipstick.&quot;, &quot;{25}&quot;, (a:), &quot;Charming&quot;, 27, 1, True), 
+(a: &quot;Storyteller&quot;, &quot;An experienced teller of tall tales, the character can use movement, magic, and anything else at their disposal to better communicate a story. They can add half of their Flair proficiency, rounded down, to their Persuasion checks.&quot;, &quot;{25}&quot;, (a:), &quot;Charming&quot;, 28, 1, True), 
+(a: &quot;Seasoned&quot;, &quot;The character can choose a single expertise to become a Deep Expertise, which grants them a +5 instead of a +3.&quot;, &quot;{17}&quot;, (a:), &quot;Astute&quot;, 29, 2, True), 
+(a: &quot;★Wary&quot;, &quot;The character&#39;s passive Perception and Aura are raised by 10, and they can take the Hide action as a Free action once per Short Rest.&quot;, &quot;Talent: Keen&quot;, (a:), &quot;Keen&quot;, 30, 0, True), 
+(a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, &quot;{20}&quot;, (a:), &quot;Faithful&quot;, 31, 2, True), 
+(a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, &quot;{21}&quot;, (a:), &quot;Faithful&quot;, 32, 2, True), 
+(a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, &quot;{20}&quot;, (a:), &quot;Faithful&quot;, 33, 2, True), 
+(a: &quot;Five Swords&quot;, &quot;When the character makes an attack without using a tool, they deal 2d6, and can choose to attack again as part of the same action, for the same damage. &#96;(CT: These attacks deal 2d6 and only cost one Action.)&#96; As well, they can add their Fisticuffs proficiency plus either their Dex or Str bonus to hit. They can also choose to make these unarmed attacks Techniques, which they can unlock in later skills.&quot;, &quot;{24}&quot;, (a:), &quot;Agile&quot;, 34, 2, True), 
+(a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 35, 1, True), 
+(a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, &quot;{37}&quot;, (a:), &quot;Tough&quot;, 36, 2, True), 
+(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 37, 1, True), 
+(a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 38, 1, True), 
+(a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 39, 1, True), 
+(a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, &quot;{11}&quot;, (a:), &quot;Creative&quot;, 40, 2, True), 
+(a: &quot;Many-Faced&quot;, &quot;The character’s proficiency with self-decoration allows them to blend in with any crowd. They have advantage on Persuasion checks to pretend they belong in a space.&quot;, &quot;{4}&quot;, (a:), &quot;Creative&quot;, 41, 1, True), 
+(a: &quot;★Divine Spirit&quot;, &quot;The character has an unusual connection to one of this world&#39;s gods, whether through accident or worship. They see signs of their deity where others do not, and know how to bring out their influence. Choose a god; the character gains the Divine Spirit buff related to that god, as seen in the [[gods-&gt;Deities and Forces of Nature]] page.&quot;, &quot;Talent: Faithful&quot;, (a:), &quot;Faithful&quot;, 42, 0, True), 
+(a: &quot;Lie Detector&quot;, &quot;If the character notices they are being lied to with an Insight check, they home in on what specific information is wrong and get a hint about what the correct information is.&quot;, &quot;{27}&quot;, (a:), &quot;Charming&quot;, 43, 2, True), 
+(a: &quot;Calming Presence&quot;, &quot;The character&#39;s skill at talking others up or down allows them to use the Help action on others&#39; Willpower checks, as well as gain a +3 to Persuasion checks against hostile characters.&quot;, &quot;{0026} or {0028}&quot;, (a:), &quot;Charming&quot;, 44, 2, True), 
+(a: &quot;Flashback&quot;, &quot;The character can make an Insight or Investigation check on any object they find to determine a bit of its recent history.&quot;, &quot;{8}&quot;, (a:), &quot;Keen&quot;, 45, 2, True), 
+(a: &quot;Silent but Deadly&quot;, &quot;Sharp senses make careful movements, and this character uses that to the fullest. If this character is Hidden from the target of one of their effects, they can choose to take another Action against them every 6 seconds in exchange for no longer being Hidden.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 46, 1, True), 
+(a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 47, 1, True), 
+(a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 48, 1, True), 
 
-(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, (a: -1), (a:), &quot;Agile&quot;, 50, 100, False), 
-(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, (a: -1), (a:), &quot;Agile&quot;, 51, 100, False), 
-(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, (a: -1), (a:), &quot;Agile&quot;, 52, 100, False), 
-(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used a Technique. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 3d6.&quot;, (a: -1), (a:), &quot;Agile&quot;, 53, 100, False), 
-(a: &quot;&quot;, &quot;When the character takes damage, they can choose to reduce that damage by 2d6 once per 6 seconds.&quot;, , (a:), &quot;Tough&quot;, 54, 100, False), 
-(a: &quot;Black and Blue&quot;, &quot;If the character chooses to make an attack without a weapon, this attack deals 3d6 Bash damage. On a hit, they can choose to move the object or creature 5ft back.&quot;, (a: 6), (a:), &quot;Tough&quot;, 55, 2, True), 
-(a: &quot;Weapons Specialist&quot;, &quot;The character can treat any weapon they have used before at least once as if it has one proficiency point. However, they do not get the +1 bonus to rolls to hit or damage.&quot;, (a: -1), (a:), &quot;Astute&quot;, 56, 100, False), 
+(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 50, 100, False), 
+(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 51, 100, False), 
+(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 52, 100, False), 
+(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used a Technique. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 3d6.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 53, 100, False), 
+(a: &quot;&quot;, &quot;When the character takes damage, they can choose to reduce that damage by 2d6 once per 6 seconds.&quot;, &quot;N/A&quot;, (a:), &quot;Tough&quot;, 54, 100, False), 
+(a: &quot;Black and Blue&quot;, &quot;If the character chooses to make an attack without a weapon, this attack deals 3d6 Bash damage. On a hit, they can choose to move the object or creature 5ft back.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 55, 2, True), 
+(a: &quot;Weapons Specialist&quot;, &quot;The character can treat any weapon they have used before at least once as if it has one proficiency point, gaining its secondary effect. However, they do not get the +1 bonus to rolls to hit or damage.&quot;, &quot;N/A&quot;, (a:), &quot;Astute&quot;, 56, 100, False), 
+(a: &quot;&quot;, &quot;&quot;, &quot;&quot;, (a:), &quot;Astute&quot;, 57, 100, False), 
+(a: &quot;Sigil of Power II&quot;, &quot;The sigil in the character&#39;s aura grows in influence, and they gain the second buff on their God Power list for their god.&quot;, &quot;{31}&quot;, (a:), &quot;Faithful&quot;, 58, 3, True),  
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -2, 0), 
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -1, 0)
@@ -3505,7 +3501,7 @@ CT  (Combat Test)
 
 
 (set:$assetLogo to (a:&quot;assets/logo_dark.svg&quot;, &quot;assets/logo_light.svg&quot;, &quot;assets/logo_gray.svg&quot;, &quot;assets/logo_thalass.svg&quot;, &quot;assets/logo_eastern.svg&quot;, &quot;assets/logo_nighthunt.svg&quot;))
-(set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_mint.svg&quot;))
+(set:$assetStar to (a:&quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_dark.svg&quot;, &quot;assets/star_icon_light.svg&quot;, &quot;assets/star_icon_mint.svg&quot;, &quot;assets/star_icon_dark.svg&quot;))
 
 }</tw-passagedata><tw-passagedata pid="111" name="Backstory and Personality" tags="" position="800,725" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="112" name="Inventory" tags="in-progress" position="800,475" size="100,100">$H2[Inventory]
 
@@ -4262,7 +4258,47 @@ Points Remaining: {(set: $remPoints to
 (a: &quot;Rotten Inside&quot;, &quot;Desecrating corpses after killing creatures will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rattzlagi&quot;), 
 (a: &quot;Having Faith&quot;, &quot;Rekke Panthali will give the character visions. Acting to fulfill these visions will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rekke Panthali&quot;)
 
-))}</tw-passagedata></tw-storydata>
+))}</tw-passagedata><tw-passagedata pid="134" name="prereqPrint" tags="code" position="2500,875" size="100,100">{(set:$prereqPrint to (macro: str-type _input, [
+	(set:_output to &quot;&quot;)
+	(set:_numberTemp to &quot;&quot;)
+	(set:_state to 0) 	&lt;!--0: string--&gt;
+						&lt;!--1: number--&gt;
+	(for: each _char, ..._input)[
+		(if:_state is 0)[
+			(if:_char is &quot;{&quot;)[
+				(set:_numberTemp to &quot;&quot;)
+				(set:_state to 1)
+			](else:)[
+				(set:_output to it + _char)
+			]
+		]
+		(else-if:_state is 1)[
+			(if:_char is &quot;}&quot;)[
+				&lt;!--end of number, index and replace--&gt;
+				(set:_index to (number:_numberTemp))
+				(set:_output to it + 
+					&quot;(link-repeat:\&quot;&quot; + 
+					$skillsMaster&#39;s (_index)&#39;s 1 +
+					&quot;\&quot;)[(scroll: ?page, ?s&quot; + 
+					(string:(_index)) + 
+					&quot;)]&quot;)
+				(set:_state to 0)
+			](else:)[
+				(set:_numberTemp to it + _char)
+			]
+		]
+	]
+	(output-data:_output)
+]))}</tw-passagedata><tw-passagedata pid="135" name="Summon, Form, and Terrain Tags" tags="in-progress" position="600,1125" size="100,100">$H2[Summon, Form, and Terrain Tags (and Conditions)]
+
+Tags are modifiers on things, creatures, and spaces that add extra effects. They are divided into three types, corresponding to each of their targets: Summon Tags, for inanimate objects, Form Tags, for creatures, and Terrain Tags, for parts of the terrain or tiles.
+
+Every tag has a name, an effect, an end condition, and optionally, one or more levels, subtypes, and/or DCs. 
+
+&lt;explain the distinction between &quot;add a level of x&quot; and &quot;give tag at level x&quot;&gt;
+
+&lt;specify which tag to use in edge cases: ie, constructs, large objects&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

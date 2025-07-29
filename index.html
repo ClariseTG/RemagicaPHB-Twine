@@ -255,10 +255,6 @@ $HB2+(box:&quot;X&quot;, 15)[\
 [[Summon, Form, and Terrain Tags]]
 
 [[Movement and Range]]\
-(if:$campaign is &quot;CT&quot;)[
-
-⭐[[Combat Test]]⭐
-]\
 ]
 =|=
 $H3[Characters]
@@ -291,7 +287,6 @@ $HB2+(box:&quot;X&quot;, 15)[\
 [[Full Compendium-&gt;Compendium]]\
 ]
 |==|
-{(unless:$campaign is &quot;NH&quot;)[Are you a (link:&quot;Nightmare Hunters&quot;)[(set:$campaign to &quot;NH&quot;)(set:$themeChosen to $themeNightHunt)(go-to:&quot;Homepage&quot;)] player?]}
 
 $H2[Lore]
 [[Thalassophobia]]
@@ -2508,16 +2503,26 @@ Often, a Rank consists of the following:
 * One Health Improvement
 * One Proficiency Point
 * Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="70" name="Magic Ability" tags="table" position="1300,225" size="100,100">$H2[Magic Ability]
+
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
-&lt;p&gt;Often, Abilities are highly specific. Some examples include:
+
+Often, Abilities are highly specific. Some examples include:
+
 * Nikita Theodora has the ability to create a shadowy shell around herself in the shape of a were-fox, augmenting her melee capabilities.
+
 * Linda Flanner can physically shape fire with her hands as if it were clay. It holds its shape and continues burning as long as she&#39;s touching it.
+
 * Felicus can scroll an object&#39;s timeline forwards or backwards relative to everything else, aging or de-aging it based on its new continuity. It can use this power on itself to travel through time.
+
 * Tico can release pheromones that can magically alter someone&#39;s psychic state if inhaled. This can change thought patterns or emotions.
+
 Think of the specific way your character casts magic-- what it does, what it does, creates, or changes. If the magic Ability you have in mind does not fit with any of the Casting Styles or damage types, talk to your DM.
+
 $H3[Casting Style]
+
 A Casting Style is like the magic equivalent of a [[Talent-&gt;Talents and Skills]]; it brings with it a Skill and some rules on how the character&#39;s magic behaves, such as their ranges.
-A character begins with only one Casting Style. Take a look at them below:
+
+Choose a Casting Style for your character. Take a look at them below:
 {&lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;
@@ -2548,11 +2553,15 @@ A character begins with only one Casting Style. Take a look at them below:
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;}
+
+To see how that character could improve at their magic, take a look at the [[Magic Skills List]].
+
 $H3[Damage Types]
-A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which is a shorthand for which natural element the magic has the most similar properties to. For example, magic that manipulates fire would deal &quot;fire damage,&quot; which means that it will be more effective at destroying wooden or flammable objects. However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
-The damage types listed here will lose support after 4.3.x. The list will be updated in 4.4.x.
+
+A character&#39;s magic will primarily deal damage of one &quot;damage type,&quot; which corresponds to the specific type of injury being inflicted. For example, magic that manipulates fire would deal &quot;burn damage,&quot; which means that it will be more effective at destroying wooden or flammable objects, or . However, the idea of a damage type is fairly loose, so depending on how the character uses their magic, the damage type could change.
+
 The damage types are as follows:
-Earth, Fire, Freezing, Life, Light, Lightning, Psychic, Rot, Soul, Sound, Time, Toxin, Water;
+
 Additionally, there are three physical damage types: Bash, Slice, and Pierce.</tw-passagedata><tw-passagedata pid="71" name="CastingStylesInit" tags="data-storage" position="2250,500" size="100,100">{(set:$castingStyles to (a:
 &quot;Borro&quot;,
 &quot;Skathi&quot;,
@@ -2910,32 +2919,36 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 ]\
 &lt;!--this is spaghetti code--&gt;\
 &lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="83" name="WeaponsInit" tags="data-storage" position="2375,375" size="100,100">{
-&lt;!--initializes weapons for the TWO ACTION SYSTEM--&gt;
+&lt;!--initializes weapons for the main system. There is no 2A anymore--&gt;
 (set:$weaponsMaster to (a:
 
-(a: &quot;Shiv&quot;, &quot;Fisticuffs check, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the damage from the shiv is what causes the target to gain a level of Bleeding, the target will gain one level of Plagued from rust poisoning.&quot;, 1, 5),
-(a: &quot;Harpoon&quot;, &quot;Athletics check, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
-(a: &quot;Staff&quot;, &quot;Acrobatics check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
-(a: &quot;Shortsword&quot;, &quot;Fisticuffs check with a +1 from the tool, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Giant Scissors&quot;, &quot;Fisticuffs check, DC Def of target; single target that is grappled. Deals 2d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
-(a: &quot;Rapier&quot;, &quot;Handiwork check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
-(a: &quot;War Hammer&quot;, &quot;Athletics check, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
-(a: &quot;Fishing Rod&quot;, &quot;Handiwork check, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
-(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user. Also, the damage it deals increases to 4d6 if the target is more than 90ft away and level with or below the user.&quot;, 1, 5),
-(a: &quot;Shortbow&quot;, &quot;Acrobatics check at Disadvantage, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage, and the character can choose to use this item a second time, potentially with a different target, in the same action for 1d6 + 2 damage on a hit.&quot;, 1, 5),
-(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, DC Def of target; single target within 5ft. Deals 2d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+)  The character can choose to use this item a second time on the same target in the same action for 1d6 + 2 damage on a hit.&quot;, 1, 5),
-(a: &quot;Machete&quot;, &quot;Fisticuffs check, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slice, Bash, or Pierce damage.&quot;, 1, 5),
-(a: &quot;Battleaxe&quot;, &quot;Athletics check, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains a level of Plagued (Bleeding).&quot;, 1, 5),
-(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
-(a: &quot;Gauntlets&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+)  The character can choose to use this item a second time on the same target in the same action for 1d6 + 2 damage on a hit.&quot;, 1, 5),
-(a: &quot;Claws&quot;, &quot;??&quot;, &quot;??&quot;, 1, 5),
-(a: &quot;Katar&quot;, &quot;??&quot;, &quot;??&quot;, 1, 5),
-(a: &quot;Faded Moonstone Assassin&#39;s Dagger&quot;, &quot;Handiwork check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success. This number increases to 4d6 against a nightmare creature.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success. This number increases to 8d6 against a nightmare creature.&quot;, 1, -1),
-(a: &quot;Faded Moonstone Katar&quot;, &quot;Acrobatics or Fisticuffs check, DC Def of target; single target within 5ft. Deals 1d6 Physical (Pierce) damage on a success. It has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) The character can choose to use this item a second, and then third, time on the same target in the same action for 1d6 Pierce damage per hit. If all three hit, all three attacks are considered critical successes.&quot;, 1, -1),
-(a: &quot;Faded Moonstone War Hammer&quot;, &quot;Athletics check, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Bash) damage on a success. Has a +2 to hit against nightmare creatures.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned. If the target is a nightmare creature, this DC becomes 12 + the user&#39;s total Athletics bonus.&quot;, 2, -1),
+(a: &quot;Shiv&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) IIf the raw roll on the die of the Handiwork check was an even number, the target gains 4/1 levels of Plagued (Rust Poisoning).&quot;, 1, 5),
+(a: &quot;Harpoon&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 10ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Athletics bonus or be moved 5ft closer to the user, if possible.&quot;, 1, 5),
+(a: &quot;Staff&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the attack will leave the target&#39;s defenses open and lower their AC by 2 for 6 seconds.&quot;, 1, 5),
+(a: &quot;Shortsword&quot;, &quot;Fisticuffs check with a +1 from the tool, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) On a critical success, the target gains 8/4 levels of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Giant Scissors&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target that is grappled. Deals 2d6 + 4 Physical (Slice) damage on a success.&quot;, &quot;(1+) Deals 4d6 + 4 Physical (Slice) damage on a success instead of 2d6 + 4.&quot;, 1, 5),
+(a: &quot;Rapier&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) A hit with a rapier counts as a critical hit if the natural die roll is 19 or 20.&quot;, 1, 5),
+(a: &quot;War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned.&quot;, 2, 5),
+(a: &quot;Fishing Rod&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 10ft.&quot;, &quot;(1+) On a success, the target must make a Sturdy check against a DC of 8 + the user&#39;s total Handiwork or Athletics bonus or be moved 5ft to another tile closer or equidistant to the user.&quot;, 1, 5),
+(a: &quot;Longbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 150ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage unless there is a hostile creature within 5ft of the user or the target is within 45ft.&quot;, 1, 10),
+(a: &quot;Shortbow&quot;, &quot;Acrobatics check at Disadvantage, 2 Actions, DC Def of target; single target within 45ft. Deals 1d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Acrobatics check is not at Disadvantage, and using this tool only requires 1 Action.&quot;, 1, 10),
+(a: &quot;Swift Dagger&quot;, &quot;Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Slice) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 times in the same turn, all three hits will be considered critical successes.&quot;, 1, 5),
+(a: &quot;Machete&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Slice) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains 6/1 levels of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Halberd&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Bash, Slice, or Pierce damage.&quot;, 1, 5),
+(a: &quot;Battleaxe&quot;, &quot;Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 + 2 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the raw roll on the die of the Handiwork check was an even number, the target gains 4/1 levels of Plagued (Bleeding).&quot;, 1, 5),
+(a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 4d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
+(a: &quot;Gauntlets&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
+(a: &quot;Weaponized Tail&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(2+) When the character uses this tool, they can use it again as part of the same action, dealing 2d6 this time.&quot;, 0, -1),
+(a: &quot;Claws&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 Physical (Slash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. If it hits 2 or more times in the same turn, the target&#39;s Def is lowered by 2 until the end of the user&#39;s next turn.&quot;, 1, 5),
+(a: &quot;Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 or more times in the same turn, an extra 1d6 + 3 Physical (Pierce) damage is dealt.&quot;, 1, 5),
+(a: &quot;Faded Moonstone Assassin&#39;s Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success. This number increases to 3d6 against a nightmare creature.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 4d6 Physical (Pierce) damage on a success. This number increases to 5d6 against a nightmare creature.&quot;, 1, -1),
+(a: &quot;Faded Moonstone Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success. It has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 times in the same turn, all three hits will be considered critical successes.&quot;, 1, -1),
+(a: &quot;Faded Moonstone War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.
+ Has a +2 to hit against nightmare creatures.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned. If the target is a nightmare creature, this DC becomes 12 + the user&#39;s total Athletics bonus.&quot;, 2, -1),
 (a: &quot;Faded Moonstone Halberd&quot;, &quot;Handiwork or Athletics check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slice, Bash, or Pierce damage.&quot;, 1, -1),
-(a: &quot;Faded Moonstone Greatsword&quot;, &quot;Fisticuffs check, DC Def of target; single target within 10ft. Deals 3d6 + 2 Physical (Bash) damage on a success. Has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) The character can choose to spend both actions to do a sweeping slash, which doubles their bonus to hit and strikes every creature within 10ft on a plane (as in 2d circle) of their choosing.&quot;, 2, -1)
+(a: &quot;Faded Moonstone Greatsword&quot;, &quot;Fisticuffs check, DC Def of target; single target within 10ft. Deals 3d6 Physical (Slice) damage on a success. Has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) The character can choose to spend both actions to do a sweeping slash, which doubles their bonus to hit and strikes every creature within 10ft on a plane (as in 2d circle) of their choosing.&quot;, 2, -1),
+(a: &quot;Crossbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 60ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage. If the user has a combined Handiwork bonus of at least 10, they can use this tool again for only 1 Action if they already used it during this Round.&quot;, 1, 10),
+(a: &quot;Flintlock Pistol&quot;, &quot;Invention check at Disadvantage, 2 Actions, DC Def of target; single target within 30ft. Deals 3d6 Physical (Pierce) damage on a success. On a failure, the pistol will misfire, dealing 1d6 Burn damage to the user.&quot;, &quot;(1+) The Invention check is not at Disadvantage. The pistol only deals damage to the user if the failure is by a margin of 10 or more.&quot;, 1, 10)
 
 ))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,625" size="100,100">{
 (set:$pop to 
@@ -3656,7 +3669,7 @@ For the 4e combat test, the following rules are changed:
 - An action considered a &#39;big&#39; or &#39;burst&#39; action (these are not technical terms) such as a finisher or thing that causes a bunch of statuses will take 3 actions.
 
 Big note:
-When making combat skills, I intend to interpret them as &#39;things the character can do that happen to be useful in combat.&#39; This means every skill has to be multipurpose and there has to be an explanation why they can do it in combat but not outside (or they can do it outside of combat.)</tw-passagedata><tw-passagedata pid="117" name="CTWeaponsInit" tags="data-storage" position="2375,1000" size="100,100">{
+When making combat skills, I intend to interpret them as &#39;things the character can do that happen to be useful in combat.&#39; This means every skill has to be multipurpose and there has to be an explanation why they can do it in combat but not outside (or they can do it outside of combat.)</tw-passagedata><tw-passagedata pid="117" name="CTWeaponsInit" tags="data-storage unused" position="3675,250" size="100,100">{
 &lt;!--initializes weapons for the COMBAT TEST--&gt;
 (set:$weaponsMaster to (a:
 
@@ -3744,11 +3757,11 @@ Skills:
 
 Casting:
 See [[Terrain Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="120" name="CTsetup" tags="code" position="1925,350" size="100,100">{
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="120" name="CTsetup" tags="code unused" position="3675,375" size="100,100">{
 (set:$campaign to &quot;CT&quot;)
 (display:&quot;CTWeaponsInit&quot;)
 (set:$themeChosen to $themeWyrmling)
-}</tw-passagedata><tw-passagedata pid="121" name="unCTsetup" tags="code" position="1925,475" size="100,100">(set:$campaign to &quot;NH&quot;)
+}</tw-passagedata><tw-passagedata pid="121" name="unCTsetup" tags="code unused" position="3675,500" size="100,100">(set:$campaign to &quot;NH&quot;)
 (display:&quot;WeaponsInit&quot;)
 (set:$themeChosen to $themeNightHunt)</tw-passagedata><tw-passagedata pid="122" name="Wyrmling" tags="table" position="3075,1300" size="100,100">$H2[Wyrmling]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/wyrmling.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;

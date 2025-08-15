@@ -217,7 +217,9 @@ li {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -254,7 +256,7 @@ $HB2+(box:&quot;X&quot;, 15)[\
 
 [[Adrenaline]]
 
-[[Summon, Form, and Terrain Tags]]
+[[Object, Creature, and Terrain Tags]]
 
 [[Movement and Range]]\
 ]
@@ -297,7 +299,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.4.4 - 2025-7-30*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.4.7 - 2025-8-14*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -368,7 +370,9 @@ Array
 {(display:&quot;TalentColorsInit&quot;)}\
 {(display:&quot;AttributesInit&quot;)}\
 {(display:&quot;MagicSkillsInit&quot;)}\
-{(display:&quot;CastingStylesInit&quot;)}\
+{(display:&quot;ObjectTagsInit&quot;)}\
+{(display:&quot;CreatureTagsInit&quot;)}\
+{(display:&quot;TerrainTagsInit&quot;)}\
 {(display:&quot;WeaponsInit&quot;)}\
 {(display:&quot;DivineBlessingsInit&quot;)}\
 \
@@ -954,7 +958,7 @@ Click on a skill&#39;s name to see its description.
 [HTML table ends](c|
 (set:$skillsListView to it + &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;)
 (print:$skillsListView)
-}</tw-passagedata><tw-passagedata pid="14" name="Locations (T)" tags="" position="2375,1300" size="100,100">$H2[Locations]
+}</tw-passagedata><tw-passagedata pid="14" name="Locations (T)" tags="" position="2375,1425" size="100,100">$H2[Locations]
 
 $H3[Ventopia]
 A coral reef located on the center of the vents. Its residents are obsessed with beauty, prizing it above everything else. They have a Queen, considered to be the most beautiful creature.
@@ -966,7 +970,7 @@ $H3[Graveyard]
 An old shrine dedicated to Cardinal East, with a graveyard around it. It almost exclusively has the remains of Boneyardians now.
 
 $H3[Shipwreck]
-The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="15" name="Cardinals" tags="" position="2500,1300" size="100,100">$H2[Cardinals]
+The remains of a mining submarine that imploded for unknown reasons. It is completely dark inside, and filled with what&#39;s left of its original crew, not quite alive.</tw-passagedata><tw-passagedata pid="15" name="Cardinals" tags="" position="2500,1425" size="100,100">$H2[Cardinals]
 
 $H3[Cardinal Down]
 The god of life, safety, and comfort, and the favored god of the Ventopians.
@@ -999,8 +1003,8 @@ $H3[Inventory]
 
 $H3[Magic]
 [[Magic Skills-&gt;Magic Skills List]] 
-[[Summon Tags-&gt;Summon Tags List]] 
-[[Form Tags-&gt;Form Tags List]]
+[[Object Tags-&gt;Object Tags List]] 
+[[Creature Tags-&gt;Creature Tags List]]
 [[Terrain Tags-&gt;Terrain Tags List]]
 
 $H3[Misc]
@@ -1505,7 +1509,7 @@ Click on a condition to see details:
 	&lt;br&gt;&lt;b&gt;+&lt;/b&gt;: XX
 	&lt;br&gt;&lt;b&gt;++&lt;/b&gt;: XX
 	]
-]}</tw-passagedata><tw-passagedata pid="23" name="Hadalite" tags="table" position="2250,1425" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="23" name="Hadalite" tags="table" position="2250,1550" size="100,100">$H2[Hadalite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hadalite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Hadalites live long lives— much longer than most other creatures. However, as ambush predators, they spend most of it in-between sleep and waking.
 
@@ -1546,13 +1550,13 @@ Features:
 &#96;[&#96;image&#96;]&#96;
 *The lures at the end of the tentacles as well as the “hairstyle” of the tentacles can be variant. Line down the middle is their mouth, so clothes tend to accommodate it opening.
 Spots on head tend to resemble eyes or features found on other races, but can vary! Colors can be anything, though tend towards more phosphorescent-looking shades.
-Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="24" name="Marigen" tags="table done" position="925,350" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Marigen (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Marigen (TL)&quot;)]</tw-passagedata><tw-passagedata pid="25" name="ItemsInit" tags="data-storage" position="2375,500" size="100,100">{
+Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata><tw-passagedata pid="24" name="Marigen" tags="table done" position="925,350" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Marigen (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Marigen (TL)&quot;)]</tw-passagedata><tw-passagedata pid="25" name="ItemsInit" tags="data-storage" position="2250,625" size="100,100">{
 (set:$itemsMaster to (a:
 
 (a: &quot;Light Armor&quot;, &quot;Highly flexible and lightweight armor, such as padded or leather armor. Raises the wearer&#39;s Defense by 2 if worn. Cannot be worn with other armor.&quot;, 1, 5),
 (a: &quot;Medium Armor&quot;, &quot;Armor that provides significant protection from danger, such as chainmail or less than half plate armor. Raises the wearer&#39;s Defense by 4 if worn, but gives them a -1 penalty to all Acrobatics checks. Cannot be worn with other armor.&quot;, 1, 5),
 (a: &quot;Heavy Armor&quot;, &quot;Armor with thick, inpenetrable plating, such as plate mail armor, with a helmet for extra protection. Raises the wearer&#39;s Defense by 8 if worn, but gives them a -2 penalty to all Acrobatics, Stealth, and Perception checks. It has two carry slots of its own. Cannot be worn with other armor.&quot;, 2, 5),
-(a: &quot;Shield&quot;, &quot;Some sort of defensive tool that requires a hand to use. Will increase Defense by 1 if worn.&quot;, , 5),
+(a: &quot;Shield&quot;, &quot;Some sort of defensive tool that requires a hand to use. Will increase Defense by 1 if worn.&quot;, 1, 5),
 (a: &quot;Quiver&quot;, &quot;A quiver, initially containing 20 of the appropriate ammunition corresponding to a ranged, physical weapon, such as arrows or crossbow bolts.&quot;, -20, 2),
 (a: &quot;Beeper&quot;, &quot;A communications device that works within 1 mile. It can be blocked by most materials that also block magic radiation completely. It allows the user to press a button, causing the crystals inside of all linked beepers to heat up and vibrate. Characters with proficiency with the beeper can decode messages sent in beeper code (similar to morse code.)&quot;, 1, 10),
 (a: &quot;Medication (magic charge)&quot;, &quot;A device that applies a very specific magic and essence charge to treat some sort of illness. These are a magical equivalent of pill bottles. These need to be refilled with charge or have their crystals changed occasionally.&quot;, 1, 1),
@@ -1563,6 +1567,7 @@ Claws are meant for burrowing, but can vary in shape and number.</tw-passagedata
 (a: &quot;Satchel&quot;, &quot;Has 10 carry slots.&quot;, 1, 5),
 (a: &quot;Fishing Rod&quot;, &quot;Enables the character to fish.&quot;, 1, 5),
 (a: &quot;Moonstone Bomb Arrows&quot;, &quot;Arrows with unstable crystals and moonstone shrapnel bound to the end. They will explode on impact and deal 6d6 damage to a nightmare creature if they are struck, on top of the normal damage of the bow used to fire it.&quot;, -8, -1)
+
 ))
 }</tw-passagedata><tw-passagedata pid="26" name="Code/Admin Stuff" tags="section" position="2400,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="test" tags="table test" position="3025,250" size="100,100">&lt;table class=&quot;mapGridTable&quot;&gt;
 (for: each _i, ...(range:1,9))[
@@ -1698,7 +1703,7 @@ $HB2+(box:&quot;=XXXXXX=&quot;)[...And a huge shoutout to all of my players!]
 		&lt;td&gt;??&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="34" name="DropdownButton" tags="" position="2250,1000" size="100,100">{
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="34" name="DropdownButton" tags="" position="2250,1150" size="100,100">{
 (link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to 7.5)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
 }</tw-passagedata><tw-passagedata pid="35" name="Weapons List" tags="table" position="1525,975" size="100,100">$H2[Weapons List]
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
@@ -2080,11 +2085,17 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Arboreal&quot;, &quot;Wyrmlings do not take damage from falling from a height.&quot;, &quot;Wyrmling&quot;)
 ))
 }</tw-passagedata><tw-passagedata pid="51" name="Talents and Skills" tags="table done" position="1175,225" size="100,100">$H2[Talents and Skills]
+
 When starting out, all characters have a Talent-- this represents the skills they brought with them from their life before adventuring, and has a profound effect on the Skills they will have access to as they progress.
+
 A Talent comes with a few bonus Attribute Proficiency points and an associated Skill. It also determines how much HP a character gains per Advancement. (MP is determined by the choice of race.)
+
 Keep in mind that end-game Skills are not always exclusive to a single Talent; in fact, the Skills&#39; prerequisites and unlocks are designed to provide multiple paths from the Talents&#39; Skills to the capstone Skills acquired by very powerful characters.
+
 You can see [[all of the Skills-&gt;Skills List]] in the Compendium.
+
 Take a look at the Talents below!
+
 {&lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;
@@ -2115,7 +2126,7 @@ Take a look at the Talents below!
 	&lt;/td&gt;
 	&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-}</tw-passagedata><tw-passagedata pid="52" name="Thalassophobia" tags="" position="2250,1300" size="100,100">$H2[Thalassophobia Lore]
+}</tw-passagedata><tw-passagedata pid="52" name="Thalassophobia" tags="" position="2250,1425" size="100,100">$H2[Thalassophobia Lore]
 
 $H3[[[Locations-&gt;Locations (T)]]]
 
@@ -2158,7 +2169,7 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 		(set: _unlockArr to it + (a:$skillsMaster&#39;s (_unlock)&#39;s 1))
 	]
 	(print:_unlockArr)
-	=|
+	=||
 	(print:_skill&#39;s 2)]
 	&lt;br&gt;
 	]]
@@ -2166,14 +2177,14 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 ]
 [[[List of Talents-&gt;Talents and Skills]]]&lt;s-2|</tw-passagedata><tw-passagedata pid="54" name="SkillsInit" tags="data-storage" position="2250,250" size="100,100">(set:$skillsMaster to (a:
 
-(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When Parrying, the character initiates a basic melee attack roll with a weapon with a fast weapon against the creature or projectile that triggered this reaction. If their melee attack roll is higher than the roll to hit of the attack that targeted them, they can subtract the damage they would have dealt with a melee attack from the damage they take. If the damage they would deal is greater than the damage they would have taken, and they can sense their attacker with their primary sense, they can deal the extra damage to their attacker.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 1, 1, True), 
+(a: &quot;Parry&quot;, &quot;The character can now Parry as a Reaction when targeted with a melee attack. When parrying, they make an attack (spending all resources needed to make that attack.) Regardless of the success of the attack, subtract the damage the attack would have dealt from the damage the character will take.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 1, 1, True), 
 (a: &quot;Unkillable&quot;, &quot;When the character drops to 0 or negative HP, they can choose to continue moving for the duration of 5 Actions, even while making Death Saving Throws.&quot;, &quot;{36}&quot;, (a:), &quot;Tough&quot;, 2, 3, True), 
 (a: &quot;History Buff&quot;, &quot;Choose one of three traits of an area&#39;s history when the character gets this skill: its political history, its ancient history, or its natural history. The character can simply ask for information about this category by invoking this Skill, and has advantage on Insight and History checks related to it.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 3, 1, True), 
 (a: &quot;★Artistry&quot;, &quot;Using an Action, this character can choose to add either their Flair modifier or their Charisma modifier to the next check of another sapient creature by adding a touch of artistry to the check. The player must justify how exactly their artistry helps with the check for this to work. They cannot target the same creature more than once with this skill within a 6 second span.&quot;, &quot;Talent: Creative&quot;, (a:), &quot;Creative&quot;, 4, 0, True), 
 (a: &quot;Rituals&quot;, &quot;This character can choose to add their Knowledge modifier to Religion checks on top of their Magic and Religion modifiers.&quot;, &quot;Talent: Faithful&quot;, (a:), &quot;Faithful&quot;, 5, 0, False), 
-(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction.&quot;, &quot;Talent: Tough&quot;, (a:), &quot;Tough&quot;, 6, 0, True), 
-(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, &quot;N/A&quot;, (a:), &quot;Keen&quot;, 7, 100, False), 
-(a: &quot;Moment of Truth&quot;, &quot;Once per Long Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 8, 1, True), 
+(a: &quot;★Strongarm&quot;, &quot;The character has advantage on Athletics checks to grapple other creatures, pick them up, or shove them in a direction. Additionally, when an effect would move the character, they can reduce the amount they are moved by 15ft.&quot;, &quot;Talent: Tough&quot;, (a:), &quot;Tough&quot;, 6, 0, True), 
+(a: &quot;Aware&quot;, &quot;Add 2 to the character&#39;s passive Perception and add 2 to the character&#39;s passive Aura.&quot;, &quot;{-1}&quot;, (a:), &quot;Keen&quot;, 7, 100, False), 
+(a: &quot;Moment of Truth&quot;, &quot;Once per Rest, the character can choose to gain advantage on an Aura, Appraisal, Investigation, or Perception check.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 8, 1, True), 
 (a: &quot;Fast Hands&quot;, &quot;The character can choose to use an item as a Reaction when they or an ally makes a Saving Throw.&quot;, &quot;{24}&quot;, (a:), &quot;Agile&quot;, 9, 2, True), 
 (a: &quot;★Startled&quot;, &quot;The character has a strong knee-jerk reaction to harm. After they take damage or make a save, they can Move up to half one of their movement speeds as a Reaction. If the damaging effect causes damage in multiple stages, they can take this reaction after the first stage of damage, rather than after the entire effect concludes. This skill can only be used once every 6 seconds.&quot;, &quot;Talent: Agile&quot;, (a:), &quot;Agile&quot;, 10, 0, True), 
 (a: &quot;Inspiration&quot;, &quot;Whenever the character spends a Short rest creating art or performing, they gain one Inspiration, with a maximum of three. They can later spend this inspiration in an act of Artistry to add half of their Flair modifier, rounded up, to a failed Persuasion, Invention or Flair check in an attempt to force it to pass.&quot;, &quot;{4}&quot;, (a:), &quot;Creative&quot;, 11, 1, True), 
@@ -2181,14 +2192,14 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Stratagem&quot;, &quot;The character can choose to give one other character advantage on their next check or roll to hit by taking one Action to suggest a strategy. This works like a held action and expires after 6 seconds or at the start of their next turn.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 13, 1, True), 
 (a: &quot;★Expertise&quot;, &quot;Choose two Attributes. When the character makes checks of this attribute type, add 3 to that check.&quot;, &quot;Talent: Astute&quot;, (a:), &quot;Astute&quot;, 14, 0, True), 
 (a: &quot;Spidey Senses&quot;, &quot;With a fine-tuned aurasense, the character can detect changes in the aura around them quick enough to react faster to magic. For any save they make against magic that they are not in control over, they can add 1.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 15, 1, True), 
-(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, &quot;N/A&quot;, (a:), &quot;Tough&quot;, 16, 100, False), 
+(a: &quot;Menacing Presence&quot;, &quot;The character&#39;s aura projects densely, allowing them to add half of their Mag bonus to Intimidation checks when their aura is projected.&quot;, &quot;{-1}&quot;, (a:), &quot;Tough&quot;, 16, 100, False), 
 (a: &quot;Jack of More Trades&quot;, &quot;The character gains the ability to apply Expertise to a third Attribute.&quot;, &quot;{14}&quot;, (a:), &quot;Astute&quot;, 17, 1, True), 
 (a: &quot;Closer Look&quot;, &quot;The character has a sharp eye for inspecting objects, and can learn more from checks to learn about an object&#39;s history.&quot;, &quot;{3}&quot;, (a:), &quot;Astute&quot;, 18, 2, True), 
 (a: &quot;Theologist&quot;, &quot;The character has more comprehensive knowledge of religious symbols, and will almost always recognize which symbol corresponds to which god.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 19, 1, True), 
 (a: &quot;Sigil of Power&quot;, &quot;The character carves a sigil into their aura, allowing some of their god&#39;s power to seep in in a controlled manner. This grants an effect within 10ft based on the god they call to.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 20, 1, True), 
 (a: &quot;Divine Purpose&quot;, &quot;As the god&#39;s will wraps its tendrils around the character&#39;s mind, they start to feel power flow into them when they obey. The character will restore 2d4 MP whenever they complete a task in their god&#39;s will.&quot;, &quot;{42}&quot;, (a:), &quot;Faithful&quot;, 21, 1, True), 
 (a: &quot;Undefeatable&quot;, &quot;Due to unending willpower, this character will not lose TruHP when they fail death saving throws. They also have advantage on saves against effects that would cause them to lose TruHP, and regain one fifth (rounded up) of their HP when they become stable from passing death saves.&quot;, &quot;{37}&quot;, (a:), &quot;Tough&quot;, 22, 2, True), 
-(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 23, 1, True), 
+(a: &quot;Aurascale&quot;, &quot;Due to a thick, impenetrable aura, the character is able to resist changes in the magic around them. For any save they make against magic that they are not in control over, they can add 1.&quot;, &quot;{38}&quot;, (a:), &quot;Tough&quot;, 23, 2, True), 
 (a: &quot;Light-Footed&quot;, &quot;The character&#39;s flightiness has served them well; when they Move, they can also take the Hide action as part of the same Action once per six seconds.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 24, 1, True), 
 (a: &quot;★Connected&quot;, &quot;The character has a contact in the area that they can rely on for support. Depending on the contact, they may be able to freely offer money, intelligence, or even help the party directly.&quot;, &quot;Talent: Charming&quot;, (a:), &quot;Charming&quot;, 25, 0, True), 
 (a: &quot;Persistent&quot;, &quot;Each time this character attempts a Persuasion check on the same sapient creature, they gain +1 to their roll for each day they&#39;ve attempted Persuasion checks on them in the past, to a maximum of 7.&quot;, &quot;{25}&quot;, (a:), &quot;Charming&quot;, 26, 1, True), 
@@ -2199,10 +2210,10 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Halo&quot;, &quot;The character has earned enough good will with their god that they have a halo visible only to other worshippers of that god, marking them as a faithful servant. Other worshippers of the god, and institutions with connections to them, will gravitate towards them and respect them.&quot;, &quot;{20}&quot;, (a:), &quot;Faithful&quot;, 31, 2, True), 
 (a: &quot;Mark of Divinity&quot;, &quot;The character&#39;s connection to their god becomes direct. Their god is capable of connecting their minds directly, for a time, but as a result, the god&#39;s essence begins to seep into the character&#39;s body and mind, leaving them with a divine mark. Refer to the Divine Marks table to see which divine mark the character gets.&quot;, &quot;{21}&quot;, (a:), &quot;Faithful&quot;, 32, 2, True), 
 (a: &quot;Local Deities&quot;, &quot;The character opens their soul to their environment, becoming better able to sense which god or spirit has the most influence over an area. With grace and patience, their calls to the gods are to whatever is nearest, changing the effect of their Sigil of Power based on where they are.&quot;, &quot;{20}&quot;, (a:), &quot;Faithful&quot;, 33, 2, True), 
-(a: &quot;Five Swords&quot;, &quot;When the character makes an attack without using a tool, they deal 2d6, and can choose to attack again as part of the same action, for the same damage. &#96;(CT: These attacks deal 2d6 and only cost one Action.)&#96; As well, they can add their Fisticuffs proficiency plus either their Dex or Str bonus to hit. They can also choose to make these unarmed attacks Techniques, which they can unlock in later skills.&quot;, &quot;{24}&quot;, (a:), &quot;Agile&quot;, 34, 2, True), 
+(a: &quot;Five Swords&quot;, &quot;When the character makes an attack without using a tool, it only costs one Action and deals 2d6 Break damage. As well, they can add their Fisticuffs proficiency plus either their Dex or Str bonus to hit. They can also choose to make these unarmed attacks Techniques, which they can unlock in later skills.&quot;, &quot;{24}&quot;, (a:), &quot;Agile&quot;, 34, 2, True), 
 (a: &quot;Creature&quot;, &quot;After spending a short rest in a natural environment, the character attunes to it, increasing their movement speeds by 5ft, or by 10ft when navigating hazardous Spaces. They can also add their Perception or Investigation proficiency to saves against local environmental effects (effects that are present in a Space or multiple Spaces, but not the entire environment.)&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 35, 1, True), 
 (a: &quot;Muscle Through&quot;, &quot;Aggressive in the face of threats, the character can force their way through guards and keep them open. If the character succeeds a melee attack, they lower the Defense of the creature that they attacked by 2 for the next 6 seconds.&quot;, &quot;{37}&quot;, (a:), &quot;Tough&quot;, 36, 2, True), 
-(a: &quot;Steadfast&quot;, &quot;Whenever an effect would move the character, they can choose to subtract 15 feet from the movement. Additionally, when they are grappling a creature, they can choose to take any damage that creature would.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 37, 1, True), 
+(a: &quot;Guardian&quot;, &quot;When the character is touching a creature, they can choose to take any damage that creature would.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 37, 1, True), 
 (a: &quot;Headlock&quot;, &quot;The character can add an extra 1d6 of damage of whatever type would otherwise be dealt when they cause damage to a creature that they are Grappling.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 38, 1, True), 
 (a: &quot;Wriggly Bastard&quot;, &quot;The character&#39;s Defense increases by 2.&quot;, &quot;{10}&quot;, (a:), &quot;Agile&quot;, 39, 1, True), 
 (a: &quot;Life Mimics Art&quot;, &quot;The character is a master at depicting form and movement in still objects, whether by clay or heaps of scrap. The character can create a sculpture so lively that it entices a spirit to inhabit it. This spirit sculpture then gains 1 HP and becomes loyal to the character. This sculpture has a movement speed of 30ft (with a type based on its material and shape) and can communicate telepathically with the character via a shared artistic vision.&quot;, &quot;{11}&quot;, (a:), &quot;Creative&quot;, 40, 2, True), 
@@ -2215,19 +2226,27 @@ $H3[[[Deities-&gt;Cardinals]]]</tw-passagedata><tw-passagedata pid="53" name="Sk
 (a: &quot;Martial Insight&quot;, &quot;The character can make an Insight check as a Free Action once every 6 seconds to gain one of the following pieces of information:&lt;br&gt;- The target&#39;s weak points (+4 to hit or -4 to their save with next action that targets them.)&lt;br&gt;- The target&#39;s intentions (broadly, or clues about what they intend to do immediately.)&lt;br&gt;- The target&#39;s motivations (broadly, or clues about their strategy.)&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 47, 1, True), 
 (a: &quot;Adaptable&quot;, &quot;The character can choose to craft a tool of a type that they have proficiency with out of things they find in their immediate environment as an Action, given they can find reasonable materials and explain how they do it. They also gain a bonus Tool Proficiency, which they can change once per Long Rest.&quot;, &quot;{30}&quot;, (a:), &quot;Keen&quot;, 48, 1, True), 
 
-(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 50, 100, False), 
-(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 51, 100, False), 
-(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 52, 100, False), 
-(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used a Technique. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 3d6.&quot;, &quot;N/A&quot;, (a:), &quot;Agile&quot;, 53, 100, False), 
-(a: &quot;&quot;, &quot;When the character takes damage, they can choose to reduce that damage by 2d6 once per 6 seconds.&quot;, &quot;N/A&quot;, (a:), &quot;Tough&quot;, 54, 100, False), 
+(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, &quot;{-1}&quot;, (a:), &quot;Agile&quot;, 50, 100, False), 
+(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, &quot;{-1}&quot;, (a:), &quot;Agile&quot;, 51, 100, False), 
+(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, &quot;{-1}&quot;, (a:), &quot;Agile&quot;, 52, 100, False), 
+(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used a Technique. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 3d6.&quot;, &quot;{-1}&quot;, (a:), &quot;Agile&quot;, 53, 100, False), 
+(a: &quot;&quot;, &quot;When the character takes damage, they can choose to reduce that damage by 2d6 once per 6 seconds.&quot;, &quot;{-1}&quot;, (a:), &quot;Tough&quot;, 54, 100, False), 
 (a: &quot;Black and Blue&quot;, &quot;If the character chooses to make an attack without a weapon, this attack deals 3d6 Bash damage. On a hit, they can choose to move the object or creature 5ft back.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 55, 2, True), 
-(a: &quot;Weapons Specialist&quot;, &quot;The character can treat any weapon they have used before at least once as if it has one proficiency point, gaining its secondary effect. However, they do not get the +1 bonus to rolls to hit or damage.&quot;, &quot;N/A&quot;, (a:), &quot;Astute&quot;, 56, 100, False), 
-(a: &quot;&quot;, &quot;&quot;, &quot;&quot;, (a:), &quot;Astute&quot;, 57, 100, False), 
-(a: &quot;Sigil of Power II&quot;, &quot;The sigil in the character&#39;s aura grows in influence, and they gain the second buff on their God Power list for their god.&quot;, &quot;{31}&quot;, (a:), &quot;Faithful&quot;, 58, 3, True),  
+(a: &quot;Weapons Specialist&quot;, &quot;The character can treat any weapon they have used before at least once as if it has one proficiency point, gaining its secondary effect. However, they do not get the +1 bonus to rolls to hit or damage.&quot;, &quot;{-1}&quot;, (a:), &quot;Astute&quot;, 56, 100, False), 
+(a: &quot;Focused&quot;, &quot;The last creature that the character did a check on is the one that they are Focused on. They can consider their Def to be 10 higher if their attacker is the creature they are focused on.&quot;, &quot;{-1}&quot;, (a:), &quot;Agile&quot;, 57, 100, False), 
+(a: &quot;Battle Tactics&quot;, &quot;The character can instruct one or more teammates on battle tactics to better get out of a risky situation. Choose two tactics from the Battle Tactics list that are unlocked by this Skill that the character is now able to use.&quot;, &quot;{-1}&quot;, (a:), &quot;Astute&quot;, 58, 2, True), 
+(a: &quot;Sigil of Power II&quot;, &quot;The sigil in the character&#39;s aura grows in influence, and they gain the second buff on their God Power list for their god.&quot;, &quot;{31}&quot;, (a:), &quot;Faithful&quot;, 59, 3, True), 
+(a: &quot;Weak Point&quot;, &quot;When a creature has a Form Tag that hinders it, the character can exploit that weakness.&quot;, &quot;{47}&quot;, (a:), &quot;Keen&quot;, 60, 2, True), 
+(a: &quot;Battle Stance&quot;, &quot;With an Action, the character can choose to enter a Battle Stance. While in the Battle Stance, all damage they take is reduced by 1d6. The battle stance drops after not taking damage for an entire round in Adrenaline, or 30 seconds without Adrenaline.&quot;, &quot;{6}&quot;, (a:), &quot;Tough&quot;, 61, 1, True), 
+(a: &quot;Brutal Strike&quot;, &quot;Melee attacks deal an additional 1d6 damage, or 2d6 when the character is in their Battle Stance. As well, Weaponless attacks deal 3d6 Break damage instead of 1d6.&quot;, &quot;{61}&quot;, (a:), &quot;Tough&quot;, 62, 2, True), 
+(a: &quot;Rise Again&quot;, &quot;When the character would become Unstable, they instead gain Stun 3 and return to max HP. They also don’t lose TruHP from this. They cannot use this Skill again until they have completed a Rest.&quot;, &quot;{-1}&quot;, (a:), &quot;Tough&quot;, 63, 100, True), 
+(a: &quot;Tinkering&quot;, &quot;The character can spend a Rest modifying a tool to have a new use. They can give it one of the following object tags:
+&lt;br&gt;&lt;ul&gt;&lt;li&gt;Specialized 1 (Type), where the Type depends on the material used to augment the tool: nightmare creatures (moonstone), aquatic or icy creatures (heatstone), fiery creatures (damprock.)&lt;/li&gt;&lt;li&gt;Shield 3&lt;/li&gt;&lt;li&gt;Grabbing 1&lt;/li&gt;&lt;/ul&gt;A given tool can only have one object tag from this Skill at a time.&quot;, &quot;{-1}&quot;, (a:), &quot;Astute&quot;, 64, 4, True), 
+(a: &quot;Dubious Medical Practice&quot;, &quot;With a medicine check and some time, the character can choose to give a creature one of the following creature tags: Blinded 2 for 4 hours (requires 20 minutes), Frightened 1 for 1 hour (requires 30 seconds), Paralyzed 1 for 24 hours (requires 1 hour), Healthy 1 for 12 hours (requires 1 hour), or Unrecognizable permanently (only unrecognizable relative to old appearance, and new appearance will be recognizable as itself; requires 30 minutes. Can only be done once per creature.)&quot;, &quot;{-1}&quot;, (a:), &quot;Astute&quot;, 65, 3, True), 
 
 (a: &quot;(print: _skill&#39;s 5 + \\\&quot; (Talent)\\\&quot;)&quot;, &quot;This skill comes with the (print:_skill&#39;s 5) Talent! Look at the (link-goto:\&quot;Talents\&quot;) page to learn more.&quot;, (a: 0), (a:), &quot;(print:_skill&#39;s 5)&quot;, -2, 0), 
 (a: &quot;???&quot;, &quot;This skill is not in the system. If you see this, report a bug!&quot;, (a: 0), (a:), &quot;0&quot;, -1, 0)
-))</tw-passagedata><tw-passagedata pid="55" name="TalentColorsInit" tags="data-storage" position="2625,750" size="100,100">{(set:$talentColor to (dm:
+))</tw-passagedata><tw-passagedata pid="55" name="TalentColorsInit" tags="data-storage" position="2625,900" size="100,100">{(set:$talentColor to (dm:
 &quot;Creative&quot;, #e340b7, 
 &quot;Faithful&quot;, #e3d040, 
 &quot;Agile&quot;, #e63119, 
@@ -2360,7 +2379,7 @@ Skill: &lt;b&gt;(print:$skillsMaster&#39;s 24&#39;s 1).&lt;/b&gt; (print:$skills
 	&lt;/td&gt;&lt;/tr&gt;
 (set:_index to it + 1)}]}\
 ]
-</tw-passagedata><tw-passagedata pid="66" name="Nerite" tags="table" position="2375,1425" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+</tw-passagedata><tw-passagedata pid="66" name="Nerite" tags="table" position="2375,1550" size="100,100">$H2[Nerite]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/nerite.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Frilly and soft, Nerites were likely prey animals before they came to the Hadal Zone. Their strong aurasense followed them even as the need for it faded, and as a result, they have the strongest aurasense among the races. 
 
@@ -2393,7 +2412,7 @@ Features:
 None-- they get a lot of MP!
 
 &#96;[&#96;image&#96;]&#96;
-*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="67" name="Khetadon" tags="table" position="2500,1425" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tails can be split or differently-shaped. Very soft. Colors, patterns and frill shapes can vary widely.</tw-passagedata><tw-passagedata pid="67" name="Khetadon" tags="table" position="2500,1550" size="100,100">$H2[Khetadon]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/ketadon.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 The Khetadons are a rough-skinned and bold species likely descended from true top-of-the-food-chain carnivores. With their sharp teeth and acute mid-range senses, they have a bit of an edge in a physical fight; don’t underestimate them in other settings because of that.
 
@@ -2426,7 +2445,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 6&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 6&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="68" name="Karkani" tags="table" position="2625,1425" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
+*Tend to be desaturated colors, but this can vary. Fins can vary, but always have pectoral fins, the major centered back fin, two fins on their stomach near the back, and a tailfin.</tw-passagedata><tw-passagedata pid="68" name="Karkani" tags="table" position="2625,1550" size="100,100">$H2[Karkani]&lt;img class=&quot;imgchar&quot; src=&quot;assets/races/karkani.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Karkani take great pride in their shells, often decorating them or carving things into them. These shells make great protection against predators, blunt force trauma, and social embarrassment.
 
@@ -2499,7 +2518,7 @@ Often, a Rank consists of the following:
 * One Skill gained
 * One Health Improvement
 * One Proficiency Point
-* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="70" name="Magic Ability" tags="table" position="1300,225" size="100,100">$H2[Magic Ability]
+* Two Statistic Points every third Rank</tw-passagedata><tw-passagedata pid="70" name="Magic Ability" tags="table" position="1300,350" size="100,100">$H2[Magic Ability]
 
 In the world of Remagica, every sapient creature-- including all of the playable races-- has access to their own unique magical Ability.
 
@@ -2552,93 +2571,39 @@ A character&#39;s magic will deal one of the (link-repeat:&quot;damage types&quo
 
 This damage type does not represent the element of the magic; it represents the way that magic interacts with other creatures. The damage type dealt by magic can change depending on how that magic is used.
 
-For example, if Katya were to use her light sword to attack someone directly with a slash, it would deal ($adjCol:#d65a02)[Slice] damage, but if she were to summon her blade such that it intersected someone she had pinned down, it might ($adjCol:#ff4d00)[Burn] them. </tw-passagedata><tw-passagedata pid="71" name="CastingStylesInit" tags="data-storage" position="2250,500" size="100,100">{(set:$castingStyles to (a:
-&quot;Borro&quot;,
-&quot;Skathi&quot;,
-&quot;Fyugo&quot;,
-&quot;Shioreta&quot;,
-&quot;Otsoa&quot;,
-&quot;Azurite&quot;
-))
-(set:$fyugoTags to (a:
+For example, if Katya were to use her light sword to attack someone directly with a slash, it would deal ($adjCol:#d65a02)[Slice] damage, but if she were to summon her blade such that it intersected someone she had pinned down, it might ($adjCol:#ff4d00)[Burn] them. </tw-passagedata><tw-passagedata pid="71" name="ObjectTagsInit" tags="data-storage" position="2250,500" size="100,100">{(set:$fyugoTags to (a:
 
-(a: &quot;Attack I&quot;, &quot;The summon can take the Attack action. When it Attacks, its target must make a save of a reasonable proficiency based off of the nature of the attack with a DC of 10 + the caster&#39;s Power proficiency. On a fail, the target will take 12 damage.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
-(a: &quot;Defend I&quot;, &quot;The summon can take the Defend reaction, which allows them to intercept a source of damage and take the damage instead, within reason. &quot;, &quot;Persistent Fabrications&quot;, 1, 3), 
-(a: &quot;Grapple I&quot;, &quot;The summon can take the Grapple action.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
-(a: &quot;Equippable&quot;, &quot;The summon can be grabbed to use or wear as an item. Any Skill that allows the user to use an item now applies to the summon. This Tag causes the summon to lose the ability to take actions, but the durability from action-giving tags still remains.&quot;, &quot;Persistent Fabrications&quot;, 2, 2), 
-(a: &quot;Sharp I&quot;, &quot;When the summon is used as an item, the action can become an Attack action. The summon then counts as a weapon, dealing the damage type that the summon would otherwise do. When Attacking, the caster makes either a Handiwork or Athletics check (depending on which is more reasonable for the weapon type) with a DC of the target&#39;s AC. On a success, they deal 4 damage. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 2), 
-(a: &quot;Solid I&quot;, &quot;No effect.&quot;, &quot;Persistent Fabrications&quot;, 10, 4), 
-(a: &quot;Shield I&quot;, &quot;The summon can be used as a shield, raising the caster&#39;s AC by 1. This tag does nothing if the summon does not also have the Equippable tag.&quot;, &quot;Persistent Fabrications&quot;, 2, 3), 
-(a: &quot;Statistic Change I&quot;, &quot;The bonus for one of the Summon&#39;s statistics rises by 1. This tag can be applied multiple times to the same Summon.&quot;, &quot;Persistent Fabrications&quot;, 5, 12), 
-(a: &quot;Luminous I&quot;, &quot;All creatures within 10ft of the summon are illuminated, lowering their DEF by 2 and increasing the range of critical successes against them by 1.&quot;, &quot;&quot;, 2, 5), 
-(a: &quot;Glowing I&quot;, &quot;The summon casts light within 30ft of its center.&quot;, &quot;&quot;, 5, 2), 
-(a: &quot;Bonding&quot;, &quot;The summon gains the Attach action, which allows them to attach to a creature, moving with them whenever they move. This Tag makes them functionally massless. The Attach action can be performed as part of the Action used to cast this Tag. If the summon attached to a creature, that creature can make a Handiwork check against a DC of 10 + the caster&#39;s Power bonus to remove it (making the summon free-moving again.) Otherwise, if the creature or object moves outside of the caster&#39;s Long Range, the summon loses its attachment and becomes free-moving again.&quot;, &quot;&quot;, 2, 2), 
-(a: &quot;Siphon I&quot;, &quot;When the summon takes the Attack action, half of the damage dealt is restored to the caster.&quot;, &quot;&quot;, 2, 7), 
-(a: &quot;Infestation I&quot;, &quot;The summon gives all creatures within 5ft Plagued 4 (X). If it is Attached to a creature, it only affects that creature, but gives that one creature Plagued 12 (X).&quot;, &quot;&quot;, 2, 3), 
-(a: &quot;Pretty I&quot;, &quot;The summon is very pretty. Sapient creatures that view it with eyesight or aurasense make a DC 12 Willpower save or gain Charmed 1 (Pretty). This makes them feel a desire not to break the summon.&quot;, &quot;&quot;, 1, 3), 
-(a: &quot;Fixation I&quot;, &quot;The summon draws attention easily. Sapient creatures around it must make a DC 12 Willpower save or gain Charmed 1 (Fixated). This makes them want to destroy the summon above all else.&quot;, &quot;&quot;, 2, 5)
+(a: 1, &quot;Summon 1&quot;, &quot;The object is a Summon, likely created by a Fyugo&#39;s magic. A Fyugo can choose to take the following Actions originating from this object: Attack, Move. It can Fly 20ft to move, but must be on a Space adjacent to the ground at the end of its Movement. If it Attacks, it deals 0 damage; it has 5 Durability; it has 8 Def; and it has 7 in every Stat.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;0&quot;),
+(a: 2, &quot;Sharp X (type)&quot;, &quot;The object can deal X more damage of the specified type. &quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;X is the level of the tag specified, and N is twice X. The type is a damage type and can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce.&quot;, &quot;Persistent Fabrications, Imbue&quot;, &quot;N&quot;),
+(a: 3, &quot;Defend 1&quot;, &quot;The caster can use their Reaction to cause this object to take damage for a creature on an adjacent Space to it.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
+(a: 4, &quot;Grapple 1&quot;, &quot;The caster can take the Grapple action through this object.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
+(a: 5, &quot;Versatile 1&quot;, &quot;The caster can take certain types of manual Actions through this object, such as picking locks or grabbing things. They do not get any senses from this Tag, including proprioception, so if they cannot see this object or it is too far away, they will be fumbling in the dark.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
+(a: 6, &quot;Weapon 1 (Type)&quot;, &quot;This object can be used as a weapon. If this Tag comes from a caster, they have 1 proficiency point for the weapon. It deals 3d6 damage and takes 2 Actions to use.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;2&quot;),
+(a: 7, &quot;Solid X&quot;, &quot;This object&#39;s durability increases by 10 * X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified. N is 3 * X.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
+(a: 8, &quot;Shield X&quot;, &quot;The object is usable as a shield, boosting its user&#39;s Def by X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified. N is X * X.&quot;, &quot;&quot;, &quot;N&quot;),
+(a: 9, &quot;Luminous 1&quot;, &quot;All creatures within 10ft of this object gain the Illuminated Creature Tag.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;2&quot;),
+(a: 10, &quot;Glowing 1&quot;, &quot;All Spaces and Tiles within 30ft of this object&#39;s center are lit.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;),
+(a: 11, &quot;Bonding (Target)&quot;, &quot;The object is bonded to a host, following them with its other effects. The object is functionally massless and is centered on Target until this Tag disappears. &quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon. Additionally, the Target can choose to make a Handiwork or Power check against either 10 or 10 + the caster&#39;s Power bonus to remove this Tag.&quot;, &quot;Target is a creature within 30ft of the source of this tag (usually the caster.)&quot;, &quot;&quot;, &quot;4&quot;),
+(a: 12, &quot;Siphon 1 (Beneficiary)&quot;, &quot;If this object deals damage, one-quarter of that damage&#39;s value is restored to its Beneficiary as HP.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;The Beneficiary is either the user of the object or the caster of the Tag, chosen when the Tag is cast.&quot;, &quot;&quot;, &quot;7&quot;),
+(a: 13, &quot;Infestation 1/X (Type)&quot;, &quot;All creatures within 5ft of this object gain Plagued (4 * X)/0 (Type). They lose that Tag at the start of their first Turn started out of range.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is a parameter specifying the severity of the damage, and not the level. N is 4 * X.&quot;, &quot;&quot;, &quot;N&quot;),
+(a: 14, &quot;Pretty 1&quot;, &quot;The object is quite pretty. Sapient creatures that view it with their dominant sense make a DC 12 Willpower save or gain Charmed 1 (Pretty). This makes them feel a desire not to break the object.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;),
+(a: 15, &quot;Fixation 1&quot;, &quot;The object draws attention easily. Sapient creatures around it must make a DC 12 Willpower save or gain Charmed 1 (Fixated). This makes them want to destroy the summon above all else.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 16, &quot;Damage X (Type)&quot;, &quot;This object (a tool or object with the Weapon tag) draws power from its caster. When it is used on a target, it can also deal 4 * X damage of the specified Type to the target, at the cost of 2 * X MP spent by the caster.&quot;, &quot;When dispelled, or if the caster moves more than their Long Range away from the object. This tag goes away if the Burst Tag is cast on the object.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is the level of the tag specified.&quot;, &quot;Imbue&quot;, &quot;0&quot;),
+(a: 17, &quot;Burst X (Type)&quot;, &quot;This object (a tool or object with the Weapon tag) draws power from its caster. When it is used on a target, it can also deal 6 * X damage of the specified Type to the target, at the cost of 5 * X MP spent by the caster.&quot;, &quot;When dispelled, or if the caster moves more than their Long Range away from the object. This tag goes away if the Damage Tag is cast on the object.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is the level of the tag specified.&quot;, &quot;Imbue&quot;, &quot;0&quot;),
+(a: 18, &quot;Stat Change X (Stat)&quot;, &quot;This object gains X to the specified Stat.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the Tag. N is 3 * X. The Stat is any one of Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, or Magic.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
+(a: 19, &quot;Specialized 1 (Type)&quot;, &quot;On a tool, this tag gives its user a +8 bonus on checks regarding its purpose when used on/against creatures of the specified Type.&quot;, &quot;When the object is badly damaged.&quot;, &quot;The Type is a creature type.&quot;, &quot;&quot;, &quot;10&quot;),
+(a: 20, &quot;Grabbing 1&quot;, &quot;If the tool is used on a creature or object and makes contact with them, that creature or object is pulled 5ft towards the user. This tag does not extend to ammunition fired from a tool.&quot;, &quot;When the object is badly damaged.&quot;, &quot;&quot;, &quot;&quot;, &quot;4&quot;)
 
-))
-
-(set:$otsoaTags to (a:
-
-(a: &quot;Statistic Change I&quot;, &quot;The caster raises their bonus for a particular statistic by 1.&quot;, &quot;Metamorphosis&quot;, 2, 3), 
-(a: &quot;Toe Beans&quot;, &quot;The caster gains advantage to Stealth and Acrobatics checks.&quot;, &quot;Metamorphosis&quot;, 2, 2), 
-(a: &quot;Quick I&quot;, &quot;The caster gains 15 feet of movement. [10 in the Combat test.]&quot;, &quot;Metamorphosis&quot;, 2, 3), 
-(a: &quot;Fluff&quot;, &quot;The caster becomes unaffected by weather and temperature effects.&quot;, &quot;Metamorphosis&quot;, 2, 3), 
-(a: &quot;Thick Hide&quot;, &quot;The caster gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;Metamorphosis&quot;, 1, 6), 
-(a: &quot;Super-Senses&quot;, &quot;The caster&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to the caster&#39;s senses.&quot;, &quot;Metamorphosis&quot;, 2, 4), 
-(a: &quot;Healthy I&quot;, &quot;No effect.&quot;, &quot;Metamorphosis&quot;, 6, 4), 
-(a: &quot;Solid Form&quot;, &quot;The caster will not revert to their true form when they fall unconscious. A Long Rest will still revert them to their true form.&quot;, &quot;Metamorphosis&quot;, 4, 5), 
-(a: &quot;Unrecognizable&quot;, &quot;The caster&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + the caster&#39;s Deception proficiency to recognize them.&quot;, &quot;Metamorphosis&quot;, 1, 2), 
-(a: &quot;Leap I&quot;, &quot;The caster can take the Leap action by using 10 MP, which has the effect of taking the Move action with a move speed of 45ft fly.&quot;, &quot;&quot;, 2, 4), 
-(a: &quot;Ooze I&quot;, &quot;The caster gains 1 DEF and becomes able to fit into any space that could contain their volume, regardless of shape.&quot;, &quot;&quot;, 2, 5), 
-(a: &quot;Hunger I&quot;, &quot;The caster has Regeneration 5. If they do not either hit a melee attack or eat something every round, they lose this Tag. The tag peters out anyway after 2 minutes.&quot;, &quot;&quot;, 5, 5), 
-(a: &quot;Shortcut I&quot;, &quot;The caster’s corporeality changes. Choose one of the following: shadows (dark areas), water, plants, or stone (that is not metallic or crystalline). They gain a movement speed of 60ft through a contiguous span of that material, and can choose not to be affected by any hazard tiles between them and their destination.&quot;, &quot;&quot;, 2, 5), 
-(a: &quot;Stubborn I&quot;, &quot;Whenever the caster would receive any levels of Charmed, reduce that level by 1.&quot;, &quot;&quot;, 4, 5), 
-(a: &quot;Feral I&quot;, &quot;The caster gains a Condition specific to this ability: Feral. Each time they take damage, raise the level of Feral that they have by 1. They can add the level of Feral that they have to any damage they deal directly.&quot;, &quot;&quot;, 2, 5), 
-(a: &quot;Beloathed&quot;, &quot;This tag causes all creatures within 10ft to make a Willpower save against a DC of 8 + the caster’s Persuasion modifier or gain Charmed (Fixated.) This condition causes them to want to attack the caster above all else. This tag also gives the caster a +2 to Intimidation checks.&quot;, &quot;&quot;, 2, 5)
-
-))
-
-(set:$aldatuTags to (a:
-
-(a: &quot;Slowing&quot;, &quot;The Tile costs 5 extra feet of movement to move out of.&quot;, &quot;Sculptor&quot;, 2), 
-(a: &quot;Strangling&quot;, &quot;When a creature enters this Tile, they must make an Athletics or Acrobatics check DC 8 or become Grappled by the Tile and unable to leave.&quot;, &quot;&quot;, 4), 
-(a: &quot;Slippery&quot;, &quot;When a creature attempts to leave this Tile, they must make an Acrobatics check DC 8 or fall over, giving them Stun II (Stun I in the 2 Action System).&quot;, &quot;&quot;, 3), 
-(a: &quot;Raised / Lowered&quot;, &quot;The Tile is considered 5 feet higher or lower than it was before, costing the appropriate amount of extra movement to move to it in 3D space. This tag only costs 2 MP if it is being stacked on itself.&quot;, &quot;Sculptor&quot;, 3), 
-(a: &quot;Climbable&quot;, &quot;When cast on a vertical face, this Tile makes it so that any character who could climb has a Climb speed of half of their Walk speed up this Tile.&quot;, &quot;&quot;, 3), 
-(a: &quot;Open&quot;, &quot;The Tile is now a normal Tile if before, it was either empty (and the source of this Tag could reasonably fill it,) or full (and the source of this Tag could remove the blockage.)&quot;, &quot;Sculptor&quot;, 2), 
-(a: &quot;Active&quot;, &quot;The Tile is currently rife with magic, such as that a Skathi would set. Entering this Tile triggers the effects of the magic that was the source of this Tag.&quot;, &quot;&quot;, -1)
-
-))
-}</tw-passagedata><tw-passagedata pid="72" name="Borro" tags="table" position="1300,350" size="100,100">$H3[Borro]
+))}</tw-passagedata><tw-passagedata pid="72" name="Borro" tags="table" position="1300,475" size="100,100">$H3[Borro]
 Borros have a strong connection to the physical, imbuing magic into the things around them. A Borro could make things gaseous or non-gaseous. Another could change the properties of a sword to suit the fight they have ahead. Yet another could make their hands heat up hot enough to forge iron on their own. 
 
 Short Range: 5ft
 Long Range: 20ft
 
-&lt;b&gt;(print:$magicMaster&#39;s 1&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 1&#39;s 2)
+&lt;b&gt;(print:$magicMaster&#39;s 15&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 15&#39;s 2)
+&lt;b&gt;Chosen Tags.&lt;/b&gt; A Borro can have up to N + 2 (where N is the number of Borro skills they have) Tags from the [[Object Tags List]], unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Borro skill.
 
-When a Borro chooses to imbue an Action with magic to deal damage, consult the table below. They can deal damage from any row with a number that is at most the number of Borro skills they have + 1. For example, a Borro with just one skill-- such as (print:$magicMaster&#39;s 1&#39;s 1)-- would be able to deal anything from row 2 or lower. The cost of the magic, in MP, would be equal to the cost in Damage Cost or Burst Cost corresponding to the Damage or Burst Damage they had just dealt.
 
-Casting:
-{&lt;table&gt;
-&lt;tr&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;8%&quot;&gt;Row&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Damage&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Damage Cost&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Burst Damage&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;23%&quot;&gt;Burst Cost&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;}
 
 [[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="73" name="MagicSkillsInit" tags="data-storage" position="2250,375" size="100,100">{(set:$magicMaster to (a:
 
@@ -2670,7 +2635,7 @@ Casting:
 (a: &quot;Setpiece&quot;, &quot;The Aldatu can choose to target the 4 Tiles adjacent in the cardinal directions to the Tile they select in addition to that Tile when they apply a Terrain Tag.&quot;, (a: 25), (a:), &quot;Aldatu&quot;), 
 (a: &quot;Layered&quot;, &quot;Applying a Terrain Tag only takes one Action. / The Aldatu can apply up to 2 Terrain Tags per Action (2 Action system.)&quot;, (a: 25), (a:), &quot;Aldatu&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="74" name="Exterreri" tags="table" position="925,475" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Exterreri (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Exterreri (TL)&quot;)]</tw-passagedata><tw-passagedata pid="75" name="Skathi" tags="table" position="1300,475" size="100,100">$H3[Skathi]
+))}</tw-passagedata><tw-passagedata pid="74" name="Exterreri" tags="table" position="925,475" size="100,100">(unless:$campaign is &quot;TL&quot;)[(display:&quot;Exterreri (other)&quot;)&lt;br&gt;&lt;br&gt;](if:$campaign is &quot;TL&quot; or it is &quot;??&quot;)[(display:&quot;Exterreri (TL)&quot;)]</tw-passagedata><tw-passagedata pid="75" name="Skathi" tags="table" position="1300,975" size="100,100">$H3[Skathi]
 Skathis&#39; magic connects to their enviroment, shaping it how they wish.
 
 Short Range: 5ft
@@ -2679,26 +2644,9 @@ Long Range: 45ft
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 2&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 2&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 3&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 3&#39;s 2)
-&lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
-&lt;b&gt;Chosen Tags.&lt;/b&gt; A Skathi can have up to N (where N is the number of Skathi skills they have besides Starting Casting) Tags selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Skathi skill.
+&lt;b&gt;Chosen Tags.&lt;/b&gt; A Skathi can have up to N + 1 (where N is the number of Skathi skills they have besides Starting Casting) Tags from the [[Terrain Tags List]], unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Skathi skill.
 
-Casting:
-{&lt;table&gt;
-&lt;tr&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;8%&quot;&gt;Row&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Damage&lt;/td&gt;
-&lt;td class=&quot;gray2&quot; width=&quot;46%&quot;&gt;Damage Cost&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;}
-
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="76" name="Shioreta" tags="table" position="1300,725" size="100,100">$H3[Shioreta]
+See [[Terrain Tags List]] for casting costs.</tw-passagedata><tw-passagedata pid="76" name="Shioreta" tags="table" position="1300,725" size="100,100">$H3[Shioreta]
 With fingers on the threads of their own being and others&#39;, Shioretas use their magic to pull people under the influence of magic.
 
 Short Range: 5ft
@@ -2706,12 +2654,9 @@ Long Range: 45ft
 
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 6&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 6&#39;s 2)
-&lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
-&lt;b&gt;Chosen Tags.&lt;/b&gt; A Shioreta can have up to N + 3 (where N is the number of Shioreta skills they have besides Starting Casting) Tags selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Shioreta skill.
+&lt;b&gt;Chosen Tags.&lt;/b&gt; A Shioreta can have up to N + 2 (where N is the number of Shioreta skills they have) Tags from the [[Creature Tags List]], unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Shioreta skill. ⚠️ The list below has not changed, but will be deprecated soon.
 
-Casting:
-See [[Conditions Cost List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="77" name="Otsoa" tags="table" position="1300,850" size="100,100">$H3[Otsoa]
+[[Shioreta Cost List]]</tw-passagedata><tw-passagedata pid="77" name="Otsoa" tags="table" position="1300,850" size="100,100">$H3[Otsoa]
 Otsoas have mastery over their own bodies via magic, transforming themselves in the process. 
 
 Short Range: 5ft
@@ -2721,11 +2666,9 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 7&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 7&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 10&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 10&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
-&lt;b&gt;Chosen Tags.&lt;/b&gt; An Otsoa can have up to N + 2 (where N is the number of Otsoa skills they have besides Starting Casting) Tags selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Otsoa skill.
+&lt;b&gt;Chosen Tags.&lt;/b&gt; An Otsoa can have up to N + 2 (where N is the number of Otsoa skills they have besides Starting Casting) Tags from the [[Creature Tags List]], unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Otsoa skill.
 
-Casting:
-See [[Form Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="78" name="Fyugo" tags="table" position="1300,600" size="100,100">$H3[Fyugo]
+See [[Creature Tags List]] for casting costs.</tw-passagedata><tw-passagedata pid="78" name="Fyugo" tags="table" position="1300,600" size="100,100">$H3[Fyugo]
 Fyugos use their magic to bring what&#39;s in their mind into reality. Their power comes from within, and lingers even beyond their initial casting.
 
 Short Range: 20ft
@@ -2735,11 +2678,11 @@ Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 4&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 4&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 5&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 5&#39;s 2)
 &lt;b&gt;(print:$magicMaster&#39;s 13&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 13&#39;s 2)
-&lt;b&gt;Chosen Tags.&lt;/b&gt; A Fyugo can have up to N + 2 (where N is the number of Fyugo skills they have besides Starting Casting) Tags selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Fyugo skill.
+&lt;b&gt;Chosen Tags.&lt;/b&gt; A Fyugo can have up to N + 2 (where N is the number of Fyugo skills they have) Tags from the [[Object Tags List]], unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Fyugo skill.
 
 Casting:
-See [[Summon Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Azurite" tags="table" position="1300,975" size="100,100">$H3[Azurite]
+See [[Object Tags List]] for casting costs.
+[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="79" name="Azurite" tags="table" position="1300,1225" size="100,100">$H3[Azurite]
 Azurites&#39; magic repairs and strengthens, allowing them to tend to wounds with their magic.
 
 Short Range: 10ft
@@ -2765,9 +2708,7 @@ Casting:
 &lt;/tr&gt;
 &lt;td&gt;3&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/table&gt;}
-
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="80" name="Summon Tags List" tags="" position="1525,600" size="100,100">$H2[Summon Tags List]
+&lt;/table&gt;}</tw-passagedata><tw-passagedata pid="80" name="Object Tags List" tags="" position="1525,600" size="100,100">$H2[Object Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -2784,12 +2725,12 @@ Casting:
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
 	Name
-	||||=
+	|||=
 	Description
+	|||=
+	Details
 	||=
 	Unlocked by
-	|=
-	Durability
 	|=
 	Cost
 ]
@@ -2802,36 +2743,36 @@ Casting:
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
-	|=
-	(print:_tag&#39;s 5)
+	(print:_tag&#39;s 7)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
-	|=
-	(print:_tag&#39;s 5)
+	(print:_tag&#39;s 7)
 	]
 	]
 (set:_index to it + 1)}]}\
 ]\
 &lt;!--this is spaghetti code--&gt;\
-&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="81" name="Conditions Cost List" tags="table" position="1525,725" size="100,100">$H2[Shioreta Conditions]
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="81" name="Shioreta Cost List" tags="table" position="1525,1225" size="100,100">$H2[Shioreta Creature Tags]
 
-Shioretas are able to place Conditions on targets and afflict them with Statistic Changes based on which Skills they have. The Conditions here are in boxes headed by the name of the Skill that unlocks them.
+Shioretas are able to place Creature Tags on targets and afflict them with Statistic Changes based on which Skills they have. The Tags here are in boxes headed by the name of the Skill that unlocks them.
 
 $HB5[\
 $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
@@ -2847,9 +2788,7 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 {[&lt;tr&gt;&lt;td&gt;Charmed 1 (calmed)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td&gt;Charmed 1 (become uneasy/fearful)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Charmed 1 (become more explosive)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;](later|}</tw-passagedata><tw-passagedata pid="82" name="Form Tags List" tags="" position="1525,850" size="100,100">$H2[Form Tags List]
-
-&lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;
+&lt;tr&gt;&lt;td&gt;Charmed 1 (become more explosive)&lt;/td&gt;&lt;td&gt;4 MP&lt;/td&gt;&lt;/tr&gt;](later|}</tw-passagedata><tw-passagedata pid="82" name="Creature Tags List" tags="" position="1525,725" size="100,100">$H2[Creature Tags List]
 
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
@@ -2867,12 +2806,12 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
 	Name
-	||||=
+	|||=
 	Description
+	|||=
+	Details
 	||=
 	Unlocked by
-	|=
-	Durability
 	|=
 	Cost
 ]
@@ -2885,28 +2824,28 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
-	|=
-	(print:_tag&#39;s 5)
+	(print:_tag&#39;s 7)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
-	|=
-	(print:_tag&#39;s 5)
+	(print:_tag&#39;s 7)
 	]
 	]
 (set:_index to it + 1)}]}\
@@ -2937,14 +2876,13 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (a: &quot;Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 or more times in the same turn, an extra 1d6 + 3 Physical (Pierce) damage is dealt.&quot;, 1, 5),
 (a: &quot;Faded Moonstone Assassin&#39;s Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success. This number increases to 3d6 against a nightmare creature.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 4d6 Physical (Pierce) damage on a success. This number increases to 5d6 against a nightmare creature.&quot;, 1, -1),
 (a: &quot;Faded Moonstone Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success. It has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 times in the same turn, all three hits will be considered critical successes.&quot;, 1, -1),
-(a: &quot;Faded Moonstone War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success.
- Has a +2 to hit against nightmare creatures.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned. If the target is a nightmare creature, this DC becomes 12 + the user&#39;s total Athletics bonus.&quot;, 2, -1),
+(a: &quot;Faded Moonstone War Hammer&quot;, &quot;Athletics check, 3 Actions, DC Def of target; single target within 5ft. Deals 5d6 Physical (Bash) damage on a success. Has a +2 to hit against nightmare creatures.&quot;, &quot;(1+) On a success, the target must make a Heartiness check against a DC of 8 + the user&#39;s total Athletics bonus or gain 1 level of Stunned. If the target is a nightmare creature, this DC becomes 12 + the user&#39;s total Athletics bonus.&quot;, 2, -1),
 (a: &quot;Faded Moonstone Halberd&quot;, &quot;Handiwork or Athletics check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slice, Bash, or Pierce damage.&quot;, 1, -1),
 (a: &quot;Faded Moonstone Greatsword&quot;, &quot;Fisticuffs check, DC Def of target; single target within 10ft. Deals 3d6 Physical (Slice) damage on a success. Has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) The character can choose to spend both actions to do a sweeping slash, which doubles their bonus to hit and strikes every creature within 10ft on a plane (as in 2d circle) of their choosing.&quot;, 2, -1),
 (a: &quot;Crossbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 60ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage. If the user has a combined Handiwork bonus of at least 10, they can use this tool again for only 1 Action if they already used it during this Round.&quot;, 1, 10),
-(a: &quot;Flintlock Pistol&quot;, &quot;Invention check at Disadvantage, 2 Actions, DC Def of target; single target within 30ft. Deals 3d6 Physical (Pierce) damage on a success. On a failure, the pistol will misfire, dealing 1d6 Burn damage to the user.&quot;, &quot;(1+) The Invention check is not at Disadvantage. The pistol only deals damage to the user if the failure is by a margin of 10 or more.&quot;, 1, 10)
+(a: &quot;Flintlock&quot;, &quot;Invention check at Disadvantage, 2 Actions, DC Def of target; single target within 30ft. Deals 3d6 Physical (Pierce) damage on a success. On a failure, the pistol will misfire, dealing 1d6 Burn damage to the user.&quot;, &quot;(1+) The Invention check is not at Disadvantage. The pistol only deals damage to the user if the failure is by a margin of 10 or more.&quot;, 1, 10)
 
-))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,625" size="100,100">{
+))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,775" size="100,100">{
 (set:$pop to 
 	(macro: string-type _disp,[
 		(set:_contents to &quot;(box:\\\&quot;X\\\&quot;, &quot; + (string:$popupHeight) + &quot;)[(display: \\\&quot;&quot; + _disp + &quot;\\\&quot;)]&quot;)
@@ -2960,7 +2898,7 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 		(output-data:&quot;(alert:\&quot;&quot; + (string:_contents) + &quot;\&quot;, \&quot;X\&quot;)&quot;)
 	])
 )
-}</tw-passagedata><tw-passagedata pid="85" name="PopupConfig" tags="settings" position="2375,625" size="100,100">|=
+}</tw-passagedata><tw-passagedata pid="85" name="PopupConfig" tags="settings" position="2375,775" size="100,100">|=
 $H2[Configure Popup Height]
 Adjust the height until the box on the right fits within the screen.
 {&lt;center&gt;
@@ -3111,12 +3049,12 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 	(print:_skill&#39;s 2)]&lt;br&gt;
 	]
 ]}\
-]</tw-passagedata><tw-passagedata pid="89" name="redo" tags="code" position="2250,750" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="89" name="redo" tags="code" position="2250,900" size="100,100">{
 (set:$managedCurr to $managedRedo&#39;s last)
 (set:$managedRedo to its 1stto2ndlast)
 (set:$wasRedone to true)
 (go-to:$managedCurr)
-}</tw-passagedata><tw-passagedata pid="90" name="undo" tags="code" position="2250,875" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="90" name="undo" tags="code" position="2250,1025" size="100,100">{
 (set:$managedRedo to it + (a:$managedHist&#39;s last))
 (set:$managedHist to its 1stto2ndlast)
 (set:$managedCurr to $managedHist&#39;s last)
@@ -3151,7 +3089,7 @@ $H3[[[Locations-&gt;Locations (NH)]]]
 
 $H3[[[Deities-&gt;Deities and Forces of Nature]]]
 
-$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1725,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2250,1825" size="100,100">$H2[Theodora City]
+$H3[[[Euridza]]]</tw-passagedata><tw-passagedata pid="93" name="Locations (NH)" tags="" position="1725,350" size="100,100">This will be updated soon!</tw-passagedata><tw-passagedata pid="94" name="Theodora City" tags="" position="2250,1950" size="100,100">$H2[Theodora City]
 
 $H3[(link-repeat:&quot;Toyhouse Page&quot;)[(goto-url:&quot;https://toyhou.se/~literature/258693.remagica-lore-channel-posts-3e-lore&quot;)]]</tw-passagedata><tw-passagedata pid="95" name="Euridza" tags="" position="1725,600" size="100,100">$H2[Euridza: The Realm of Dreams]
 </tw-passagedata><tw-passagedata pid="96" name="Astute" tags="" position="1175,475" size="100,100">$H3[Astute]
@@ -3183,7 +3121,7 @@ Attribute Proficiencies are a measure of proficiency in specific Attributes, whi
 $H3[Tool Proficiencies]&lt;tool|
 Tool Proficiencies 
 
-$H3[Other Proficiencies]&lt;other|</tw-passagedata><tw-passagedata pid="100" name="Thalassophobia Stuff" tags="section" position="2400,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
+$H3[Other Proficiencies]&lt;other|</tw-passagedata><tw-passagedata pid="100" name="Thalassophobia Stuff" tags="section" position="2400,1300" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="Apian" tags="table" position="925,600" size="100,100">$H2[Apian]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/apian.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Some Apians come from hives in the wilderness, raised making honey to survive the winter and foraging for food. Others are raised around other peoples, using their flight to get around settlements that are not built for their stature.
@@ -3427,7 +3365,7 @@ The character starts with a cybernetic enhancement made of living wood and magic
 
 $H3[Traits]
 Traits are neutral flavor options, designed for players who want to codify slight mechanical differences in their characters due to unique traits they have. Traits are meant to not increase or decrease power, but rather add a mechanical basis for flavor decisions, and enforce certain roleplay decisions.
-&lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="109" name="ConstInit" tags="data-storage" position="2500,500" size="100,100">{
+&lt;p&gt;Many of the Traits are disabilities; if you have recommendations on new Traits to be added, or revisions to Traits that you believe are not representative of the condition they are supposed to emulate, please &lt;a href=&quot;https://clarisetg.tumblr.com/ask&quot;&gt;send me an ask on my official Tumblr&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="109" name="ConstInit" tags="data-storage" position="2625,775" size="100,100">{
 |CampaignsKey)[
 TL  (Thalassophobia)
 NH  (Nightmare Hunters)
@@ -3460,7 +3398,8 @@ CT  (Combat Test)
 
 &lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
-}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,625" size="100,100">{
+
+}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,650" size="100,100">{
 (set:$leftPad to 7.5)
 (set:$openingSidebar to false)
 
@@ -3515,7 +3454,7 @@ A character can only hold 4 Slots&#39; worth of items on their person without an
 
 $H3[Starting Out]&lt;making|
 Each item has a point value alongside its Size. When a character is starting out, they can take any items they want as long as the total point worth of those items is less than or equal to $maxInvPoints. They can only carry items according to their Carrying Capacity, but items that they can&#39;t fit on their person can be present at a home or base if applicable.
-&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="113" name="ManageHistory" tags="code" position="2375,875" size="100,100">{
+&lt;p&gt;A DM can choose to change the amount of inventory points that characters can start with to suit their campaign. (if:$campaign is &quot;NH&quot;)[&lt;b&gt;For the Nightmare Hunters campaign, the amount is (ceil: 0.65 * $maxInvPoints), because you start in a very poor country.&lt;/b&gt;]</tw-passagedata><tw-passagedata pid="113" name="ManageHistory" tags="code" position="2375,1025" size="100,100">{
 (if: $managedHist&#39;s length &gt; 0)[ &lt;!--no short circuiting--&gt;
 	(if:(passage:)&#39;s name is not $managedHist&#39;s last)[
 		(set:$managedHist to it + (a: (passage:)&#39;s name))
@@ -3660,7 +3599,7 @@ When a creature is Unstable, they must begin making (link-goto:&quot;Death Saves
 &lt;/tr&gt;
 &lt;/table&gt;
 }
-$HB3[]&lt;Cond|</tw-passagedata><tw-passagedata pid="115" name="Xperiment" tags="section" position="1925,100" size="100,100">&lt;!--SECTION TITLE--&gt;</tw-passagedata><tw-passagedata pid="116" name="Combat Test" tags="" position="1925,225" size="100,100">$H2[Combat Test]
+$HB3[]&lt;Cond|</tw-passagedata><tw-passagedata pid="115" name="Xperiment" tags="section" position="3675,100" size="100,100">&lt;!--SECTION TITLE--&gt;</tw-passagedata><tw-passagedata pid="116" name="Combat Test" tags="" position="3675,625" size="100,100">$H2[Combat Test]
 
 &lt;center&gt;$H3[⚠️ Under Construction ⚠️]&lt;/center&gt;
 
@@ -3693,7 +3632,7 @@ When making combat skills, I intend to interpret them as &#39;things the charact
 (a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 6d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
 (a: &quot;Gauntlets&quot;, &quot;Handiwork or Athletics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5)
 
-))}</tw-passagedata><tw-passagedata pid="118" name="Terrain Tags List" tags="" position="1525,1100" size="100,100">$H2[Terrain Tags List]
+))}</tw-passagedata><tw-passagedata pid="118" name="Terrain Tags List" tags="" position="1525,850" size="100,100">$H2[Terrain Tags List]
 (set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
@@ -3710,8 +3649,10 @@ When making combat skills, I intend to interpret them as &#39;things the charact
 (box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
 	Name
-	||||=
+	|||=
 	Description
+	|||=
+	Details
 	||=
 	Unlocked by
 	|=
@@ -3726,24 +3667,28 @@ When making combat skills, I intend to interpret them as &#39;things the charact
 	(if:_index % 2 is 1)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
+	(print:_tag&#39;s 7)
 	]
 	](else:)[
 	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
 	||=
-	(print:_tag&#39;s 1)
-	||||=
 	(print:_tag&#39;s 2)
-	||=
+	|||=
 	(print:_tag&#39;s 3)
+	|||=
+	&lt;b&gt;Ends: &lt;/b&gt;(print:_tag&#39;s 4)&lt;br&gt;&lt;b&gt;Parameters: &lt;/b&gt;(print:_tag&#39;s 5)
+	||=
+	(print:_tag&#39;s 6)
 	|=
-	(print:_tag&#39;s 4)
+	(print:_tag&#39;s 7)
 	]
 	]
 (set:_index to it + 1)}]}\
@@ -3757,17 +3702,16 @@ Long Range: 30ft
 
 Skills:
 &lt;b&gt;(print:$magicMaster&#39;s 25&#39;s 1).&lt;/b&gt; (print:$magicMaster&#39;s 7&#39;s 2)
-&lt;b&gt;Chosen Tags.&lt;/b&gt; An Aldatu can have up to N + 4 (where N is the number of Aldatu skills they have besides Starting Casting) Tags selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Aldatu skill.
+&lt;b&gt;Chosen Tags.&lt;/b&gt; An Aldatu can have up to N + 4 (where N is the number of Aldatu skills they have besides Starting Casting) Tags from the Terrain Tags list, unlocked by their skills, selected and copied to their character sheet. When casting magic, they can only use those Tags, and not other ones. They can change any of the Tags on the list whenever they gain a new Aldatu skill.
 
 Casting:
-See [[Terrain Tags List]] for casting costs.
-[[Magic Abilities Page-&gt;Magic Ability]]</tw-passagedata><tw-passagedata pid="120" name="CTsetup" tags="code unused" position="3675,375" size="100,100">{
+See [[Terrain Tags List]] for casting costs.</tw-passagedata><tw-passagedata pid="120" name="CTsetup" tags="code unused" position="3675,375" size="100,100">{
 (set:$campaign to &quot;CT&quot;)
 (display:&quot;CTWeaponsInit&quot;)
 (set:$themeChosen to $themeWyrmling)
 }</tw-passagedata><tw-passagedata pid="121" name="unCTsetup" tags="code unused" position="3675,500" size="100,100">(set:$campaign to &quot;NH&quot;)
 (display:&quot;WeaponsInit&quot;)
-(set:$themeChosen to $themeNightHunt)</tw-passagedata><tw-passagedata pid="122" name="Wyrmling" tags="table" position="3075,1300" size="100,100">$H2[Wyrmling]
+(set:$themeChosen to $themeNightHunt)</tw-passagedata><tw-passagedata pid="122" name="Wyrmling" tags="table" position="3075,1425" size="100,100">$H2[Wyrmling]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/wyrmling.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 Wyrmlings, known in their jungle as the People of the Quetzalcōātl, are an arboreal people that seek innovation and discovery. Some live in harmony with all life; others meddle in its fabric without hesitation.
@@ -3802,7 +3746,7 @@ Features:
 &lt;b&gt;(print:$racesFeatures&#39;s 14&#39;s 1).&lt;/b&gt; (print:$racesFeatures&#39;s 14&#39;s 2)
 
 &#96;[&#96;image&#96;]&#96;
-*Feathers can be any color; often, they are the same fur/feather colors and patterns seen on cats or common songbirds, but cybernetics or magic can cause these colors to change. </tw-passagedata><tw-passagedata pid="123" name="Exterreri (TL)" tags="" position="2375,1550" size="100,100">$H2[Deepsea Exterreri]\
+*Feathers can be any color; often, they are the same fur/feather colors and patterns seen on cats or common songbirds, but cybernetics or magic can cause these colors to change. </tw-passagedata><tw-passagedata pid="123" name="Exterreri (TL)" tags="" position="2375,1675" size="100,100">$H2[Deepsea Exterreri]\
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/exterreri_tl.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 No one knows how Exterreri are born; they simply appear out of the darkness of the Fringes. They bleed stardust and have featureless skin that glows from within. They feel emotion strongly, but in unclear ways, like a dream.
@@ -3838,7 +3782,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Always shaped like one of the other races (including the surface races-- ask if you&#39;re interested,) but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="124" name="Marigen (TL)" tags="" position="2250,1550" size="100,100">$H2[Deepsea Marigen]\
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="124" name="Marigen (TL)" tags="" position="2250,1675" size="100,100">$H2[Deepsea Marigen]\
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/marigen.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 
@@ -3946,7 +3890,7 @@ Features:
 
 &#96;[&#96;image&#96;]&#96;
 *Always shaped like one of the other races, but with altered proportions and colors. Colors are either dark or brightly lit. Bits of “smoke” (intangible, but visible, and have a scent,) can trail from anywhere on their bodies, often replacing dense clumps of hair, fur or tentacles on the creature they look like.
-Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="127" name="Hiverscruff (XA)" tags="" position="2950,1300" size="100,100">$H2[Hiverscruff (Eastern Jungle)]
+Always have exactly one pain-eating tentacle, but can have any number of other limbs.</tw-passagedata><tw-passagedata pid="127" name="Hiverscruff (XA)" tags="" position="2950,1425" size="100,100">$H2[Hiverscruff (Eastern Jungle)]
 &lt;img class=&quot;imgchar&quot; src=&quot;assets/races/hiverscruff.png&quot; align=&quot;right&quot; hspace=&quot;10&quot; vspace=&quot;0&quot;&gt;
 
 With bright and colorful plumage in a variety of shapes and patterns, Hiverscruffs are known for their beautiful song and intricate rituals. They lack the fur or down of their Northern counterparts, instead completely covered in feathers.
@@ -4022,7 +3966,7 @@ Features:
 
 *Feather colors are often more neutral colors, but don&#39;t have to be. Hiverscruffs are typically based off of birds of prey, and have a wing and tail fan shape based off of particular birds, but can also be other birds. Colors can also correspond to any bird species, or a custom color scheme. They tend to match the environment their ancestors are from.
 
-Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="129" name="Eastern Continent Stuff" tags="section" position="3100,1175" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="130" name="Point Buy Calculator" tags="" position="800,975" size="100,100">{(set:$totalPoints to 38)(set:$pointThreshold to 13)
+Hiverscruffs often have large tusks, but they can have up to three tusks or horns on their head in different positions.</tw-passagedata><tw-passagedata pid="129" name="Eastern Continent Stuff" tags="section" position="3100,1300" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="130" name="Point Buy Calculator" tags="" position="800,975" size="100,100">{(set:$totalPoints to 38)(set:$pointThreshold to 13)
 &lt;!--if GREATER THAN threshold, increase by 2 per one increase--&gt;
 &lt;!--math derived from UPB, credit smorebob--&gt;
 (set:_pbStr to 10)
@@ -4174,7 +4118,7 @@ Points Remaining: {(set: $remPoints to
         (rerun:?display)
 ]]]
 }]
-]&lt;display|</tw-passagedata><tw-passagedata pid="131" name="Eupharia Stuff" tags="section" position="2400,1700" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="132" name="Divine Blessings List" tags="" position="1525,1225" size="100,100">$H2[Divine Blessings List]
+]&lt;display|</tw-passagedata><tw-passagedata pid="131" name="Eupharia Stuff" tags="section" position="2400,1825" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="132" name="Divine Blessings List" tags="" position="1525,1100" size="100,100">$H2[Divine Blessings List]
 (set:_sortByNum to 4)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 4)[Entity | (link:&quot;Skill&quot;)[
@@ -4242,7 +4186,7 @@ Points Remaining: {(set: $remPoints to
 (a: &quot;Rotten Inside&quot;, &quot;Desecrating corpses after killing creatures will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rattzlagi&quot;), 
 (a: &quot;Having Faith&quot;, &quot;Rekke Panthali will give the character visions. Acting to fulfill these visions will activate Divine Purpose.&quot;, &quot;Divine Purpose&quot;, &quot;Rekke Panthali&quot;)
 
-))}</tw-passagedata><tw-passagedata pid="134" name="prereqPrint" tags="code" position="2500,875" size="100,100">{(set:$prereqPrint to (macro: str-type _input, [
+))}</tw-passagedata><tw-passagedata pid="134" name="prereqPrint" tags="code" position="2500,1025" size="100,100">{(set:$prereqPrint to (macro: str-type _input, [
 	(set:_output to &quot;&quot;)
 	(set:_numberTemp to &quot;&quot;)
 	(set:_state to 0) 	&lt;!--0: string--&gt;
@@ -4273,7 +4217,7 @@ Points Remaining: {(set: $remPoints to
 		]
 	]
 	(output-data:_output)
-]))}</tw-passagedata><tw-passagedata pid="135" name="Summon, Form, and Terrain Tags" tags="in-progress" position="600,1000" size="100,100">$H2[Summon, Form, and Terrain Tags (and Conditions)]
+]))}</tw-passagedata><tw-passagedata pid="135" name="Object, Creature, and Terrain Tags" tags="in-progress" position="600,1000" size="100,100">$H2[Object, Creature, and Terrain Tags]
 
 Tags are modifiers on things, creatures, and spaces that add extra effects. They are divided into three types, corresponding to each of their targets: Summon Tags, for inanimate objects, Form Tags, for creatures, and Terrain Tags, for parts of the terrain or tiles.
 
@@ -4351,7 +4295,7 @@ They are defined by the kind of injury inflicted to the creature or thing.
 
 ($adjCol:#d65a02)[Slice] damage includes any slashes to the body, especially those that cause bleeding.
 
-($adjCol:#f08418)[Pierce] damage refers to deeper, more localized physical wounds, such as those from a bullet.</tw-passagedata><tw-passagedata pid="139" name="adjCol" tags="code" position="2625,875" size="100,100">{
+($adjCol:#f08418)[Pierce] damage refers to deeper, more localized physical wounds, such as those from a bullet.</tw-passagedata><tw-passagedata pid="139" name="adjCol" tags="code" position="2625,1025" size="100,100">{
 (set:$hex2col to (macro:str-type _hexCode, [
 	(set:_color to #ff0)
 	(print:&quot;(set:_color to &quot; + _hexCode + &quot;)&quot;)
@@ -4362,7 +4306,46 @@ They are defined by the kind of injury inflicted to the creature or thing.
 	(print:&quot;(set:_textColor to &quot; + $themeChosen&#39;s 2 + &quot;)&quot;)
 	(out-data:(text-color:(mix: .85, _mainColor, .15, _textColor)))
 ]))
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="140" name="CreatureTagsInit" tags="data-storage" position="2375,500" size="100,100">{(set:$otsoaTags to (a:
+
+(a: 1, &quot;Blinded 1&quot;, &quot;The creature&#39;s senses-- especially their primary sense-- are dulled, reducing their ability to navigate their enviroment. They have a -5 penalty to all checks that rely on their primary sense.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Snowball Effect&quot;, &quot;&quot;),
+(a: 2, &quot;Blinded 2&quot;, &quot;The creature&#39;s primary sense is removed, reducing their ability to navigate their enviroment. They have a -5 penalty and disadvantage to all checks that rely on their primary sense.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 3, &quot;Blinded 3&quot;, &quot;All of the creature&#39;s senses are dampened or removed. The creature has -10 and disadvantage to checks that rely on any of their senses.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 4, &quot;Charmed X (Effect)&quot;, &quot;The creature&#39;s behavior is influenced by magic, pushing their thought processes and emotions in a direction. For example, a creature with Charmed (calmed) would feel calm, and a creature with Charmed (made to like you) would like you more.&quot;, &quot;When dispelled. The creature can choose to make a Willpower save of at least 10 + 2 * X to dispel this Tag themself. Only one instance of Charmed is dispelled at a time.&quot;, &quot;X is the level of the Tag. N is 3 * X.&quot;, &quot;Snowball Effect&quot;, &quot;N&quot;),
+(a: 5, &quot;Dizzy X&quot;, &quot;The creature is dizzy, and gains a -X penalty to checks that require precise movement (such as rolls to use weapons, Handiwork checks, or Acrobatics checks.)&quot;, &quot;When dispelled. The creature can choose to make a Heartiness save of at least 10 + 2 * X to dispel this Tag themself.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 6, &quot;Frightened 1&quot;, &quot;The creature has a -5 penalty to checks while the caster is visible to its primary sense.&quot;, &quot;&quot;, &quot;&quot;, &quot;Snowball Effect&quot;, &quot;&quot;),
+(a: 7, &quot;Grappled (Grappler)&quot;, &quot;The creature has been physically captured by their Grappler. Their movement speeds all become 0, and they have disadvantage on checks targeting anything other than their Grappler.&quot;, &quot;When the Grappler becomes unable to hold them, or when they succeed a Clash against the Grappler&#39;s Athletics or Sturdy with their Acrobatics or Athletics.&quot;, &quot;The Grappler is the creature or object that grappled the creature.&quot;, &quot;&quot;, &quot;&quot;),
+(a: 8, &quot;Grappler (Target)&quot;, &quot;The creature is physically restraining a Target. Their movement speeds are all halved, rounded up, unless their Target is willing.&quot;, &quot;See Grappled.&quot;, &quot;The Target is the creature that the Grappler is grappling.&quot;, &quot;&quot;, &quot;&quot;),
+(a: 9, &quot;Pained 1&quot;, &quot;The creature gains a -1 penalty to Heartiness checks, and halves the second parameter of the Plagued (Bleeding) Tag, rounded up.&quot;, &quot;When the creature&#39;s HP increases beyond half of its maximum.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 10, &quot;Paralyzed 1&quot;, &quot;The creature gains a -10 penalty to any checks that require them to move move normally, as if not bound. They also lose one Action per round. Their movement speeds become 0.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 11, &quot;Plagued X/Y (Type)&quot;, &quot;The creature is besieged by some sort of damage, only worsened by Adrenaline. Every minute, or at the end of the creature&#39;s Turn in Adrenaline, the creature takes X damage, and then loses Y levels of Plagued. Plagued (Bleeding) is equivalent to Plagued (Drown) and deals that type of damage.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 12, &quot;Toe Beans&quot;, &quot;The creature has advantage to Stealth and Acrobatics checks.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;2&quot;),
+(a: 13, &quot;Quick X&quot;, &quot;The creature gains 5 * X feet of movement.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;X is the level of the Tag. N is 2 * X.&quot;, &quot;Metamorphosis, Snowball Effect&quot;, &quot;N&quot;),
+(a: 14, &quot;Fluff&quot;, &quot;The creature becomes unaffected by weather and temperature effects.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;3&quot;),
+(a: 15, &quot;Thick Hide&quot;, &quot;The creature gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;6&quot;),
+(a: 16, &quot;Super-Senses&quot;, &quot;The creature&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to The creature&#39;s senses.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis, Snowball Effect&quot;, &quot;4&quot;),
+(a: 17, &quot;Healthy X&quot;, &quot;The creature gains 10 * X bonus HP.&quot;, &quot;When dispelled. The bonus HP granted by this tag cannot be healed, and when it is reduced to 0, this Tag disappears.&quot;, &quot;X is the level of the Tag. N is 3 * X.&quot;, &quot;Metamorphosis&quot;, &quot;N&quot;),
+(a: 18, &quot;Unrecognizable&quot;, &quot;The creature&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + The creature&#39;s Deception proficiency to recognize them.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;2&quot;),
+(a: 19, &quot;Leap 1&quot;, &quot;The creature can take the Leap action by using 10 MP, which has the effect of taking the Move action with a move speed of 45ft fly.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;0&quot;),
+(a: 20, &quot;Ooze 1&quot;, &quot;The creature gains 1 DEF and becomes able to fit into any space that could contain their volume, regardless of shape.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;5&quot;),
+(a: 21, &quot;Hunger 1&quot;, &quot;The creature has Regeneration 5. If they do not either hit a melee attack or eat something every round, they lose this Tag. The tag peters out anyway after 2 minutes.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 22, &quot;Shortcut 1&quot;, &quot;The creature’s corporeality changes. Choose one of the following: shadows (dark areas), water, plants, or stone (that is not metallic or crystalline). They gain a movement speed of 60ft through a contiguous span of that material, and can choose not to be affected by any hazard tiles between them and their destination.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 23, &quot;Stubborn 1&quot;, &quot;Whenever The creature would receive any levels of Charmed, reduce that level by 1.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 24, &quot;Feral 1&quot;, &quot;Each time the creature takes damage, raise the level of the Feral tag that they have by 2. They can add the level of Feral that they have to any damage they deal directly.&quot;, &quot;When dispelled, the creature falls asleep, or 1 minute after it begins.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 25, &quot;Beloathed&quot;, &quot;This tag causes all creatures within 10ft to make a Willpower save against a DC of 8 + The creature’s Persuasion modifier or gain Charmed (Fixated.) This condition causes them to want to attack The creature above all else. This tag also gives The creature a +2 to Intimidation checks.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;)
+
+))}</tw-passagedata><tw-passagedata pid="141" name="TerrainTagsInit" tags="data-storage" position="2500,500" size="100,100">{(set:$aldatuTags to (a:
+
+(a: 1, &quot;Slowing&quot;, &quot;The Tile costs 5 extra feet of movement to move out of.&quot;, &quot;&quot;, &quot;&quot;, &quot;Sculptor&quot;, &quot;2&quot;),
+(a: 2, &quot;Strangling&quot;, &quot;When a creature enters this Tile, they must make an Athletics or Acrobatics check DC 8 or become Grappled by the Tile and unable to leave.&quot;, &quot;&quot;, &quot;&quot;, &quot;It Spreads&quot;, &quot;4&quot;),
+(a: 3, &quot;Slippery&quot;, &quot;When a creature attempts to leave this Tile, they must make an Acrobatics check DC 8 or fall over, giving them Stun II (Stun I in the 2 Action System).&quot;, &quot;&quot;, &quot;&quot;, &quot;It Spreads&quot;, &quot;3&quot;),
+(a: 4, &quot;Raised / Lowered&quot;, &quot;The Tile is considered 5 feet higher or lower than it was before, costing the appropriate amount of extra movement to move to it in 3D space. This tag only costs 2 MP if it is being stacked on itself.&quot;, &quot;&quot;, &quot;&quot;, &quot;Sculptor&quot;, &quot;3&quot;),
+(a: 5, &quot;Climbable&quot;, &quot;When cast on a vertical face, this Tile makes it so that any character who could climb has a Climb speed of half of their Walk speed up this Tile.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;),
+(a: 6, &quot;Open&quot;, &quot;The Tile is now a normal Tile if before, it was either empty (and the source of this Tag could reasonably fill it,) or full (and the source of this Tag could remove the blockage.)&quot;, &quot;&quot;, &quot;&quot;, &quot;Sculptor&quot;, &quot;2&quot;),
+(a: 7, &quot;Trapped&quot;, &quot;When a creature exits this Tile, they must make an Athletics or Acrobatics check DC 8 or take 6d6 damage of a type that makes sense for the construction of this Tag. When a creature fails this check for this Tile, this Tag breaks.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;4&quot;),
+(a: 8, &quot;Crumbling&quot;, &quot;The tile will collapse when a creature weighing at least 20 lbs moves into it, becoming an empty tile. If there is mass around this tile on its sides and below, this will essentially drop the terrain 5ft where this Tile was. Creatures other than the caster cannot detect this Tag except by a DC 10 Perception check.&quot;, &quot;&quot;, &quot;&quot;, &quot;Sculptor, It Spreads&quot;, &quot;3&quot;)
+
+))}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

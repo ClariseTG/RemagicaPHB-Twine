@@ -1009,7 +1009,7 @@ $H3[Magic]
 
 $H3[Misc]
 [[Deities and Forces of Nature]]
-[[Divine Blessings List]]
+[[Divine Blessings List (Old)]]
 [[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Downtime" tags="done" position="600,750" size="100,100">$H2[Downtime]
 
 When characters are not actively adventuring or achieving goals, they are on Downtime! Being on Downtime is a healing experience, recovering a character&#39;s energy after their ordeals. They can also still grow during downtime through practice!
@@ -1834,7 +1834,7 @@ $H4[Actions], which are tasks that can be completed in 2 seconds. These include 
 
 $H4[Reactions], which are quick reactions that occur when prompted by some stimulus. These include things like Parrying or Dodging.
 
-$H4[Free Actions], which are things creatures can feasibly do at the same time as their main Actions. Even in Adrenaline, these are still mostly in the domain of roleplay, and include talking and gesturing. Some abilities turn certain Actions into Free Actions.</tw-passagedata><tw-passagedata pid="40" name="Death Saves" tags="" position="475,1375" size="100,100">Death Saves are a series of Endurance checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="41" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
+$H4[Free Actions], which are things creatures can feasibly do at the same time as their main Actions. Even in Adrenaline, these are still mostly in the domain of roleplay, and include talking and gesturing. Some abilities turn certain Actions into Free Actions.</tw-passagedata><tw-passagedata pid="40" name="Death Saves" tags="" position="275,1375" size="100,100">Death Saves are a series of Endurance checks that are made once a creature is at 0 HP or lower. A save is a pass if the roll, plus the Constitution modifier, is 10 or more, and a fail otherwise. Once the creature fails 3 saves, they lost all of their True Health and die. If they pass 3 saves, their HP becomes 1, and they are stable.&lt;br&gt;&lt;p&gt;After one save is failed, the creature loses a True Health. Once two saves are failed, the creature will still be incapacitated once stable. A critical success nets two passes, and a critical fail nets two failures.</tw-passagedata><tw-passagedata pid="41" name="Search" tags="data-processing" position="300,425" size="200,100">(input-box: bind $search, &quot;x&quot;, 1)\
 (link-repeat:&quot;🔎 Search&quot;)[(replace:?Results)[{(alert: &quot;(display:\&quot;SearchResults\&quot;)&quot;, &quot;X&quot;)}]]{
 }\
 []&lt;Results|</tw-passagedata><tw-passagedata pid="42" name="SearchResults" tags="data-processing" position="350,550" size="100,100">{$H4[&lt;i&gt;Search Results for &quot;$search&quot;...&lt;/i&gt;]&lt;br&gt;
@@ -2081,7 +2081,7 @@ This is a small bit of extra space right at the top of your sheet-- prime real e
 (a: &quot;Feathery Wings&quot;, &quot;Hiverscruffs have strong, feathery wings, and a Fly speed of 30ft. However, they cannot fly up. They can increase this Fly speed to 60ft if they choose to lose 5ft for every 10ft traveled horizontally.&quot;, &quot;Hiverscruff&quot;), 
 (a: &quot;Flora&quot;, &quot;If exposed to direct sunlight, fresh water, and a comfortable amount of heat the entire time, a Phorad can complete a Long Rest in the span of a Short Rest.&quot;, &quot;Phorad&quot;), 
 (a: &quot;Sudden Movement&quot;, &quot;Hazaan are adept runners, capable of surprising speed. In exchange for one of their actions in the next round, a Hazaan can take one extra Move action this round. In round-less time, this translates to a quick burst of movement when necessary.&quot;, &quot;Hazaan&quot;), 
-(a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds.&quot;, &quot;Marigen&quot;), 
+(a: &quot;The Bends&quot;, &quot;Marigen recover quickly from dizziness and pain from diving and surfacing too quickly. If they have the Dizzy or Pained conditions, they will lose one level of it every 12 seconds. Additionally, they take twice as long to suffocate.&quot;, &quot;Marigen&quot;), 
 (a: &quot;Arboreal&quot;, &quot;Wyrmlings do not take damage from falling from a height.&quot;, &quot;Wyrmling&quot;)
 ))
 }</tw-passagedata><tw-passagedata pid="51" name="Talents and Skills" tags="table done" position="1175,225" size="100,100">$H2[Talents and Skills]
@@ -2273,7 +2273,7 @@ Proficiency: 2 Bonus Proficiency Points between History and Religion.
 
 Skill: &lt;b&gt;(print:$skillsMaster&#39;s 42&#39;s 1).&lt;/b&gt; (print:$skillsMaster&#39;s 42&#39;s 2)
 
-All of the abilities associated with specific entities can be seen [[here-&gt;Divine Blessings List]].
+All of the abilities associated with specific entities can be seen [[here-&gt;Divine Blessings List (Old)]].
 A list of the entities themselves can be seen [[here-&gt;Deities and Forces of Nature]].</tw-passagedata><tw-passagedata pid="59" name="Agile" tags="" position="1175,350" size="100,100">$H3[Agile]
 
 Those who have learned to rely on their quick reactions and sharp instincts are deeply at home in their abilities. They can act before they can think; often, this can save their life when trouble comes to get them. Wired and unpredictable, those whose talents lie in their speed are difficult to pin down.
@@ -3398,6 +3398,7 @@ CT  (Combat Test)
 
 &lt;!--MISC--&gt;
 (set:$baseProfPts to 7)
+(set:$godsMaster to (a:&quot;Summary&quot;,&quot;Queen of Nightmares&quot;, &quot;Rattzlagi&quot;, &quot;Rekke Panthali&quot;, &quot;Krementini&quot;, &quot;Amorro&quot;, &quot;Sping&quot;))
 
 }</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,650" size="100,100">{
 (set:$leftPad to 7.5)
@@ -4118,7 +4119,7 @@ Points Remaining: {(set: $remPoints to
         (rerun:?display)
 ]]]
 }]
-]&lt;display|</tw-passagedata><tw-passagedata pid="131" name="Eupharia Stuff" tags="section" position="2400,1825" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="132" name="Divine Blessings List" tags="" position="1525,1100" size="100,100">$H2[Divine Blessings List]
+]&lt;display|</tw-passagedata><tw-passagedata pid="131" name="Eupharia Stuff" tags="section" position="2400,1825" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="132" name="Divine Blessings List (Old)" tags="unused" position="3675,750" size="100,100">$H2[Divine Blessings List]
 (set:_sortByNum to 4)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
 |SortBy&gt;[Sort by: {
 	(if:_sortByNum is 4)[Entity | (link:&quot;Skill&quot;)[
@@ -4270,7 +4271,7 @@ The speed at which the creature moves through Spaces that are too narrow to be e
 
 $H3[Dig]
 Default: 0ft
-The speed at which the creature can burrow through solid material that they can break through, leaving behind a narrow passage that must be Crawled through.</tw-passagedata><tw-passagedata pid="137" name="In-Progress Header" tags="header" position="100,1625" size="100,100">{(if:(passage:)&#39;s tags contains &quot;in-progress&quot;)[⚠️ Under Construction ⚠️&lt;br&gt;]}</tw-passagedata><tw-passagedata pid="138" name="Damage Types" tags="" position="600,1375" size="100,100">The damage types are as follows:
+The speed at which the creature can burrow through solid material that they can break through, leaving behind a narrow passage that must be Crawled through.</tw-passagedata><tw-passagedata pid="137" name="In-Progress Header" tags="header" position="100,1625" size="100,100">{(if:(passage:)&#39;s tags contains &quot;in-progress&quot;)[⚠️ Under Construction ⚠️&lt;br&gt;]}</tw-passagedata><tw-passagedata pid="138" name="Damage Types" tags="" position="425,1375" size="100,100">The damage types are as follows:
 ($adjCol:#ff4d00)[Burn], ($adjCol:#24afff)[Frostbite], ($adjCol:#0084db)[Drown], ($adjCol:#76d600)[Melt], ($adjCol:#9a0dff)[Toxin], ($adjCol:#5446b3)[Rot], ($adjCol:#f424ff)[Mental], ($adjCol:#ffd447)[Aura], ($adjCol:#ff7c1f)[Break], ($adjCol:#d65a02)[Slice], and ($adjCol:#f08418)[Pierce].
 
 They are defined by the kind of injury inflicted to the creature or thing.
@@ -4345,7 +4346,33 @@ They are defined by the kind of injury inflicted to the creature or thing.
 (a: 7, &quot;Trapped&quot;, &quot;When a creature exits this Tile, they must make an Athletics or Acrobatics check DC 8 or take 6d6 damage of a type that makes sense for the construction of this Tag. When a creature fails this check for this Tile, this Tag breaks.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;4&quot;),
 (a: 8, &quot;Crumbling&quot;, &quot;The tile will collapse when a creature weighing at least 20 lbs moves into it, becoming an empty tile. If there is mass around this tile on its sides and below, this will essentially drop the terrain 5ft where this Tile was. Creatures other than the caster cannot detect this Tag except by a DC 10 Perception check.&quot;, &quot;&quot;, &quot;&quot;, &quot;Sculptor, It Spreads&quot;, &quot;3&quot;)
 
-))}</tw-passagedata></tw-storydata>
+))}</tw-passagedata><tw-passagedata pid="142" name="Divine Blessings" tags="" position="1525,1100" size="100,100">$H2[Divine Blessings]
+(set:_gray to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)\
+See divine blessings for:
+(dropdown: bind $selectedGod, ...$godsMaster)
+ 
+Sigil of Power. The character gains a 10ft AOE effect.
+Tendrils. When the character does a task in alignment with their god, they regain 2d4 MP.
+Divine Justice. The character gains some instant ability that they can do to a creature or object using their god’s power using some MP.
+Rewoven. The character gains a major, physical change, alongside either a change in their mobility or an ability they can use (for MP).
+{$HB2 + (b4r:&quot;solid&quot;) + \
+	(b4r-color:$talentColor&#39;s &quot;Faithful&quot;) + \
+	(background:(gradient:
+		0,
+		0, (_gray),
+		1, (mix: 0.8, (_gray), 0.2, $talentColor&#39;s &quot;Faithful&quot;)
+	))[
+	|=
+	$H4[Divine Spirit]&lt;br&gt;
+	
+	$H5[Talent]&lt;br&gt;
+	&lt;!--print prerequisites--&gt;\
+	Prerequisites: n/a
+	&lt;br&gt;
+	(print: &quot;Unlocks: ???&quot;)
+	=||
+	The character has special insight about something related to their god and a minor mark from them.]}</tw-passagedata><tw-passagedata pid="143" name="Drowning and Suffocating" tags="" position="600,1250" size="100,100">$H2[Suffocating]
+If a creature is not exposed to a material they can respirate in, they will begin Suffocating after 96 + 12 &#96;*&#96; their Con bonus seconds (equivalent to 16 + 2 &#96;*&#96; Con rounds.)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

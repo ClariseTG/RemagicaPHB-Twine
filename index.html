@@ -301,7 +301,7 @@ $H2[Lore]
 &lt;i&gt;Remagica by ClariseTG&lt;/i&gt;
 [[Credits]]
 
-*Version 4.5.3 - 2026-2-21*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
+*Version 4.5.5 - 2026-3-14*</tw-passagedata><tw-passagedata pid="2" name="Notes" tags="unused" position="100,100" size="100,100">https://twinery.org/forum/discussion/1528/css-is-your-friend-the-basics-of-changing-twines-default-appearance-for-newbs
 
 https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
 
@@ -377,6 +377,7 @@ Array
 {(display:&quot;TerrainTagsInit&quot;)}\
 {(display:&quot;WeaponsInit&quot;)}\
 {(display:&quot;DivineBlessingsInit&quot;)}\
+{(display:&quot;StratagemsInit&quot;)}\
 \
 &lt;!--Setting up Headers--&gt;\
 (set:$baseSize to 1)\
@@ -1011,7 +1012,8 @@ $H3[Magic]
 
 $H3[Misc]
 [[Deities and Forces of Nature]]
-[[Divine Blessings List (Old)]]
+[[Divine Blessings List-&gt;Divine Blessings List (Old)]] 
+[[Stratagems List]] 
 [[Character Sheet Links]]</tw-passagedata><tw-passagedata pid="19" name="Lore" tags="section" position="1725,100" size="100,100">&lt;!--HEADER--&gt;</tw-passagedata><tw-passagedata pid="20" name="Downtime" tags="done" position="600,750" size="100,100">$H2[Downtime]
 
 When characters are not actively adventuring or achieving goals, they are on Downtime! Being on Downtime is a healing experience, recovering a character&#39;s energy after their ordeals. They can also still grow during downtime through practice!
@@ -1707,7 +1709,7 @@ $HB2+(box:&quot;=XXXXXX=&quot;)[...And a huge shoutout to all of my players!]
 	&lt;/tbody&gt;
 &lt;/table&gt;}</tw-passagedata><tw-passagedata pid="34" name="DropdownButton" tags="" position="2250,1150" size="100,100">{
 (link:&quot;&lt;img class=\&quot;imgbox\&quot; src=\&quot;&quot; + (string: $assetStar&#39;s (($themeChosen&#39;s 3) + 1)) + &quot;\&quot;&gt;&lt;/img&gt;&quot;)[(set:$leftPad to 7.5)(set:$openingSidebar to true)(go-to:(passage:)&#39;s name)]
-}</tw-passagedata><tw-passagedata pid="35" name="Weapons List" tags="table" position="1525,975" size="100,100">$H2[Weapons List]
+}</tw-passagedata><tw-passagedata pid="35" name="Weapons List" tags="" position="1525,975" size="100,100">$H2[Weapons List]
 (set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_weapon to 0)(set:_index to 0)\
 {
 &lt;!--header--&gt;
@@ -2605,23 +2607,23 @@ This damage type does not represent the element of the magic; it represents the 
 For example, if Katya were to use her light sword to attack someone directly with a slash, it would deal ($adjCol:#d65a02)[Slice] damage, but if she were to summon her blade such that it intersected someone she had pinned down, it might ($adjCol:#ff4d00)[Burn] them. </tw-passagedata><tw-passagedata pid="71" name="ObjectTagsInit" tags="data-storage" position="2250,500" size="100,100">{(set:$fyugoTags to (a:
 
 (a: 1, &quot;Summon 1&quot;, &quot;The object is a Summon, likely created by a Fyugo&#39;s magic. A Fyugo can choose to take the following Actions originating from this object: Attack, Move. It can Fly 20ft to move, but must be on a Space adjacent to the ground at the end of its Movement. If it Attacks, it deals 0 damage; it has 5 Durability; it has 8 Def; and it has 7 in every Stat.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;0&quot;),
-(a: 2, &quot;Sharp X (type)&quot;, &quot;The object can deal X more damage of the specified type. &quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;X is the level of the tag specified, and N is twice X. The type is a damage type and can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce.&quot;, &quot;Persistent Fabrications, Imbue&quot;, &quot;N&quot;),
+(a: 2, &quot;Sharp X (type)&quot;, &quot;The object can deal X more damage of the specified type. If X is a dice quantity, the dice are rolled every time the object is used.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;X is the level of the tag specified, and can either be a number or a dice quantity. The type is a damage type and can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce.&quot;, &quot;Persistent Fabrications, Imbue&quot;, &quot;N&quot;),
 (a: 3, &quot;Defend 1&quot;, &quot;The caster can use their Reaction to cause this object to take damage for a creature on an adjacent Space to it.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
 (a: 4, &quot;Grapple 1&quot;, &quot;The caster can take the Grapple action through this object.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
 (a: 5, &quot;Versatile 1&quot;, &quot;The caster can take certain types of manual Actions through this object, such as picking locks or grabbing things. They do not get any senses from this Tag, including proprioception, so if they cannot see this object or it is too far away, they will be fumbling in the dark.&quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;3&quot;),
 (a: 6, &quot;Weapon 1 (Type)&quot;, &quot;This object can be used as a weapon. If this Tag comes from a caster, they have 1 proficiency point for the weapon. It deals 3d6 damage and takes 2 Actions to use.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Persistent Fabrications&quot;, &quot;2&quot;),
-(a: 7, &quot;Solid X&quot;, &quot;This object&#39;s durability increases by 10 * X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified. N is 3 * X.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
-(a: 8, &quot;Shield X&quot;, &quot;The object is usable as a shield, boosting its user&#39;s Def by X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified. N is X * X.&quot;, &quot;&quot;, &quot;N&quot;),
+(a: 7, &quot;Solid X&quot;, &quot;This object&#39;s durability increases by 10 * X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
+(a: 8, &quot;Shield X&quot;, &quot;The object is usable as a shield, boosting its user&#39;s Def by X.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;&quot;, &quot;N&quot;),
 (a: 9, &quot;Luminous 1&quot;, &quot;All creatures within 10ft of this object gain the Illuminated Creature Tag.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;2&quot;),
 (a: 10, &quot;Glowing 1&quot;, &quot;All Spaces and Tiles within 30ft of this object&#39;s center are lit.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;),
 (a: 11, &quot;Bonding (Target)&quot;, &quot;The object is bonded to a host, following them with its other effects. The object is functionally massless and is centered on Target until this Tag disappears. &quot;, &quot;When dispelled, or if the object it is on does not have any levels of Summon. Additionally, the Target can choose to make a Handiwork or Power check against either 10 or 10 + the caster&#39;s Power bonus to remove this Tag.&quot;, &quot;Target is a creature within 30ft of the source of this tag (usually the caster.)&quot;, &quot;&quot;, &quot;4&quot;),
 (a: 12, &quot;Siphon 1 (Beneficiary)&quot;, &quot;If this object deals damage, one-quarter of that damage&#39;s value is restored to its Beneficiary as HP.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;The Beneficiary is either the user of the object or the caster of the Tag, chosen when the Tag is cast.&quot;, &quot;&quot;, &quot;7&quot;),
-(a: 13, &quot;Infestation 1/X (Type)&quot;, &quot;All creatures within 5ft of this object gain Plagued (4 * X)/0 (Type). They lose that Tag at the start of their first Turn started out of range.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is a parameter specifying the severity of the damage, and not the level. N is 4 * X.&quot;, &quot;&quot;, &quot;N&quot;),
+(a: 13, &quot;Infestation 1/X (Type)&quot;, &quot;All creatures within 5ft of this object gain Plagued (4 * X)/0 (Type). They lose that Tag at the start of their first Turn started out of range.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is a parameter specifying the severity of the damage, and not the level.&quot;, &quot;&quot;, &quot;N&quot;),
 (a: 14, &quot;Pretty 1&quot;, &quot;The object is quite pretty. Sapient creatures that view it with their dominant sense make a DC 12 Willpower save or gain Charmed 1 (Pretty). This makes them feel a desire not to break the object.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;),
 (a: 15, &quot;Fixation 1&quot;, &quot;The object draws attention easily. Sapient creatures around it must make a DC 12 Willpower save or gain Charmed 1 (Fixated). This makes them want to destroy the summon above all else.&quot;, &quot;When dispelled, or if the object&#39;s durability goes to 0.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
 (a: 16, &quot;Damage X (Type)&quot;, &quot;This object (a tool or object with the Weapon tag) draws power from its caster. When it is used on a target, it can also deal 4 * X damage of the specified Type to the target, at the cost of 2 * X MP spent by the caster.&quot;, &quot;When dispelled, or if the caster moves more than their Long Range away from the object. This tag goes away if the Burst Tag is cast on the object.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is the level of the tag specified.&quot;, &quot;Imbue&quot;, &quot;0&quot;),
 (a: 17, &quot;Burst X (Type)&quot;, &quot;This object (a tool or object with the Weapon tag) draws power from its caster. When it is used on a target, it can also deal 6 * X damage of the specified Type to the target, at the cost of 5 * X MP spent by the caster.&quot;, &quot;When dispelled, or if the caster moves more than their Long Range away from the object. This tag goes away if the Damage Tag is cast on the object.&quot;, &quot;The Type is a damage type. It can be any of: Burn, Frostbite, Drown, Melt, Toxin, Rot, Mental, Break, Slice, or Pierce. X is the level of the tag specified.&quot;, &quot;Imbue&quot;, &quot;0&quot;),
-(a: 18, &quot;Stat Change X (Stat)&quot;, &quot;This object gains X to the specified Stat.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the Tag. N is 3 * X. The Stat is any one of Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, or Magic.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
+(a: 18, &quot;Stat Change X (Stat)&quot;, &quot;This object gains X to the specified Stat.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the Tag. The Stat is any one of Strength, Dexterity, Constitution, Knowledge, Wisdom, Charisma, or Magic.&quot;, &quot;Persistent Fabrications&quot;, &quot;N&quot;),
 (a: 19, &quot;Specialized 1 (Type)&quot;, &quot;On a tool, this tag gives its user a +8 bonus on checks regarding its purpose when used on/against creatures of the specified Type.&quot;, &quot;When the object is badly damaged.&quot;, &quot;The Type is a creature type.&quot;, &quot;&quot;, &quot;10&quot;),
 (a: 20, &quot;Grabbing 1&quot;, &quot;If the tool is used on a creature or object and makes contact with them, that creature or object is pulled 5ft towards the user. This tag does not extend to ammunition fired from a tool.&quot;, &quot;When the object is badly damaged.&quot;, &quot;&quot;, &quot;&quot;, &quot;4&quot;)
 
@@ -2905,7 +2907,7 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (a: &quot;Sleek Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 4d6 Physical (Pierce) damage on a success.&quot;, 1, 5),
 (a: &quot;Gauntlets&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Bash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action.&quot;, 1, 5),
 (a: &quot;Weaponized Tail&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(2+) When the character uses this tool, they can use it again as part of the same action, dealing 2d6 this time.&quot;, 0, -1),
-(a: &quot;Claws&quot;, &quot;Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 Physical (Slash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. If it hits 2 or more times in the same turn, the target&#39;s Def is lowered by 2 until the end of the user&#39;s next turn.&quot;, 1, 5),
+(a: &quot;Claws&quot;, &quot;Fisticuffs, Athletics, or Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 Physical (Slash) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. If it hits 2 or more times in the same turn, the target&#39;s Def is lowered by 2 until the end of the user&#39;s next turn. This tool is a body part.&quot;, 0, 5),
 (a: &quot;Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 or more times in the same turn, an extra 1d6 + 3 Physical (Pierce) damage is dealt.&quot;, 1, 5),
 (a: &quot;Faded Moonstone Assassin&#39;s Dagger&quot;, &quot;Handiwork check, 2 Actions, DC Def of target; single target within 5ft. Deals 2d6 Physical (Pierce) damage on a success. This number increases to 3d6 against a nightmare creature.&quot;, &quot;(1+) If the user is hidden from the target, or the target does not expect them to attack, this dagger instead does 4d6 Physical (Pierce) damage on a success. This number increases to 5d6 against a nightmare creature.&quot;, 1, -1),
 (a: &quot;Faded Moonstone Katar&quot;, &quot;Acrobatics or Fisticuffs check, 2 Actions, DC Def of target; single target within 5ft. Deals 1d6 + 1 Physical (Pierce) damage on a success. It has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) Using this tool only requires 1 Action. (2+) If it hits successfully 3 times in the same turn, all three hits will be considered critical successes.&quot;, 1, -1),
@@ -2913,7 +2915,8 @@ $H4[(print:$magicMaster&#39;s 6&#39;s 1)]
 (a: &quot;Faded Moonstone Halberd&quot;, &quot;Handiwork or Athletics check, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) This tool can be used on any target within 10ft, and the user can choose whether it deals Slice, Bash, or Pierce damage.&quot;, 1, -1),
 (a: &quot;Faded Moonstone Greatsword&quot;, &quot;Fisticuffs check, DC Def of target; single target within 10ft. Deals 3d6 Physical (Slice) damage on a success. Has a +4 to hit against nightmare creatures.&quot;, &quot;(1+) The character can choose to spend both actions to do a sweeping slash, which doubles their bonus to hit and strikes every creature within 10ft on a plane (as in 2d circle) of their choosing.&quot;, 2, -1),
 (a: &quot;Crossbow&quot;, &quot;Handiwork check at Disadvantage, 2 Actions, DC Def of target; single target within 60ft. Deals 2d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) The Handiwork check is not at Disadvantage. If the user has a combined Handiwork bonus of at least 10, they can use this tool again for only 1 Action if they already used it during this Round.&quot;, 1, 10),
-(a: &quot;Flintlock&quot;, &quot;Invention check at Disadvantage, 2 Actions, DC Def of target; single target within 30ft. Deals 3d6 Physical (Pierce) damage on a success. On a failure, the pistol will misfire, dealing 1d6 Burn damage to the user.&quot;, &quot;(1+) The Invention check is not at Disadvantage. The pistol only deals damage to the user if the failure is by a margin of 10 or more.&quot;, 1, 10)
+(a: &quot;Flintlock&quot;, &quot;Invention check at Disadvantage, 2 Actions, DC Def of target; single target within 30ft. Deals 3d6 Physical (Pierce) damage on a success. On a failure, the pistol will misfire, dealing 1d6 Burn damage to the user.&quot;, &quot;(1+) The Invention check is not at Disadvantage. The pistol only deals damage to the user if the failure is by a margin of 10 or more.&quot;, 1, 10),
+(a: &quot;Fangs&quot;, &quot;Fisticuffs, Athletics, or Acrobatics check, 2 Actions, DC Def of target; single target within 5ft. Deals 3d6 Physical (Pierce) damage on a success.&quot;, &quot;(1+) If the check made against the target is 5 or more above the Def of the target, deal 1d6 extra damage.&quot;, 0, 5)
 
 ))}</tw-passagedata><tw-passagedata pid="84" name="Popup" tags="code" position="2250,775" size="100,100">{
 (set:$pop to 
@@ -3435,7 +3438,7 @@ CT  (Combat Test)
 (set:$baseProfPts to 7)
 (set:$godsMaster to (a:&quot;Summary&quot;,&quot;Queen of Nightmares&quot;, &quot;Rattzlagi&quot;, &quot;Rekke Panthali&quot;, &quot;Krementini&quot;, &quot;Amorro&quot;, &quot;Sping&quot;))
 
-}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,650" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="110" name="ThemesInit" tags="data-storage" position="2625,625" size="100,100">{
 (set:$leftPad to 7.5)
 (set:$openingSidebar to false)
 
@@ -4347,28 +4350,34 @@ They are defined by the kind of injury inflicted to the creature or thing.
 (a: 1, &quot;Blinded 1&quot;, &quot;The creature&#39;s senses-- especially their primary sense-- are dulled, reducing their ability to navigate their enviroment. They have a -5 penalty to all checks that rely on their primary sense.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;Snowball Effect&quot;, &quot;&quot;),
 (a: 2, &quot;Blinded 2&quot;, &quot;The creature&#39;s primary sense is removed, reducing their ability to navigate their enviroment. They have a -5 penalty and disadvantage to all checks that rely on their primary sense.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
 (a: 3, &quot;Blinded 3&quot;, &quot;All of the creature&#39;s senses are dampened or removed. The creature has -10 and disadvantage to checks that rely on any of their senses.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
-(a: 4, &quot;Charmed X (Effect)&quot;, &quot;The creature&#39;s behavior is influenced by magic, pushing their thought processes and emotions in a direction. For example, a creature with Charmed (calmed) would feel calm, and a creature with Charmed (made to like you) would like you more.&quot;, &quot;When dispelled. The creature can choose to make a Willpower save of at least 10 + 2 * X to dispel this Tag themself. Only one instance of Charmed is dispelled at a time.&quot;, &quot;X is the level of the Tag. N is 3 * X.&quot;, &quot;Snowball Effect&quot;, &quot;N&quot;),
-(a: 5, &quot;Dizzy X&quot;, &quot;The creature is dizzy, and gains a -X penalty to checks that require precise movement (such as rolls to use weapons, Handiwork checks, or Acrobatics checks.)&quot;, &quot;When dispelled. The creature can choose to make a Heartiness save of at least 10 + 2 * X to dispel this Tag themself.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 4, &quot;Charmed X (Effect)&quot;, &quot;The creature&#39;s behavior is influenced by magic, pushing their thought processes and emotions in a direction. For example, a creature with Charmed (calmed) would feel calm, and a creature with Charmed (made to like you) would like you more.&quot;, &quot;When dispelled. The creature can choose to make a Willpower save of at least 10 + 2 * X to dispel this Tag themself. Only one instance of Charmed is dispelled at a time.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;Snowball Effect&quot;, &quot;3*X&quot;),
+(a: 5, &quot;Dizzy X&quot;, &quot;The creature is dizzy, and gains a -X penalty to checks that require precise movement (such as rolls to use weapons, Handiwork checks, or Acrobatics checks.)&quot;, &quot;When dispelled. The creature can choose to make a Heartiness save of at least 10 + 2 * X to dispel this Tag themself.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;&quot;, &quot;&quot;),
 (a: 6, &quot;Frightened 1&quot;, &quot;The creature has a -5 penalty to checks while the caster is visible to its primary sense.&quot;, &quot;&quot;, &quot;&quot;, &quot;Snowball Effect&quot;, &quot;&quot;),
-(a: 7, &quot;Grappled (Grappler)&quot;, &quot;The creature has been physically captured by their Grappler. Their movement speeds all become 0, and they have disadvantage on checks targeting anything other than their Grappler.&quot;, &quot;When the Grappler becomes unable to hold them, or when they succeed a Clash against the Grappler&#39;s Athletics or Sturdy with their Acrobatics or Athletics.&quot;, &quot;The Grappler is the creature or object that grappled the creature.&quot;, &quot;&quot;, &quot;&quot;),
-(a: 8, &quot;Grappler (Target)&quot;, &quot;The creature is physically restraining a Target. Their movement speeds are all halved, rounded up, unless their Target is willing.&quot;, &quot;See Grappled.&quot;, &quot;The Target is the creature that the Grappler is grappling.&quot;, &quot;&quot;, &quot;&quot;),
+(a: 7, &quot;Grappled (Grappler)&quot;, &quot;The creature has been physically captured by their Grappler. Their movement speeds all become 0, and they have disadvantage on checks targeting anything other than their Grappler.&quot;, &quot;When the Grappler becomes unable to hold them, or when they succeed a Clash against the Grappler&#39;s Athletics or Sturdy with their Acrobatics or Athletics.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 8, &quot;Grappler (Target)&quot;, &quot;The creature is physically restraining a Target. Their movement speeds are all halved, rounded up, unless their Target is willing.&quot;, &quot;See Grappled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
 (a: 9, &quot;Pained 1&quot;, &quot;The creature gains a -1 penalty to Heartiness checks, and halves the second parameter of the Plagued (Bleeding) Tag, rounded up.&quot;, &quot;When the creature&#39;s HP increases beyond half of its maximum.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
 (a: 10, &quot;Paralyzed 1&quot;, &quot;The creature gains a -10 penalty to any checks that require them to move move normally, as if not bound. They also lose one Action per round. Their movement speeds become 0.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
-(a: 11, &quot;Plagued X/Y (Type)&quot;, &quot;The creature is besieged by some sort of damage, only worsened by Adrenaline. Every minute, or at the end of the creature&#39;s Turn in Adrenaline, the creature takes X damage, and then loses Y levels of Plagued. Plagued (Bleeding) is equivalent to Plagued (Drown) and deals that type of damage.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 11, &quot;Plagued X/Y (Type)&quot;, &quot;The creature is besieged by some sort of damage, only worsened by Adrenaline. Every minute, or at the end of the creature&#39;s Turn in Adrenaline, the creature takes X damage, and then loses Y levels of Plagued. Plagued (Bleeding) is equivalent to Plagued (Drown) and deals that type of damage.&quot;, &quot;&quot;, &quot;X is the level of the tag specified; Y is a modifier, and can be positive or negative.&quot;, &quot;&quot;, &quot;&quot;),
 (a: 12, &quot;Toe Beans&quot;, &quot;The creature has advantage to Stealth and Acrobatics checks.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;2&quot;),
-(a: 13, &quot;Quick X&quot;, &quot;The creature gains 5 * X feet of movement.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;X is the level of the Tag. N is 2 * X.&quot;, &quot;Metamorphosis, Snowball Effect&quot;, &quot;N&quot;),
+(a: 13, &quot;Quick X&quot;, &quot;The creature gains 5 * X feet of movement.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;Metamorphosis, Snowball Effect&quot;, &quot;2*X&quot;),
 (a: 14, &quot;Fluff&quot;, &quot;The creature becomes unaffected by weather and temperature effects.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;3&quot;),
 (a: 15, &quot;Thick Hide&quot;, &quot;The creature gains resistance to 3 damage types other than Physical; these three types are chosen when this Tag is unlocked.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;6&quot;),
 (a: 16, &quot;Super-Senses&quot;, &quot;The creature&#39;s sensory ranges double; this tag&#39;s effect applies before any other modifications to The creature&#39;s senses.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis, Snowball Effect&quot;, &quot;4&quot;),
-(a: 17, &quot;Healthy X&quot;, &quot;The creature gains 10 * X bonus HP.&quot;, &quot;When dispelled. The bonus HP granted by this tag cannot be healed, and when it is reduced to 0, this Tag disappears.&quot;, &quot;X is the level of the Tag. N is 3 * X.&quot;, &quot;Metamorphosis&quot;, &quot;N&quot;),
+(a: 17, &quot;Healthy X&quot;, &quot;The creature gains 10 * X bonus HP.&quot;, &quot;When dispelled. The bonus HP granted by this tag cannot be healed&quot;, &quot;X is the level of the tag specified.&quot;, &quot;Metamorphosis&quot;, &quot;3*X&quot;),
 (a: 18, &quot;Unrecognizable&quot;, &quot;The creature&#39;s appearance changes enough that an observer needs to pass an Insight check with a DC of 10 + The creature&#39;s Deception proficiency to recognize them.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;2&quot;),
 (a: 19, &quot;Leap 1&quot;, &quot;The creature can take the Leap action by using 10 MP, which has the effect of taking the Move action with a move speed of 45ft fly.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;0&quot;),
 (a: 20, &quot;Ooze 1&quot;, &quot;The creature gains 1 DEF and becomes able to fit into any space that could contain their volume, regardless of shape.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;Metamorphosis&quot;, &quot;5&quot;),
 (a: 21, &quot;Hunger 1&quot;, &quot;The creature has Regeneration 5. If they do not either hit a melee attack or eat something every round, they lose this Tag. The tag peters out anyway after 2 minutes.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
-(a: 22, &quot;Shortcut 1&quot;, &quot;The creature’s corporeality changes. Choose one of the following: shadows (dark areas), water, plants, or stone (that is not metallic or crystalline). They gain a movement speed of 60ft through a contiguous span of that material, and can choose not to be affected by any hazard tiles between them and their destination.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 22, &quot;Shortcut 1&quot;, &quot;The creature’s corporeality changes. Choose one of the following: shadows (dark areas), water, plants, or stone (that is not metallic or crystalline). They gain a movement speed of 40ft through a contiguous span of that material, and can choose not to be affected by any hazard tiles between them and their destination.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
 (a: 23, &quot;Stubborn 1&quot;, &quot;Whenever The creature would receive any levels of Charmed, reduce that level by 1.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
 (a: 24, &quot;Feral 1&quot;, &quot;Each time the creature takes damage, raise the level of the Feral tag that they have by 2. They can add the level of Feral that they have to any damage they deal directly.&quot;, &quot;When dispelled, the creature falls asleep, or 1 minute after it begins.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
-(a: 25, &quot;Beloathed&quot;, &quot;This tag causes all creatures within 10ft to make a Willpower save against a DC of 8 + The creature’s Persuasion modifier or gain Charmed (Fixated.) This condition causes them to want to attack The creature above all else. This tag also gives The creature a +2 to Intimidation checks.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;)
+(a: 25, &quot;Beloathed&quot;, &quot;This tag causes all creatures within 10ft to make a Willpower save against a DC of 8 + The creature’s Persuasion modifier or gain Charmed (Fixated.) This condition causes them to want to attack The creature above all else. This tag also gives The creature a +2 to Intimidation checks.&quot;, &quot;When dispelled or the creature falls asleep.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 26, &quot;Fallen&quot;, &quot;All distances from the character are considered 5ft further away than they truly are, and the character&#39;s Def is lowered by 4. &quot;, &quot;The character can take the Move action and spend 10ft of movement to get rid of this Tag.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 27, &quot;Slowed X (Speed)&quot;, &quot;The movement speed in the parameter is lowered by X*5 feet for the character; the movement speed cannot go below 0.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;&quot;, &quot;X*2&quot;),
+(a: 28, &quot;Respiration X&quot;, &quot;Every round or 6 second span that the creature would have the Suffocating tag, ignore its effects and instead decrease the level of this tag by 1.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;&quot;, &quot;&quot;),
+(a: 29, &quot;Suffocating&quot;, &quot;The creature gains the effects of Plagued 16/0 (Drown), Dizzy 4, and Pained 1.&quot;, &quot;When the creature is able to respirate again.&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;),
+(a: 30, &quot;Large 1&quot;, &quot;The creature grows in size, filling 2x2x2 spaces in a cube and gaining +5 to Sturdy checks.&quot;, &quot;When dispelled.&quot;, &quot;&quot;, &quot;&quot;, &quot;5&quot;),
+(a: 31, &quot;Bonus X (Stat)&quot;, &quot;The creature gains +X to the specified statistic.&quot;, &quot;When dispelled.&quot;, &quot;X is the level of the tag specified.&quot;, &quot;&quot;, &quot;5*X&quot;)
 
 ))}</tw-passagedata><tw-passagedata pid="141" name="TerrainTagsInit" tags="data-storage" position="2500,500" size="100,100">{(set:$aldatuTags to (a:
 
@@ -4452,7 +4461,80 @@ A character&#39;s magic will deal one of the (link-repeat:&quot;damage types&quo
 
 This damage type does not represent the element of the magic; it represents the way that magic interacts with other creatures. The damage type dealt by magic can change depending on how that magic is used.
 
-For example, if Katya were to use her light sword to attack someone directly with a slash, it would deal ($adjCol:#d65a02)[Slice] damage, but if she were to summon her blade such that it intersected someone she had pinned down, it might ($adjCol:#ff4d00)[Burn] them. </tw-passagedata></tw-storydata>
+For example, if Katya were to use her light sword to attack someone directly with a slash, it would deal ($adjCol:#d65a02)[Slice] damage, but if she were to summon her blade such that it intersected someone she had pinned down, it might ($adjCol:#ff4d00)[Burn] them. </tw-passagedata><tw-passagedata pid="145" name="Stratagems List" tags="" position="1525,1350" size="100,100">$H2[Stratagems List]
+(set:_sortByNum to 1)(set:_gray to #fff)(set:_bg to #fff)(print:&quot;(set:_gray to &quot; + $themeChosen&#39;s 6 + &quot;)&quot;)(print:&quot;(set:_bg to &quot; + $themeChosen&#39;s 1 + &quot;)&quot;)(set:_att to 0)\
+|SortBy&gt;[Sort by: {
+	(if:_sortByNum is 1)[Name | (link:&quot;Unlocked by&quot;)[
+		(set:(_sortByNum) to 3)
+		(rerun:?SortBy)
+	]](else-if:_sortByNum is 3)[(link:&quot;Name&quot;)[
+		(set:(_sortByNum) to 1)
+		(rerun:?SortBy)
+	] | Unlocked by]
+	(set:_index to 0)
+}\
+{
+&lt;!--header--&gt;
+(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	Name
+	|||=
+	Description
+	|||=
+	Cost/End Condition
+	||=
+	Unlocked by
+]
+&lt;!--table body--&gt;
+(for: each (_tag), 
+	...(sorted: via its (_sortByNum), 
+		...$stratagemsMaster
+		)
+)[{
+	(if:_index % 2 is 1)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_gray)[\
+	||=
+	(print:_tag&#39;s 1)
+	|||=
+	(print:_tag&#39;s 2)
+	|||=
+	(print:_tag&#39;s 4)
+	||=
+	(print:_tag&#39;s 3)
+	]
+	](else:)[
+	(box:&quot;X&quot;)+(css:&quot;padding: 0.2em;&quot;)+(background:_bg)[\
+	||=
+	(print:_tag&#39;s 1)
+	|||=
+	(print:_tag&#39;s 2)
+	|||=
+	(print:_tag&#39;s 4)
+	||=
+	(print:_tag&#39;s 3)
+	]
+	]
+(set:_index to it + 1)}]}\
+]\
+&lt;!--this is spaghetti code--&gt;\
+&lt;!--why do tables not work with for loops?????--&gt;</tw-passagedata><tw-passagedata pid="146" name="StratagemsInit" tags="data-storage" position="2625,500" size="100,100">{(set:$stratagemsMaster to (a:
+
+(a: &quot;Pack Hunting&quot;, &quot;If an ally is within 5ft of the character, they both gain a +7 on checks made against hostile creatures and +5 Def.&quot;, &quot;Battle Tactics&quot;, &quot;This Tactic is only effective for 2 rounds after it is used, and takes 1 Action to use.&quot;), 
+(a: &quot;Hasty Retreat&quot;, &quot;Instruct an ally to retreat. They gain +10 Def as long as they do not attempt any checks against any hostile creatures, and do not deal any damage, directly or indirectly. If they do either, they lose the bonus of this Tactic.&quot;, &quot;Battle Tactics&quot;, &quot;This Tactic is only effective for 3 rounds after it is used, and takes 1 Action to use.&quot;), 
+(a: &quot;Onwards!&quot;, &quot;The character or their ally can use the Move action once as a Free Action.&quot;, &quot;Battle Tactics&quot;, &quot;This Tactic is only effective for 2 rounds after it is used, and stops being effective once the Move action is completed. It takes 1 Action to use.&quot;), 
+(a: &quot;Magic Tango&quot;, &quot;Two allies of the character or the character and one of their allies can combine their magic, dealing an extra 2d6 damage of their choice to a target within range of either of their magic if they use their magic together.&quot;, &quot;Battle Tactics&quot;, &quot;This Tactic is only effective for 1 round after it is used, and takes 1 Action to use. It expires once the bonus is used.&quot;), 
+(a: &quot;Hand at Hiding&quot;, &quot;When a group of characters makes a group Stealth check, the lowest raw roll in the group is not factored in.&quot;, &quot;Battle Tactics&quot;, &quot;This Tactic is effective for the duration of the Stealth check, and takes 1 Action to use.&quot;), 
+(a: &quot;Item!&quot;, &quot;Choose a non-tool item that the character is intelligent enough to use and a creature. Even if the creature would not normally be intelligent enough to use that item, they have been trained and can use it with two Actions.&quot;, &quot;Animal Tactics&quot;, &quot;It takes one Respite to teach a creature how to use an item in this way. It lasts until the creature is trained in using another item.&quot;), 
+(a: &quot;Sic &#39;em!&quot;, &quot;Given a target, the creature has a +5 bonus on checks against that creature, including Tracking checks to find them.&quot;, &quot;Animal Tactics&quot;, &quot;It takes one Respite to teach a creature how to use this Strategem. Once an animal has been trained, it will not forget and can be told to use it using an Action. The bonus from this Stratagem ends if any other Stratagem is used by the character on another creature they command.&quot;), 
+(a: &quot;There!&quot;, &quot;The creature gains 10ft to one of their movements when commanded to move to a space the character can sense with their primary sense.&quot;, &quot;Animal Tactics&quot;, &quot;It takes one Respite to teach a creature how to use this Strategem. Once an animal has been trained, it will not forget and can be told to use it using an Action. The bonus from this Stratagem ends if any other Stratagem is used by the character on another creature they command.&quot;), 
+(a: &quot;Short Long Range&quot;, &quot;If a skill or tactic says that a weapon gains a bonus once the character is a number of feet away, reduce that distance by 20ft.&quot;, &quot;Weaponology&quot;, &quot;This Tactic is always active.&quot;), 
+(a: &quot;Precision Strike&quot;, &quot;If a roll to hit is 10 or more above the Defense of the target, it deals 1d6 more damage of one of the Types already being dealt.&quot;, &quot;Weaponology&quot;, &quot;This Tactic is always active.&quot;), 
+(a: &quot;Buckling Branch&quot;, &quot;This technique attacks the support of the target, such as the legs; on a hit, they must succeed an Acrobatics save against the character&#39;s Martial Arts DC or gain Stun I.&quot;, &quot;Body and Spirit&quot;, &quot;This Tactic takes the form of an Action.&quot;), 
+(a: &quot;Capturing the Storm&quot;, &quot;Using this technique, the character subverts an opponent&#39;s armed strike to make them lose their grip on their weapon. On a hit, the target must succeed a Handiwork check against the character&#39;s Martial Arts DC or have their weapon taken by the character. They must beat the character in a Handiwork clash to get it back.&quot;, &quot;Body and Spirit&quot;, &quot;This Tactic takes the form of an Action.&quot;), 
+(a: &quot;Spiraling Twig&quot;, &quot;While Grappled, this technique allows the character to escape the Grappled condition on a hit against the grappler.&quot;, &quot;Body and Spirit&quot;, &quot;This Tactic takes the form of an Action.&quot;), 
+(a: &quot;Delayed Sword&quot;, &quot;The character cannot be targeted with opportunity attacks during the same round that they have used this Statagem. The Delayed Sword technique can be used in the next Action or Reaction that the character takes after taking damage, and increases the damage of their unarmed attack to 5d6.&quot;, &quot;Body and Spirit&quot;, &quot;This Tactic takes the form of an Action.&quot;)
+
+))}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
